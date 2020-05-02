@@ -1,0 +1,108 @@
+Qflow migration logfile created on Mi 29. Apr 17:49:29 CEST 2020
+magic -dnull -noconsole  migrate_map9v3.tcl
+
+Magic 8.3 revision 5 - Compiled on Mi 29. Apr 16:54:54 CEST 2020.
+Starting magic under Tcl interpreter
+Using the terminal as the console.
+Using NULL graphics device.
+Processing system .magicrc file
+Input style lambda=0.20(p): scaleFactor=20, multiplier=1
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+4 Magic internal units = 1 Lambda
+Loading "migrate_map9v3.tcl" from command line.
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )
+
+microns:    0.00 x 0.00    (  0.00,  0.00 ), (  0.00,  0.00 )
+lambda:     0.00 x 0.00    (  0.00,  0.00 ), (  0.00,  0.00 )
+internal:      0 x 0       (     0,  0    ), (     0,  0    )
+Reading LEF data from file /usr/local/share/qflow/tech/osu035/osu035_stdcells.lef.
+This action cannot be undone.
+LEF read, Line 16 (Message): Unknown keyword "OBS" in LEF file; ignoring.
+LEF read, Line 17 (Message): Unknown keyword "PIN" in LEF file; ignoring.
+LEF read, Line 207 (Message): Defines site corner (ignored)
+LEF read, Line 213 (Message): Defines site IO (ignored)
+LEF read, Line 219 (Message): Defines site core (ignored)
+Moving label "CLK" from metal1 to m2contact in cell DFFNEGX1.
+Moving label "CLK" from metal1 to m2contact in cell DFFNEGX1.
+Moving label "A" from metal1 to m2contact in cell XNOR2X1.
+LEF read: Processed 3179 lines.
+Reading DEF data from file map9v3.def.
+This action cannot be undone.
+  Processed 3 vias total.
+  Processed 296 subcell instances total.
+  Processed 40 pins total.
+  Processed 229 nets total.
+DEF read, Line 3076 (Warning): Number of nets read (31) does not match the number declared (32).
+DEF read: Processed 3078 lines.
+DEF Read: encountered 1 warning total.
+Generating LEF output map9v3.lef for cell map9v3:
+Diagnostic:  Write LEF header for cell map9v3
+Diagnostic:  Writing LEF output for cell map9v3
+Diagnostic:  Scale value is 0.050000
+Extracting CLKBUF1 into CLKBUF1.ext:
+Completed 100%
+Extracting INVX4 into INVX4.ext:
+Completed 100%
+Extracting XOR2X1 into XOR2X1.ext:
+Completed 100%
+Extracting OR2X2 into OR2X2.ext:
+Completed 100%
+Extracting XNOR2X1 into XNOR2X1.ext:
+Completed 100%
+Extracting AOI21X1 into AOI21X1.ext:
+Completed 100%
+Extracting MUX2X1 into MUX2X1.ext:
+Completed 100%
+Extracting INVX8 into INVX8.ext:
+Completed 100%
+Extracting NAND2X1 into NAND2X1.ext:
+Completed 100%
+Extracting AOI22X1 into AOI22X1.ext:
+Completed 100%
+Extracting FILL into FILL.ext:
+Completed 100%
+Extracting AND2X2 into AND2X2.ext:
+Completed 100%
+Extracting OAI22X1 into OAI22X1.ext:
+Completed 100%
+Extracting NAND3X1 into NAND3X1.ext:
+Completed 100%
+Extracting NOR2X1 into NOR2X1.ext:
+Completed 100%
+Extracting OAI21X1 into OAI21X1.ext:
+Completed 100%
+Extracting BUFX2 into BUFX2.ext:
+Completed 100%
+Extracting INVX1 into INVX1.ext:
+Completed 100%
+Extracting DFFSR into DFFSR.ext:
+Completed 50%
+Completed 75%
+Completed 100%
+Extracting map9v3 into map9v3.ext:
+Completed 6%
+Completed 11%
+Completed 17%
+Completed 23%
+Completed 29%
+Completed 34%
+Completed 40%
+Completed 46%
+Completed 51%
+Completed 57%
+Completed 63%
+Completed 69%
+Completed 74%
+Completed 79%
+Completed 85%
+Completed 91%
+Completed 96%
+Completed 100%
+exttospice finished.
+Migration script ended on Mi 29. Apr 17:49:29 CEST 2020
