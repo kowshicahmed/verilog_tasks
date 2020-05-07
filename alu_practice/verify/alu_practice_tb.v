@@ -12,7 +12,7 @@ module alu_tb;
 
 initial
 begin
-    $dumpfile("practice.vcd"); //generate a waveform call it x.vcd and dump the files there
+    $dumpfile("alu_practice.vcd"); //generate a waveform call it x.vcd and dump the files there
     $dumpvars(0, alu_tb);
     A = 8'h05;
     B = 8'h04;

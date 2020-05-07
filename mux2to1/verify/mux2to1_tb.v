@@ -9,7 +9,7 @@ mux2to1 mymux (a, b, s, out);
 
 initial
 begin
-    $dumpfile("practice.vcd"); //generate a waveform call it x.vcd and dump the files there
+    $dumpfile("mux2to1.vcd"); //generate a waveform call it x.vcd and dump the files there
     $dumpvars(0, testmux);
     a = 0;
     b = 1;
