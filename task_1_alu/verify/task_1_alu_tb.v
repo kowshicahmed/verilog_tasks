@@ -1,7 +1,7 @@
 `timescale 1ns/1ps
 
 module alu_tb;
-//inputs
+    //inputs
     reg [15:0] a,b;
     reg [3:0] op_code;
     //outputs
@@ -20,10 +20,10 @@ begin
     op_code = 4'h0;
     for (i=0; i<16; i++) //testing for all the op-codes
         begin
-        op_code = op_code+1;
-        #10;
+            op_code = op_code+1;
+            #10;
         end
-        $finish;
+    $finish;
 end
 
 endmodule
