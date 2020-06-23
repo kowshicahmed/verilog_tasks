@@ -1,0 +1,32 @@
+Qflow DRC logfile created on Mo 8. Jun 17:06:04 CEST 2020
+magic -dnull -noconsole  /home/akash/Documents/DigitalLab/verilog_tasks/task_2/program_counter/layout/run_drc_program_counter.tcl
+
+Magic 8.3 revision 5 - Compiled on Mi 29. Apr 16:54:54 CEST 2020.
+Starting magic under Tcl interpreter
+Using the terminal as the console.
+Using NULL graphics device.
+Processing system .magicrc file
+Input style lambda=0.20(p): scaleFactor=20, multiplier=1
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+4 Magic internal units = 1 Lambda
+Loading "/home/akash/Documents/DigitalLab/verilog_tasks/task_2/program_counter/layout/run_drc_program_counter.tcl" from command line.
+Reading LEF data from file /usr/local/share/qflow/tech/osu035/osu035_stdcells.lef.
+This action cannot be undone.
+LEF read, Line 16 (Message): Unknown keyword "OBS" in LEF file; ignoring.
+LEF read, Line 17 (Message): Unknown keyword "PIN" in LEF file; ignoring.
+LEF read, Line 207 (Message): Defines site corner (ignored)
+LEF read, Line 213 (Message): Defines site IO (ignored)
+LEF read, Line 219 (Message): Defines site core (ignored)
+Moving label "CLK" from metal1 to m2contact in cell DFFNEGX1.
+Moving label "CLK" from metal1 to m2contact in cell DFFNEGX1.
+Moving label "A" from metal1 to m2contact in cell XNOR2X1.
+LEF read: Processed 3179 lines.
+Scaled magic input cell program_counter geometry by factor of 2
+Processing timestamp mismatches: BUFX2, CLKBUF1, NAND2X1, FILL, DFFPOSX1, OAI21X1, NOR2X1, AOI21X1, INVX1, AOI22X1, NAND3X1, INVX2, AND2X2, NOR3X1.
+drc = 0
+DRC checking script ended on Mo 8. Jun 17:06:04 CEST 2020

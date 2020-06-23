@@ -1,0 +1,368 @@
+Qflow route logfile created on Mi 13. Mai 15:24:21 CEST 2020
+qrouter -noc  -s mux2to1.cfg
+Qrouter detail maze router version 1.4.81.T
+Reading LEF data from file /usr/local/share/qflow/tech/osu035/osu035_stdcells.lef.
+LEF Read, Line 135: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 136: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 140: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 141: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 151: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 152: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 156: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 157: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 167: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 168: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 172: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 173: NOTE:  Old format VIARULE ignored.
+LEF file:  Defines site corner (ignored)
+LEF file:  Defines site IO (ignored)
+LEF file:  Defines site core (ignored)
+LEF read: Processed 3179 lines.
+LEF Read: encountered 0 errors and 12 warnings total.
+Vertical route layer at non-minimum pitch 3.2.  Using smaller pitch 1.6, will route on 1-of-2 tracks for layer metal4.
+Reading DEF data from file mux2to1.def.
+Diagnostic: Design name: "mux2to1"
+  Processed 3 vias total.
+  Processed 16 subcell instances total.
+  Processed 6 pins total.
+  Processed 7 nets total (0 fixed).
+  Processed 2 special nets total (4 fixed).
+DEF read: Processed 125 lines.
+Output scale = microns / 100, precision 1
+Error: Node s/s of net "s" has no taps!
+Qrouter will not be able to completely route this net.
+Error: Node in0/in0 of net "in0" has no taps!
+Qrouter will not be able to completely route this net.
+There are 9 nets in this design.
+*** Running stage1 routing with defaults
+Node s/s of net s has no tap points---unable to route!
+Failed to route net s
+Node in0/in0 of net in0 has no tap points---unable to route!
+Failed to route net in0
+Finished routing net _0_
+Nets remaining: 8
+Finished routing net in1
+Nets remaining: 7
+Finished routing net _1_
+Nets remaining: 6
+Finished routing net _2_
+Nets remaining: 5
+Finished routing net out
+Nets remaining: 4
+
+----------------------------------------------
+Progress: Stage 1 total routes completed: 6
+Failed net routes: 2
+----------------------------------------------
+*** Running stage2 routing with options mask 10, effort 10
+Nets remaining: 2
+Node in0/in0 of net in0 has no tap points---unable to route!
+Failure on net in0:  Abandoning for now.
+Nets remaining: 1
+Node s/s of net s has no tap points---unable to route!
+Failure on net s:  Abandoning for now.
+
+----------------------------------------------
+Progress: Stage 2 total routes completed: 6
+Failed net routes: 2
+----------------------------------------------
+*** Running stage2 routing with options mask 20, effort 10
+Nets remaining: 2
+Node s/s of net s has no tap points---unable to route!
+Failure on net s:  Abandoning for now.
+Nets remaining: 1
+Node in0/in0 of net in0 has no tap points---unable to route!
+Failure on net in0:  Abandoning for now.
+
+----------------------------------------------
+Progress: Stage 2 total routes completed: 7
+Failed net routes: 2
+----------------------------------------------
+*** Running stage2 routing with options mask 30, effort 10
+Nets remaining: 2
+Node in0/in0 of net in0 has no tap points---unable to route!
+Failure on net in0:  Abandoning for now.
+Nets remaining: 1
+Node s/s of net s has no tap points---unable to route!
+Failure on net s:  Abandoning for now.
+
+----------------------------------------------
+Progress: Stage 2 total routes completed: 8
+Failed net routes: 2
+----------------------------------------------
+*** Running stage2 routing with options mask 40, effort 10
+Nets remaining: 2
+Node s/s of net s has no tap points---unable to route!
+Failure on net s:  Abandoning for now.
+Nets remaining: 1
+Node in0/in0 of net in0 has no tap points---unable to route!
+Failure on net in0:  Abandoning for now.
+
+----------------------------------------------
+Progress: Stage 2 total routes completed: 9
+Failed net routes: 2
+----------------------------------------------
+*** Running stage2 routing with options mask 50, effort 10
+Nets remaining: 2
+Node in0/in0 of net in0 has no tap points---unable to route!
+Failure on net in0:  Abandoning for now.
+Nets remaining: 1
+Node s/s of net s has no tap points---unable to route!
+Failure on net s:  Abandoning for now.
+
+----------------------------------------------
+Progress: Stage 2 total routes completed: 10
+Failed net routes: 2
+----------------------------------------------
+*** Running stage2 routing with options mask 60, effort 10
+Nets remaining: 2
+Node s/s of net s has no tap points---unable to route!
+Failure on net s:  Abandoning for now.
+Nets remaining: 1
+Node in0/in0 of net in0 has no tap points---unable to route!
+Failure on net in0:  Abandoning for now.
+
+----------------------------------------------
+Progress: Stage 2 total routes completed: 11
+Failed net routes: 2
+----------------------------------------------
+*** Running stage2 routing with options mask 70, effort 10
+Nets remaining: 2
+Node in0/in0 of net in0 has no tap points---unable to route!
+Failure on net in0:  Abandoning for now.
+Nets remaining: 1
+Node s/s of net s has no tap points---unable to route!
+Failure on net s:  Abandoning for now.
+
+----------------------------------------------
+Progress: Stage 2 total routes completed: 12
+Failed net routes: 2
+----------------------------------------------
+*** Running stage2 routing with options mask 80, effort 10
+Nets remaining: 2
+Node s/s of net s has no tap points---unable to route!
+Failure on net s:  Abandoning for now.
+Nets remaining: 1
+Node in0/in0 of net in0 has no tap points---unable to route!
+Failure on net in0:  Abandoning for now.
+
+----------------------------------------------
+Progress: Stage 2 total routes completed: 13
+Failed net routes: 2
+----------------------------------------------
+*** Running stage2 routing with options mask 90, effort 10
+Nets remaining: 2
+Node in0/in0 of net in0 has no tap points---unable to route!
+Failure on net in0:  Abandoning for now.
+Nets remaining: 1
+Node s/s of net s has no tap points---unable to route!
+Failure on net s:  Abandoning for now.
+
+----------------------------------------------
+Progress: Stage 2 total routes completed: 14
+Failed net routes: 2
+----------------------------------------------
+*** Running stage2 routing with options mask 100, effort 10
+Nets remaining: 2
+Node s/s of net s has no tap points---unable to route!
+Failure on net s:  Abandoning for now.
+Nets remaining: 1
+Node in0/in0 of net in0 has no tap points---unable to route!
+Failure on net in0:  Abandoning for now.
+
+----------------------------------------------
+Progress: Stage 2 total routes completed: 15
+Failed net routes: 2
+----------------------------------------------
+*** Running stage2 routing with options mask none, effort 20
+Nets remaining: 2
+Node in0/in0 of net in0 has no tap points---unable to route!
+Failure on net in0:  Abandoning for now.
+Nets remaining: 1
+Node s/s of net s has no tap points---unable to route!
+Failure on net s:  Abandoning for now.
+
+----------------------------------------------
+Progress: Stage 2 total routes completed: 16
+Failed net routes: 2
+----------------------------------------------
+*** Running stage2 routing with options mask none, effort 40
+Nets remaining: 2
+Node s/s of net s has no tap points---unable to route!
+Failure on net s:  Abandoning for now.
+Nets remaining: 1
+Node in0/in0 of net in0 has no tap points---unable to route!
+Failure on net in0:  Abandoning for now.
+
+----------------------------------------------
+Progress: Stage 2 total routes completed: 17
+Failed net routes: 2
+----------------------------------------------
+*** Running stage2 routing with options mask none, effort 60
+Nets remaining: 2
+Node in0/in0 of net in0 has no tap points---unable to route!
+Failure on net in0:  Abandoning for now.
+Nets remaining: 1
+Node s/s of net s has no tap points---unable to route!
+Failure on net s:  Abandoning for now.
+
+----------------------------------------------
+Progress: Stage 2 total routes completed: 18
+Failed net routes: 2
+----------------------------------------------
+*** Running stage2 routing with options mask none, effort 80
+Nets remaining: 2
+Node s/s of net s has no tap points---unable to route!
+Failure on net s:  Abandoning for now.
+Nets remaining: 1
+Node in0/in0 of net in0 has no tap points---unable to route!
+Failure on net in0:  Abandoning for now.
+
+----------------------------------------------
+Progress: Stage 2 total routes completed: 19
+Failed net routes: 2
+----------------------------------------------
+*** Running stage2 routing with options mask none, effort 100
+Nets remaining: 2
+Node in0/in0 of net in0 has no tap points---unable to route!
+Failure on net in0:  Abandoning for now.
+Nets remaining: 1
+Node s/s of net s has no tap points---unable to route!
+Failure on net s:  Abandoning for now.
+
+----------------------------------------------
+Progress: Stage 2 total routes completed: 20
+Failed net routes: 2
+----------------------------------------------
+*** Running stage3 routing with defaults, 1st round
+Node s/s of net s has no tap points---unable to route!
+Failed to route net s.
+Node in0/in0 of net in0 has no tap points---unable to route!
+Failed to route net in0.
+Finished routing net _0_
+Nets remaining: 8
+Finished routing net in1
+Nets remaining: 7
+Keeping route for net _1_
+Finished routing net _2_
+Nets remaining: 5
+Finished routing net out
+Nets remaining: 4
+
+----------------------------------------------
+Progress: Stage 3 total routes completed: 25
+Failed net routes: 2
+----------------------------------------------
+*** Running stage2 routing with options mask none
+Nets remaining: 2
+Node in0/in0 of net in0 has no tap points---unable to route!
+Failure on net in0:  Abandoning for now.
+Nets remaining: 1
+Node s/s of net s has no tap points---unable to route!
+Failure on net s:  Abandoning for now.
+
+----------------------------------------------
+Progress: Stage 2 total routes completed: 25
+Failed net routes: 2
+----------------------------------------------
+*** Running stage3 routing with defaults, 2nd round
+Node s/s of net s has no tap points---unable to route!
+Failed to route net s.
+Node in0/in0 of net in0 has no tap points---unable to route!
+Failed to route net in0.
+Keeping route for net _0_
+Finished routing net in1
+Nets remaining: 7
+Keeping route for net _1_
+Finished routing net _2_
+Nets remaining: 5
+Finished routing net out
+Nets remaining: 4
+
+----------------------------------------------
+Progress: Stage 3 total routes completed: 29
+Failed net routes: 2
+----------------------------------------------
+*** Running stage2 routing with options mask none
+Nets remaining: 2
+Node in0/in0 of net in0 has no tap points---unable to route!
+Failure on net in0:  Abandoning for now.
+Nets remaining: 1
+Node s/s of net s has no tap points---unable to route!
+Failure on net s:  Abandoning for now.
+
+----------------------------------------------
+Progress: Stage 2 total routes completed: 29
+Failed net routes: 2
+----------------------------------------------
+*** Running stage2 routing with options mask none
+Nets remaining: 2
+Node s/s of net s has no tap points---unable to route!
+Failure on net s:  Abandoning for now.
+Nets remaining: 1
+Node in0/in0 of net in0 has no tap points---unable to route!
+Failure on net in0:  Abandoning for now.
+
+----------------------------------------------
+Progress: Stage 2 total routes completed: 30
+Failed net routes: 2
+----------------------------------------------
+*** Running stage2 routing with options mask none
+Nets remaining: 2
+Node in0/in0 of net in0 has no tap points---unable to route!
+Failure on net in0:  Abandoning for now.
+Nets remaining: 1
+Node s/s of net s has no tap points---unable to route!
+Failure on net s:  Abandoning for now.
+
+----------------------------------------------
+Progress: Stage 2 total routes completed: 31
+Failed net routes: 2
+----------------------------------------------
+*** Running stage2 routing with options mask none
+Nets remaining: 2
+Node s/s of net s has no tap points---unable to route!
+Failure on net s:  Abandoning for now.
+Nets remaining: 1
+Node in0/in0 of net in0 has no tap points---unable to route!
+Failure on net in0:  Abandoning for now.
+
+----------------------------------------------
+Progress: Stage 2 total routes completed: 32
+Failed net routes: 2
+----------------------------------------------
+*** Running stage2 routing with options mask none
+Nets remaining: 2
+Node in0/in0 of net in0 has no tap points---unable to route!
+Failure on net in0:  Abandoning for now.
+Nets remaining: 1
+Node s/s of net s has no tap points---unable to route!
+Failure on net s:  Abandoning for now.
+
+----------------------------------------------
+Progress: Stage 2 total routes completed: 33
+Failed net routes: 2
+----------------------------------------------
+*** Writing DEF file mux2to1_route.def
+emit_routes():  DEF file has 7 nets and 4 specialnets.
+but qrouter wants to write 9 nets and specialnets.
+----------------------------------------------
+Final: Failed net routes: 2
+List of failed nets follows:
+ s
+ in0
+
+----------------------------------------------
+*** Writing RC file mux2to1_route.rc
+DEF2Verilog -v /home/akash/Documents/DigitalLab/verilog_tasks/mux2to1/synthesis/mux2to1.rtlnopwr.v -o /home/akash/Documents/DigitalLab/verilog_tasks/mux2to1/synthesis/mux2to1_postroute.v
+-p vdd -g gnd  -l  /usr/local/share/qflow/tech/osu035/osu035_stdcells.lef mux2to1_route.def
+
+Generating RTL verilog and SPICE netlist file in directory
+   /home/akash/Documents/DigitalLab/verilog_tasks/mux2to1/synthesis
+Running vlog2Verilog.
+vlog2Verilog -c -v vdd -g gnd -o mux2to1.rtl.anno.v mux2to1_postroute.v
+vlog2Verilog -c -p -v vdd -g gnd -o mux2to1.rtlnopwr.anno.v mux2to1_postroute.v
+/usr/local/share/qflow/bin/vlog2Verilog -c -b -p -n -v vdd -g gnd -o mux2to1.rtlbb.anno.v mux2to1_postroute.v
+Running vlog2Spice.
+vlog2Spice -i -l  /usr/local/share/qflow/tech/osu035/osu035_stdcells.sp -o mux2to1.anno.spc mux2to1.rtl.anno.v
+Router script ended on Mi 13. Mai 15:24:21 CEST 2020

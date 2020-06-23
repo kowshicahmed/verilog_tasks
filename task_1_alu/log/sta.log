@@ -1,0 +1,372 @@
+Qflow static timing analysis logfile created on Fr 15. Mai 15:24:52 CEST 2020
+Running vesta static timing analysis
+vesta --long alu.rtlnopwr.v /usr/local/share/qflow/tech/osu035/osu035_stdcells.lib
+----------------------------------------------
+Vesta static timing analysis tool
+for qflow 1.4.79
+(c) 2013-2018 Tim Edwards, Open Circuit Design
+----------------------------------------------
+
+Parsing library "osu035_stdcells"
+End of library at line 6636
+Lib read /usr/local/share/qflow/tech/osu035/osu035_stdcells.lib:  Processed 6637 lines.
+Parsing module "alu"
+Verilog netlist read:  Processed 4039 lines.
+Number of paths analyzed:  0
+
+Top 0 maximum delay paths:
+-----------------------------------------
+
+Number of paths analyzed:  0
+
+Top 0 minimum delay paths:
+Design meets minimum hold timing.
+-----------------------------------------
+
+Number of paths analyzed:  16
+
+Top 16 maximum delay paths:
+Path input pin b[1] to output pin alu_output[15] delay 2898.77 ps
+      0.0 ps            b[1]:          ->  _611_/A
+    269.5 ps            _80_:  _611_/Y ->  _719_/C
+    598.8 ps           _186_:  _719_/Y ->  _754_/C
+    955.7 ps           _219_:  _754_/Y ->  _815_/B
+   1128.3 ps           _276_:  _815_/Y ->  _822_/B
+   1448.3 ps           _283_:  _822_/Y ->  _916_/B
+   1816.0 ps           _373_:  _916_/Y ->  _951_/A
+   2065.4 ps           _406_:  _951_/Y ->  _961_/B
+   2246.0 ps           _415_:  _961_/Y ->  _962_/B
+   2341.9 ps           _416_:  _962_/Y ->  _963_/B
+   2480.7 ps           _417_:  _963_/Y ->  _966_/C
+   2598.3 ps           _419_:  _966_/Y ->  _975_/B
+   2755.9 ps       _483_[15]:  _975_/Y -> _1002_/A
+   2898.8 ps  alu_output[15]: _1002_/Y -> alu_output[15]
+
+Path input pin b[1] to output pin alu_output[14] delay 2700.82 ps
+      0.0 ps            b[1]:          ->  _611_/A
+    269.5 ps            _80_:  _611_/Y ->  _719_/C
+    598.8 ps           _186_:  _719_/Y ->  _754_/C
+    955.7 ps           _219_:  _754_/Y ->  _815_/B
+   1128.3 ps           _276_:  _815_/Y ->  _822_/B
+   1448.3 ps           _283_:  _822_/Y ->  _916_/B
+   1816.0 ps           _373_:  _916_/Y ->  _951_/A
+   2065.4 ps           _406_:  _951_/Y ->  _953_/B
+   2233.7 ps           _408_:  _953_/Y ->  _958_/B
+   2365.5 ps           _413_:  _958_/Y ->  _959_/A
+   2516.0 ps           _414_:  _959_/Y ->  _960_/A
+   2593.8 ps       _483_[14]:  _960_/Y -> _1001_/A
+   2700.8 ps  alu_output[14]: _1001_/Y -> alu_output[14]
+
+Path input pin b[1] to output pin alu_output[13] delay 2530.93 ps
+      0.0 ps            b[1]:          ->  _611_/A
+    269.5 ps            _80_:  _611_/Y ->  _719_/C
+    598.8 ps           _186_:  _719_/Y ->  _754_/C
+    955.7 ps           _219_:  _754_/Y ->  _815_/B
+   1128.3 ps           _276_:  _815_/Y ->  _822_/B
+   1448.3 ps           _283_:  _822_/Y ->  _916_/B
+   1816.0 ps           _373_:  _916_/Y ->  _927_/B
+   1972.5 ps           _383_:  _927_/Y ->  _929_/B
+   2077.4 ps           _385_:  _929_/Y ->  _931_/C
+   2181.5 ps           _387_:  _931_/Y ->  _942_/A
+   2375.4 ps       _483_[13]:  _942_/Y -> _1000_/A
+   2530.9 ps  alu_output[13]: _1000_/Y -> alu_output[13]
+
+Path input pin b[1] to output pin alu_output[12] delay 2396.05 ps
+      0.0 ps            b[1]:         -> _611_/A
+    269.5 ps            _80_: _611_/Y -> _719_/C
+    598.8 ps           _186_: _719_/Y -> _754_/C
+    955.7 ps           _219_: _754_/Y -> _815_/B
+   1128.3 ps           _276_: _815_/Y -> _822_/B
+   1448.3 ps           _283_: _822_/Y -> _916_/B
+   1816.0 ps           _373_: _916_/Y -> _917_/A
+   2027.5 ps           _374_: _917_/Y -> _922_/A
+   2176.5 ps           _379_: _922_/Y -> _923_/B
+   2272.6 ps       _483_[12]: _923_/Y -> _999_/A
+   2396.1 ps  alu_output[12]: _999_/Y -> alu_output[12]
+
+Path input pin b[1] to output pin alu_output[11] delay 2337.75 ps
+      0.0 ps            b[1]:         -> _611_/A
+    269.5 ps            _80_: _611_/Y -> _719_/C
+    598.8 ps           _186_: _719_/Y -> _754_/C
+    955.7 ps           _219_: _754_/Y -> _815_/B
+   1128.3 ps           _276_: _815_/Y -> _822_/B
+   1448.3 ps           _283_: _822_/Y -> _877_/B
+   1690.0 ps           _336_: _877_/Y -> _886_/B
+   1822.1 ps           _344_: _886_/Y -> _887_/C
+   1932.1 ps           _345_: _887_/Y -> _889_/B
+   2063.0 ps           _347_: _889_/Y -> _901_/C
+   2202.3 ps       _483_[11]: _901_/Y -> _998_/A
+   2337.8 ps  alu_output[11]: _998_/Y -> alu_output[11]
+
+Path input pin b[1] to output pin alu_output[10] delay 2288.09 ps
+      0.0 ps            b[1]:         -> _611_/A
+    269.5 ps            _80_: _611_/Y -> _719_/C
+    598.8 ps           _186_: _719_/Y -> _754_/C
+    955.7 ps           _219_: _754_/Y -> _815_/B
+   1128.3 ps           _276_: _815_/Y -> _822_/B
+   1448.3 ps           _283_: _822_/Y -> _877_/B
+   1690.0 ps           _336_: _877_/Y -> _878_/B
+   1848.4 ps           _337_: _878_/Y -> _881_/B
+   1979.9 ps           _340_: _881_/Y -> _882_/C
+   2093.3 ps           _341_: _882_/Y -> _883_/A
+   2167.3 ps       _483_[10]: _883_/Y -> _997_/A
+   2288.1 ps  alu_output[10]: _997_/Y -> alu_output[10]
+
+Path input pin b[1] to output pin alu_output[7] delay 2163.1 ps
+      0.0 ps           b[1]:         -> _611_/A
+    269.5 ps           _80_: _611_/Y -> _719_/C
+    598.8 ps          _186_: _719_/Y -> _754_/C
+    955.7 ps          _219_: _754_/Y -> _775_/A
+   1216.6 ps          _239_: _775_/Y -> _782_/B
+   1475.7 ps          _245_: _782_/Y -> _806_/C
+   1619.5 ps          _268_: _806_/Y -> _807_/B
+   1728.3 ps          _269_: _807_/Y -> _810_/B
+   1845.5 ps          _272_: _810_/Y -> _811_/C
+   1965.6 ps          _273_: _811_/Y -> _812_/A
+   2041.8 ps       _483_[7]: _812_/Y -> _994_/A
+   2163.1 ps  alu_output[7]: _994_/Y -> alu_output[7]
+
+Path input pin b[1] to output pin alu_output[9] delay 2095.64 ps
+      0.0 ps           b[1]:         -> _611_/A
+    269.5 ps           _80_: _611_/Y -> _719_/C
+    598.8 ps          _186_: _719_/Y -> _754_/C
+    955.7 ps          _219_: _754_/Y -> _815_/B
+   1128.3 ps          _276_: _815_/Y -> _822_/B
+   1448.3 ps          _283_: _822_/Y -> _856_/B
+   1648.5 ps          _316_: _856_/Y -> _859_/A
+   1782.0 ps          _319_: _859_/Y -> _860_/C
+   1912.0 ps          _320_: _860_/Y -> _861_/A
+   1988.8 ps       _483_[9]: _861_/Y -> _996_/A
+   2095.6 ps  alu_output[9]: _996_/Y -> alu_output[9]
+
+Path input pin b[6] to output pin alu_output[0] delay 2074.69 ps
+      0.0 ps           b[6]:         -> _591_/A
+    216.6 ps           _60_: _591_/Y -> _594_/A
+    610.5 ps           _63_: _594_/Y -> _604_/A
+   1027.3 ps           _73_: _604_/Y -> _619_/A
+   1263.3 ps           _88_: _619_/Y -> _691_/B
+   1432.4 ps          _160_: _691_/Y -> _692_/C
+   1530.1 ps          _161_: _692_/Y -> _693_/A
+   1608.4 ps          _162_: _693_/Y -> _694_/B
+   1754.6 ps          _163_: _694_/Y -> _695_/C
+   1869.5 ps          _164_: _695_/Y -> _696_/A
+   1951.8 ps       _483_[0]: _696_/Y -> _987_/A
+   2074.7 ps  alu_output[0]: _987_/Y -> alu_output[0]
+
+Path input pin b[1] to output pin alu_output[8] delay 2003.89 ps
+      0.0 ps           b[1]:         -> _611_/A
+    269.5 ps           _80_: _611_/Y -> _719_/C
+    598.8 ps          _186_: _719_/Y -> _754_/C
+    955.7 ps          _219_: _754_/Y -> _815_/B
+   1128.3 ps          _276_: _815_/Y -> _822_/B
+   1448.3 ps          _283_: _822_/Y -> _823_/A
+   1600.3 ps          _284_: _823_/Y -> _824_/C
+   1724.0 ps          _285_: _824_/Y -> _838_/C
+   1867.7 ps       _483_[8]: _838_/Y -> _995_/A
+   2003.9 ps  alu_output[8]: _995_/Y -> alu_output[8]
+
+Path input pin b[1] to output pin alu_output[6] delay 1983.96 ps
+      0.0 ps           b[1]:         -> _611_/A
+    269.5 ps           _80_: _611_/Y -> _719_/C
+    598.8 ps          _186_: _719_/Y -> _754_/C
+    955.7 ps          _219_: _754_/Y -> _775_/A
+   1216.6 ps          _239_: _775_/Y -> _782_/B
+   1475.7 ps          _245_: _782_/Y -> _785_/B
+   1663.0 ps          _248_: _785_/Y -> _798_/A
+   1858.6 ps       _483_[6]: _798_/Y -> _993_/A
+   1984.0 ps  alu_output[6]: _993_/Y -> alu_output[6]
+
+Path input pin op_code[2] to output pin alu_output[4] delay 1967.56 ps
+      0.0 ps     op_code[2]:         -> _624_/A
+    170.1 ps           _93_: _624_/Y -> _706_/B
+    327.9 ps          _174_: _706_/Y -> _710_/C
+   1079.2 ps          _178_: _710_/Y -> _759_/B
+   1423.1 ps          _224_: _759_/Y -> _760_/C
+   1536.6 ps          _225_: _760_/Y -> _761_/C
+   1650.7 ps          _226_: _761_/Y -> _762_/C
+   1770.2 ps          _227_: _762_/Y -> _763_/A
+   1846.3 ps       _483_[4]: _763_/Y -> _991_/A
+   1967.6 ps  alu_output[4]: _991_/Y -> alu_output[4]
+
+Path input pin op_code[2] to output pin alu_output[3] delay 1868.65 ps
+      0.0 ps     op_code[2]:         -> _624_/A
+    170.1 ps           _93_: _624_/Y -> _706_/B
+    327.9 ps          _174_: _706_/Y -> _710_/C
+   1079.2 ps          _178_: _710_/Y -> _740_/B
+   1307.3 ps          _206_: _740_/Y -> _741_/B
+   1428.2 ps          _207_: _741_/Y -> _742_/C
+   1551.1 ps          _208_: _742_/Y -> _743_/C
+   1671.2 ps          _209_: _743_/Y -> _744_/A
+   1747.3 ps       _483_[3]: _744_/Y -> _990_/A
+   1868.7 ps  alu_output[3]: _990_/Y -> alu_output[3]
+
+Path input pin op_code[2] to output pin alu_output[5] delay 1819.84 ps
+      0.0 ps     op_code[2]:         -> _624_/A
+    170.1 ps           _93_: _624_/Y -> _706_/B
+    327.9 ps          _174_: _706_/Y -> _710_/C
+   1079.2 ps          _178_: _710_/Y -> _770_/B
+   1423.1 ps          _234_: _770_/Y -> _778_/C
+   1536.6 ps          _242_: _778_/Y -> _779_/C
+   1677.1 ps       _483_[5]: _779_/Y -> _992_/A
+   1819.8 ps  alu_output[5]: _992_/Y -> alu_output[5]
+
+Path input pin op_code[2] to output pin alu_output[2] delay 1717.69 ps
+      0.0 ps     op_code[2]:         -> _624_/A
+    170.1 ps           _93_: _624_/Y -> _706_/B
+    327.9 ps          _174_: _706_/Y -> _710_/C
+   1079.2 ps          _178_: _710_/Y -> _725_/B
+   1311.8 ps          _192_: _725_/Y -> _726_/C
+   1427.1 ps          _193_: _726_/Y -> _727_/C
+   1581.0 ps       _483_[2]: _727_/Y -> _989_/A
+   1717.7 ps  alu_output[2]: _989_/Y -> alu_output[2]
+
+Path input pin op_code[2] to output pin alu_output[1] delay 1715.57 ps
+      0.0 ps     op_code[2]:         -> _624_/A
+    170.1 ps           _93_: _624_/Y -> _706_/B
+    327.9 ps          _174_: _706_/Y -> _710_/C
+   1079.2 ps          _178_: _710_/Y -> _711_/B
+   1311.8 ps          _179_: _711_/Y -> _712_/C
+   1427.1 ps          _180_: _712_/Y -> _713_/C
+   1579.3 ps       _483_[1]: _713_/Y -> _988_/A
+   1715.6 ps  alu_output[1]: _988_/Y -> alu_output[1]
+
+-----------------------------------------
+
+Number of paths analyzed:  16
+
+Top 16 minimum delay paths:
+Path input pin a[15] to output pin alu_output[15] delay 449.331 ps
+      0.0 ps           a[15]:          ->  _972_/B
+     80.1 ps           _425_:  _972_/Y ->  _973_/C
+    158.7 ps           _426_:  _973_/Y ->  _974_/C
+    244.7 ps           _427_:  _974_/Y ->  _975_/A
+    337.3 ps       _483_[15]:  _975_/Y -> _1002_/A
+    449.3 ps  alu_output[15]: _1002_/Y -> alu_output[15]
+
+Path input pin b[4] to output pin alu_output[5] delay 455.131 ps
+      0.0 ps           b[4]:         -> _768_/A
+    110.8 ps          _232_: _768_/Y -> _769_/B
+    198.9 ps          _233_: _769_/Y -> _779_/B
+    335.4 ps       _483_[5]: _779_/Y -> _992_/A
+    455.1 ps  alu_output[5]: _992_/Y -> alu_output[5]
+
+Path input pin b[6] to output pin alu_output[6] delay 497.942 ps
+      0.0 ps           b[6]:         -> _544_/A
+    168.9 ps           _13_: _544_/Y -> _797_/A
+    290.4 ps          _260_: _797_/Y -> _798_/B
+    384.7 ps       _483_[6]: _798_/Y -> _993_/A
+    497.9 ps  alu_output[6]: _993_/Y -> alu_output[6]
+
+Path input pin b[0] to output pin alu_output[1] delay 504.61 ps
+      0.0 ps           b[0]:         -> _651_/A
+    123.1 ps          _120_: _651_/Y -> _705_/B
+    205.1 ps          _173_: _705_/Y -> _713_/A
+    380.1 ps       _483_[1]: _713_/Y -> _988_/A
+    504.6 ps  alu_output[1]: _988_/Y -> alu_output[1]
+
+Path input pin b[12] to output pin alu_output[13] delay 539.134 ps
+      0.0 ps           b[12]:          ->  _935_/A
+    114.1 ps           _391_:  _935_/Y ->  _936_/A
+    218.1 ps           _392_:  _936_/Y ->  _939_/C
+    326.6 ps           _395_:  _939_/Y ->  _942_/C
+    424.5 ps       _483_[13]:  _942_/Y -> _1000_/A
+    539.1 ps  alu_output[13]: _1000_/Y -> alu_output[13]
+
+Path input pin a[10] to output pin alu_output[11] delay 566.41 ps
+      0.0 ps           a[10]:         -> _890_/A
+    156.1 ps           _348_: _890_/Y -> _896_/B
+    226.9 ps           _354_: _896_/Y -> _897_/B
+    361.9 ps           _355_: _897_/Y -> _901_/A
+    453.9 ps       _483_[11]: _901_/Y -> _998_/A
+    566.4 ps  alu_output[11]: _998_/Y -> alu_output[11]
+
+Path input pin a[2] to output pin alu_output[2] delay 579.773 ps
+      0.0 ps           a[2]:         -> _570_/B
+    153.4 ps           _39_: _570_/Y -> _725_/A
+    278.0 ps          _192_: _725_/Y -> _726_/C
+    373.3 ps          _193_: _726_/Y -> _727_/C
+    466.1 ps       _483_[2]: _727_/Y -> _989_/A
+    579.8 ps  alu_output[2]: _989_/Y -> alu_output[2]
+
+Path input pin op_code[1] to output pin alu_output[0] delay 581.289 ps
+      0.0 ps     op_code[1]:         -> _622_/B
+     88.5 ps           _91_: _622_/Y -> _626_/A
+    152.6 ps           _95_: _626_/Y -> _627_/A
+    260.2 ps           _96_: _627_/Y -> _695_/B
+    397.3 ps          _164_: _695_/Y -> _696_/A
+    474.4 ps       _483_[0]: _696_/Y -> _987_/A
+    581.3 ps  alu_output[0]: _987_/Y -> alu_output[0]
+
+Path input pin a[8] to output pin alu_output[8] delay 588.959 ps
+      0.0 ps           a[8]:         -> _488_/B
+    159.6 ps          _440_: _488_/Y -> _836_/A
+    286.0 ps          _297_: _836_/Y -> _837_/C
+    382.3 ps          _298_: _837_/Y -> _838_/B
+    476.1 ps       _483_[8]: _838_/Y -> _995_/A
+    589.0 ps  alu_output[8]: _995_/Y -> alu_output[8]
+
+Path input pin a[14] to output pin alu_output[14] delay 596.311 ps
+      0.0 ps           a[14]:          ->  _955_/B
+     80.1 ps           _410_:  _955_/Y ->  _956_/C
+    158.7 ps           _411_:  _956_/Y ->  _957_/C
+    237.3 ps           _412_:  _957_/Y ->  _958_/C
+    314.2 ps           _413_:  _958_/Y ->  _959_/A
+    431.5 ps           _414_:  _959_/Y ->  _960_/A
+    491.1 ps       _483_[14]:  _960_/Y -> _1001_/A
+    596.3 ps  alu_output[14]: _1001_/Y -> alu_output[14]
+
+Path input pin b[7] to output pin alu_output[7] delay 636.807 ps
+      0.0 ps           b[7]:         -> _546_/A
+    194.3 ps           _15_: _546_/Y -> _802_/A
+    328.1 ps          _264_: _802_/Y -> _811_/A
+    454.0 ps          _273_: _811_/Y -> _812_/A
+    530.0 ps       _483_[7]: _812_/Y -> _994_/A
+    636.8 ps  alu_output[7]: _994_/Y -> alu_output[7]
+
+Path input pin b[10] to output pin alu_output[10] delay 647.89 ps
+      0.0 ps           b[10]:         -> _492_/A
+    185.5 ps           _444_: _492_/Y -> _880_/A
+    301.8 ps           _339_: _880_/Y -> _881_/C
+    383.3 ps           _340_: _881_/Y -> _882_/C
+    485.7 ps           _341_: _882_/Y -> _883_/A
+    543.3 ps       _483_[10]: _883_/Y -> _997_/A
+    647.9 ps  alu_output[10]: _997_/Y -> alu_output[10]
+
+Path input pin a[9] to output pin alu_output[9] delay 684.916 ps
+      0.0 ps           a[9]:         -> _489_/A
+    208.2 ps          _441_: _489_/Y -> _858_/A
+    328.0 ps          _318_: _858_/Y -> _859_/C
+    410.1 ps          _319_: _859_/Y -> _860_/C
+    521.0 ps          _320_: _860_/Y -> _861_/A
+    579.9 ps       _483_[9]: _861_/Y -> _996_/A
+    684.9 ps  alu_output[9]: _996_/Y -> alu_output[9]
+
+Path input pin b[2] to output pin alu_output[3] delay 712.105 ps
+      0.0 ps           b[2]:         -> _730_/A
+    115.9 ps          _196_: _730_/Y -> _731_/C
+    261.0 ps          _197_: _731_/Y -> _733_/A
+    394.6 ps          _199_: _733_/Y -> _743_/B
+    529.6 ps          _209_: _743_/Y -> _744_/A
+    605.4 ps       _483_[3]: _744_/Y -> _990_/A
+    712.1 ps  alu_output[3]: _990_/Y -> alu_output[3]
+
+Path input pin a[12] to output pin alu_output[12] delay 712.564 ps
+      0.0 ps           a[12]:         -> _519_/B
+    160.0 ps           _471_: _519_/Y -> _919_/A
+    286.4 ps           _376_: _919_/Y -> _920_/C
+    366.4 ps           _377_: _920_/Y -> _921_/A
+    438.8 ps           _378_: _921_/Y -> _922_/C
+    553.0 ps           _379_: _922_/Y -> _923_/B
+    606.9 ps       _483_[12]: _923_/Y -> _999_/A
+    712.6 ps  alu_output[12]: _999_/Y -> alu_output[12]
+
+Path input pin b[3] to output pin alu_output[4] delay 721.24 ps
+      0.0 ps           b[3]:         -> _749_/A
+    200.8 ps          _214_: _749_/Y -> _750_/A
+    389.0 ps          _215_: _750_/Y -> _762_/A
+    550.8 ps          _227_: _762_/Y -> _763_/A
+    614.7 ps       _483_[4]: _763_/Y -> _991_/A
+    721.2 ps  alu_output[4]: _991_/Y -> alu_output[4]
+
+-----------------------------------------
+

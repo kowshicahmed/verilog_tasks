@@ -1,0 +1,450 @@
+[
+  {
+   "pins": [
+      [
+        "A",
+        "B",
+        "gnd",
+        "Y",
+        "vdd"
+      ], [
+        "A",
+        "B",
+        "gnd",
+        "Y",
+        "vdd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "B",
+        "C",
+        "gnd",
+        "Y",
+        "vdd"
+      ], [
+        "A",
+        "B",
+        "C",
+        "gnd",
+        "Y",
+        "vdd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "B",
+        "gnd",
+        "Y",
+        "vdd"
+      ], [
+        "A",
+        "B",
+        "gnd",
+        "Y",
+        "vdd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "B",
+        "C",
+        "gnd",
+        "Y",
+        "vdd"
+      ], [
+        "A",
+        "B",
+        "C",
+        "gnd",
+        "Y",
+        "vdd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "B",
+        "C",
+        "gnd",
+        "Y",
+        "vdd"
+      ], [
+        "A",
+        "B",
+        "C",
+        "gnd",
+        "Y",
+        "vdd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "B",
+        "C",
+        "gnd",
+        "Y",
+        "vdd"
+      ], [
+        "A",
+        "B",
+        "C",
+        "gnd",
+        "Y",
+        "vdd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "B",
+        "gnd",
+        "Y",
+        "vdd"
+      ], [
+        "A",
+        "B",
+        "gnd",
+        "Y",
+        "vdd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "gnd",
+        "Y",
+        "vdd"
+      ], [
+        "A",
+        "gnd",
+        "Y",
+        "vdd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "B",
+        "C",
+        "D",
+        "gnd",
+        "Y",
+        "vdd"
+      ], [
+        "A",
+        "B",
+        "C",
+        "D",
+        "gnd",
+        "Y",
+        "vdd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "B",
+        "C",
+        "D",
+        "gnd",
+        "Y",
+        "vdd"
+      ], [
+        "A",
+        "B",
+        "C",
+        "D",
+        "gnd",
+        "Y",
+        "vdd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "B",
+        "gnd",
+        "Y",
+        "vdd"
+      ], [
+        "A",
+        "B",
+        "gnd",
+        "Y",
+        "vdd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "gnd",
+        "Y",
+        "vdd"
+      ], [
+        "A",
+        "gnd",
+        "Y",
+        "vdd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "gnd",
+        "Y",
+        "vdd"
+      ], [
+        "A",
+        "gnd",
+        "Y",
+        "vdd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "gnd",
+        "Y",
+        "vdd"
+      ], [
+        "A",
+        "gnd",
+        "Y",
+        "vdd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "B",
+        "gnd",
+        "Y",
+        "vdd"
+      ], [
+        "A",
+        "B",
+        "gnd",
+        "Y",
+        "vdd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "B",
+        "gnd",
+        "Y",
+        "vdd"
+      ], [
+        "A",
+        "B",
+        "gnd",
+        "Y",
+        "vdd"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "alu",
+      "alu"
+   ],
+   "devices": [
+       [
+         ["NAND2X1", 78],
+         ["NAND3X1", 44],
+         ["OAI21X1", 83],
+         ["NOR2X1", 86],
+         ["OR2X2", 11],
+         ["AOI22X1", 8],
+         ["INVX1", 68],
+         ["BUFX2", 18],
+         ["AOI21X1", 62],
+         ["AND2X2", 22],
+         ["OAI22X1", 21],
+         ["NOR3X1", 7],
+         ["INVX2", 8],
+         ["XOR2X1", 1],
+         ["INVX4", 1],
+         ["XNOR2X1", 1 ]
+       ], [
+         ["NAND2X1", 78 ],
+         ["NAND3X1", 44 ],
+         ["OAI21X1", 83 ],
+         ["NOR2X1", 86 ],
+         ["OR2X2", 11 ],
+         ["AOI22X1", 8 ],
+         ["INVX1", 68 ],
+         ["BUFX2", 18 ],
+         ["AOI21X1", 62 ],
+         ["AND2X2", 22 ],
+         ["OAI22X1", 21 ],
+         ["NOR3X1", 7 ],
+         ["INVX2", 8 ],
+         ["XOR2X1", 1 ],
+         ["INVX4", 1 ],
+         ["XNOR2X1", 1 ]
+       ]
+   ],
+   "nets": [
+    557,
+    557
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "b[1]",
+        "alu_output[12]",
+        "alu_output[9]",
+        "alu_output[3]",
+        "alu_output[0]",
+        "alu_output[14]",
+        "alu_output[10]",
+        "alu_output[7]",
+        "alu_output[4]",
+        "carryout",
+        "zero_flag",
+        "alu_output[1]",
+        "alu_output[5]",
+        "alu_output[6]",
+        "alu_output[2]",
+        "alu_output[8]",
+        "alu_output[13]",
+        "alu_output[11]",
+        "alu_output[15]",
+        "a[7]",
+        "a[1]",
+        "a[3]",
+        "a[5]",
+        "b[13]",
+        "b[7]",
+        "b[3]",
+        "a[9]",
+        "a[4]",
+        "b[0]",
+        "op_code[2]",
+        "b[10]",
+        "b[11]",
+        "vdd",
+        "gnd",
+        "a[8]",
+        "b[8]",
+        "a[12]",
+        "a[14]",
+        "a[11]",
+        "op_code[3]",
+        "a[10]",
+        "a[0]",
+        "op_code[0]",
+        "b[9]",
+        "b[5]",
+        "a[13]",
+        "b[6]",
+        "a[6]",
+        "b[4]",
+        "b[14]",
+        "a[2]",
+        "b[2]",
+        "op_code[1]",
+        "a[15]",
+        "b[15]",
+        "b[12]"
+      ], [
+        "b[1]",
+        "alu_output[12]",
+        "alu_output[9]",
+        "alu_output[3]",
+        "alu_output[0]",
+        "alu_output[14]",
+        "alu_output[10]",
+        "alu_output[7]",
+        "alu_output[4]",
+        "carryout",
+        "zero_flag",
+        "alu_output[1]",
+        "alu_output[5]",
+        "alu_output[6]",
+        "alu_output[2]",
+        "alu_output[8]",
+        "alu_output[13]",
+        "alu_output[11]",
+        "alu_output[15]",
+        "a[7]",
+        "a[1]",
+        "a[3]",
+        "a[5]",
+        "b[13]",
+        "b[7]",
+        "b[3]",
+        "a[9]",
+        "a[4]",
+        "b[0]",
+        "op_code[2]",
+        "b[10]",
+        "b[11]",
+        "vdd",
+        "gnd",
+        "a[8]",
+        "b[8]",
+        "a[12]",
+        "a[14]",
+        "a[11]",
+        "op_code[3]",
+        "a[10]",
+        "a[0]",
+        "op_code[0]",
+        "b[9]",
+        "b[5]",
+        "a[13]",
+        "b[6]",
+        "a[6]",
+        "b[4]",
+        "b[14]",
+        "a[2]",
+        "b[2]",
+        "op_code[1]",
+        "a[15]",
+        "b[15]",
+        "b[12]"
+      ]
+   ]
+  }
+]

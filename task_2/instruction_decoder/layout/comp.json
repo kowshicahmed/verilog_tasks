@@ -1,0 +1,220 @@
+[
+  {
+   "pins": [
+      [
+        "A",
+        "B",
+        "gnd",
+        "Y",
+        "vdd"
+      ], [
+        "A",
+        "B",
+        "gnd",
+        "Y",
+        "vdd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "gnd",
+        "Y",
+        "vdd"
+      ], [
+        "A",
+        "gnd",
+        "Y",
+        "vdd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "gnd",
+        "Y",
+        "vdd"
+      ], [
+        "A",
+        "gnd",
+        "Y",
+        "vdd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "B",
+        "C",
+        "gnd",
+        "Y",
+        "vdd"
+      ], [
+        "A",
+        "B",
+        "C",
+        "gnd",
+        "Y",
+        "vdd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "Q",
+        "CLK",
+        "D",
+        "gnd",
+        "vdd"
+      ], [
+        "Q",
+        "CLK",
+        "D",
+        "gnd",
+        "vdd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "gnd",
+        "Y",
+        "vdd"
+      ], [
+        "A",
+        "gnd",
+        "Y",
+        "vdd"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "instruction_decoder",
+      "instruction_decoder"
+   ],
+   "devices": [
+       [
+         ["INVX1", 22],
+         ["BUFX2", 28],
+         ["NAND2X1", 16],
+         ["OAI21X1", 22],
+         ["DFFPOSX1", 22],
+         ["CLKBUF1", 4 ]
+       ], [
+         ["INVX1", 22 ],
+         ["BUFX2", 28 ],
+         ["NAND2X1", 16 ],
+         ["OAI21X1", 22 ],
+         ["DFFPOSX1", 22 ],
+         ["CLKBUF1", 4 ]
+       ]
+   ],
+   "nets": [
+    134,
+    134
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "clock",
+        "enable",
+        "instruct[8]",
+        "instruct[15]",
+        "instruct[10]",
+        "instruct[14]",
+        "instruct[0]",
+        "instruct[11]",
+        "instruct[13]",
+        "instruct[9]",
+        "instruct[1]",
+        "instruct[12]",
+        "opcode[2]",
+        "rAadrs[0]",
+        "imm[7]",
+        "rAadrs[2]",
+        "imm[4]",
+        "rBadrs[1]",
+        "rBadrs[2]",
+        "imm[3]",
+        "opcode[0]",
+        "rDadrs[0]",
+        "opcode[3]",
+        "rDadrs[1]",
+        "imm[0]",
+        "rDadrs[2]",
+        "imm[5]",
+        "rBadrs[0]",
+        "imm[6]",
+        "rAadrs[1]",
+        "imm[2]",
+        "opcode[1]",
+        "flag",
+        "imm[1]",
+        "instruct[6]",
+        "instruct[7]",
+        "instruct[5]",
+        "instruct[2]",
+        "instruct[3]",
+        "instruct[4]",
+        "vdd",
+        "gnd"
+      ], [
+        "clock",
+        "enable",
+        "instruct[8]",
+        "instruct[15]",
+        "instruct[10]",
+        "instruct[14]",
+        "instruct[0]",
+        "instruct[11]",
+        "instruct[13]",
+        "instruct[9]",
+        "instruct[1]",
+        "instruct[12]",
+        "opcode[2]",
+        "rAadrs[0]",
+        "imm[7]",
+        "rAadrs[2]",
+        "imm[4]",
+        "rBadrs[1]",
+        "rBadrs[2]",
+        "imm[3]",
+        "opcode[0]",
+        "rDadrs[0]",
+        "opcode[3]",
+        "rDadrs[1]",
+        "imm[0]",
+        "rDadrs[2]",
+        "imm[5]",
+        "rBadrs[0]",
+        "imm[6]",
+        "rAadrs[1]",
+        "imm[2]",
+        "opcode[1]",
+        "flag",
+        "imm[1]",
+        "instruct[6]",
+        "instruct[7]",
+        "instruct[5]",
+        "instruct[2]",
+        "instruct[3]",
+        "instruct[4]",
+        "vdd",
+        "gnd"
+      ]
+   ]
+  }
+]

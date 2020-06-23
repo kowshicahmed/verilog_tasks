@@ -1,0 +1,10 @@
+obstruction -6.4 203 310.4 208 metal1
+obstruction -6.4 -6 310.4 1 metal1
+obstruction -6.4 -6 0.8 208 metal1
+obstruction 304.8 -6 310.4 208 metal1
+obstruction 0.8 203 304.8 208 metal3
+obstruction 0.8 -6 304.8 1 metal3
+obstruction -6.4 1 0.8 203 metal2
+obstruction 304.8 1 310.4 203 metal2
+obstruction -6.4 1 0.8 203 metal4
+obstruction 304.8 1 310.4 203 metal4

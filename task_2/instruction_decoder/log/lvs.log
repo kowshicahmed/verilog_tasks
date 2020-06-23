@@ -1,0 +1,110 @@
+Qflow LVS logfile created on Mo 8. Jun 17:34:10 CEST 2020
+netgen -batch lvs "instruction_decoder.spice instruction_decoder" "/home/akash/Documents/DigitalLab/verilog_tasks/task_2/instruction_decoder/synthesis/instruction_decoder.spc instruction_decoder" /usr/local/share/qflow/tech/osu035/osu035_setup.tcl comp.out -json -blackbox
+Netgen 1.5.146 compiled on Mi 29. Apr 16:56:07 CEST 2020
+Warning: netgen command 'format' use fully-qualified name '::netgen::format'
+Warning: netgen command 'global' use fully-qualified name '::netgen::global'
+Generating JSON file result
+Treating empty subcircuits as black-box cells
+Reading netlist file instruction_decoder.spice
+Reading netlist file /home/akash/Documents/DigitalLab/verilog_tasks/task_2/instruction_decoder/synthesis/instruction_decoder.spc
+Reading setup file /usr/local/share/qflow/tech/osu035/osu035_setup.tcl
+No property w found for device r
+No property l found for device r
+Error /usr/local/share/qflow/tech/osu035/osu035_setup.tcl:5 (ignoring), No such cell or bad file number!
+Error /usr/local/share/qflow/tech/osu035/osu035_setup.tcl:6 (ignoring), No such cell or bad file number!
+Warning:  There were errors reading the setup file
+Comparison output logged to file comp.out
+Logging to file "comp.out" enabled
+Contents of circuit 1:  Circuit: 'NAND2X1'
+Circuit NAND2X1 contains 0 device instances.
+Circuit contains 0 nets, and 5 disconnected pins.
+Contents of circuit 2:  Circuit: 'NAND2X1'
+Circuit NAND2X1 contains 4 device instances.
+  Class: pfet                  instances:   2
+  Class: nfet                  instances:   2
+Circuit contains 6 nets.
+
+Circuit NAND2X1 contains no devices.
+Contents of circuit 1:  Circuit: 'BUFX2'
+Circuit BUFX2 contains 0 device instances.
+Circuit contains 0 nets, and 4 disconnected pins.
+Contents of circuit 2:  Circuit: 'BUFX2'
+Circuit BUFX2 contains 4 device instances.
+  Class: pfet                  instances:   2
+  Class: nfet                  instances:   2
+Circuit contains 5 nets.
+
+Circuit BUFX2 contains no devices.
+Contents of circuit 1:  Circuit: 'INVX1'
+Circuit INVX1 contains 0 device instances.
+Circuit contains 0 nets, and 4 disconnected pins.
+Contents of circuit 2:  Circuit: 'INVX1'
+Circuit INVX1 contains 2 device instances.
+  Class: pfet                  instances:   1
+  Class: nfet                  instances:   1
+Circuit contains 4 nets.
+
+Circuit INVX1 contains no devices.
+Contents of circuit 1:  Circuit: 'OAI21X1'
+Circuit OAI21X1 contains 0 device instances.
+Circuit contains 0 nets, and 6 disconnected pins.
+Contents of circuit 2:  Circuit: 'OAI21X1'
+Circuit OAI21X1 contains 6 device instances.
+  Class: pfet                  instances:   3
+  Class: nfet                  instances:   3
+Circuit contains 8 nets.
+
+Circuit OAI21X1 contains no devices.
+Contents of circuit 1:  Circuit: 'DFFPOSX1'
+Circuit DFFPOSX1 contains 0 device instances.
+Circuit contains 0 nets, and 5 disconnected pins.
+Contents of circuit 2:  Circuit: 'DFFPOSX1'
+Circuit DFFPOSX1 contains 22 device instances.
+  Class: pfet                  instances:  11
+  Class: nfet                  instances:  11
+Circuit contains 17 nets.
+
+Circuit DFFPOSX1 contains no devices.
+Contents of circuit 1:  Circuit: 'CLKBUF1'
+Circuit CLKBUF1 contains 0 device instances.
+Circuit contains 0 nets, and 4 disconnected pins.
+Contents of circuit 2:  Circuit: 'CLKBUF1'
+Circuit CLKBUF1 contains 16 device instances.
+  Class: pfet                  instances:   8
+  Class: nfet                  instances:   8
+Circuit contains 7 nets.
+
+Circuit CLKBUF1 contains no devices.
+Contents of circuit 1:  Circuit: 'instruction_decoder'
+Circuit instruction_decoder contains 114 device instances.
+  Class: DFFPOSX1              instances:  22
+  Class: NAND2X1               instances:  16
+  Class: OAI21X1               instances:  22
+  Class: BUFX2                 instances:  28
+  Class: CLKBUF1               instances:   4
+  Class: INVX1                 instances:  22
+Circuit contains 134 nets.
+Contents of circuit 2:  Circuit: 'instruction_decoder'
+Circuit instruction_decoder contains 114 device instances.
+  Class: DFFPOSX1              instances:  22
+  Class: NAND2X1               instances:  16
+  Class: OAI21X1               instances:  22
+  Class: BUFX2                 instances:  28
+  Class: CLKBUF1               instances:   4
+  Class: INVX1                 instances:  22
+Circuit contains 134 nets.
+
+Circuit 1 contains 114 devices, Circuit 2 contains 114 devices.
+Circuit 1 contains 134 nets,    Circuit 2 contains 134 nets.
+
+Circuits match with 38 symmetries.
+Netlists match uniquely.
+Circuits match correctly.
+Result: Circuits match uniquely.
+Logging to file "comp.out" disabled
+LVS Done.
+/usr/local/share/qflow/scripts/count_lvs.py
+LVS reports no net, device, pin, or property mismatches.
+
+Total errors = 0
+LVS checking script ended on Mo 8. Jun 17:34:10 CEST 2020

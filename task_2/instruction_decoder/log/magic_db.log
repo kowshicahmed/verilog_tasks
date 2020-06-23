@@ -1,0 +1,80 @@
+Qflow migration logfile created on Mo 8. Jun 17:34:07 CEST 2020
+magic -dnull -noconsole  migrate_instruction_decoder.tcl
+
+Magic 8.3 revision 5 - Compiled on Mi 29. Apr 16:54:54 CEST 2020.
+Starting magic under Tcl interpreter
+Using the terminal as the console.
+Using NULL graphics device.
+Processing system .magicrc file
+Input style lambda=0.20(p): scaleFactor=20, multiplier=1
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+4 Magic internal units = 1 Lambda
+Loading "migrate_instruction_decoder.tcl" from command line.
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )
+
+microns:    0.00 x 0.00    (  0.00,  0.00 ), (  0.00,  0.00 )
+lambda:     0.00 x 0.00    (  0.00,  0.00 ), (  0.00,  0.00 )
+internal:      0 x 0       (     0,  0    ), (     0,  0    )
+Reading LEF data from file /usr/local/share/qflow/tech/osu035/osu035_stdcells.lef.
+This action cannot be undone.
+LEF read, Line 16 (Message): Unknown keyword "OBS" in LEF file; ignoring.
+LEF read, Line 17 (Message): Unknown keyword "PIN" in LEF file; ignoring.
+LEF read, Line 207 (Message): Defines site corner (ignored)
+LEF read, Line 213 (Message): Defines site IO (ignored)
+LEF read, Line 219 (Message): Defines site core (ignored)
+Moving label "CLK" from metal1 to m2contact in cell DFFNEGX1.
+Moving label "CLK" from metal1 to m2contact in cell DFFNEGX1.
+Moving label "A" from metal1 to m2contact in cell XNOR2X1.
+LEF read: Processed 3179 lines.
+Reading DEF data from file instruction_decoder.def.
+This action cannot be undone.
+  Processed 3 vias total.
+  Processed 168 subcell instances total.
+  Processed 42 pins total.
+  Processed 132 nets total.
+DEF read, Line 1514 (Warning): Number of nets read (22) does not match the number declared (24).
+DEF read: Processed 1516 lines.
+DEF Read: encountered 1 warning total.
+Generating LEF output instruction_decoder.lef for cell instruction_decoder:
+Diagnostic:  Write LEF header for cell instruction_decoder
+Diagnostic:  Writing LEF output for cell instruction_decoder
+Diagnostic:  Scale value is 0.050000
+Extracting CLKBUF1 into CLKBUF1.ext:
+Completed 100%
+Extracting FILL into FILL.ext:
+Completed 100%
+Extracting OAI21X1 into OAI21X1.ext:
+Completed 100%
+Extracting INVX1 into INVX1.ext:
+Completed 100%
+Extracting NAND2X1 into NAND2X1.ext:
+Completed 100%
+Extracting DFFPOSX1 into DFFPOSX1.ext:
+Completed 100%
+Extracting BUFX2 into BUFX2.ext:
+Completed 100%
+Extracting instruction_decoder into instruction_decoder.ext:
+Completed 6%
+Completed 13%
+Completed 19%
+Completed 25%
+Completed 32%
+Completed 38%
+Completed 44%
+Completed 51%
+Completed 57%
+Completed 63%
+Completed 70%
+Completed 76%
+Completed 83%
+Completed 89%
+Completed 95%
+Completed 100%
+exttospice finished.
+Migration script ended on Mo 8. Jun 17:34:08 CEST 2020

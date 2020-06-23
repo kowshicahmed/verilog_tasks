@@ -1,0 +1,169 @@
+
+Cell NAND2X1 disconnected node: A
+Cell NAND2X1 disconnected node: B
+Cell NAND2X1 disconnected node: gnd
+Cell NAND2X1 disconnected node: Y
+Cell NAND2X1 disconnected node: vdd
+
+Subcircuit pins:
+Circuit 1: NAND2X1                         |Circuit 2: NAND2X1                         
+-------------------------------------------|-------------------------------------------
+A                                          |A                                          
+B                                          |B                                          
+gnd                                        |gnd                                        
+Y                                          |Y                                          
+vdd                                        |vdd                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes NAND2X1 and NAND2X1 are equivalent.
+
+Cell BUFX2 disconnected node: A
+Cell BUFX2 disconnected node: gnd
+Cell BUFX2 disconnected node: Y
+Cell BUFX2 disconnected node: vdd
+
+Subcircuit pins:
+Circuit 1: BUFX2                           |Circuit 2: BUFX2                           
+-------------------------------------------|-------------------------------------------
+A                                          |A                                          
+gnd                                        |gnd                                        
+Y                                          |Y                                          
+vdd                                        |vdd                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes BUFX2 and BUFX2 are equivalent.
+
+Cell INVX1 disconnected node: A
+Cell INVX1 disconnected node: gnd
+Cell INVX1 disconnected node: Y
+Cell INVX1 disconnected node: vdd
+
+Subcircuit pins:
+Circuit 1: INVX1                           |Circuit 2: INVX1                           
+-------------------------------------------|-------------------------------------------
+A                                          |A                                          
+gnd                                        |gnd                                        
+Y                                          |Y                                          
+vdd                                        |vdd                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes INVX1 and INVX1 are equivalent.
+
+Cell OAI21X1 disconnected node: A
+Cell OAI21X1 disconnected node: B
+Cell OAI21X1 disconnected node: C
+Cell OAI21X1 disconnected node: gnd
+Cell OAI21X1 disconnected node: Y
+Cell OAI21X1 disconnected node: vdd
+
+Subcircuit pins:
+Circuit 1: OAI21X1                         |Circuit 2: OAI21X1                         
+-------------------------------------------|-------------------------------------------
+A                                          |A                                          
+B                                          |B                                          
+C                                          |C                                          
+gnd                                        |gnd                                        
+Y                                          |Y                                          
+vdd                                        |vdd                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes OAI21X1 and OAI21X1 are equivalent.
+
+Cell DFFPOSX1 disconnected node: Q
+Cell DFFPOSX1 disconnected node: CLK
+Cell DFFPOSX1 disconnected node: D
+Cell DFFPOSX1 disconnected node: gnd
+Cell DFFPOSX1 disconnected node: vdd
+
+Subcircuit pins:
+Circuit 1: DFFPOSX1                        |Circuit 2: DFFPOSX1                        
+-------------------------------------------|-------------------------------------------
+Q                                          |Q                                          
+CLK                                        |CLK                                        
+D                                          |D                                          
+gnd                                        |gnd                                        
+vdd                                        |vdd                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes DFFPOSX1 and DFFPOSX1 are equivalent.
+
+Cell CLKBUF1 disconnected node: A
+Cell CLKBUF1 disconnected node: gnd
+Cell CLKBUF1 disconnected node: Y
+Cell CLKBUF1 disconnected node: vdd
+
+Subcircuit pins:
+Circuit 1: CLKBUF1                         |Circuit 2: CLKBUF1                         
+-------------------------------------------|-------------------------------------------
+A                                          |A                                          
+gnd                                        |gnd                                        
+Y                                          |Y                                          
+vdd                                        |vdd                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes CLKBUF1 and CLKBUF1 are equivalent.
+
+Subcircuit summary:
+Circuit 1: instruction_decoder             |Circuit 2: instruction_decoder             
+-------------------------------------------|-------------------------------------------
+INVX1 (22)                                 |INVX1 (22)                                 
+BUFX2 (28)                                 |BUFX2 (28)                                 
+NAND2X1 (16)                               |NAND2X1 (16)                               
+OAI21X1 (22)                               |OAI21X1 (22)                               
+DFFPOSX1 (22)                              |DFFPOSX1 (22)                              
+CLKBUF1 (4)                                |CLKBUF1 (4)                                
+Number of devices: 114                     |Number of devices: 114                     
+Number of nets: 134                        |Number of nets: 134                        
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+Circuits match correctly.
+
+Subcircuit pins:
+Circuit 1: instruction_decoder             |Circuit 2: instruction_decoder             
+-------------------------------------------|-------------------------------------------
+clock                                      |clock                                      
+enable                                     |enable                                     
+instruct[8]                                |instruct[8]                                
+instruct[15]                               |instruct[15]                               
+instruct[10]                               |instruct[10]                               
+instruct[14]                               |instruct[14]                               
+instruct[0]                                |instruct[0]                                
+instruct[11]                               |instruct[11]                               
+instruct[13]                               |instruct[13]                               
+instruct[9]                                |instruct[9]                                
+instruct[1]                                |instruct[1]                                
+instruct[12]                               |instruct[12]                               
+opcode[2]                                  |opcode[2]                                  
+rAadrs[0]                                  |rAadrs[0]                                  
+imm[7]                                     |imm[7]                                     
+rAadrs[2]                                  |rAadrs[2]                                  
+imm[4]                                     |imm[4]                                     
+rBadrs[1]                                  |rBadrs[1]                                  
+rBadrs[2]                                  |rBadrs[2]                                  
+imm[3]                                     |imm[3]                                     
+opcode[0]                                  |opcode[0]                                  
+rDadrs[0]                                  |rDadrs[0]                                  
+opcode[3]                                  |opcode[3]                                  
+rDadrs[1]                                  |rDadrs[1]                                  
+imm[0]                                     |imm[0]                                     
+rDadrs[2]                                  |rDadrs[2]                                  
+imm[5]                                     |imm[5]                                     
+rBadrs[0]                                  |rBadrs[0]                                  
+imm[6]                                     |imm[6]                                     
+rAadrs[1]                                  |rAadrs[1]                                  
+imm[2]                                     |imm[2]                                     
+opcode[1]                                  |opcode[1]                                  
+flag                                       |flag                                       
+imm[1]                                     |imm[1]                                     
+instruct[6]                                |instruct[6]                                
+instruct[7]                                |instruct[7]                                
+instruct[5]                                |instruct[5]                                
+instruct[2]                                |instruct[2]                                
+instruct[3]                                |instruct[3]                                
+instruct[4]                                |instruct[4]                                
+vdd                                        |vdd                                        
+gnd                                        |gnd                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes instruction_decoder and instruction_decoder are equivalent.
+Circuits match uniquely.

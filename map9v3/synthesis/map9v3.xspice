@@ -1,325 +1,315 @@
 * XSpice netlist created from SPICE and liberty sources by spi2xspice.py
 *SPICE netlist created from verilog structural netlist module map9v3 by vlog2Spice (qflow)
-** Start of included library /usr/local/share/qflow/tech/osu035/osu035_stdcells.sp
-** End of included library /usr/local/share/qflow/tech/osu035/osu035_stdcells.sp
+** Start of included library /usr/local/share/qflow/tech/osu018/osu018_stdcells.sp
+** End of included library /usr/local/share/qflow/tech/osu018/osu018_stdcells.sp
 .subckt map9v3 a_vdd a_gnd a_N_0_ a_N_1_ a_N_2_ a_N_3_ a_N_4_ a_N_5_ a_N_6_ a_N_7_ a_N_8_ a_clock a_counter_0_ a_counter_1_ a_counter_2_ a_counter_3_ a_counter_4_ a_counter_5_ a_counter_6_ a_counter_7_ a_done a_dp_0_ a_dp_1_ a_dp_2_ a_dp_3_ a_dp_4_ a_dp_5_ a_dp_6_ a_dp_7_ a_dp_8_ a_reset a_sr_0_ a_sr_1_ a_sr_2_ a_sr_3_ a_sr_4_ a_sr_5_ a_sr_6_ a_sr_7_ a_start
-ABUFX2_insert17 [_98_] _98__bF$buf0 d_lut_BUFX2
-ABUFX2_insert16 [_98_] _98__bF$buf1 d_lut_BUFX2
-ABUFX2_insert15 [_98_] _98__bF$buf2 d_lut_BUFX2
-ABUFX2_insert14 [_98_] _98__bF$buf3 d_lut_BUFX2
-ABUFX2_insert13 [_56_] _56__bF$buf0 d_lut_BUFX2
-ABUFX2_insert12 [_56_] _56__bF$buf1 d_lut_BUFX2
-ABUFX2_insert11 [_56_] _56__bF$buf2 d_lut_BUFX2
-ABUFX2_insert10 [_56_] _56__bF$buf3 d_lut_BUFX2
-ABUFX2_insert9 [_56_] _56__bF$buf4 d_lut_BUFX2
-ABUFX2_insert8 [_97_] _97__bF$buf0 d_lut_BUFX2
-ABUFX2_insert7 [_97_] _97__bF$buf1 d_lut_BUFX2
-ABUFX2_insert6 [_97_] _97__bF$buf2 d_lut_BUFX2
-ABUFX2_insert5 [_97_] _97__bF$buf3 d_lut_BUFX2
+ABUFX2_insert17 [_90_] _90__bF$buf0 d_lut_BUFX2
+ABUFX2_insert16 [_90_] _90__bF$buf1 d_lut_BUFX2
+ABUFX2_insert15 [_90_] _90__bF$buf2 d_lut_BUFX2
+ABUFX2_insert14 [_90_] _90__bF$buf3 d_lut_BUFX2
+ABUFX2_insert13 [_55_] _55__bF$buf0 d_lut_BUFX2
+ABUFX2_insert12 [_55_] _55__bF$buf1 d_lut_BUFX2
+ABUFX2_insert11 [_55_] _55__bF$buf2 d_lut_BUFX2
+ABUFX2_insert10 [_55_] _55__bF$buf3 d_lut_BUFX2
+ABUFX2_insert9 [_55_] _55__bF$buf4 d_lut_BUFX2
+ABUFX2_insert8 [_91_] _91__bF$buf0 d_lut_BUFX2
+ABUFX2_insert7 [_91_] _91__bF$buf1 d_lut_BUFX2
+ABUFX2_insert6 [_91_] _91__bF$buf2 d_lut_BUFX2
+ABUFX2_insert5 [_91_] _91__bF$buf3 d_lut_BUFX2
 ACLKBUF1_insert4 [clock] clock_bF$buf0 d_lut_CLKBUF1
 ACLKBUF1_insert3 [clock] clock_bF$buf1 d_lut_CLKBUF1
 ACLKBUF1_insert2 [clock] clock_bF$buf2 d_lut_CLKBUF1
 ACLKBUF1_insert1 [clock] clock_bF$buf3 d_lut_CLKBUF1
 ACLKBUF1_insert0 [clock] clock_bF$buf4 d_lut_CLKBUF1
-A_121_ [state_0_] _97_ d_lut_INVX4
-A_122_ [state_3_] _98_ d_lut_INVX8
-A_123_ [_117__3_ _117__2_] _99_ d_lut_NOR2X1
-A_124_ [_117__5_ _117__4_] _100_ d_lut_NOR2X1
-A_125_ [_99_ _100_] _101_ d_lut_NAND2X1
-A_126_ [_117__7_ _117__6_] _102_ d_lut_NOR2X1
-A_127_ [_117__1_ _117__0_] _103_ d_lut_NOR2X1
-A_128_ [_102_ _103_] _104_ d_lut_NAND2X1
-A_129_ [_104_ _101_] _105_ d_lut_NOR2X1
-A_130_ [_98__bF$buf3 _105_ _97__bF$buf3] _6_ d_lut_OAI21X1
-A_131_ [state_4_] _106_ d_lut_INVX1
-A_132_ [state_1_] _107_ d_lut_INVX1
-A_133_ [startbuf_0_] _108_ d_lut_INVX1
-A_134_ [startbuf_1_ _108_] _109_ d_lut_NOR2X1
-A_135_ [_107_ _109_ _106_] _7_ d_lut_OAI21X1
-A_136_ [_119__1_] _110_ d_lut_INVX1
-A_137_ [state_2_ _97__bF$buf2 _98__bF$buf2] _111_ d_lut_NAND3X1
-A_138_ [_120__0_ _111_] _112_ d_lut_NOR2X1
-A_139_ [_110_ _111_ _112_] _2__1_ d_lut_AOI21X1
-A_140_ [_119__2_] _113_ d_lut_INVX1
-A_141_ [_120__1_] _114_ d_lut_INVX1
-A_142_ [_113_ _114_ _111_] _2__2_ d_lut_MUX2X1
-A_143_ [_119__3_] _115_ d_lut_INVX1
-A_144_ [_120__2_] _116_ d_lut_INVX1
-A_145_ [_115_ _116_ _111_] _2__3_ d_lut_MUX2X1
-A_146_ [_119__4_] _8_ d_lut_INVX1
-A_147_ [_120__3_] _9_ d_lut_INVX1
-A_148_ [_8_ _9_ _111_] _2__4_ d_lut_MUX2X1
-A_149_ [_119__5_] _10_ d_lut_INVX1
-A_150_ [_120__4_] _11_ d_lut_INVX1
-A_151_ [_10_ _11_ _111_] _2__5_ d_lut_MUX2X1
-A_152_ [_119__6_] _12_ d_lut_INVX1
-A_153_ [_120__5_] _13_ d_lut_INVX1
-A_154_ [_12_ _13_ _111_] _2__6_ d_lut_MUX2X1
-A_155_ [_119__7_] _14_ d_lut_INVX1
-A_156_ [_120__6_] _15_ d_lut_INVX1
-A_157_ [_14_ _15_ _111_] _2__7_ d_lut_MUX2X1
-A_158_ [_119__8_] _16_ d_lut_INVX1
-A_159_ [_120__7_] _17_ d_lut_INVX1
-A_160_ [_16_ _17_ _111_] _2__8_ d_lut_MUX2X1
-A_161_ [_119__0_] _18_ d_lut_INVX1
-A_162_ [N_0_ _111_] _19_ d_lut_NOR2X1
-A_163_ [_18_ _111_ _19_] _2__0_ d_lut_AOI21X1
-A_164_ [_120__5_ _120__7_] _20_ d_lut_XNOR2X1
-A_165_ [_120__4_ _9_] _21_ d_lut_NOR2X1
-A_166_ [_120__3_ _11_] _22_ d_lut_NOR2X1
-A_167_ [_21_ _22_ _20_] _23_ d_lut_OAI21X1
-A_168_ [_120__7_ _13_] _24_ d_lut_NOR2X1
-A_169_ [_120__5_ _17_] _25_ d_lut_NOR2X1
-A_170_ [_120__3_ _120__4_] _26_ d_lut_XNOR2X1
-A_171_ [_24_ _25_ _26_] _27_ d_lut_OAI21X1
-A_172_ [_23_ _27_] _28_ d_lut_NAND2X1
-A_173_ [state_3_ _120__0_ _97__bF$buf1] _29_ d_lut_OAI21X1
-A_174_ [_28_ state_3_ _29_] _3__0_ d_lut_AOI21X1
-A_175_ [_120__1_ _98__bF$buf1 _97__bF$buf0] _30_ d_lut_OAI21X1
-A_176_ [_98__bF$buf0 _116_ _30_] _3__2_ d_lut_AOI21X1
-A_177_ [_120__2_ _98__bF$buf3 _97__bF$buf3] _31_ d_lut_OAI21X1
-A_178_ [_98__bF$buf2 _9_ _31_] _3__3_ d_lut_AOI21X1
-A_179_ [_120__3_ _98__bF$buf1 _97__bF$buf2] _32_ d_lut_OAI21X1
-A_180_ [_98__bF$buf0 _11_ _32_] _3__4_ d_lut_AOI21X1
-A_181_ [_120__4_ _98__bF$buf3 _97__bF$buf1] _33_ d_lut_OAI21X1
-A_182_ [_98__bF$buf2 _13_ _33_] _3__5_ d_lut_AOI21X1
-A_183_ [_120__5_ _98__bF$buf1 _97__bF$buf0] _34_ d_lut_OAI21X1
-A_184_ [_98__bF$buf0 _15_ _34_] _3__6_ d_lut_AOI21X1
-A_185_ [_120__6_ _98__bF$buf3 _97__bF$buf3] _35_ d_lut_OAI21X1
-A_186_ [_98__bF$buf2 _17_ _35_] _3__7_ d_lut_AOI21X1
-A_187_ [N_1_] _36_ d_lut_INVX1
-A_188_ [_117__0_ _98__bF$buf1] _37_ d_lut_NOR2X1
-A_189_ [_98__bF$buf0 _117__0_] _38_ d_lut_AND2X2
-A_190_ [_37_ _38_ _97__bF$buf2] _39_ d_lut_OAI21X1
-A_191_ [_97__bF$buf1 _36_ _39_] _0__0_ d_lut_OAI21X1
-A_192_ [N_1_ N_2_] _40_ d_lut_NOR2X1
-A_193_ [N_1_ N_2_] _41_ d_lut_NAND2X1
-A_194_ [_41_] _42_ d_lut_INVX1
-A_195_ [_40_ _42_ state_0_] _43_ d_lut_OAI21X1
-A_196_ [_103_ state_3_] _44_ d_lut_AND2X2
-A_197_ [_117__1_] _45_ d_lut_INVX1
-A_198_ [_45_ _37_] _46_ d_lut_NOR2X1
-A_199_ [_44_ _46_ _97__bF$buf0] _47_ d_lut_OAI21X1
-A_200_ [_43_ _47_] _0__1_ d_lut_NAND2X1
-A_201_ [state_3_ _103_] _48_ d_lut_NAND2X1
-A_202_ [_48_ _117__2_] _49_ d_lut_XOR2X1
-A_203_ [N_3_] _50_ d_lut_INVX1
-A_204_ [_50_ _41_] _51_ d_lut_NAND2X1
-A_205_ [N_3_ _42_] _52_ d_lut_NAND2X1
-A_206_ [state_0_ _51_ _52_] _53_ d_lut_NAND3X1
-A_207_ [state_0_ _49_ _53_] _0__2_ d_lut_OAI21X1
-A_208_ [N_3_ _42_ N_4_] _54_ d_lut_OAI21X1
-A_209_ [N_4_] _55_ d_lut_INVX1
-A_210_ [_50_ _55_ _41_] _57_ d_lut_NAND3X1
-A_211_ [_57_ _54_] _58_ d_lut_NAND2X1
-A_212_ [_117__3_ _117__2_] _59_ d_lut_OR2X2
-A_213_ [_117__2_ _48_ _117__3_] _60_ d_lut_OAI21X1
-A_214_ [_59_ _48_ _60_] _61_ d_lut_OAI21X1
-A_215_ [_97__bF$buf3 _61_] _62_ d_lut_NAND2X1
-A_216_ [_97__bF$buf2 _58_ _62_] _0__3_ d_lut_OAI21X1
-A_217_ [N_5_] _63_ d_lut_INVX1
-A_218_ [N_3_ N_4_] _64_ d_lut_NOR2X1
-A_219_ [_64_ _41_ _63_] _65_ d_lut_AOI21X1
-A_220_ [N_5_ _57_ state_0_] _66_ d_lut_OAI21X1
-A_221_ [_117__4_ _59_] _67_ d_lut_NOR2X1
-A_222_ [_99_ _44_] _68_ d_lut_NAND2X1
-A_223_ [_67_ _44_ _117__4_ _68_] _69_ d_lut_AOI22X1
-A_224_ [_65_ _66_ state_0_ _69_] _0__4_ d_lut_OAI22X1
-A_225_ [N_5_ _57_ N_6_] _70_ d_lut_OAI21X1
-A_226_ [N_5_ N_6_] _71_ d_lut_OR2X2
-A_227_ [_57_ _71_ _70_] _72_ d_lut_OAI21X1
-A_228_ [_48_ _101_] _73_ d_lut_NOR2X1
-A_229_ [_117__5_] _74_ d_lut_INVX1
-A_230_ [_67_ _44_ _74_] _75_ d_lut_AOI21X1
-A_231_ [_73_ _75_ _97__bF$buf1] _76_ d_lut_OAI21X1
-A_232_ [_97__bF$buf0 _72_ _76_] _0__5_ d_lut_OAI21X1
-A_233_ [N_7_] _77_ d_lut_INVX1
-A_234_ [_71_ _57_] _78_ d_lut_NOR2X1
-A_235_ [_77_ _78_] _79_ d_lut_NOR2X1
-A_236_ [N_5_ N_6_] _80_ d_lut_NOR2X1
-A_237_ [_41_ _64_ _80_] _81_ d_lut_NAND3X1
-A_238_ [N_7_ _81_ state_0_] _82_ d_lut_OAI21X1
-A_239_ [_117__6_] _83_ d_lut_INVX1
-A_240_ [_99_ _100_] _84_ d_lut_AND2X2
-A_241_ [_83_ _44_ _84_] _85_ d_lut_NAND3X1
-A_242_ [_48_ _101_ _117__6_] _86_ d_lut_OAI21X1
-A_243_ [_85_ _86_] _87_ d_lut_AND2X2
-A_244_ [_79_ _82_ state_0_ _87_] _0__6_ d_lut_OAI22X1
-A_245_ [N_7_ _81_ N_8_] _88_ d_lut_OAI21X1
-A_246_ [N_8_] _89_ d_lut_INVX1
-A_247_ [_77_ _89_ _78_] _90_ d_lut_NAND3X1
-A_248_ [state_0_ _88_ _90_] _91_ d_lut_NAND3X1
-A_249_ [state_3_ _105_ _117__7_ _85_] _92_ d_lut_AOI22X1
-A_250_ [state_0_ _92_ _91_] _0__7_ d_lut_OAI21X1
-A_251_ [_118_] _93_ d_lut_INVX1
-A_252_ [state_2_] _94_ d_lut_INVX1
-A_253_ [state_4_ _98__bF$buf3 _94_] _95_ d_lut_NAND3X1
-A_254_ [_95_ _93_ state_0_] _1_ d_lut_AOI21X1
-A_255_ [_120__0_ _98__bF$buf2 _97__bF$buf3] _96_ d_lut_OAI21X1
-A_256_ [_98__bF$buf1 _114_ _96_] _3__1_ d_lut_AOI21X1
-A_257_ [_109_ state_1_] _4_ d_lut_AND2X2
-A_258_ [_73_ _102_] _5_ d_lut_AND2X2
-A_259_ [reset] _56_ d_lut_INVX8
-A_260_ [_117__0_] counter_0_ d_lut_BUFX2
-A_261_ [_117__1_] counter_1_ d_lut_BUFX2
-A_262_ [_117__2_] counter_2_ d_lut_BUFX2
-A_263_ [_117__3_] counter_3_ d_lut_BUFX2
-A_264_ [_117__4_] counter_4_ d_lut_BUFX2
-A_265_ [_117__5_] counter_5_ d_lut_BUFX2
-A_266_ [_117__6_] counter_6_ d_lut_BUFX2
-A_267_ [_117__7_] counter_7_ d_lut_BUFX2
-A_268_ [_118_] done d_lut_BUFX2
-A_269_ [_119__0_] dp_0_ d_lut_BUFX2
-A_270_ [_119__1_] dp_1_ d_lut_BUFX2
-A_271_ [_119__2_] dp_2_ d_lut_BUFX2
-A_272_ [_119__3_] dp_3_ d_lut_BUFX2
-A_273_ [_119__4_] dp_4_ d_lut_BUFX2
-A_274_ [_119__5_] dp_5_ d_lut_BUFX2
-A_275_ [_119__6_] dp_6_ d_lut_BUFX2
-A_276_ [_119__7_] dp_7_ d_lut_BUFX2
-A_277_ [_119__8_] dp_8_ d_lut_BUFX2
-A_278_ [_120__0_] sr_0_ d_lut_BUFX2
-A_279_ [_120__1_] sr_1_ d_lut_BUFX2
-A_280_ [_120__2_] sr_2_ d_lut_BUFX2
-A_281_ [_120__3_] sr_3_ d_lut_BUFX2
-A_282_ [_120__4_] sr_4_ d_lut_BUFX2
-A_283_ [_120__5_] sr_5_ d_lut_BUFX2
-A_284_ [_120__6_] sr_6_ d_lut_BUFX2
-A_285_ [_120__7_] sr_7_ d_lut_BUFX2
-A_286_ _4_ clock_bF$buf4 ~_56__bF$buf4 ~vdd state_0_ NULL ddflop
-A_287_ _7_ clock_bF$buf3 ~vdd ~_56__bF$buf3 state_1_ NULL ddflop
-A_288_ _5_ clock_bF$buf2 ~vdd ~_56__bF$buf2 state_2_ NULL ddflop
-A_289_ _6_ clock_bF$buf1 ~vdd ~_56__bF$buf1 state_3_ NULL ddflop
-A_290_ state_2_ clock_bF$buf0 ~vdd ~_56__bF$buf0 state_4_ NULL ddflop
-A_291_ _2__0_ clock_bF$buf4 ~vdd ~_56__bF$buf4 _119__0_ NULL ddflop
-A_292_ _2__1_ clock_bF$buf3 ~vdd ~_56__bF$buf3 _119__1_ NULL ddflop
-A_293_ _2__2_ clock_bF$buf2 ~vdd ~_56__bF$buf2 _119__2_ NULL ddflop
-A_294_ _2__3_ clock_bF$buf1 ~vdd ~_56__bF$buf1 _119__3_ NULL ddflop
-A_295_ _2__4_ clock_bF$buf0 ~vdd ~_56__bF$buf0 _119__4_ NULL ddflop
-A_296_ _2__5_ clock_bF$buf4 ~vdd ~_56__bF$buf4 _119__5_ NULL ddflop
-A_297_ _2__6_ clock_bF$buf3 ~vdd ~_56__bF$buf3 _119__6_ NULL ddflop
-A_298_ _2__7_ clock_bF$buf2 ~vdd ~_56__bF$buf2 _119__7_ NULL ddflop
-A_299_ _2__8_ clock_bF$buf1 ~vdd ~_56__bF$buf1 _119__8_ NULL ddflop
-A_300_ _1_ clock_bF$buf0 ~vdd ~_56__bF$buf0 _118_ NULL ddflop
-A_301_ _0__0_ clock_bF$buf4 ~vdd ~_56__bF$buf4 _117__0_ NULL ddflop
-A_302_ _0__1_ clock_bF$buf3 ~vdd ~_56__bF$buf3 _117__1_ NULL ddflop
-A_303_ _0__2_ clock_bF$buf2 ~vdd ~_56__bF$buf2 _117__2_ NULL ddflop
-A_304_ _0__3_ clock_bF$buf1 ~vdd ~_56__bF$buf1 _117__3_ NULL ddflop
-A_305_ _0__4_ clock_bF$buf0 ~vdd ~_56__bF$buf0 _117__4_ NULL ddflop
-A_306_ _0__5_ clock_bF$buf4 ~vdd ~_56__bF$buf4 _117__5_ NULL ddflop
-A_307_ _0__6_ clock_bF$buf3 ~vdd ~_56__bF$buf3 _117__6_ NULL ddflop
-A_308_ _0__7_ clock_bF$buf2 ~vdd ~_56__bF$buf2 _117__7_ NULL ddflop
-A_309_ _3__0_ clock_bF$buf1 ~vdd ~_56__bF$buf1 _120__0_ NULL ddflop
-A_310_ _3__1_ clock_bF$buf0 ~vdd ~_56__bF$buf0 _120__1_ NULL ddflop
-A_311_ _3__2_ clock_bF$buf4 ~vdd ~_56__bF$buf4 _120__2_ NULL ddflop
-A_312_ _3__3_ clock_bF$buf3 ~vdd ~_56__bF$buf3 _120__3_ NULL ddflop
-A_313_ _3__4_ clock_bF$buf2 ~vdd ~_56__bF$buf2 _120__4_ NULL ddflop
-A_314_ _3__5_ clock_bF$buf1 ~vdd ~_56__bF$buf1 _120__5_ NULL ddflop
-A_315_ _3__6_ clock_bF$buf0 ~vdd ~_56__bF$buf0 _120__6_ NULL ddflop
-A_316_ _3__7_ clock_bF$buf4 ~vdd ~_56__bF$buf4 _120__7_ NULL ddflop
-A_317_ start clock_bF$buf3 ~vdd ~_56__bF$buf3 startbuf_0_ NULL ddflop
-A_318_ startbuf_0_ clock_bF$buf2 ~vdd ~_56__bF$buf2 startbuf_1_ NULL ddflop
+A_114_ [state_0_] _90_ d_lut_INVX8
+A_115_ [state_3_] _91_ d_lut_INVX8
+A_116_ [_110__3_ _110__2_] _92_ d_lut_NOR2X1
+A_117_ [_110__5_ _110__4_] _93_ d_lut_NOR2X1
+A_118_ [_92_ _93_] _94_ d_lut_NAND2X1
+A_119_ [_110__7_ _110__6_] _95_ d_lut_NOR2X1
+A_120_ [_110__1_ _110__0_] _96_ d_lut_NOR2X1
+A_121_ [_95_ _96_] _97_ d_lut_NAND2X1
+A_122_ [_97_ _94_] _98_ d_lut_NOR2X1
+A_123_ [_98_ _91__bF$buf3 _90__bF$buf3] _6_ d_lut_OAI21X1
+A_124_ [state_4_] _99_ d_lut_INVX1
+A_125_ [state_1_] _100_ d_lut_INVX1
+A_126_ [startbuf_0_] _101_ d_lut_INVX1
+A_127_ [startbuf_1_ _101_] _102_ d_lut_NOR2X1
+A_128_ [_102_ _100_ _99_] _7_ d_lut_OAI21X1
+A_129_ [_112__1_] _103_ d_lut_INVX1
+A_130_ [state_2_ _90__bF$buf2 _91__bF$buf2] _104_ d_lut_NAND3X1
+A_131_ [_113__0_ _104_] _105_ d_lut_NOR2X1
+A_132_ [_103_ _104_ _105_] _2__1_ d_lut_AOI21X1
+A_133_ [_112__2_] _106_ d_lut_INVX1
+A_134_ [_113__1_] _107_ d_lut_INVX1
+A_135_ [_106_ _107_ _104_] _2__2_ d_lut_MUX2X1
+A_136_ [_112__3_] _108_ d_lut_INVX1
+A_137_ [_113__2_] _109_ d_lut_INVX1
+A_138_ [_108_ _109_ _104_] _2__3_ d_lut_MUX2X1
+A_139_ [_112__4_] _8_ d_lut_INVX1
+A_140_ [_113__3_] _9_ d_lut_INVX1
+A_141_ [_8_ _9_ _104_] _2__4_ d_lut_MUX2X1
+A_142_ [_112__5_] _10_ d_lut_INVX1
+A_143_ [_113__4_] _11_ d_lut_INVX1
+A_144_ [_10_ _11_ _104_] _2__5_ d_lut_MUX2X1
+A_145_ [_112__6_] _12_ d_lut_INVX1
+A_146_ [_113__5_] _13_ d_lut_INVX1
+A_147_ [_12_ _13_ _104_] _2__6_ d_lut_MUX2X1
+A_148_ [_112__7_] _14_ d_lut_INVX1
+A_149_ [_113__6_] _15_ d_lut_INVX1
+A_150_ [_14_ _15_ _104_] _2__7_ d_lut_MUX2X1
+A_151_ [_112__8_] _16_ d_lut_INVX1
+A_152_ [_113__7_] _17_ d_lut_INVX1
+A_153_ [_16_ _17_ _104_] _2__8_ d_lut_MUX2X1
+A_154_ [_112__0_] _18_ d_lut_INVX1
+A_155_ [N_0_ _104_] _19_ d_lut_NOR2X1
+A_156_ [_18_ _104_ _19_] _2__-9_ d_lut_AOI21X1
+A_157_ [_113__5_ _113__7_] _20_ d_lut_XOR2X1
+A_158_ [_113__3_ _113__4_] _21_ d_lut_XNOR2X1
+A_159_ [_20_ _21_] _22_ d_lut_XNOR2X1
+A_160_ [state_3_ _113__0_ _90__bF$buf1] _23_ d_lut_OAI21X1
+A_161_ [state_-6_ _22_ _23_] _3__0_ d_lut_AOI21X1
+A_162_ [_91__bF$buf1 _113__1_ _90__bF$buf0] _24_ d_lut_OAI21X1
+A_163_ [_91__bF$buf0 _109_ _24_] _3__-7_ d_lut_AOI21X1
+A_164_ [_91__bF$buf3 _113__2_ _90__bF$buf3] _25_ d_lut_OAI21X1
+A_165_ [_91__bF$buf2 _9_ _25_] _3__3_ d_lut_AOI21X1
+A_166_ [_91__bF$buf1 _113__3_ _90__bF$buf2] _26_ d_lut_OAI21X1
+A_167_ [_91__bF$buf0 _11_ _26_] _3__-5_ d_lut_AOI21X1
+A_168_ [_91__bF$buf3 _113__4_ _90__bF$buf1] _27_ d_lut_OAI21X1
+A_169_ [_91__bF$buf2 _13_ _27_] _3__5_ d_lut_AOI21X1
+A_170_ [_91__bF$buf1 _113__5_ _90__bF$buf0] _28_ d_lut_OAI21X1
+A_171_ [_91__bF$buf0 _15_ _28_] _3__-3_ d_lut_AOI21X1
+A_172_ [_91__bF$buf3 _113__6_ _90__bF$buf3] _29_ d_lut_OAI21X1
+A_173_ [_91__bF$buf2 _17_ _29_] _3__7_ d_lut_AOI21X1
+A_174_ [N_1_] _30_ d_lut_INVX1
+A_175_ [_110__0_ _91__bF$buf1] _31_ d_lut_NOR2X1
+A_176_ [_91__bF$buf0 _110__0_] _32_ d_lut_AND2X2
+A_177_ [_32_ _31_ _90__bF$buf2] _33_ d_lut_OAI21X1
+A_178_ [_90__bF$buf1 _30_ _33_] _0__0_ d_lut_OAI21X1
+A_179_ [N_1_ N_2_] _34_ d_lut_NOR2X1
+A_180_ [N_-8_ N_-7_] _35_ d_lut_AND2X2
+A_181_ [_35_ _34_ state_0_] _36_ d_lut_OAI21X1
+A_182_ [_96_ state_3_] _37_ d_lut_AND2X2
+A_183_ [_110__1_] _38_ d_lut_INVX1
+A_184_ [_38_ _31_] _39_ d_lut_NOR2X1
+A_185_ [_39_ _37_ _90__bF$buf0] _40_ d_lut_OAI21X1
+A_186_ [_36_ _40_] _0__1_ d_lut_NAND2X1
+A_187_ [state_3_ _96_] _41_ d_lut_NAND2X1
+A_188_ [_41_ _110__2_] _42_ d_lut_XOR2X1
+A_189_ [_35_ N_3_] _43_ d_lut_OR2X2
+A_190_ [N_3_ _35_] _44_ d_lut_NAND2X1
+A_191_ [state_0_ _43_ _44_] _45_ d_lut_NAND3X1
+A_192_ [_42_ state_0_ _45_] _0__2_ d_lut_OAI21X1
+A_193_ [_35_ N_3_ N_4_] _46_ d_lut_OAI21X1
+A_194_ [N_3_ N_4_] _47_ d_lut_OR2X2
+A_195_ [_35_ _47_ _46_] _48_ d_lut_OAI21X1
+A_196_ [_92_ _37_] _49_ d_lut_NAND2X1
+A_197_ [_41_ _110__2_ _110__3_] _50_ d_lut_OAI21X1
+A_198_ [_49_ _50_] _51_ d_lut_AND2X2
+A_199_ [_51_ _48_ _90__bF$buf3] _0__3_ d_lut_MUX2X1
+A_200_ [_47_ _35_ N_5_] _52_ d_lut_OAI21X1
+A_201_ [N_5_] _53_ d_lut_INVX1
+A_202_ [N_1_ N_2_] _54_ d_lut_NAND2X1
+A_203_ [N_3_ N_4_] _56_ d_lut_NOR2X1
+A_204_ [_53_ _54_ _56_] _57_ d_lut_NAND3X1
+A_205_ [state_0_ _57_ _52_] _58_ d_lut_NAND3X1
+A_206_ [_110__4_] _59_ d_lut_INVX1
+A_207_ [_92_ _59_] _60_ d_lut_AND2X2
+A_208_ [_60_ _37_ _49_ _110__4_] _61_ d_lut_AOI22X1
+A_209_ [_61_ state_0_ _58_] _0__4_ d_lut_OAI21X1
+A_210_ [N_6_ _57_] _62_ d_lut_NAND2X1
+A_211_ [N_5_ N_6_] _63_ d_lut_NOR2X1
+A_212_ [_54_ _56_ _63_] _64_ d_lut_NAND3X1
+A_213_ [_64_ _62_] _65_ d_lut_NAND2X1
+A_214_ [_41_ _94_] _66_ d_lut_NOR2X1
+A_215_ [_110__5_] _67_ d_lut_INVX1
+A_216_ [_60_ _37_ _67_] _68_ d_lut_AOI21X1
+A_217_ [_68_ _66_ _90__bF$buf2] _69_ d_lut_OAI21X1
+A_218_ [_90__bF$buf1 _65_ _69_] _0__5_ d_lut_OAI21X1
+A_219_ [N_7_] _70_ d_lut_INVX1
+A_220_ [N_5_ N_6_] _71_ d_lut_OR2X2
+A_221_ [_47_ _35_ _71_] _72_ d_lut_NOR3X1
+A_222_ [_70_ _72_] _73_ d_lut_NOR2X1
+A_223_ [_64_ N_7_ state_0_] _74_ d_lut_OAI21X1
+A_224_ [_41_ _110__6_ _94_] _75_ d_lut_NOR3X1
+A_225_ [_110__6_] _76_ d_lut_INVX1
+A_226_ [_92_ _93_] _77_ d_lut_AND2X2
+A_227_ [_37_ _77_ _76_] _78_ d_lut_AOI21X1
+A_228_ [_78_ _75_ _90__bF$buf0] _79_ d_lut_OAI21X1
+A_229_ [_73_ _74_ _79_] _0__6_ d_lut_OAI21X1
+A_230_ [_64_ N_7_ N_8_] _80_ d_lut_OAI21X1
+A_231_ [N_8_] _81_ d_lut_INVX1
+A_232_ [_70_ _81_ _72_] _82_ d_lut_NAND3X1
+A_233_ [state_0_ _80_ _82_] _83_ d_lut_NAND3X1
+A_234_ [_76_ _37_ _77_] _84_ d_lut_NAND3X1
+A_235_ [state_-6_ _98_ _84_ _110__-2_] _85_ d_lut_AOI22X1
+A_236_ [state_0_ _85_ _83_] _0__7_ d_lut_OAI21X1
+A_237_ [_111_] _86_ d_lut_INVX1
+A_238_ [state_2_] _87_ d_lut_INVX1
+A_239_ [state_4_ _91__bF$buf3 _87_] _88_ d_lut_NAND3X1
+A_240_ [_86_ _88_ state_-9_] _1_ d_lut_AOI21X1
+A_241_ [_91__bF$buf2 _113__0_ _90__bF$buf3] _89_ d_lut_OAI21X1
+A_242_ [_91__bF$buf1 _107_ _89_] _3__-8_ d_lut_AOI21X1
+A_243_ [_102_ state_-8_] _4_ d_lut_AND2X2
+A_244_ [_66_ _95_] _5_ d_lut_AND2X2
+A_245_ [reset] _55_ d_lut_INVX8
+A_246_ [_110__-9_] counter_-9_ d_lut_BUFX2
+A_247_ [_110__1_] counter_1_ d_lut_BUFX2
+A_248_ [_110__-7_] counter_-7_ d_lut_BUFX2
+A_249_ [_110__3_] counter_3_ d_lut_BUFX2
+A_250_ [_110__-5_] counter_-5_ d_lut_BUFX2
+A_251_ [_110__5_] counter_5_ d_lut_BUFX2
+A_252_ [_110__-3_] counter_-3_ d_lut_BUFX2
+A_253_ [_110__7_] counter_7_ d_lut_BUFX2
+A_254_ [_111_] done d_lut_BUFX2
+A_255_ [_112__-9_] dp_-9_ d_lut_BUFX2
+A_256_ [_112__1_] dp_1_ d_lut_BUFX2
+A_257_ [_112__-7_] dp_-7_ d_lut_BUFX2
+A_258_ [_112__3_] dp_3_ d_lut_BUFX2
+A_259_ [_112__-5_] dp_-5_ d_lut_BUFX2
+A_260_ [_112__5_] dp_5_ d_lut_BUFX2
+A_261_ [_112__-3_] dp_-3_ d_lut_BUFX2
+A_262_ [_112__7_] dp_7_ d_lut_BUFX2
+A_263_ [_112__-1_] dp_-1_ d_lut_BUFX2
+A_264_ [_113__0_] sr_0_ d_lut_BUFX2
+A_265_ [_113__-8_] sr_-8_ d_lut_BUFX2
+A_266_ [_113__2_] sr_2_ d_lut_BUFX2
+A_267_ [_113__-6_] sr_-6_ d_lut_BUFX2
+A_268_ [_113__4_] sr_4_ d_lut_BUFX2
+A_269_ [_113__-4_] sr_-4_ d_lut_BUFX2
+A_270_ [_113__6_] sr_6_ d_lut_BUFX2
+A_271_ [_113__-2_] sr_-2_ d_lut_BUFX2
+A_272_ _4_ clock_bF$buf4 ~_55__bF$buf4 ~vdd state_0_ NULL ddflop
+A_273_ _7_ clock_bF$buf3 ~vdd ~_55__bF$buf3 state_1_ NULL ddflop
+A_274_ _5_ clock_bF$buf2 ~vdd ~_55__bF$buf2 state_2_ NULL ddflop
+A_275_ _6_ clock_bF$buf1 ~vdd ~_55__bF$buf1 state_3_ NULL ddflop
+A_276_ state_2_ clock_bF$buf0 ~vdd ~_55__bF$buf0 state_4_ NULL ddflop
+A_277_ _2__0_ clock_bF$buf4 ~vdd ~_55__bF$buf4 _112__0_ NULL ddflop
+A_278_ _2__1_ clock_bF$buf3 ~vdd ~_55__bF$buf3 _112__1_ NULL ddflop
+A_279_ _2__2_ clock_bF$buf2 ~vdd ~_55__bF$buf2 _112__2_ NULL ddflop
+A_280_ _2__3_ clock_bF$buf1 ~vdd ~_55__bF$buf1 _112__3_ NULL ddflop
+A_281_ _2__4_ clock_bF$buf0 ~vdd ~_55__bF$buf0 _112__4_ NULL ddflop
+A_282_ _2__5_ clock_bF$buf4 ~vdd ~_55__bF$buf4 _112__5_ NULL ddflop
+A_283_ _2__6_ clock_bF$buf3 ~vdd ~_55__bF$buf3 _112__6_ NULL ddflop
+A_284_ _2__7_ clock_bF$buf2 ~vdd ~_55__bF$buf2 _112__7_ NULL ddflop
+A_285_ _2__8_ clock_bF$buf1 ~vdd ~_55__bF$buf1 _112__8_ NULL ddflop
+A_286_ _1_ clock_bF$buf0 ~vdd ~_55__bF$buf0 _111_ NULL ddflop
+A_287_ _0__0_ clock_bF$buf4 ~vdd ~_55__bF$buf4 _110__0_ NULL ddflop
+A_288_ _0__1_ clock_bF$buf3 ~vdd ~_55__bF$buf3 _110__1_ NULL ddflop
+A_289_ _0__2_ clock_bF$buf2 ~vdd ~_55__bF$buf2 _110__2_ NULL ddflop
+A_290_ _0__3_ clock_bF$buf1 ~vdd ~_55__bF$buf1 _110__3_ NULL ddflop
+A_291_ _0__4_ clock_bF$buf0 ~vdd ~_55__bF$buf0 _110__4_ NULL ddflop
+A_292_ _0__5_ clock_bF$buf4 ~vdd ~_55__bF$buf4 _110__5_ NULL ddflop
+A_293_ _0__6_ clock_bF$buf3 ~vdd ~_55__bF$buf3 _110__6_ NULL ddflop
+A_294_ _0__7_ clock_bF$buf2 ~vdd ~_55__bF$buf2 _110__7_ NULL ddflop
+A_295_ _3__0_ clock_bF$buf1 ~vdd ~_55__bF$buf1 _113__0_ NULL ddflop
+A_296_ _3__1_ clock_bF$buf0 ~vdd ~_55__bF$buf0 _113__1_ NULL ddflop
+A_297_ _3__2_ clock_bF$buf4 ~vdd ~_55__bF$buf4 _113__2_ NULL ddflop
+A_298_ _3__3_ clock_bF$buf3 ~vdd ~_55__bF$buf3 _113__3_ NULL ddflop
+A_299_ _3__4_ clock_bF$buf2 ~vdd ~_55__bF$buf2 _113__4_ NULL ddflop
+A_300_ _3__5_ clock_bF$buf1 ~vdd ~_55__bF$buf1 _113__5_ NULL ddflop
+A_301_ _3__6_ clock_bF$buf0 ~vdd ~_55__bF$buf0 _113__6_ NULL ddflop
+A_302_ _3__7_ clock_bF$buf4 ~vdd ~_55__bF$buf4 _113__7_ NULL ddflop
+A_303_ start clock_bF$buf3 ~vdd ~_55__bF$buf3 startbuf_0_ NULL ddflop
+A_304_ startbuf_0_ clock_bF$buf2 ~vdd ~_55__bF$buf2 startbuf_1_ NULL ddflop
 
-.model todig_3v3 adc_bridge(in_high=2.1999999999999997 in_low=1.0999999999999999 rise_delay=10n fall_delay=10n)
-.model toana_3v3 dac_bridge(out_high=3.3 out_low=0)
+.model todig_1v8 adc_bridge(in_high=1.2 in_low=0.6 rise_delay=1n fall_delay=1n)
+.model toana_1v8 dac_bridge(out_high=1.8 out_low=0)
 
-.model ddflop d_dff(ic=0 rise_delay=1n fall_delay=1n)
-.model dzero d_pulldown(load=1p)
-.model done d_pullup(load=1p)
+.model ddflop d_dff(ic=0 rise_delay=100p fall_delay=100p)
+.model dzero d_pulldown(load=500f)
+.model done d_pullup(load=500f)
 
-AA2D1 [a_vdd] [vdd] todig_3v3
-AA2D2 [a_gnd] [gnd] todig_3v3
-AA2D3 [a_N_0_] [N_0_] todig_3v3
-AA2D4 [a_N_1_] [N_1_] todig_3v3
-AA2D5 [a_N_2_] [N_2_] todig_3v3
-AA2D6 [a_N_3_] [N_3_] todig_3v3
-AA2D7 [a_N_4_] [N_4_] todig_3v3
-AA2D8 [a_N_5_] [N_5_] todig_3v3
-AA2D9 [a_N_6_] [N_6_] todig_3v3
-AA2D10 [a_N_7_] [N_7_] todig_3v3
-AA2D11 [a_N_8_] [N_8_] todig_3v3
-AA2D12 [a_clock] [clock] todig_3v3
-AD2A1 [counter_0_] [a_counter_0_] toana_3v3
-AD2A2 [counter_1_] [a_counter_1_] toana_3v3
-AD2A3 [counter_2_] [a_counter_2_] toana_3v3
-AD2A4 [counter_3_] [a_counter_3_] toana_3v3
-AD2A5 [counter_4_] [a_counter_4_] toana_3v3
-AD2A6 [counter_5_] [a_counter_5_] toana_3v3
-AD2A7 [counter_6_] [a_counter_6_] toana_3v3
-AD2A8 [counter_7_] [a_counter_7_] toana_3v3
-AD2A9 [done] [a_done] toana_3v3
-AD2A10 [dp_0_] [a_dp_0_] toana_3v3
-AD2A11 [dp_1_] [a_dp_1_] toana_3v3
-AD2A12 [dp_2_] [a_dp_2_] toana_3v3
-AD2A13 [dp_3_] [a_dp_3_] toana_3v3
-AD2A14 [dp_4_] [a_dp_4_] toana_3v3
-AD2A15 [dp_5_] [a_dp_5_] toana_3v3
-AD2A16 [dp_6_] [a_dp_6_] toana_3v3
-AD2A17 [dp_7_] [a_dp_7_] toana_3v3
-AD2A18 [dp_8_] [a_dp_8_] toana_3v3
-AA2D13 [a_reset] [reset] todig_3v3
-AD2A19 [sr_0_] [a_sr_0_] toana_3v3
-AD2A20 [sr_1_] [a_sr_1_] toana_3v3
-AD2A21 [sr_2_] [a_sr_2_] toana_3v3
-AD2A22 [sr_3_] [a_sr_3_] toana_3v3
-AD2A23 [sr_4_] [a_sr_4_] toana_3v3
-AD2A24 [sr_5_] [a_sr_5_] toana_3v3
-AD2A25 [sr_6_] [a_sr_6_] toana_3v3
-AD2A26 [sr_7_] [a_sr_7_] toana_3v3
-AA2D14 [a_start] [start] todig_3v3
+AA2D1 [a_vdd] [vdd] todig_1v8
+AA2D2 [a_gnd] [gnd] todig_1v8
+AA2D3 [a_N_0_] [N_0_] todig_1v8
+AA2D4 [a_N_1_] [N_1_] todig_1v8
+AA2D5 [a_N_2_] [N_2_] todig_1v8
+AA2D6 [a_N_3_] [N_3_] todig_1v8
+AA2D7 [a_N_4_] [N_4_] todig_1v8
+AA2D8 [a_N_5_] [N_5_] todig_1v8
+AA2D9 [a_N_6_] [N_6_] todig_1v8
+AA2D10 [a_N_7_] [N_7_] todig_1v8
+AA2D11 [a_N_8_] [N_8_] todig_1v8
+AA2D12 [a_clock] [clock] todig_1v8
+AA2D13 [a_counter_0_] [counter_0_] todig_1v8
+AD2A1 [counter_1_] [a_counter_1_] toana_1v8
+AA2D14 [a_counter_2_] [counter_2_] todig_1v8
+AD2A2 [counter_3_] [a_counter_3_] toana_1v8
+AA2D15 [a_counter_4_] [counter_4_] todig_1v8
+AD2A3 [counter_5_] [a_counter_5_] toana_1v8
+AA2D16 [a_counter_6_] [counter_6_] todig_1v8
+AD2A4 [counter_7_] [a_counter_7_] toana_1v8
+AD2A5 [done] [a_done] toana_1v8
+AA2D17 [a_dp_0_] [dp_0_] todig_1v8
+AD2A6 [dp_1_] [a_dp_1_] toana_1v8
+AA2D18 [a_dp_2_] [dp_2_] todig_1v8
+AD2A7 [dp_3_] [a_dp_3_] toana_1v8
+AA2D19 [a_dp_4_] [dp_4_] todig_1v8
+AD2A8 [dp_5_] [a_dp_5_] toana_1v8
+AA2D20 [a_dp_6_] [dp_6_] todig_1v8
+AD2A9 [dp_7_] [a_dp_7_] toana_1v8
+AA2D21 [a_dp_8_] [dp_8_] todig_1v8
+AA2D22 [a_reset] [reset] todig_1v8
+AD2A10 [sr_0_] [a_sr_0_] toana_1v8
+AA2D23 [a_sr_1_] [sr_1_] todig_1v8
+AD2A11 [sr_2_] [a_sr_2_] toana_1v8
+AA2D24 [a_sr_3_] [sr_3_] todig_1v8
+AD2A12 [sr_4_] [a_sr_4_] toana_1v8
+AA2D25 [a_sr_5_] [sr_5_] todig_1v8
+AD2A13 [sr_6_] [a_sr_6_] toana_1v8
+AA2D26 [a_sr_7_] [sr_7_] todig_1v8
+AA2D27 [a_start] [start] todig_1v8
 
 .ends
 
 * BUFX2 A
-.model d_lut_BUFX2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
+.model d_lut_BUFX2 d_lut (rise_delay=100p fall_delay=100p input_load=500f
 + table_values "01")
 * CLKBUF1 A
-.model d_lut_CLKBUF1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
+.model d_lut_CLKBUF1 d_lut (rise_delay=100p fall_delay=100p input_load=500f
 + table_values "01")
-* INVX4 (!A)
-.model d_lut_INVX4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
-+ table_values "10")
 * INVX8 (!A)
-.model d_lut_INVX8 d_lut (rise_delay=1n fall_delay=1n input_load=1p
+.model d_lut_INVX8 d_lut (rise_delay=100p fall_delay=100p input_load=500f
 + table_values "10")
 * NOR2X1 (!(A+B))
-.model d_lut_NOR2X1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
+.model d_lut_NOR2X1 d_lut (rise_delay=100p fall_delay=100p input_load=500f
 + table_values "1000")
 * NAND2X1 (!(A B))
-.model d_lut_NAND2X1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
+.model d_lut_NAND2X1 d_lut (rise_delay=100p fall_delay=100p input_load=500f
 + table_values "1110")
 * OAI21X1 (!((A+B) C))
-.model d_lut_OAI21X1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
+.model d_lut_OAI21X1 d_lut (rise_delay=100p fall_delay=100p input_load=500f
 + table_values "11111000")
 * INVX1 (!A)
-.model d_lut_INVX1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
+.model d_lut_INVX1 d_lut (rise_delay=100p fall_delay=100p input_load=500f
 + table_values "10")
 * NAND3X1 (!((A B) C))
-.model d_lut_NAND3X1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
+.model d_lut_NAND3X1 d_lut (rise_delay=100p fall_delay=100p input_load=500f
 + table_values "11111110")
 * AOI21X1 (!((A B)+C))
-.model d_lut_AOI21X1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
+.model d_lut_AOI21X1 d_lut (rise_delay=100p fall_delay=100p input_load=500f
 + table_values "11100000")
 * MUX2X1 (!((S A) + (!S B)))
-.model d_lut_MUX2X1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
+.model d_lut_MUX2X1 d_lut (rise_delay=100p fall_delay=100p input_load=500f
 + table_values "11001010")
+* XOR2X1 (A^B)
+.model d_lut_XOR2X1 d_lut (rise_delay=100p fall_delay=100p input_load=500f
++ table_values "0110")
 * XNOR2X1 (!(A^B))
-.model d_lut_XNOR2X1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
+.model d_lut_XNOR2X1 d_lut (rise_delay=100p fall_delay=100p input_load=500f
 + table_values "1001")
 * AND2X2 (A B)
-.model d_lut_AND2X2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
+.model d_lut_AND2X2 d_lut (rise_delay=100p fall_delay=100p input_load=500f
 + table_values "0001")
-* XOR2X1 (A^B)
-.model d_lut_XOR2X1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
-+ table_values "0110")
 * OR2X2 (A+B)
-.model d_lut_OR2X2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
+.model d_lut_OR2X2 d_lut (rise_delay=100p fall_delay=100p input_load=500f
 + table_values "0111")
 * AOI22X1 (!((A B)+(C D)))
-.model d_lut_AOI22X1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
+.model d_lut_AOI22X1 d_lut (rise_delay=100p fall_delay=100p input_load=500f
 + table_values "1110111011100000")
-* OAI22X1 (!((A+B) (C+D)))
-.model d_lut_OAI22X1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
-+ table_values "1111100010001000")
+* NOR3X1 (!((A+B)+C))
+.model d_lut_NOR3X1 d_lut (rise_delay=100p fall_delay=100p input_load=500f
++ table_values "10000000")
 * DFFSR P0002
 .end

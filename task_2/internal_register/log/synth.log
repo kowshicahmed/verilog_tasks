@@ -1,0 +1,969 @@
+Qflow synthesis logfile created on Mo 8. Jun 18:04:59 CEST 2020
+Running yosys for verilog parsing and synthesis
+yosys  -s internal_register.ys
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2016  Clifford Wolf <clifford@clifford.at>           |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.7 (git sha1 61f6811, gcc 6.2.0-11ubuntu1 -O2 -fdebug-prefix-map=/build/yosys-OIL3SR/yosys-0.7=. -fstack-protector-strong -fPIC -Os)
+
+
+-- Executing script file `internal_register.ys' --
+
+1. Executing Liberty frontend.
+Imported 39 cell types from liberty file.
+
+2. Executing Verilog-2005 frontend.
+Parsing Verilog input from `/home/akash/Documents/DigitalLab/verilog_tasks/task_2/internal_register/source/internal_register.v' to AST representation.
+Generating RTLIL representation for module `\internal_register'.
+Successfully finished Verilog frontend.
+
+3. Executing SYNTH pass.
+
+3.1. Executing HIERARCHY pass (managing design hierarchy).
+
+3.1.1. Analyzing design hierarchy..
+Top module:  \internal_register
+
+3.1.2. Analyzing design hierarchy..
+Top module:  \internal_register
+Removed 0 unused modules.
+
+3.2. Executing PROC pass (convert processes to netlists).
+
+3.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+3.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+3.2.3. Executing PROC_INIT pass (extract init attributes).
+Found init rule in `\internal_register.$proc$/home/akash/Documents/DigitalLab/verilog_tasks/task_2/internal_register/source/internal_register.v:15$18'.
+  Set init value: \rb_out = 16'0000000000000000
+Found init rule in `\internal_register.$proc$/home/akash/Documents/DigitalLab/verilog_tasks/task_2/internal_register/source/internal_register.v:14$17'.
+  Set init value: \ra_out = 16'0000000000000000
+
+3.2.4. Executing PROC_ARST pass (detect async resets in processes).
+
+3.2.5. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\internal_register.$proc$/home/akash/Documents/DigitalLab/verilog_tasks/task_2/internal_register/source/internal_register.v:15$18'.
+     1/1: $1\rb_out[15:0]
+Creating decoders for process `\internal_register.$proc$/home/akash/Documents/DigitalLab/verilog_tasks/task_2/internal_register/source/internal_register.v:14$17'.
+     1/1: $1\ra_out[15:0]
+Creating decoders for process `\internal_register.$proc$/home/akash/Documents/DigitalLab/verilog_tasks/task_2/internal_register/source/internal_register.v:21$4'.
+     1/11: $2$mem2bits$\internal_reg$/home/akash/Documents/DigitalLab/verilog_tasks/task_2/internal_register/source/internal_register.v:32$2[15:0]$13
+     2/11: $2$mem2bits$\internal_reg$/home/akash/Documents/DigitalLab/verilog_tasks/task_2/internal_register/source/internal_register.v:31$1[15:0]$12
+     3/11: $1$mem2bits$\internal_reg$/home/akash/Documents/DigitalLab/verilog_tasks/task_2/internal_register/source/internal_register.v:32$2[15:0]$11
+     4/11: $1$mem2bits$\internal_reg$/home/akash/Documents/DigitalLab/verilog_tasks/task_2/internal_register/source/internal_register.v:31$1[15:0]$10
+     5/11: $0$mem2bits$\internal_reg$/home/akash/Documents/DigitalLab/verilog_tasks/task_2/internal_register/source/internal_register.v:32$2[15:0]$6
+     6/11: $0$mem2bits$\internal_reg$/home/akash/Documents/DigitalLab/verilog_tasks/task_2/internal_register/source/internal_register.v:31$1[15:0]$5
+     7/11: $0$memwr$\internal_reg$/home/akash/Documents/DigitalLab/verilog_tasks/task_2/internal_register/source/internal_register.v:27$3_EN[15:0]$9
+     8/11: $0$memwr$\internal_reg$/home/akash/Documents/DigitalLab/verilog_tasks/task_2/internal_register/source/internal_register.v:27$3_DATA[15:0]$8
+     9/11: $0$memwr$\internal_reg$/home/akash/Documents/DigitalLab/verilog_tasks/task_2/internal_register/source/internal_register.v:27$3_ADDR[2:0]$7
+    10/11: $0\rb_out[15:0]
+    11/11: $0\ra_out[15:0]
+
+3.2.6. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+3.2.7. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\internal_register.\ra_out' using process `\internal_register.$proc$/home/akash/Documents/DigitalLab/verilog_tasks/task_2/internal_register/source/internal_register.v:21$4'.
+  created $dff cell `$procdff$67' with positive edge clock.
+Creating register for signal `\internal_register.\rb_out' using process `\internal_register.$proc$/home/akash/Documents/DigitalLab/verilog_tasks/task_2/internal_register/source/internal_register.v:21$4'.
+  created $dff cell `$procdff$68' with positive edge clock.
+Creating register for signal `\internal_register.$mem2bits$\internal_reg$/home/akash/Documents/DigitalLab/verilog_tasks/task_2/internal_register/source/internal_register.v:31$1' using process `\internal_register.$proc$/home/akash/Documents/DigitalLab/verilog_tasks/task_2/internal_register/source/internal_register.v:21$4'.
+  created $dff cell `$procdff$69' with positive edge clock.
+Creating register for signal `\internal_register.$mem2bits$\internal_reg$/home/akash/Documents/DigitalLab/verilog_tasks/task_2/internal_register/source/internal_register.v:32$2' using process `\internal_register.$proc$/home/akash/Documents/DigitalLab/verilog_tasks/task_2/internal_register/source/internal_register.v:21$4'.
+  created $dff cell `$procdff$70' with positive edge clock.
+Creating register for signal `\internal_register.$memwr$\internal_reg$/home/akash/Documents/DigitalLab/verilog_tasks/task_2/internal_register/source/internal_register.v:27$3_ADDR' using process `\internal_register.$proc$/home/akash/Documents/DigitalLab/verilog_tasks/task_2/internal_register/source/internal_register.v:21$4'.
+  created $dff cell `$procdff$71' with positive edge clock.
+Creating register for signal `\internal_register.$memwr$\internal_reg$/home/akash/Documents/DigitalLab/verilog_tasks/task_2/internal_register/source/internal_register.v:27$3_DATA' using process `\internal_register.$proc$/home/akash/Documents/DigitalLab/verilog_tasks/task_2/internal_register/source/internal_register.v:21$4'.
+  created $dff cell `$procdff$72' with positive edge clock.
+Creating register for signal `\internal_register.$memwr$\internal_reg$/home/akash/Documents/DigitalLab/verilog_tasks/task_2/internal_register/source/internal_register.v:27$3_EN' using process `\internal_register.$proc$/home/akash/Documents/DigitalLab/verilog_tasks/task_2/internal_register/source/internal_register.v:21$4'.
+  created $dff cell `$procdff$73' with positive edge clock.
+
+3.2.8. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `internal_register.$proc$/home/akash/Documents/DigitalLab/verilog_tasks/task_2/internal_register/source/internal_register.v:15$18'.
+Removing empty process `internal_register.$proc$/home/akash/Documents/DigitalLab/verilog_tasks/task_2/internal_register/source/internal_register.v:14$17'.
+Found and cleaned up 2 empty switches in `\internal_register.$proc$/home/akash/Documents/DigitalLab/verilog_tasks/task_2/internal_register/source/internal_register.v:21$4'.
+Removing empty process `internal_register.$proc$/home/akash/Documents/DigitalLab/verilog_tasks/task_2/internal_register/source/internal_register.v:21$4'.
+Cleaned up 2 empty switches.
+
+3.3. Executing OPT_EXPR pass (perform const folding).
+
+3.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \internal_register..
+  removing unused `$mux' cell `$procmux$21'.
+  removing unused `$mux' cell `$procmux$23'.
+  removing unused `$mux' cell `$procmux$27'.
+  removing unused `$mux' cell `$procmux$29'.
+  removing unused `$mux' cell `$procmux$32'.
+  removing unused `$mux' cell `$procmux$35'.
+  removing unused `$dff' cell `$procdff$69'.
+  removing unused `$dff' cell `$procdff$70'.
+
+3.5. Executing CHECK pass (checking for obvious problems).
+checking module internal_register..
+found and reported 0 problems.
+
+3.6. Executing OPT pass (performing simple optimizations).
+
+3.6.1. Executing OPT_EXPR pass (perform const folding).
+
+3.6.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\internal_register'.
+Removed a total of 0 cells.
+
+3.6.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \internal_register..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+    Root of a mux tree: $procmux$41 (pure)
+    Root of a mux tree: $procmux$47 (pure)
+    Root of a mux tree: $procmux$53 (pure)
+    Root of a mux tree: $procmux$59 (pure)
+    Root of a mux tree: $procmux$65 (pure)
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+
+3.6.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \internal_register.
+    Consolidated identical input bits for $mux cell $procmux$39:
+      Old ports: A=16'0000000000000000, B=16'1111111111111111, Y=$procmux$39_Y
+      New ports: A=1'0, B=1'1, Y=$procmux$39_Y [0]
+      New connections: $procmux$39_Y [15:1] = { $procmux$39_Y [0] $procmux$39_Y [0] $procmux$39_Y [0] $procmux$39_Y [0] $procmux$39_Y [0] $procmux$39_Y [0] $procmux$39_Y [0] $procmux$39_Y [0] $procmux$39_Y [0] $procmux$39_Y [0] $procmux$39_Y [0] $procmux$39_Y [0] $procmux$39_Y [0] $procmux$39_Y [0] $procmux$39_Y [0] }
+  Optimizing cells in module \internal_register.
+    Consolidated identical input bits for $mux cell $procmux$41:
+      Old ports: A=16'0000000000000000, B=$procmux$39_Y, Y=$0$memwr$\internal_reg$/home/akash/Documents/DigitalLab/verilog_tasks/task_2/internal_register/source/internal_register.v:27$3_EN[15:0]$9
+      New ports: A=1'0, B=$procmux$39_Y [0], Y=$0$memwr$\internal_reg$/home/akash/Documents/DigitalLab/verilog_tasks/task_2/internal_register/source/internal_register.v:27$3_EN[15:0]$9 [0]
+      New connections: $0$memwr$\internal_reg$/home/akash/Documents/DigitalLab/verilog_tasks/task_2/internal_register/source/internal_register.v:27$3_EN[15:0]$9 [15:1] = { $0$memwr$\internal_reg$/home/akash/Documents/DigitalLab/verilog_tasks/task_2/internal_register/source/internal_register.v:27$3_EN[15:0]$9 [0] $0$memwr$\internal_reg$/home/akash/Documents/DigitalLab/verilog_tasks/task_2/internal_register/source/internal_register.v:27$3_EN[15:0]$9 [0] $0$memwr$\internal_reg$/home/akash/Documents/DigitalLab/verilog_tasks/task_2/internal_register/source/internal_register.v:27$3_EN[15:0]$9 [0] $0$memwr$\internal_reg$/home/akash/Documents/DigitalLab/verilog_tasks/task_2/internal_register/source/internal_register.v:27$3_EN[15:0]$9 [0] $0$memwr$\internal_reg$/home/akash/Documents/DigitalLab/verilog_tasks/task_2/internal_register/source/internal_register.v:27$3_EN[15:0]$9 [0] $0$memwr$\internal_reg$/home/akash/Documents/DigitalLab/verilog_tasks/task_2/internal_register/source/internal_register.v:27$3_EN[15:0]$9 [0] $0$memwr$\internal_reg$/home/akash/Documents/DigitalLab/verilog_tasks/task_2/internal_register/source/internal_register.v:27$3_EN[15:0]$9 [0] $0$memwr$\internal_reg$/home/akash/Documents/DigitalLab/verilog_tasks/task_2/internal_register/source/internal_register.v:27$3_EN[15:0]$9 [0] $0$memwr$\internal_reg$/home/akash/Documents/DigitalLab/verilog_tasks/task_2/internal_register/source/internal_register.v:27$3_EN[15:0]$9 [0] $0$memwr$\internal_reg$/home/akash/Documents/DigitalLab/verilog_tasks/task_2/internal_register/source/internal_register.v:27$3_EN[15:0]$9 [0] $0$memwr$\internal_reg$/home/akash/Documents/DigitalLab/verilog_tasks/task_2/internal_register/source/internal_register.v:27$3_EN[15:0]$9 [0] $0$memwr$\internal_reg$/home/akash/Documents/DigitalLab/verilog_tasks/task_2/internal_register/source/internal_register.v:27$3_EN[15:0]$9 [0] $0$memwr$\internal_reg$/home/akash/Documents/DigitalLab/verilog_tasks/task_2/internal_register/source/internal_register.v:27$3_EN[15:0]$9 [0] $0$memwr$\internal_reg$/home/akash/Documents/DigitalLab/verilog_tasks/task_2/internal_register/source/internal_register.v:27$3_EN[15:0]$9 [0] $0$memwr$\internal_reg$/home/akash/Documents/DigitalLab/verilog_tasks/task_2/internal_register/source/internal_register.v:27$3_EN[15:0]$9 [0] }
+  Optimizing cells in module \internal_register.
+Performed a total of 2 changes.
+
+3.6.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\internal_register'.
+Removed a total of 0 cells.
+
+3.6.6. Executing OPT_RMDFF pass (remove dff with constant values).
+
+3.6.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \internal_register..
+
+3.6.8. Executing OPT_EXPR pass (perform const folding).
+
+3.6.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+3.6.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \internal_register..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+    Root of a mux tree: $procmux$41 (pure)
+    Root of a mux tree: $procmux$47 (pure)
+    Root of a mux tree: $procmux$53 (pure)
+    Root of a mux tree: $procmux$59 (pure)
+    Root of a mux tree: $procmux$65 (pure)
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+
+3.6.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \internal_register.
+Performed a total of 0 changes.
+
+3.6.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\internal_register'.
+Removed a total of 0 cells.
+
+3.6.13. Executing OPT_RMDFF pass (remove dff with constant values).
+
+3.6.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \internal_register..
+
+3.6.15. Executing OPT_EXPR pass (perform const folding).
+
+3.6.16. Finished OPT passes. (There is nothing left to do.)
+
+3.7. Executing WREDUCE pass (reducing word size of cells).
+Removed cell internal_register.$procmux$45 ($mux).
+Removed cell internal_register.$procmux$47 ($mux).
+Removed cell internal_register.$procmux$51 ($mux).
+Removed cell internal_register.$procmux$53 ($mux).
+
+3.8. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module internal_register:
+  created 0 $alu and 0 $macc cells.
+
+3.9. Executing SHARE pass (SAT-based resource sharing).
+Found 2 cells in module internal_register that may be considered for resource sharing.
+  Analyzing resource sharing options for $memrd$\internal_reg$/home/akash/Documents/DigitalLab/verilog_tasks/task_2/internal_register/source/internal_register.v:32$15 ($memrd):
+    Found 1 activation_patterns using ctrl signal { \wr_en \enable }.
+    Found 1 candidates: $memrd$\internal_reg$/home/akash/Documents/DigitalLab/verilog_tasks/task_2/internal_register/source/internal_register.v:31$14
+    Analyzing resource sharing with $memrd$\internal_reg$/home/akash/Documents/DigitalLab/verilog_tasks/task_2/internal_register/source/internal_register.v:31$14 ($memrd):
+      Found 1 activation_patterns using ctrl signal { \wr_en \enable }.
+      Activation pattern for cell $memrd$\internal_reg$/home/akash/Documents/DigitalLab/verilog_tasks/task_2/internal_register/source/internal_register.v:32$15: { \wr_en \enable } = 2'01
+      Activation pattern for cell $memrd$\internal_reg$/home/akash/Documents/DigitalLab/verilog_tasks/task_2/internal_register/source/internal_register.v:31$14: { \wr_en \enable } = 2'01
+      Size of SAT problem: 0 cells, 9 variables, 18 clauses
+      According to the SAT solver this pair of cells can not be shared.
+      Model from SAT solver: { \wr_en \enable } = 2'01
+  Analyzing resource sharing options for $memrd$\internal_reg$/home/akash/Documents/DigitalLab/verilog_tasks/task_2/internal_register/source/internal_register.v:31$14 ($memrd):
+    Found 1 activation_patterns using ctrl signal { \wr_en \enable }.
+    No candidates found.
+
+3.10. Executing OPT pass (performing simple optimizations).
+
+3.10.1. Executing OPT_EXPR pass (perform const folding).
+
+3.10.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\internal_register'.
+Removed a total of 0 cells.
+
+3.10.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \internal_register..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+    Root of a mux tree: $procmux$41 (pure)
+    Root of a mux tree: $procmux$59 (pure)
+    Root of a mux tree: $procmux$65 (pure)
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+
+3.10.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \internal_register.
+Performed a total of 0 changes.
+
+3.10.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\internal_register'.
+Removed a total of 0 cells.
+
+3.10.6. Executing OPT_RMDFF pass (remove dff with constant values).
+
+3.10.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \internal_register..
+
+3.10.8. Executing OPT_EXPR pass (perform const folding).
+
+3.10.9. Finished OPT passes. (There is nothing left to do.)
+
+3.11. Executing FSM pass (extract and optimize FSM).
+
+3.11.1. Executing FSM_DETECT pass (finding FSMs in design).
+Not marking internal_register.$memwr$\internal_reg$/home/akash/Documents/DigitalLab/verilog_tasks/task_2/internal_register/source/internal_register.v:27$3_EN as FSM state register:
+    Users of register don't seem to benefit from recoding.
+
+3.11.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+3.11.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+3.11.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \internal_register..
+
+3.11.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+3.11.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+3.11.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+3.11.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+3.12. Executing OPT pass (performing simple optimizations).
+
+3.12.1. Executing OPT_EXPR pass (perform const folding).
+
+3.12.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\internal_register'.
+Removed a total of 0 cells.
+
+3.12.3. Executing OPT_RMDFF pass (remove dff with constant values).
+
+3.12.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \internal_register..
+
+3.12.5. Finished fast OPT passes.
+
+3.13. Executing MEMORY pass.
+
+3.13.1. Executing MEMORY_DFF pass (merging $dff cells to $memrd and $memwr).
+Checking cell `$memwr$\internal_reg$/home/akash/Documents/DigitalLab/verilog_tasks/task_2/internal_register/source/internal_register.v:27$16' in module `\internal_register': merged $dff to cell.
+Checking cell `$memrd$\internal_reg$/home/akash/Documents/DigitalLab/verilog_tasks/task_2/internal_register/source/internal_register.v:31$14' in module `\internal_register': no (compatible) $dff found.
+Checking cell `$memrd$\internal_reg$/home/akash/Documents/DigitalLab/verilog_tasks/task_2/internal_register/source/internal_register.v:32$15' in module `\internal_register': no (compatible) $dff found.
+
+3.13.2. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \internal_register..
+  removing unused `$dff' cell `$procdff$71'.
+  removing unused `$dff' cell `$procdff$72'.
+  removing unused `$dff' cell `$procdff$73'.
+
+3.13.3. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+3.13.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \internal_register..
+
+3.13.5. Executing MEMORY_COLLECT pass (generating $mem cells).
+Collecting $memrd, $memwr and $meminit for memory `\internal_reg' in module `\internal_register':
+  $memwr$\internal_reg$/home/akash/Documents/DigitalLab/verilog_tasks/task_2/internal_register/source/internal_register.v:27$16 ($memwr)
+  $memrd$\internal_reg$/home/akash/Documents/DigitalLab/verilog_tasks/task_2/internal_register/source/internal_register.v:31$14 ($memrd)
+  $memrd$\internal_reg$/home/akash/Documents/DigitalLab/verilog_tasks/task_2/internal_register/source/internal_register.v:32$15 ($memrd)
+
+3.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \internal_register..
+
+3.15. Executing OPT pass (performing simple optimizations).
+
+3.15.1. Executing OPT_EXPR pass (perform const folding).
+Replacing $mux cell `$procmux$39' (mux_bool) in module `\internal_register' with constant driver `$procmux$39_Y [15] = \wr_en'.
+Replacing $mux cell `$procmux$41' in module `internal_register' with and-gate.
+
+3.15.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\internal_register'.
+Removed a total of 0 cells.
+
+3.15.3. Executing OPT_RMDFF pass (remove dff with constant values).
+
+3.15.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \internal_register..
+
+3.15.5. Finished fast OPT passes.
+
+3.16. Executing MEMORY_MAP pass (converting $mem cells to logic and flip-flops).
+Mapping memory cell \internal_reg in module \internal_register:
+  created 8 $dff cells and 0 static cells of width 16.
+  read interface: 0 $dff and 14 $mux cells.
+  write interface: 8 write mux blocks.
+
+3.17. Executing OPT pass (performing simple optimizations).
+
+3.17.1. Executing OPT_EXPR pass (perform const folding).
+Replacing $eq cell `$auto$memory_map.cc:65:addr_decode$133' in module `internal_register' with inverter.
+Replacing $eq cell `$auto$memory_map.cc:65:addr_decode$135' in module `internal_register' with inverter.
+Replacing $eq cell `$auto$memory_map.cc:65:addr_decode$137' in module `internal_register' with inverter.
+Replacing $eq cell `$auto$memory_map.cc:65:addr_decode$147' (1) in module `\internal_register' with constant driver `$auto$rtlil.cc:1641:Eq$148 = \rd_adrs [0]'.
+Replacing $eq cell `$auto$memory_map.cc:65:addr_decode$155' (1) in module `\internal_register' with constant driver `$auto$rtlil.cc:1641:Eq$156 = \rd_adrs [1]'.
+Replacing $eq cell `$auto$memory_map.cc:65:addr_decode$171' (1) in module `\internal_register' with constant driver `$auto$rtlil.cc:1641:Eq$172 = \rd_adrs [2]'.
+
+3.17.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\internal_register'.
+Removed a total of 0 cells.
+
+3.17.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \internal_register..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+    Root of a mux tree: $memory\internal_reg$wrmux[5][0][0]$185 (pure)
+    Root of a mux tree: $memory\internal_reg$wrmux[4][0][0]$179 (pure)
+    Root of a mux tree: $memory\internal_reg$wrmux[6][0][0]$193 (pure)
+    Root of a mux tree: $memory\internal_reg$wrmux[3][0][0]$169 (pure)
+    Root of a mux tree: $memory\internal_reg$wrmux[2][0][0]$163 (pure)
+    Root of a mux tree: $memory\internal_reg$wrmux[1][0][0]$153 (pure)
+    Root of a mux tree: $memory\internal_reg$wrmux[0][0][0]$145 (pure)
+    Root of a mux tree: $procmux$59 (pure)
+    Root of a mux tree: $procmux$65 (pure)
+    Root of a mux tree: $memory\internal_reg$wrmux[7][0][0]$199 (pure)
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+
+3.17.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \internal_register.
+Performed a total of 0 changes.
+
+3.17.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\internal_register'.
+Removed a total of 0 cells.
+
+3.17.6. Executing OPT_RMDFF pass (remove dff with constant values).
+
+3.17.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \internal_register..
+
+3.17.8. Executing OPT_EXPR pass (perform const folding).
+
+3.17.9. Finished OPT passes. (There is nothing left to do.)
+
+3.18. Executing TECHMAP pass (map to technology primitives).
+
+3.18.1. Executing Verilog-2005 frontend.
+Parsing Verilog input from `<techmap.v>' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+Mapping internal_register.$memory\internal_reg$rdmux[1][0][0]$112 ($mux) with simplemap.
+Mapping internal_register.$memory\internal_reg$rdmux[0][2][3]$109 ($mux) with simplemap.
+Mapping internal_register.$memory\internal_reg$rdmux[0][2][2]$106 ($mux) with simplemap.
+Mapping internal_register.$memory\internal_reg[1]$77 ($dff) with simplemap.
+Mapping internal_register.$memory\internal_reg$rdmux[0][2][1]$103 ($mux) with simplemap.
+Mapping internal_register.$memory\internal_reg$rdmux[0][2][0]$100 ($mux) with simplemap.
+Mapping internal_register.$memory\internal_reg$rdmux[0][1][1]$97 ($mux) with simplemap.
+Mapping internal_register.$memory\internal_reg$rdmux[1][1][1]$118 ($mux) with simplemap.
+Mapping internal_register.$memory\internal_reg$rdmux[0][1][0]$94 ($mux) with simplemap.
+Mapping internal_register.$memory\internal_reg$rdmux[0][0][0]$91 ($mux) with simplemap.
+Mapping internal_register.$memory\internal_reg$rdmux[1][1][0]$115 ($mux) with simplemap.
+Mapping internal_register.$memory\internal_reg[0]$75 ($dff) with simplemap.
+Mapping internal_register.$memory\internal_reg[7]$89 ($dff) with simplemap.
+Mapping internal_register.$procmux$41 ($and) with simplemap.
+Mapping internal_register.$memory\internal_reg[6]$87 ($dff) with simplemap.
+Mapping internal_register.$memory\internal_reg[2]$79 ($dff) with simplemap.
+Mapping internal_register.$memory\internal_reg[5]$85 ($dff) with simplemap.
+Mapping internal_register.$procmux$57 ($mux) with simplemap.
+Mapping internal_register.$memory\internal_reg[4]$83 ($dff) with simplemap.
+Mapping internal_register.$procmux$59 ($mux) with simplemap.
+Mapping internal_register.$procmux$63 ($mux) with simplemap.
+Mapping internal_register.$memory\internal_reg[3]$81 ($dff) with simplemap.
+Mapping internal_register.$procmux$65 ($mux) with simplemap.
+Mapping internal_register.$procdff$68 ($dff) with simplemap.
+Mapping internal_register.$procdff$67 ($dff) with simplemap.
+Mapping internal_register.$memory\internal_reg$rdmux[1][2][0]$121 ($mux) with simplemap.
+Mapping internal_register.$memory\internal_reg$rdmux[1][2][1]$124 ($mux) with simplemap.
+Mapping internal_register.$memory\internal_reg$rdmux[1][2][2]$127 ($mux) with simplemap.
+Mapping internal_register.$memory\internal_reg$rdmux[1][2][3]$130 ($mux) with simplemap.
+Mapping internal_register.$auto$memory_map.cc:65:addr_decode$133 ($not) with simplemap.
+Mapping internal_register.$auto$memory_map.cc:65:addr_decode$135 ($not) with simplemap.
+Mapping internal_register.$auto$memory_map.cc:65:addr_decode$137 ($not) with simplemap.
+Mapping internal_register.$auto$memory_map.cc:70:addr_decode$139 ($and) with simplemap.
+Mapping internal_register.$auto$memory_map.cc:70:addr_decode$141 ($and) with simplemap.
+Mapping internal_register.$memory\internal_reg$wren[0][0][0]$143 ($and) with simplemap.
+Mapping internal_register.$memory\internal_reg$wrmux[0][0][0]$145 ($mux) with simplemap.
+Mapping internal_register.$auto$memory_map.cc:70:addr_decode$149 ($and) with simplemap.
+Mapping internal_register.$memory\internal_reg$wren[1][0][0]$151 ($and) with simplemap.
+Mapping internal_register.$memory\internal_reg$wrmux[1][0][0]$153 ($mux) with simplemap.
+Mapping internal_register.$auto$memory_map.cc:70:addr_decode$157 ($and) with simplemap.
+Mapping internal_register.$auto$memory_map.cc:70:addr_decode$159 ($and) with simplemap.
+Mapping internal_register.$memory\internal_reg$wren[2][0][0]$161 ($and) with simplemap.
+Mapping internal_register.$memory\internal_reg$wrmux[2][0][0]$163 ($mux) with simplemap.
+Mapping internal_register.$auto$memory_map.cc:70:addr_decode$165 ($and) with simplemap.
+Mapping internal_register.$memory\internal_reg$wren[3][0][0]$167 ($and) with simplemap.
+Mapping internal_register.$memory\internal_reg$wrmux[3][0][0]$169 ($mux) with simplemap.
+Mapping internal_register.$auto$memory_map.cc:70:addr_decode$173 ($and) with simplemap.
+Mapping internal_register.$auto$memory_map.cc:70:addr_decode$175 ($and) with simplemap.
+Mapping internal_register.$memory\internal_reg$wren[4][0][0]$177 ($and) with simplemap.
+Mapping internal_register.$memory\internal_reg$wrmux[4][0][0]$179 ($mux) with simplemap.
+Mapping internal_register.$auto$memory_map.cc:70:addr_decode$181 ($and) with simplemap.
+Mapping internal_register.$memory\internal_reg$wren[5][0][0]$183 ($and) with simplemap.
+Mapping internal_register.$memory\internal_reg$wrmux[5][0][0]$185 ($mux) with simplemap.
+Mapping internal_register.$auto$memory_map.cc:70:addr_decode$187 ($and) with simplemap.
+Mapping internal_register.$auto$memory_map.cc:70:addr_decode$189 ($and) with simplemap.
+Mapping internal_register.$memory\internal_reg$wren[6][0][0]$191 ($and) with simplemap.
+Mapping internal_register.$memory\internal_reg$wrmux[6][0][0]$193 ($mux) with simplemap.
+Mapping internal_register.$auto$memory_map.cc:70:addr_decode$195 ($and) with simplemap.
+Mapping internal_register.$memory\internal_reg$wren[7][0][0]$197 ($and) with simplemap.
+Mapping internal_register.$memory\internal_reg$wrmux[7][0][0]$199 ($mux) with simplemap.
+No more expansions possible.
+
+3.19. Executing OPT pass (performing simple optimizations).
+
+3.19.1. Executing OPT_EXPR pass (perform const folding).
+
+3.19.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\internal_register'.
+Removed a total of 0 cells.
+
+3.19.3. Executing OPT_RMDFF pass (remove dff with constant values).
+
+3.19.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \internal_register..
+
+3.19.5. Finished fast OPT passes.
+
+3.20. Executing ABC pass (technology mapping using ABC).
+
+3.20.1. Extracting gate netlist of module `\internal_register' to `<abc-temp-dir>/input.blif'..
+Extracted 440 gates and 627 wires to a netlist network with 187 inputs and 160 outputs.
+
+3.20.1.1. Executing ABC.
+Running ABC command: berkeley-abc -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: Entered genlib library with 15 gates from file "<abc-temp-dir>/stdcells.genlib".
+ABC: + retime -o 
+ABC: + map 
+ABC: Warning: The network was strashed and balanced before mapping.
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+3.20.1.2. Re-integrating ABC results.
+ABC RESULTS:               MUX cells:      416
+ABC RESULTS:              NAND cells:        3
+ABC RESULTS:               NOT cells:        7
+ABC RESULTS:                OR cells:       14
+ABC RESULTS:        internal signals:      280
+ABC RESULTS:           input signals:      187
+ABC RESULTS:          output signals:      160
+Removing temp directory.
+
+3.21. Executing OPT pass (performing simple optimizations).
+
+3.21.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$1135' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$1132' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$1136' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$1138' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$1126' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$1123' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$1127' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$1129' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$1117' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$1114' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$1118' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$1120' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$1108' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$1105' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$1109' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$1111' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$1099' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$1096' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$1100' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$1102' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$1090' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$1087' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$1091' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$1093' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$1081' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$1078' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$1082' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$1084' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$1072' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$1069' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$1073' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$1075' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$1063' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$1060' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$1064' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$1066' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$1054' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$1051' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$1055' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$1057' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$1045' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$1042' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$1046' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$1048' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$1036' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$1033' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$1037' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$1039' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$1027' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$1024' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$1028' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$1030' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$1018' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$1015' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$1019' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$1021' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$1009' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$1006' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$1010' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$1012' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$1000' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$997' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$1001' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$1003' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$989' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$986' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$990' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$992' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$980' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$977' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$981' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$983' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$971' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$968' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$972' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$974' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$962' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$959' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$963' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$965' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$953' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$950' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$954' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$956' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$944' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$941' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$945' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$947' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$935' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$932' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$936' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$938' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$926' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$923' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$927' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$929' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$917' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$914' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$918' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$920' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$908' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$905' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$909' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$911' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$899' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$896' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$900' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$902' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$890' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$887' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$891' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$893' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$881' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$878' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$882' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$884' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$872' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$869' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$873' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$875' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$863' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$860' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$864' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$866' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$854' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$851' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$855' in module `internal_register'.
+Optimizing away select inverter for $_MUX_ cell `$abc$845$auto$blifparse.cc:286:parse_blif$857' in module `internal_register'.
+
+3.21.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\internal_register'.
+Removed a total of 0 cells.
+
+3.21.3. Executing OPT_RMDFF pass (remove dff with constant values).
+
+3.21.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \internal_register..
+  removing unused `$_NOT_' cell `$abc$845$auto$blifparse.cc:286:parse_blif$994'.
+  removing unused `$_NOT_' cell `$abc$845$auto$blifparse.cc:286:parse_blif$993'.
+  removing unused `$_NOT_' cell `$abc$845$auto$blifparse.cc:286:parse_blif$848'.
+  removing unused `$_NOT_' cell `$abc$845$auto$blifparse.cc:286:parse_blif$847'.
+  removing unused `$_NOT_' cell `$abc$845$auto$blifparse.cc:286:parse_blif$846'.
+
+3.21.5. Finished fast OPT passes.
+
+3.22. Executing HIERARCHY pass (managing design hierarchy).
+
+3.22.1. Analyzing design hierarchy..
+Top module:  \internal_register
+
+3.22.2. Analyzing design hierarchy..
+Top module:  \internal_register
+Removed 0 unused modules.
+
+3.23. Printing statistics.
+
+=== internal_register ===
+
+   Number of wires:                422
+   Number of wire bits:            623
+   Number of public wires:          17
+   Number of public wire bits:     188
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                595
+     $_DFF_P_                      160
+     $_MUX_                        416
+     $_NAND_                         3
+     $_NOT_                          2
+     $_OR_                          14
+
+3.24. Executing CHECK pass (checking for obvious problems).
+checking module internal_register..
+found and reported 0 problems.
+
+4. Executing DFFLIBMAP pass (mapping DFF cells to sequential cells from liberty file).
+  cell DFFNEGX1 (noninv, pins=3, area=384.00) is a direct match for cell type $_DFF_N_.
+  cell DFFPOSX1 (noninv, pins=3, area=384.00) is a direct match for cell type $_DFF_P_.
+  cell DFFSR (noninv, pins=5, area=704.00) is a direct match for cell type $_DFFSR_PNN_.
+  create mapping for $_DFFSR_PPN_ from mapping for $_DFFSR_PNN_.
+  create mapping for $_DFFSR_PNP_ from mapping for $_DFFSR_PNN_.
+  create mapping for $_DFFSR_PPP_ from mapping for $_DFFSR_PNP_.
+  create mapping for $_DFFSR_NNN_ from mapping for $_DFFSR_PNN_.
+  create mapping for $_DFFSR_NPN_ from mapping for $_DFFSR_NNN_.
+  create mapping for $_DFFSR_NNP_ from mapping for $_DFFSR_NNN_.
+  create mapping for $_DFFSR_NPP_ from mapping for $_DFFSR_NNP_.
+  create mapping for $_DFF_NN0_ from mapping for $_DFFSR_NNN_.
+  create mapping for $_DFF_NN1_ from mapping for $_DFFSR_NNN_.
+  create mapping for $_DFF_NP0_ from mapping for $_DFFSR_NPP_.
+  create mapping for $_DFF_NP1_ from mapping for $_DFFSR_NPP_.
+  create mapping for $_DFF_PN0_ from mapping for $_DFFSR_PNN_.
+  create mapping for $_DFF_PN1_ from mapping for $_DFFSR_PNN_.
+  create mapping for $_DFF_PP0_ from mapping for $_DFFSR_PPP_.
+  create mapping for $_DFF_PP1_ from mapping for $_DFFSR_PPP_.
+  final dff cell mappings:
+    DFFNEGX1 _DFF_N_ (.CLK( C), .D( D), .Q( Q));
+    DFFPOSX1 _DFF_P_ (.CLK( C), .D( D), .Q( Q));
+    DFFSR _DFF_NN0_ (.CLK(~C), .D( D), .Q( Q), .R( R), .S( 1));
+    DFFSR _DFF_NN1_ (.CLK(~C), .D( D), .Q( Q), .R( 1), .S( R));
+    DFFSR _DFF_NP0_ (.CLK(~C), .D( D), .Q( Q), .R(~R), .S( 1));
+    DFFSR _DFF_NP1_ (.CLK(~C), .D( D), .Q( Q), .R( 1), .S(~R));
+    DFFSR _DFF_PN0_ (.CLK( C), .D( D), .Q( Q), .R( R), .S( 1));
+    DFFSR _DFF_PN1_ (.CLK( C), .D( D), .Q( Q), .R( 1), .S( R));
+    DFFSR _DFF_PP0_ (.CLK( C), .D( D), .Q( Q), .R(~R), .S( 1));
+    DFFSR _DFF_PP1_ (.CLK( C), .D( D), .Q( Q), .R( 1), .S(~R));
+    DFFSR _DFFSR_NNN_ (.CLK(~C), .D( D), .Q( Q), .R( R), .S( S));
+    DFFSR _DFFSR_NNP_ (.CLK(~C), .D( D), .Q( Q), .R(~R), .S( S));
+    DFFSR _DFFSR_NPN_ (.CLK(~C), .D( D), .Q( Q), .R( R), .S(~S));
+    DFFSR _DFFSR_NPP_ (.CLK(~C), .D( D), .Q( Q), .R(~R), .S(~S));
+    DFFSR _DFFSR_PNN_ (.CLK( C), .D( D), .Q( Q), .R( R), .S( S));
+    DFFSR _DFFSR_PNP_ (.CLK( C), .D( D), .Q( Q), .R(~R), .S( S));
+    DFFSR _DFFSR_PPN_ (.CLK( C), .D( D), .Q( Q), .R( R), .S(~S));
+    DFFSR _DFFSR_PPP_ (.CLK( C), .D( D), .Q( Q), .R(~R), .S(~S));
+Mapping DFF cells in module `\internal_register':
+  mapped 160 $_DFF_P_ cells to \DFFPOSX1 cells.
+
+5. Executing OPT pass (performing simple optimizations).
+
+5.1. Executing OPT_EXPR pass (perform const folding).
+
+5.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\internal_register'.
+Removed a total of 0 cells.
+
+5.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \internal_register..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+5.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \internal_register.
+Performed a total of 0 changes.
+
+5.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\internal_register'.
+Removed a total of 0 cells.
+
+5.6. Executing OPT_RMDFF pass (remove dff with constant values).
+
+5.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \internal_register..
+
+5.8. Executing OPT_EXPR pass (perform const folding).
+
+5.9. Finished OPT passes. (There is nothing left to do.)
+
+6. Executing ABC pass (technology mapping using ABC).
+
+6.1. Extracting gate netlist of module `\internal_register' to `<abc-temp-dir>/input.blif'..
+Extracted 435 gates and 622 wires to a netlist network with 187 inputs and 160 outputs.
+
+6.1.1. Executing ABC.
+Running ABC command: /usr/local/share/qflow/bin/yosys-abc -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_lib -w /usr/local/share/qflow/tech/osu035/osu035_stdcells.lib 
+ABC: Parsing finished successfully.  Parsing time =     0.00 sec
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFFNEGX1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFFPOSX1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFFSR".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "LATCH".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "PADINOUT".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "TBUFX1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "TBUFX2".
+ABC: Scl_LibertyReadGenlib() skipped cell "PADFC" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "PADNC" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "PADVDD" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "PADGND" without logic function.
+ABC: Library "osu035_stdcells" from "/usr/local/share/qflow/tech/osu035/osu035_stdcells.lib" has 28 cells (11 skipped: 4 seq; 3 tri-state; 4 no func).  Time =     0.00 sec
+ABC: Memory =    0.38 MB. Time =     0.00 sec
+ABC: Warning: Detected 2 multi-output gates (for example, "FAX1").
+ABC: + strash 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + ifraig 
+ABC: + retime 
+ABC: + strash 
+ABC: + dch -f 
+ABC: + map -M 1 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+6.1.2. Re-integrating ABC results.
+ABC RESULTS:            AND2X2 cells:        3
+ABC RESULTS:             INVX1 cells:       56
+ABC RESULTS:            MUX2X1 cells:       64
+ABC RESULTS:           NAND2X1 cells:       70
+ABC RESULTS:           NAND3X1 cells:       34
+ABC RESULTS:            NOR2X1 cells:      100
+ABC RESULTS:           OAI21X1 cells:      320
+ABC RESULTS:           OAI22X1 cells:       64
+ABC RESULTS:             OR2X2 cells:        2
+ABC RESULTS:        internal signals:      275
+ABC RESULTS:           input signals:      187
+ABC RESULTS:          output signals:      160
+Removing temp directory.
+
+7. Executing FLATTEN pass (flatten design).
+No more expansions possible.
+Removed 0 unused cells and 622 unused wires.
+
+8. Executing IOPADMAP pass (mapping inputs/outputs to IO-PAD cells).
+Don't map input port internal_register.clock: Missing option -inpad.
+Don't map input port internal_register.data_in: Missing option -inpad.
+Don't map input port internal_register.enable: Missing option -inpad.
+Don't map input port internal_register.ra_adrs: Missing option -inpad.
+Mapping port internal_register.ra_out using BUFX2.
+Don't map input port internal_register.rb_adrs: Missing option -inpad.
+Mapping port internal_register.rb_out using BUFX2.
+Don't map input port internal_register.rd_adrs: Missing option -inpad.
+Don't map input port internal_register.wr_en: Missing option -inpad.
+
+9. Executing OPT pass (performing simple optimizations).
+
+9.1. Executing OPT_EXPR pass (perform const folding).
+
+9.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\internal_register'.
+Removed a total of 0 cells.
+
+9.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \internal_register..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+9.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \internal_register.
+Performed a total of 0 changes.
+
+9.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\internal_register'.
+Removed a total of 0 cells.
+
+9.6. Executing OPT_RMDFF pass (remove dff with constant values).
+
+9.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \internal_register..
+
+9.8. Executing OPT_EXPR pass (perform const folding).
+
+9.9. Finished OPT passes. (There is nothing left to do.)
+
+10. Executing Verilog backend.
+Dumping module `\internal_register'.
+
+11. Printing statistics.
+
+=== internal_register ===
+
+   Number of wires:                702
+   Number of wire bits:            933
+   Number of public wires:         702
+   Number of public wire bits:     933
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                905
+     AND2X2                          3
+     BUFX2                          32
+     DFFPOSX1                      160
+     INVX1                          56
+     MUX2X1                         64
+     NAND2X1                        70
+     NAND3X1                        34
+     NOR2X1                        100
+     OAI21X1                       320
+     OAI22X1                        64
+     OR2X2                           2
+
+End of script. Logfile hash: d18bc18620
+CPU: user 0.67s system 0.04s, MEM: 38.02 MB total, 10.93 MB resident
+Yosys 0.7 (git sha1 61f6811, gcc 6.2.0-11ubuntu1 -O2 -fdebug-prefix-map=/build/yosys-OIL3SR/yosys-0.7=. -fstack-protector-strong -fPIC -Os)
+Time spent: 13% 15x opt_clean (0 sec), 13% 16x opt_expr (0 sec), ...
+Running getpowerground to determine power and ground net names.
+getpowerground.tcl  /usr/local/share/qflow/tech/osu035/osu035_stdcells.lef
+Running vlogFanout
+vlogFanout -l 200 -c 30 -I internal_register_nofanout -s nullstring -p /usr/local/share/qflow/tech/osu035/osu035_stdcells.lib -b BUFX2,CLKBUF1 -i A,A -o Y,Y internal_register_mapped.v internal_register_sized.v
+
+vlogFanout for qflow 1.4.79
+Parsing library "osu035_stdcells"
+End of library at line 6636
+Lib Read:  Processed 6637 lines.
+Top internal fanout is 35 (load 945.335) from node _404_,
+driven by NAND2X1 with strength 102.232 (fF driven at latency 200)
+Top fanout load-to-strength ratio is 9.24694 (latency = 1849.39 ps)
+Top input node fanout is 160 (load 6482.53) from node clock.
+0 gates exceed specified minimum load.
+123 buffers were added.
+Warning 1: load of 548.92 is 2.64593 times greater than strongest gate AND2X2
+This warning will only be repeated for larger overload ratios.  Warning count reflects
+the total number of overloaded nets.
+Warning 2: load of 419.714 is 3.86173 times greater than strongest gate NOR2X1
+Warning 3: load of 751.368 is 7.34962 times greater than strongest gate NAND2X1
+Warning 5: load of 755.048 is 7.45028 times greater than strongest gate NAND3X1
+Warning 12: load of 955.335 is 9.34475 times greater than strongest gate NAND2X1
+22 gates were changed.
+
+Gate counts by drive strength:
+
+	"1" gates	In: 880    	Out: 858    	-22
+	"2" gates	In: 148    	Out: 164    	+16
+
+15 gates exceed specified minimum load.
+0 buffers were added.
+0 gates were changed.
+
+Gate counts by drive strength:
+
+	"1" gates	In: 880    	Out: 858    	-22
+	"2" gates	In: 148    	Out: 164    	+16
+
+Number of gates changed: 0
+Running vlog2Verilog for antenna cell mapping.
+vlog2Verilog -c -p -v vdd -g gnd  -l /usr/local/share/qflow/tech/osu035/osu035_stdcells.lef 
+   -o internal_register.v internal_register_sized.v
+
+Generating RTL verilog and SPICE netlist file in directory
+	 /home/akash/Documents/DigitalLab/verilog_tasks/task_2/internal_register/synthesis
+Files:
+   Verilog: /home/akash/Documents/DigitalLab/verilog_tasks/task_2/internal_register/synthesis/internal_register.rtl.v
+   Verilog: /home/akash/Documents/DigitalLab/verilog_tasks/task_2/internal_register/synthesis/internal_register.rtlnopwr.v
+   Verilog: /home/akash/Documents/DigitalLab/verilog_tasks/task_2/internal_register/synthesis/internal_register.rtlbb.v
+   Spice:   /home/akash/Documents/DigitalLab/verilog_tasks/task_2/internal_register/synthesis/internal_register.spc
+
+Running vlog2Verilog.
+vlog2Verilog -c -v vdd -g gnd  -l /usr/local/share/qflow/tech/osu035/osu035_stdcells.lef 
+	-o internal_register.rtl.v
+   internal_register.v
+vlog2Verilog -c -p -v vdd -g gnd  -l /usr/local/share/qflow/tech/osu035/osu035_stdcells.lef 
+	-o internal_register.rtlnopwr.v
+   internal_register.v
+/usr/local/share/qflow/bin/vlog2Verilog -c -p -b -n -v vdd -g gnd  -l /usr/local/share/qflow/tech/osu035/osu035_stdcells.lef
+   -o internal_register.rtlbb.v
+Running vlog2Spice.
+vlog2Spice -i -l  /usr/local/share/qflow/tech/osu035/osu035_stdcells.sp -o internal_register.spc internal_register.rtl.v
+Running spi2xspice.py
+spi2xspice.py "/usr/local/share/qflow/tech/osu035/osu035_stdcells.lib" internal_register.spc internal_register.xspice
+
+Synthesis script ended on Mo 8. Jun 18:05:01 CEST 2020

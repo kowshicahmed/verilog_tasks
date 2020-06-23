@@ -1,0 +1,206 @@
+* NGSPICE file created from instruction_decoder.ext - technology: scmos
+
+* Black-box entry subcircuit for INVX1 abstract view
+.subckt INVX1 A gnd Y vdd
+.ends
+
+* Black-box entry subcircuit for BUFX2 abstract view
+.subckt BUFX2 A gnd Y vdd
+.ends
+
+* Black-box entry subcircuit for NAND2X1 abstract view
+.subckt NAND2X1 A B gnd Y vdd
+.ends
+
+* Black-box entry subcircuit for FILL abstract view
+.subckt FILL gnd vdd
+.ends
+
+* Black-box entry subcircuit for OAI21X1 abstract view
+.subckt OAI21X1 A B C gnd Y vdd
+.ends
+
+* Black-box entry subcircuit for DFFPOSX1 abstract view
+.subckt DFFPOSX1 Q CLK D gnd vdd
+.ends
+
+* Black-box entry subcircuit for CLKBUF1 abstract view
+.subckt CLKBUF1 A gnd Y vdd
+.ends
+
+.subckt instruction_decoder gnd vdd clock enable flag imm[7] imm[6] imm[5] imm[4]
++ imm[3] imm[2] imm[1] imm[0] instruct[15] instruct[14] instruct[13] instruct[12]
++ instruct[11] instruct[10] instruct[9] instruct[8] instruct[7] instruct[6] instruct[5]
++ instruct[4] instruct[3] instruct[2] instruct[1] instruct[0] opcode[3] opcode[2]
++ opcode[1] opcode[0] rAadrs[2] rAadrs[1] rAadrs[0] rBadrs[2] rBadrs[1] rBadrs[0]
++ rDadrs[2] rDadrs[1] rDadrs[0]
+X_83_ _83_/A gnd _83_/Y vdd INVX1
+X_131_ _95_/A gnd rDadrs[2] vdd BUFX2
+X_66_ _67_/A instruct[4] gnd _82_/C vdd NAND2X1
+XFILL15120x6100 gnd vdd FILL
+X_114_ _62_/A gnd imm[3] vdd BUFX2
+X_82_ _67_/A _81_/Y _82_/C gnd _82_/Y vdd OAI21X1
+XSFILL3600x2100 gnd vdd FILL
+XSFILL12080x4100 gnd vdd FILL
+X_130_ _92_/A gnd rDadrs[1] vdd BUFX2
+X_65_ _65_/A gnd _65_/Y vdd INVX1
+X_113_ _59_/A gnd imm[2] vdd BUFX2
+XSFILL12080x10100 gnd vdd FILL
+X_81_ _81_/A gnd _81_/Y vdd INVX1
+X_64_ _67_/A _62_/Y _63_/Y gnd _64_/Y vdd OAI21X1
+X_112_ _56_/A gnd imm[1] vdd BUFX2
+X_63_ _67_/A instruct[3] gnd _63_/Y vdd NAND2X1
+X_80_ _67_/A _80_/B _63_/Y gnd _80_/Y vdd OAI21X1
+X_111_ _53_/A gnd imm[0] vdd BUFX2
+XSFILL13200x6100 gnd vdd FILL
+XSFILL4720x100 gnd vdd FILL
+XSFILL11920x4100 gnd vdd FILL
+X_62_ _62_/A gnd _62_/Y vdd INVX1
+X_110_ _50_/A gnd flag vdd BUFX2
+XBUFX2_insert4 enable gnd _73_/A vdd BUFX2
+XSFILL12880x6100 gnd vdd FILL
+X_61_ _73_/A _59_/Y _60_/Y gnd _61_/Y vdd OAI21X1
+XSFILL5360x10100 gnd vdd FILL
+XBUFX2_insert5 enable gnd _72_/A vdd BUFX2
+XSFILL12720x6100 gnd vdd FILL
+X_60_ _51_/B instruct[2] gnd _60_/Y vdd NAND2X1
+XBUFX2_insert6 enable gnd _76_/A vdd BUFX2
+XSFILL11760x10100 gnd vdd FILL
+XSFILL4880x100 gnd vdd FILL
+XBUFX2_insert7 enable gnd _51_/B vdd BUFX2
+XSFILL12080x100 gnd vdd FILL
+XBUFX2_insert8 enable gnd _67_/A vdd BUFX2
+X_149_ _107_/A _149_/CLK _109_/Y gnd vdd DFFPOSX1
+XCLKBUF1_insert0 clock gnd _142_/CLK vdd CLKBUF1
+XBUFX2_insert9 enable gnd _70_/A vdd BUFX2
+X_148_ _104_/A _148_/CLK _148_/D gnd vdd DFFPOSX1
+XCLKBUF1_insert1 clock gnd _149_/CLK vdd CLKBUF1
+XSFILL4240x6100 gnd vdd FILL
+X_99_ _70_/A instruct[12] gnd _99_/Y vdd NAND2X1
+X_147_ _101_/A _149_/CLK _147_/D gnd vdd DFFPOSX1
+XCLKBUF1_insert2 clock gnd _144_/CLK vdd CLKBUF1
+X_98_ _98_/A gnd _98_/Y vdd INVX1
+XSFILL5200x10100 gnd vdd FILL
+X_129_ _89_/A gnd rDadrs[0] vdd BUFX2
+X_146_ _98_/A _144_/CLK _146_/D gnd vdd DFFPOSX1
+XCLKBUF1_insert3 clock gnd _148_/CLK vdd CLKBUF1
+X_97_ _72_/A _95_/Y _97_/C gnd _97_/Y vdd OAI21X1
+XSFILL12080x2100 gnd vdd FILL
+X_145_ _50_/A _142_/CLK _52_/Y gnd vdd DFFPOSX1
+X_128_ _81_/A gnd rBadrs[2] vdd BUFX2
+X_96_ _72_/A instruct[11] gnd _97_/C vdd NAND2X1
+X_79_ _79_/A gnd _80_/B vdd INVX1
+X_127_ _79_/A gnd rBadrs[1] vdd BUFX2
+XSFILL12240x100 gnd vdd FILL
+X_144_ _74_/A _144_/CLK _76_/Y gnd vdd DFFPOSX1
+XSFILL12400x8100 gnd vdd FILL
+XSFILL12080x8100 gnd vdd FILL
+X_95_ _95_/A gnd _95_/Y vdd INVX1
+X_143_ _71_/A _149_/CLK _73_/Y gnd vdd DFFPOSX1
+XSFILL11760x100 gnd vdd FILL
+X_78_ _51_/B _77_/Y _60_/Y gnd _78_/Y vdd OAI21X1
+X_126_ _77_/A gnd rBadrs[0] vdd BUFX2
+X_109_ _73_/A _107_/Y _108_/Y gnd _109_/Y vdd OAI21X1
+XSFILL11920x2100 gnd vdd FILL
+X_77_ _77_/A gnd _77_/Y vdd INVX1
+X_94_ _73_/A _94_/B _94_/C gnd _94_/Y vdd OAI21X1
+X_125_ _87_/A gnd rAadrs[2] vdd BUFX2
+X_142_ _68_/A _142_/CLK _70_/Y gnd vdd DFFPOSX1
+X_108_ _73_/A instruct[15] gnd _108_/Y vdd NAND2X1
+XSFILL5360x4100 gnd vdd FILL
+XSFILL4400x8100 gnd vdd FILL
+XSFILL4080x8100 gnd vdd FILL
+X_93_ _73_/A instruct[10] gnd _94_/C vdd NAND2X1
+XSFILL11920x8100 gnd vdd FILL
+X_76_ _76_/A _74_/Y _76_/C gnd _76_/Y vdd OAI21X1
+X_141_ _65_/A _148_/CLK _67_/Y gnd vdd DFFPOSX1
+X_124_ _85_/A gnd rAadrs[1] vdd BUFX2
+X_59_ _59_/A gnd _59_/Y vdd INVX1
+X_107_ _107_/A gnd _107_/Y vdd INVX1
+XSFILL5200x4100 gnd vdd FILL
+X_92_ _92_/A gnd _94_/B vdd INVX1
+X_140_ _62_/A _148_/CLK _64_/Y gnd vdd DFFPOSX1
+X_75_ _76_/A instruct[7] gnd _76_/C vdd NAND2X1
+XSFILL3920x2100 gnd vdd FILL
+X_58_ _70_/A _58_/B _57_/Y gnd _58_/Y vdd OAI21X1
+X_106_ _72_/A _104_/Y _106_/C gnd _148_/D vdd OAI21X1
+X_123_ _83_/A gnd rAadrs[0] vdd BUFX2
+X_91_ _76_/A _91_/B _91_/C gnd _91_/Y vdd OAI21X1
+X_74_ _74_/A gnd _74_/Y vdd INVX1
+X_122_ _107_/A gnd opcode[3] vdd BUFX2
+XSFILL4880x10100 gnd vdd FILL
+X_57_ _70_/A instruct[1] gnd _57_/Y vdd NAND2X1
+XSFILL4880x4100 gnd vdd FILL
+X_105_ _72_/A instruct[14] gnd _106_/C vdd NAND2X1
+XSFILL3920x8100 gnd vdd FILL
+XSFILL3440x2100 gnd vdd FILL
+XSFILL12240x4100 gnd vdd FILL
+X_90_ _76_/A instruct[9] gnd _91_/C vdd NAND2X1
+X_73_ _73_/A _73_/B _72_/Y gnd _73_/Y vdd OAI21X1
+XFILL14960x6100 gnd vdd FILL
+X_56_ _56_/A gnd _58_/B vdd INVX1
+X_104_ _104_/A gnd _104_/Y vdd INVX1
+X_121_ _104_/A gnd opcode[2] vdd BUFX2
+XSFILL5040x10100 gnd vdd FILL
+X_72_ _72_/A instruct[6] gnd _72_/Y vdd NAND2X1
+XSFILL11920x100 gnd vdd FILL
+X_55_ _72_/A _55_/B _55_/C gnd _55_/Y vdd OAI21X1
+X_120_ _101_/A gnd opcode[1] vdd BUFX2
+X_103_ _51_/B _101_/Y _102_/Y gnd _147_/D vdd OAI21X1
+XSFILL13040x6100 gnd vdd FILL
+X_54_ _72_/A instruct[0] gnd _55_/C vdd NAND2X1
+X_71_ _71_/A gnd _73_/B vdd INVX1
+XSFILL11760x4100 gnd vdd FILL
+X_102_ _51_/B instruct[13] gnd _102_/Y vdd NAND2X1
+X_70_ _70_/A _70_/B _70_/C gnd _70_/Y vdd OAI21X1
+X_53_ _53_/A gnd _55_/B vdd INVX1
+X_101_ _101_/A gnd _101_/Y vdd INVX1
+X_52_ _51_/B _52_/B _52_/C gnd _52_/Y vdd OAI21X1
+X_100_ _70_/A _98_/Y _99_/Y gnd _146_/D vdd OAI21X1
+XFILL15120x100 gnd vdd FILL
+XFILL15120x8100 gnd vdd FILL
+X_51_ instruct[8] _51_/B gnd _52_/C vdd NAND2X1
+X_50_ _50_/A gnd _52_/B vdd INVX1
+XSFILL4400x6100 gnd vdd FILL
+XSFILL4080x6100 gnd vdd FILL
+X_139_ _59_/A _142_/CLK _61_/Y gnd vdd DFFPOSX1
+XSFILL4400x100 gnd vdd FILL
+X_138_ _56_/A _142_/CLK _58_/Y gnd vdd DFFPOSX1
+XFILL14960x10100 gnd vdd FILL
+XSFILL12240x10100 gnd vdd FILL
+X_89_ _89_/A gnd _91_/B vdd INVX1
+X_137_ _53_/A _149_/CLK _55_/Y gnd vdd DFFPOSX1
+XFILL15120x10100 gnd vdd FILL
+XSFILL12240x2100 gnd vdd FILL
+XSFILL3920x6100 gnd vdd FILL
+X_88_ _76_/A _87_/Y _76_/C gnd _88_/Y vdd OAI21X1
+X_136_ _81_/A _148_/CLK _82_/Y gnd vdd DFFPOSX1
+X_153_ _83_/A _144_/CLK _84_/Y gnd vdd DFFPOSX1
+X_119_ _98_/A gnd opcode[0] vdd BUFX2
+XSFILL12240x8100 gnd vdd FILL
+X_152_ _95_/A _149_/CLK _97_/Y gnd vdd DFFPOSX1
+X_87_ _87_/A gnd _87_/Y vdd INVX1
+X_135_ _79_/A _148_/CLK _80_/Y gnd vdd DFFPOSX1
+X_118_ _74_/A gnd imm[7] vdd BUFX2
+X_86_ _73_/A _85_/Y _72_/Y gnd _86_/Y vdd OAI21X1
+X_151_ _92_/A _142_/CLK _94_/Y gnd vdd DFFPOSX1
+X_69_ _76_/A instruct[5] gnd _70_/C vdd NAND2X1
+X_134_ _77_/A _142_/CLK _78_/Y gnd vdd DFFPOSX1
+X_117_ _71_/A gnd imm[6] vdd BUFX2
+XSFILL4560x100 gnd vdd FILL
+XSFILL11760x2100 gnd vdd FILL
+X_85_ _85_/A gnd _85_/Y vdd INVX1
+X_150_ _89_/A _144_/CLK _91_/Y gnd vdd DFFPOSX1
+XSFILL4240x8100 gnd vdd FILL
+X_133_ _87_/A _144_/CLK _88_/Y gnd vdd DFFPOSX1
+X_68_ _68_/A gnd _70_/B vdd INVX1
+X_116_ _68_/A gnd imm[5] vdd BUFX2
+XSFILL11920x10100 gnd vdd FILL
+X_84_ _70_/A _83_/Y _70_/C gnd _84_/Y vdd OAI21X1
+X_132_ _85_/A _149_/CLK _86_/Y gnd vdd DFFPOSX1
+X_67_ _67_/A _65_/Y _82_/C gnd _67_/Y vdd OAI21X1
+XSFILL5040x4100 gnd vdd FILL
+X_115_ _65_/A gnd imm[4] vdd BUFX2
+XSFILL3760x2100 gnd vdd FILL
+.ends
+
