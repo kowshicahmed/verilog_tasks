@@ -1,0 +1,1126 @@
+Qflow static timing analysis logfile created on Mo 10. Aug 13:42:39 CEST 2020
+Converting qrouter output to vesta delay format
+Running rc2dly -r uProcessor.rc -l /usr/local/share/qflow/tech/osu035/osu035_stdcells.lib -V /home/akash/Documents/DigitalLab/verilog_tasks/task_4/synthesis/uProcessor.rtl.v
+-d uProcessor.dly
+Converting qrouter output to SPEF delay format
+Running rc2dly -D : -r uProcessor.rc -l /usr/local/share/qflow/tech/osu035/osu035_stdcells.lib -V /home/akash/Documents/DigitalLab/verilog_tasks/task_4/synthesis/uProcessor.rtl.v
+-d uProcessor.spef
+Converting qrouter output to SDF delay format
+Running rc2dly -r uProcessor.rc -l /usr/local/share/qflow/tech/osu035/osu035_stdcells.lib -V /home/akash/Documents/DigitalLab/verilog_tasks/task_4/synthesis/uProcessor.rtl.v
+-d uProcessor.sdf
+Running vesta static timing analysis with back-annotated extracted wire delays
+vesta -c -d uProcessor.dly --long uProcessor.rtlnopwr.v /usr/local/share/qflow/tech/osu035/osu035_stdcells.lib
+----------------------------------------------
+Vesta static timing analysis tool
+for qflow 1.4.79
+(c) 2013-2018 Tim Edwards, Open Circuit Design
+----------------------------------------------
+
+Parsing library "osu035_stdcells"
+End of library at line 6636
+Lib read /usr/local/share/qflow/tech/osu035/osu035_stdcells.lib:  Processed 6637 lines.
+Parsing module "uProcessor"
+ERROR: Net \alu_inst01.inst12.sel [3] had 10 receivers in delay file,  but expected a fanout of 14
+Verilog netlist read:  Processed 21045 lines.
+Number of paths analyzed:  234
+
+Top 20 maximum delay paths:
+Path _4299_/CLK to _4186_/D delay 4457.02 ps
+      0.1 ps                                 clock_bF$buf9: CLKBUF1_insert26/Y ->          _4299_/CLK
+    341.9 ps         \internal_register_inst_07.ra_out [0]:           _4299_/Q -> BUFX2_insert112/A
+    626.3 ps  \internal_register_inst_07.ra_out_0_bF$buf2 :  BUFX2_insert112/Y ->          _2099_/A
+    893.6 ps                                         _104_:           _2099_/Y ->          _2105_/A
+   1171.0 ps                                         _109_:           _2105_/Y ->          _2115_/B
+   1422.6 ps                                         _117_:           _2115_/Y ->          _2118_/B
+   1675.7 ps                                         _120_:           _2118_/Y ->          _2151_/B
+   1999.6 ps                                          _37_:           _2151_/Y ->          _2185_/B
+   2338.8 ps                                          _67_:           _2185_/Y ->          _2202_/A
+   2588.6 ps                                          _82_:           _2202_/Y ->          _2223_/B
+   2739.3 ps                                         _102_:           _2223_/Y ->          _2224_/B
+   2839.5 ps                                         _103_:           _2224_/Y ->          _2225_/B
+   2943.2 ps                \alu_inst01.inst01.result [15]:           _2225_/Y ->          _3251_/C
+   3052.1 ps                                        _1087_:           _3251_/Y ->          _3252_/B
+   3153.1 ps                                        _1088_:           _3252_/Y ->          _3253_/A
+   3246.8 ps                                        _1089_:           _3253_/Y ->          _3254_/C
+   3336.8 ps                     \alu_inst01.inst12.y [15]:           _3254_/Y ->          _3408_/A
+   3406.3 ps                                        _1188_:           _3408_/Y ->          _3409_/C
+   3504.2 ps                                        _1189_:           _3409_/Y ->          _3412_/B
+   3633.7 ps                                        _1192_:           _3412_/Y ->          _3413_/B
+   3800.7 ps                 \data_mux_inst_06.m_regD [15]:           _3413_/Y ->          _3575_/A
+   3971.2 ps                                        _1442_:           _3575_/Y ->          _3577_/A
+   4085.7 ps                                        _1291_:           _3577_/Y ->          _4186_/D
+
+   clock skew at destination = 36.5995
+   setup at destination = 334.712
+
+Path _4299_/CLK to _4234_/D delay 4455.6 ps
+      0.1 ps                                 clock_bF$buf9: CLKBUF1_insert26/Y ->          _4299_/CLK
+    341.9 ps         \internal_register_inst_07.ra_out [0]:           _4299_/Q -> BUFX2_insert112/A
+    626.3 ps  \internal_register_inst_07.ra_out_0_bF$buf2 :  BUFX2_insert112/Y ->          _2099_/A
+    893.6 ps                                         _104_:           _2099_/Y ->          _2105_/A
+   1171.0 ps                                         _109_:           _2105_/Y ->          _2115_/B
+   1422.6 ps                                         _117_:           _2115_/Y ->          _2118_/B
+   1675.7 ps                                         _120_:           _2118_/Y ->          _2151_/B
+   1999.6 ps                                          _37_:           _2151_/Y ->          _2185_/B
+   2338.8 ps                                          _67_:           _2185_/Y ->          _2202_/A
+   2588.6 ps                                          _82_:           _2202_/Y ->          _2223_/B
+   2739.3 ps                                         _102_:           _2223_/Y ->          _2224_/B
+   2839.5 ps                                         _103_:           _2224_/Y ->          _2225_/B
+   2943.2 ps                \alu_inst01.inst01.result [15]:           _2225_/Y ->          _3251_/C
+   3052.1 ps                                        _1087_:           _3251_/Y ->          _3252_/B
+   3153.1 ps                                        _1088_:           _3252_/Y ->          _3253_/A
+   3246.8 ps                                        _1089_:           _3253_/Y ->          _3254_/C
+   3336.8 ps                     \alu_inst01.inst12.y [15]:           _3254_/Y ->          _3408_/A
+   3406.3 ps                                        _1188_:           _3408_/Y ->          _3409_/C
+   3504.2 ps                                        _1189_:           _3409_/Y ->          _3412_/B
+   3633.7 ps                                        _1192_:           _3412_/Y ->          _3413_/B
+   3800.7 ps                 \data_mux_inst_06.m_regD [15]:           _3413_/Y ->          _3575_/A
+   3971.2 ps                                        _1442_:           _3575_/Y ->          _3745_/A
+   4084.5 ps                                        _1371_:           _3745_/Y ->          _4234_/D
+
+   clock skew at destination = 36.5995
+   setup at destination = 334.548
+
+Path _4299_/CLK to _4202_/D delay 4441.97 ps
+      0.1 ps                                 clock_bF$buf9: CLKBUF1_insert26/Y ->          _4299_/CLK
+    341.9 ps         \internal_register_inst_07.ra_out [0]:           _4299_/Q -> BUFX2_insert112/A
+    626.3 ps  \internal_register_inst_07.ra_out_0_bF$buf2 :  BUFX2_insert112/Y ->          _2099_/A
+    893.6 ps                                         _104_:           _2099_/Y ->          _2105_/A
+   1171.0 ps                                         _109_:           _2105_/Y ->          _2115_/B
+   1422.6 ps                                         _117_:           _2115_/Y ->          _2118_/B
+   1675.7 ps                                         _120_:           _2118_/Y ->          _2151_/B
+   1999.6 ps                                          _37_:           _2151_/Y ->          _2185_/B
+   2338.8 ps                                          _67_:           _2185_/Y ->          _2202_/A
+   2588.6 ps                                          _82_:           _2202_/Y ->          _2223_/B
+   2739.3 ps                                         _102_:           _2223_/Y ->          _2224_/B
+   2839.5 ps                                         _103_:           _2224_/Y ->          _2225_/B
+   2943.2 ps                \alu_inst01.inst01.result [15]:           _2225_/Y ->          _3251_/C
+   3052.1 ps                                        _1087_:           _3251_/Y ->          _3252_/B
+   3153.1 ps                                        _1088_:           _3252_/Y ->          _3253_/A
+   3246.8 ps                                        _1089_:           _3253_/Y ->          _3254_/C
+   3336.8 ps                     \alu_inst01.inst12.y [15]:           _3254_/Y ->          _3408_/A
+   3406.3 ps                                        _1188_:           _3408_/Y ->          _3409_/C
+   3504.2 ps                                        _1189_:           _3409_/Y ->          _3412_/B
+   3633.7 ps                                        _1192_:           _3412_/Y ->          _3413_/B
+   3800.7 ps                 \data_mux_inst_06.m_regD [15]:           _3413_/Y ->          _3575_/A
+   3971.2 ps                                        _1442_:           _3575_/Y ->          _3712_/A
+   4085.8 ps                                        _1355_:           _3712_/Y ->          _4202_/D
+
+   clock skew at destination = 19.3512
+   setup at destination = 336.772
+
+Path _4299_/CLK to _4250_/D delay 4441.76 ps
+      0.1 ps                                 clock_bF$buf9: CLKBUF1_insert26/Y ->          _4299_/CLK
+    341.9 ps         \internal_register_inst_07.ra_out [0]:           _4299_/Q -> BUFX2_insert112/A
+    626.3 ps  \internal_register_inst_07.ra_out_0_bF$buf2 :  BUFX2_insert112/Y ->          _2099_/A
+    893.6 ps                                         _104_:           _2099_/Y ->          _2105_/A
+   1171.0 ps                                         _109_:           _2105_/Y ->          _2115_/B
+   1422.6 ps                                         _117_:           _2115_/Y ->          _2118_/B
+   1675.7 ps                                         _120_:           _2118_/Y ->          _2151_/B
+   1999.6 ps                                          _37_:           _2151_/Y ->          _2185_/B
+   2338.8 ps                                          _67_:           _2185_/Y ->          _2202_/A
+   2588.6 ps                                          _82_:           _2202_/Y ->          _2223_/B
+   2739.3 ps                                         _102_:           _2223_/Y ->          _2224_/B
+   2839.5 ps                                         _103_:           _2224_/Y ->          _2225_/B
+   2943.2 ps                \alu_inst01.inst01.result [15]:           _2225_/Y ->          _3251_/C
+   3052.1 ps                                        _1087_:           _3251_/Y ->          _3252_/B
+   3153.1 ps                                        _1088_:           _3252_/Y ->          _3253_/A
+   3246.8 ps                                        _1089_:           _3253_/Y ->          _3254_/C
+   3336.8 ps                     \alu_inst01.inst12.y [15]:           _3254_/Y ->          _3408_/A
+   3406.3 ps                                        _1188_:           _3408_/Y ->          _3409_/C
+   3504.2 ps                                        _1189_:           _3409_/Y ->          _3412_/B
+   3633.7 ps                                        _1192_:           _3412_/Y ->          _3413_/B
+   3800.7 ps                 \data_mux_inst_06.m_regD [15]:           _3413_/Y ->          _3575_/A
+   3971.2 ps                                        _1442_:           _3575_/Y ->          _3645_/A
+   4085.9 ps                                        _1323_:           _3645_/Y ->          _4250_/D
+
+   clock skew at destination = 19.0342
+   setup at destination = 336.803
+
+Path _4299_/CLK to _4218_/D delay 4441.56 ps
+      0.1 ps                                 clock_bF$buf9: CLKBUF1_insert26/Y ->          _4299_/CLK
+    341.9 ps         \internal_register_inst_07.ra_out [0]:           _4299_/Q -> BUFX2_insert112/A
+    626.3 ps  \internal_register_inst_07.ra_out_0_bF$buf2 :  BUFX2_insert112/Y ->          _2099_/A
+    893.6 ps                                         _104_:           _2099_/Y ->          _2105_/A
+   1171.0 ps                                         _109_:           _2105_/Y ->          _2115_/B
+   1422.6 ps                                         _117_:           _2115_/Y ->          _2118_/B
+   1675.7 ps                                         _120_:           _2118_/Y ->          _2151_/B
+   1999.6 ps                                          _37_:           _2151_/Y ->          _2185_/B
+   2338.8 ps                                          _67_:           _2185_/Y ->          _2202_/A
+   2588.6 ps                                          _82_:           _2202_/Y ->          _2223_/B
+   2739.3 ps                                         _102_:           _2223_/Y ->          _2224_/B
+   2839.5 ps                                         _103_:           _2224_/Y ->          _2225_/B
+   2943.2 ps                \alu_inst01.inst01.result [15]:           _2225_/Y ->          _3251_/C
+   3052.1 ps                                        _1087_:           _3251_/Y ->          _3252_/B
+   3153.1 ps                                        _1088_:           _3252_/Y ->          _3253_/A
+   3246.8 ps                                        _1089_:           _3253_/Y ->          _3254_/C
+   3336.8 ps                     \alu_inst01.inst12.y [15]:           _3254_/Y ->          _3408_/A
+   3406.3 ps                                        _1188_:           _3408_/Y ->          _3409_/C
+   3504.2 ps                                        _1189_:           _3409_/Y ->          _3412_/B
+   3633.7 ps                                        _1192_:           _3412_/Y ->          _3413_/B
+   3800.7 ps                 \data_mux_inst_06.m_regD [15]:           _3413_/Y ->          _3575_/A
+   3971.2 ps                                        _1442_:           _3575_/Y ->          _3611_/A
+   4085.7 ps                                        _1307_:           _3611_/Y ->          _4218_/D
+
+   clock skew at destination = 19.0342
+   setup at destination = 336.821
+
+Path _4299_/CLK to _4298_/D delay 4441.08 ps
+      0.1 ps                                 clock_bF$buf9: CLKBUF1_insert26/Y ->          _4299_/CLK
+    341.9 ps         \internal_register_inst_07.ra_out [0]:           _4299_/Q -> BUFX2_insert112/A
+    626.3 ps  \internal_register_inst_07.ra_out_0_bF$buf2 :  BUFX2_insert112/Y ->          _2099_/A
+    893.6 ps                                         _104_:           _2099_/Y ->          _2105_/A
+   1171.0 ps                                         _109_:           _2105_/Y ->          _2115_/B
+   1422.6 ps                                         _117_:           _2115_/Y ->          _2118_/B
+   1675.7 ps                                         _120_:           _2118_/Y ->          _2151_/B
+   1999.6 ps                                          _37_:           _2151_/Y ->          _2185_/B
+   2338.8 ps                                          _67_:           _2185_/Y ->          _2202_/A
+   2588.6 ps                                          _82_:           _2202_/Y ->          _2223_/B
+   2739.3 ps                                         _102_:           _2223_/Y ->          _2224_/B
+   2839.5 ps                                         _103_:           _2224_/Y ->          _2225_/B
+   2943.2 ps                \alu_inst01.inst01.result [15]:           _2225_/Y ->          _3251_/C
+   3052.1 ps                                        _1087_:           _3251_/Y ->          _3252_/B
+   3153.1 ps                                        _1088_:           _3252_/Y ->          _3253_/A
+   3246.8 ps                                        _1089_:           _3253_/Y ->          _3254_/C
+   3336.8 ps                     \alu_inst01.inst12.y [15]:           _3254_/Y ->          _3408_/A
+   3406.3 ps                                        _1188_:           _3408_/Y ->          _3409_/C
+   3504.2 ps                                        _1189_:           _3409_/Y ->          _3412_/B
+   3633.7 ps                                        _1192_:           _3412_/Y ->          _3413_/B
+   3800.7 ps                 \data_mux_inst_06.m_regD [15]:           _3413_/Y ->          _3575_/A
+   3971.2 ps                                        _1442_:           _3575_/Y ->          _4170_/A
+   4084.6 ps                                        _1403_:           _4170_/Y ->          _4298_/D
+
+   clock skew at destination = 19.3512
+   setup at destination = 337.085
+
+Path _4299_/CLK to _4282_/D delay 4440.96 ps
+      0.1 ps                                 clock_bF$buf9: CLKBUF1_insert26/Y ->          _4299_/CLK
+    341.9 ps         \internal_register_inst_07.ra_out [0]:           _4299_/Q -> BUFX2_insert112/A
+    626.3 ps  \internal_register_inst_07.ra_out_0_bF$buf2 :  BUFX2_insert112/Y ->          _2099_/A
+    893.6 ps                                         _104_:           _2099_/Y ->          _2105_/A
+   1171.0 ps                                         _109_:           _2105_/Y ->          _2115_/B
+   1422.6 ps                                         _117_:           _2115_/Y ->          _2118_/B
+   1675.7 ps                                         _120_:           _2118_/Y ->          _2151_/B
+   1999.6 ps                                          _37_:           _2151_/Y ->          _2185_/B
+   2338.8 ps                                          _67_:           _2185_/Y ->          _2202_/A
+   2588.6 ps                                          _82_:           _2202_/Y ->          _2223_/B
+   2739.3 ps                                         _102_:           _2223_/Y ->          _2224_/B
+   2839.5 ps                                         _103_:           _2224_/Y ->          _2225_/B
+   2943.2 ps                \alu_inst01.inst01.result [15]:           _2225_/Y ->          _3251_/C
+   3052.1 ps                                        _1087_:           _3251_/Y ->          _3252_/B
+   3153.1 ps                                        _1088_:           _3252_/Y ->          _3253_/A
+   3246.8 ps                                        _1089_:           _3253_/Y ->          _3254_/C
+   3336.8 ps                     \alu_inst01.inst12.y [15]:           _3254_/Y ->          _3408_/A
+   3406.3 ps                                        _1188_:           _3408_/Y ->          _3409_/C
+   3504.2 ps                                        _1189_:           _3409_/Y ->          _3412_/B
+   3633.7 ps                                        _1192_:           _3412_/Y ->          _3413_/B
+   3800.7 ps                 \data_mux_inst_06.m_regD [15]:           _3413_/Y ->          _3575_/A
+   3971.2 ps                                        _1442_:           _3575_/Y ->          _3959_/A
+   4084.5 ps                                        _1387_:           _3959_/Y ->          _4282_/D
+
+   clock skew at destination = 19.3512
+   setup at destination = 337.096
+
+Path _4299_/CLK to _4266_/D delay 4440.67 ps
+      0.1 ps                                 clock_bF$buf9: CLKBUF1_insert26/Y ->          _4299_/CLK
+    341.9 ps         \internal_register_inst_07.ra_out [0]:           _4299_/Q -> BUFX2_insert112/A
+    626.3 ps  \internal_register_inst_07.ra_out_0_bF$buf2 :  BUFX2_insert112/Y ->          _2099_/A
+    893.6 ps                                         _104_:           _2099_/Y ->          _2105_/A
+   1171.0 ps                                         _109_:           _2105_/Y ->          _2115_/B
+   1422.6 ps                                         _117_:           _2115_/Y ->          _2118_/B
+   1675.7 ps                                         _120_:           _2118_/Y ->          _2151_/B
+   1999.6 ps                                          _37_:           _2151_/Y ->          _2185_/B
+   2338.8 ps                                          _67_:           _2185_/Y ->          _2202_/A
+   2588.6 ps                                          _82_:           _2202_/Y ->          _2223_/B
+   2739.3 ps                                         _102_:           _2223_/Y ->          _2224_/B
+   2839.5 ps                                         _103_:           _2224_/Y ->          _2225_/B
+   2943.2 ps                \alu_inst01.inst01.result [15]:           _2225_/Y ->          _3251_/C
+   3052.1 ps                                        _1087_:           _3251_/Y ->          _3252_/B
+   3153.1 ps                                        _1088_:           _3252_/Y ->          _3253_/A
+   3246.8 ps                                        _1089_:           _3253_/Y ->          _3254_/C
+   3336.8 ps                     \alu_inst01.inst12.y [15]:           _3254_/Y ->          _3408_/A
+   3406.3 ps                                        _1188_:           _3408_/Y ->          _3409_/C
+   3504.2 ps                                        _1189_:           _3409_/Y ->          _3412_/B
+   3633.7 ps                                        _1192_:           _3412_/Y ->          _3413_/B
+   3800.7 ps                 \data_mux_inst_06.m_regD [15]:           _3413_/Y ->          _3575_/A
+   3971.2 ps                                        _1442_:           _3575_/Y ->          _3678_/A
+   4084.5 ps                                        _1339_:           _3678_/Y ->          _4266_/D
+
+   clock skew at destination = 19.0342
+   setup at destination = 337.145
+
+Path _4299_/CLK to _4217_/D delay 4294.39 ps
+      0.1 ps                                 clock_bF$buf9: CLKBUF1_insert26/Y ->          _4299_/CLK
+    341.9 ps         \internal_register_inst_07.ra_out [0]:           _4299_/Q -> BUFX2_insert112/A
+    626.3 ps  \internal_register_inst_07.ra_out_0_bF$buf2 :  BUFX2_insert112/Y ->          _2099_/A
+    893.6 ps                                         _104_:           _2099_/Y ->          _2105_/A
+   1171.0 ps                                         _109_:           _2105_/Y ->          _2115_/B
+   1422.6 ps                                         _117_:           _2115_/Y ->          _2118_/B
+   1675.7 ps                                         _120_:           _2118_/Y ->          _2151_/B
+   1999.6 ps                                          _37_:           _2151_/Y ->          _2185_/B
+   2338.8 ps                                          _67_:           _2185_/Y ->          _2202_/A
+   2588.6 ps                                          _82_:           _2202_/Y ->          _2206_/A
+   2774.6 ps                \alu_inst01.inst01.result [14]:           _2206_/Y ->          _3229_/C
+   2891.9 ps                                        _1066_:           _3229_/Y ->          _3230_/B
+   2994.7 ps                                        _1067_:           _3230_/Y ->          _3231_/A
+   3088.4 ps                                        _1068_:           _3231_/Y ->          _3232_/C
+   3178.4 ps                     \alu_inst01.inst12.y [14]:           _3232_/Y ->          _3401_/A
+   3248.4 ps                                        _1182_:           _3401_/Y ->          _3402_/C
+   3344.0 ps                                        _1183_:           _3402_/Y ->          _3405_/B
+   3473.1 ps                                        _1186_:           _3405_/Y ->          _3406_/B
+   3638.4 ps                 \data_mux_inst_06.m_regD [14]:           _3406_/Y ->          _3572_/A
+   3808.4 ps                                        _1440_:           _3572_/Y ->          _3609_/A
+   3922.9 ps                                        _1306_:           _3609_/Y ->          _4217_/D
+
+   clock skew at destination = 36.7754
+   setup at destination = 334.691
+
+Path _4299_/CLK to _4185_/D delay 4294.3 ps
+      0.1 ps                                 clock_bF$buf9: CLKBUF1_insert26/Y ->          _4299_/CLK
+    341.9 ps         \internal_register_inst_07.ra_out [0]:           _4299_/Q -> BUFX2_insert112/A
+    626.3 ps  \internal_register_inst_07.ra_out_0_bF$buf2 :  BUFX2_insert112/Y ->          _2099_/A
+    893.6 ps                                         _104_:           _2099_/Y ->          _2105_/A
+   1171.0 ps                                         _109_:           _2105_/Y ->          _2115_/B
+   1422.6 ps                                         _117_:           _2115_/Y ->          _2118_/B
+   1675.7 ps                                         _120_:           _2118_/Y ->          _2151_/B
+   1999.6 ps                                          _37_:           _2151_/Y ->          _2185_/B
+   2338.8 ps                                          _67_:           _2185_/Y ->          _2202_/A
+   2588.6 ps                                          _82_:           _2202_/Y ->          _2206_/A
+   2774.6 ps                \alu_inst01.inst01.result [14]:           _2206_/Y ->          _3229_/C
+   2891.9 ps                                        _1066_:           _3229_/Y ->          _3230_/B
+   2994.7 ps                                        _1067_:           _3230_/Y ->          _3231_/A
+   3088.4 ps                                        _1068_:           _3231_/Y ->          _3232_/C
+   3178.4 ps                     \alu_inst01.inst12.y [14]:           _3232_/Y ->          _3401_/A
+   3248.4 ps                                        _1182_:           _3401_/Y ->          _3402_/C
+   3344.0 ps                                        _1183_:           _3402_/Y ->          _3405_/B
+   3473.1 ps                                        _1186_:           _3405_/Y ->          _3406_/B
+   3638.4 ps                 \data_mux_inst_06.m_regD [14]:           _3406_/Y ->          _3572_/A
+   3808.4 ps                                        _1440_:           _3572_/Y ->          _3574_/A
+   3922.8 ps                                        _1290_:           _3574_/Y ->          _4185_/D
+
+   clock skew at destination = 36.7754
+   setup at destination = 334.687
+
+Path _4299_/CLK to _4249_/D delay 4294.23 ps
+      0.1 ps                                 clock_bF$buf9: CLKBUF1_insert26/Y ->          _4299_/CLK
+    341.9 ps         \internal_register_inst_07.ra_out [0]:           _4299_/Q -> BUFX2_insert112/A
+    626.3 ps  \internal_register_inst_07.ra_out_0_bF$buf2 :  BUFX2_insert112/Y ->          _2099_/A
+    893.6 ps                                         _104_:           _2099_/Y ->          _2105_/A
+   1171.0 ps                                         _109_:           _2105_/Y ->          _2115_/B
+   1422.6 ps                                         _117_:           _2115_/Y ->          _2118_/B
+   1675.7 ps                                         _120_:           _2118_/Y ->          _2151_/B
+   1999.6 ps                                          _37_:           _2151_/Y ->          _2185_/B
+   2338.8 ps                                          _67_:           _2185_/Y ->          _2202_/A
+   2588.6 ps                                          _82_:           _2202_/Y ->          _2206_/A
+   2774.6 ps                \alu_inst01.inst01.result [14]:           _2206_/Y ->          _3229_/C
+   2891.9 ps                                        _1066_:           _3229_/Y ->          _3230_/B
+   2994.7 ps                                        _1067_:           _3230_/Y ->          _3231_/A
+   3088.4 ps                                        _1068_:           _3231_/Y ->          _3232_/C
+   3178.4 ps                     \alu_inst01.inst12.y [14]:           _3232_/Y ->          _3401_/A
+   3248.4 ps                                        _1182_:           _3401_/Y ->          _3402_/C
+   3344.0 ps                                        _1183_:           _3402_/Y ->          _3405_/B
+   3473.1 ps                                        _1186_:           _3405_/Y ->          _3406_/B
+   3638.4 ps                 \data_mux_inst_06.m_regD [14]:           _3406_/Y ->          _3572_/A
+   3808.4 ps                                        _1440_:           _3572_/Y ->          _3643_/A
+   3922.8 ps                                        _1322_:           _3643_/Y ->          _4249_/D
+
+   clock skew at destination = 36.7754
+   setup at destination = 334.684
+
+Path _4299_/CLK to _4265_/D delay 4293.44 ps
+      0.1 ps                                 clock_bF$buf9: CLKBUF1_insert26/Y ->          _4299_/CLK
+    341.9 ps         \internal_register_inst_07.ra_out [0]:           _4299_/Q -> BUFX2_insert112/A
+    626.3 ps  \internal_register_inst_07.ra_out_0_bF$buf2 :  BUFX2_insert112/Y ->          _2099_/A
+    893.6 ps                                         _104_:           _2099_/Y ->          _2105_/A
+   1171.0 ps                                         _109_:           _2105_/Y ->          _2115_/B
+   1422.6 ps                                         _117_:           _2115_/Y ->          _2118_/B
+   1675.7 ps                                         _120_:           _2118_/Y ->          _2151_/B
+   1999.6 ps                                          _37_:           _2151_/Y ->          _2185_/B
+   2338.8 ps                                          _67_:           _2185_/Y ->          _2202_/A
+   2588.6 ps                                          _82_:           _2202_/Y ->          _2206_/A
+   2774.6 ps                \alu_inst01.inst01.result [14]:           _2206_/Y ->          _3229_/C
+   2891.9 ps                                        _1066_:           _3229_/Y ->          _3230_/B
+   2994.7 ps                                        _1067_:           _3230_/Y ->          _3231_/A
+   3088.4 ps                                        _1068_:           _3231_/Y ->          _3232_/C
+   3178.4 ps                     \alu_inst01.inst12.y [14]:           _3232_/Y ->          _3401_/A
+   3248.4 ps                                        _1182_:           _3401_/Y ->          _3402_/C
+   3344.0 ps                                        _1183_:           _3402_/Y ->          _3405_/B
+   3473.1 ps                                        _1186_:           _3405_/Y ->          _3406_/B
+   3638.4 ps                 \data_mux_inst_06.m_regD [14]:           _3406_/Y ->          _3572_/A
+   3808.4 ps                                        _1440_:           _3572_/Y ->          _3676_/A
+   3922.1 ps                                        _1338_:           _3676_/Y ->          _4265_/D
+
+   clock skew at destination = 36.7754
+   setup at destination = 334.542
+
+Path _4299_/CLK to _4233_/D delay 4293.25 ps
+      0.1 ps                                 clock_bF$buf9: CLKBUF1_insert26/Y ->          _4299_/CLK
+    341.9 ps         \internal_register_inst_07.ra_out [0]:           _4299_/Q -> BUFX2_insert112/A
+    626.3 ps  \internal_register_inst_07.ra_out_0_bF$buf2 :  BUFX2_insert112/Y ->          _2099_/A
+    893.6 ps                                         _104_:           _2099_/Y ->          _2105_/A
+   1171.0 ps                                         _109_:           _2105_/Y ->          _2115_/B
+   1422.6 ps                                         _117_:           _2115_/Y ->          _2118_/B
+   1675.7 ps                                         _120_:           _2118_/Y ->          _2151_/B
+   1999.6 ps                                          _37_:           _2151_/Y ->          _2185_/B
+   2338.8 ps                                          _67_:           _2185_/Y ->          _2202_/A
+   2588.6 ps                                          _82_:           _2202_/Y ->          _2206_/A
+   2774.6 ps                \alu_inst01.inst01.result [14]:           _2206_/Y ->          _3229_/C
+   2891.9 ps                                        _1066_:           _3229_/Y ->          _3230_/B
+   2994.7 ps                                        _1067_:           _3230_/Y ->          _3231_/A
+   3088.4 ps                                        _1068_:           _3231_/Y ->          _3232_/C
+   3178.4 ps                     \alu_inst01.inst12.y [14]:           _3232_/Y ->          _3401_/A
+   3248.4 ps                                        _1182_:           _3401_/Y ->          _3402_/C
+   3344.0 ps                                        _1183_:           _3402_/Y ->          _3405_/B
+   3473.1 ps                                        _1186_:           _3405_/Y ->          _3406_/B
+   3638.4 ps                 \data_mux_inst_06.m_regD [14]:           _3406_/Y ->          _3572_/A
+   3808.4 ps                                        _1440_:           _3572_/Y ->          _3743_/A
+   3921.9 ps                                        _1370_:           _3743_/Y ->          _4233_/D
+
+   clock skew at destination = 36.7754
+   setup at destination = 334.534
+
+Path _4299_/CLK to _4297_/D delay 4293.05 ps
+      0.1 ps                                 clock_bF$buf9: CLKBUF1_insert26/Y ->          _4299_/CLK
+    341.9 ps         \internal_register_inst_07.ra_out [0]:           _4299_/Q -> BUFX2_insert112/A
+    626.3 ps  \internal_register_inst_07.ra_out_0_bF$buf2 :  BUFX2_insert112/Y ->          _2099_/A
+    893.6 ps                                         _104_:           _2099_/Y ->          _2105_/A
+   1171.0 ps                                         _109_:           _2105_/Y ->          _2115_/B
+   1422.6 ps                                         _117_:           _2115_/Y ->          _2118_/B
+   1675.7 ps                                         _120_:           _2118_/Y ->          _2151_/B
+   1999.6 ps                                          _37_:           _2151_/Y ->          _2185_/B
+   2338.8 ps                                          _67_:           _2185_/Y ->          _2202_/A
+   2588.6 ps                                          _82_:           _2202_/Y ->          _2206_/A
+   2774.6 ps                \alu_inst01.inst01.result [14]:           _2206_/Y ->          _3229_/C
+   2891.9 ps                                        _1066_:           _3229_/Y ->          _3230_/B
+   2994.7 ps                                        _1067_:           _3230_/Y ->          _3231_/A
+   3088.4 ps                                        _1068_:           _3231_/Y ->          _3232_/C
+   3178.4 ps                     \alu_inst01.inst12.y [14]:           _3232_/Y ->          _3401_/A
+   3248.4 ps                                        _1182_:           _3401_/Y ->          _3402_/C
+   3344.0 ps                                        _1183_:           _3402_/Y ->          _3405_/B
+   3473.1 ps                                        _1186_:           _3405_/Y ->          _3406_/B
+   3638.4 ps                 \data_mux_inst_06.m_regD [14]:           _3406_/Y ->          _3572_/A
+   3808.4 ps                                        _1440_:           _3572_/Y ->          _4168_/A
+   3921.7 ps                                        _1402_:           _4168_/Y ->          _4297_/D
+
+   clock skew at destination = 36.7754
+   setup at destination = 334.525
+
+Path _4299_/CLK to _4201_/D delay 4279.02 ps
+      0.1 ps                                 clock_bF$buf9: CLKBUF1_insert26/Y ->          _4299_/CLK
+    341.9 ps         \internal_register_inst_07.ra_out [0]:           _4299_/Q -> BUFX2_insert112/A
+    626.3 ps  \internal_register_inst_07.ra_out_0_bF$buf2 :  BUFX2_insert112/Y ->          _2099_/A
+    893.6 ps                                         _104_:           _2099_/Y ->          _2105_/A
+   1171.0 ps                                         _109_:           _2105_/Y ->          _2115_/B
+   1422.6 ps                                         _117_:           _2115_/Y ->          _2118_/B
+   1675.7 ps                                         _120_:           _2118_/Y ->          _2151_/B
+   1999.6 ps                                          _37_:           _2151_/Y ->          _2185_/B
+   2338.8 ps                                          _67_:           _2185_/Y ->          _2202_/A
+   2588.6 ps                                          _82_:           _2202_/Y ->          _2206_/A
+   2774.6 ps                \alu_inst01.inst01.result [14]:           _2206_/Y ->          _3229_/C
+   2891.9 ps                                        _1066_:           _3229_/Y ->          _3230_/B
+   2994.7 ps                                        _1067_:           _3230_/Y ->          _3231_/A
+   3088.4 ps                                        _1068_:           _3231_/Y ->          _3232_/C
+   3178.4 ps                     \alu_inst01.inst12.y [14]:           _3232_/Y ->          _3401_/A
+   3248.4 ps                                        _1182_:           _3401_/Y ->          _3402_/C
+   3344.0 ps                                        _1183_:           _3402_/Y ->          _3405_/B
+   3473.1 ps                                        _1186_:           _3405_/Y ->          _3406_/B
+   3638.4 ps                 \data_mux_inst_06.m_regD [14]:           _3406_/Y ->          _3572_/A
+   3808.4 ps                                        _1440_:           _3572_/Y ->          _3710_/A
+   3923.2 ps                                        _1354_:           _3710_/Y ->          _4201_/D
+
+   clock skew at destination = 19.0342
+   setup at destination = 336.799
+
+Path _4299_/CLK to _4281_/D delay 4277.8 ps
+      0.1 ps                                 clock_bF$buf9: CLKBUF1_insert26/Y ->          _4299_/CLK
+    341.9 ps         \internal_register_inst_07.ra_out [0]:           _4299_/Q -> BUFX2_insert112/A
+    626.3 ps  \internal_register_inst_07.ra_out_0_bF$buf2 :  BUFX2_insert112/Y ->          _2099_/A
+    893.6 ps                                         _104_:           _2099_/Y ->          _2105_/A
+   1171.0 ps                                         _109_:           _2105_/Y ->          _2115_/B
+   1422.6 ps                                         _117_:           _2115_/Y ->          _2118_/B
+   1675.7 ps                                         _120_:           _2118_/Y ->          _2151_/B
+   1999.6 ps                                          _37_:           _2151_/Y ->          _2185_/B
+   2338.8 ps                                          _67_:           _2185_/Y ->          _2202_/A
+   2588.6 ps                                          _82_:           _2202_/Y ->          _2206_/A
+   2774.6 ps                \alu_inst01.inst01.result [14]:           _2206_/Y ->          _3229_/C
+   2891.9 ps                                        _1066_:           _3229_/Y ->          _3230_/B
+   2994.7 ps                                        _1067_:           _3230_/Y ->          _3231_/A
+   3088.4 ps                                        _1068_:           _3231_/Y ->          _3232_/C
+   3178.4 ps                     \alu_inst01.inst12.y [14]:           _3232_/Y ->          _3401_/A
+   3248.4 ps                                        _1182_:           _3401_/Y ->          _3402_/C
+   3344.0 ps                                        _1183_:           _3402_/Y ->          _3405_/B
+   3473.1 ps                                        _1186_:           _3405_/Y ->          _3406_/B
+   3638.4 ps                 \data_mux_inst_06.m_regD [14]:           _3406_/Y ->          _3572_/A
+   3808.4 ps                                        _1440_:           _3572_/Y ->          _3957_/A
+   3921.6 ps                                        _1386_:           _3957_/Y ->          _4281_/D
+
+   clock skew at destination = 19.0342
+   setup at destination = 337.153
+
+Path _4299_/CLK to _4214_/D delay 4263.38 ps
+      0.1 ps                                 clock_bF$buf9: CLKBUF1_insert26/Y ->          _4299_/CLK
+    341.9 ps         \internal_register_inst_07.ra_out [0]:           _4299_/Q -> BUFX2_insert112/A
+    626.3 ps  \internal_register_inst_07.ra_out_0_bF$buf2 :  BUFX2_insert112/Y ->          _2099_/A
+    893.6 ps                                         _104_:           _2099_/Y ->          _2105_/A
+   1171.0 ps                                         _109_:           _2105_/Y ->          _2115_/B
+   1422.6 ps                                         _117_:           _2115_/Y ->          _2118_/B
+   1675.7 ps                                         _120_:           _2118_/Y ->          _2151_/B
+   1999.6 ps                                          _37_:           _2151_/Y ->          _2168_/B
+   2281.2 ps                                          _52_:           _2168_/Y ->          _2175_/C
+   2426.7 ps                                          _58_:           _2175_/Y ->          _2176_/C
+   2577.2 ps                                          _59_:           _2176_/Y ->          _2180_/A
+   2741.9 ps                \alu_inst01.inst01.result [11]:           _2180_/Y ->          _3163_/C
+   2859.2 ps                                        _1003_:           _3163_/Y ->          _3164_/B
+   2960.9 ps                                        _1004_:           _3164_/Y ->          _3165_/A
+   3055.9 ps                                        _1005_:           _3165_/Y ->          _3166_/C
+   3148.1 ps                     \alu_inst01.inst12.y [11]:           _3166_/Y ->          _3380_/A
+   3218.3 ps                                        _1164_:           _3380_/Y ->          _3381_/C
+   3314.3 ps                                        _1165_:           _3381_/Y ->          _3384_/B
+   3442.9 ps                                        _1168_:           _3384_/Y ->          _3385_/B
+   3607.8 ps                 \data_mux_inst_06.m_regD [11]:           _3385_/Y ->          _3563_/A
+   3777.4 ps                                        _1434_:           _3563_/Y ->          _3603_/A
+   3891.9 ps                                        _1303_:           _3603_/Y ->          _4214_/D
+
+   clock skew at destination = 36.7444
+   setup at destination = 334.697
+
+Path _4299_/CLK to _4294_/D delay 4261.83 ps
+      0.1 ps                                 clock_bF$buf9: CLKBUF1_insert26/Y ->          _4299_/CLK
+    341.9 ps         \internal_register_inst_07.ra_out [0]:           _4299_/Q -> BUFX2_insert112/A
+    626.3 ps  \internal_register_inst_07.ra_out_0_bF$buf2 :  BUFX2_insert112/Y ->          _2099_/A
+    893.6 ps                                         _104_:           _2099_/Y ->          _2105_/A
+   1171.0 ps                                         _109_:           _2105_/Y ->          _2115_/B
+   1422.6 ps                                         _117_:           _2115_/Y ->          _2118_/B
+   1675.7 ps                                         _120_:           _2118_/Y ->          _2151_/B
+   1999.6 ps                                          _37_:           _2151_/Y ->          _2168_/B
+   2281.2 ps                                          _52_:           _2168_/Y ->          _2175_/C
+   2426.7 ps                                          _58_:           _2175_/Y ->          _2176_/C
+   2577.2 ps                                          _59_:           _2176_/Y ->          _2180_/A
+   2741.9 ps                \alu_inst01.inst01.result [11]:           _2180_/Y ->          _3163_/C
+   2859.2 ps                                        _1003_:           _3163_/Y ->          _3164_/B
+   2960.9 ps                                        _1004_:           _3164_/Y ->          _3165_/A
+   3055.9 ps                                        _1005_:           _3165_/Y ->          _3166_/C
+   3148.1 ps                     \alu_inst01.inst12.y [11]:           _3166_/Y ->          _3380_/A
+   3218.3 ps                                        _1164_:           _3380_/Y ->          _3381_/C
+   3314.3 ps                                        _1165_:           _3381_/Y ->          _3384_/B
+   3442.9 ps                                        _1168_:           _3384_/Y ->          _3385_/B
+   3607.8 ps                 \data_mux_inst_06.m_regD [11]:           _3385_/Y ->          _3563_/A
+   3777.4 ps                                        _1434_:           _3563_/Y ->          _4162_/A
+   3890.6 ps                                        _1399_:           _4162_/Y ->          _4294_/D
+
+   clock skew at destination = 36.7444
+   setup at destination = 334.523
+
+Path _4299_/CLK to _4246_/D delay 4247.41 ps
+      0.1 ps                                 clock_bF$buf9: CLKBUF1_insert26/Y ->          _4299_/CLK
+    341.9 ps         \internal_register_inst_07.ra_out [0]:           _4299_/Q -> BUFX2_insert112/A
+    626.3 ps  \internal_register_inst_07.ra_out_0_bF$buf2 :  BUFX2_insert112/Y ->          _2099_/A
+    893.6 ps                                         _104_:           _2099_/Y ->          _2105_/A
+   1171.0 ps                                         _109_:           _2105_/Y ->          _2115_/B
+   1422.6 ps                                         _117_:           _2115_/Y ->          _2118_/B
+   1675.7 ps                                         _120_:           _2118_/Y ->          _2151_/B
+   1999.6 ps                                          _37_:           _2151_/Y ->          _2168_/B
+   2281.2 ps                                          _52_:           _2168_/Y ->          _2175_/C
+   2426.7 ps                                          _58_:           _2175_/Y ->          _2176_/C
+   2577.2 ps                                          _59_:           _2176_/Y ->          _2180_/A
+   2741.9 ps                \alu_inst01.inst01.result [11]:           _2180_/Y ->          _3163_/C
+   2859.2 ps                                        _1003_:           _3163_/Y ->          _3164_/B
+   2960.9 ps                                        _1004_:           _3164_/Y ->          _3165_/A
+   3055.9 ps                                        _1005_:           _3165_/Y ->          _3166_/C
+   3148.1 ps                     \alu_inst01.inst12.y [11]:           _3166_/Y ->          _3380_/A
+   3218.3 ps                                        _1164_:           _3380_/Y ->          _3381_/C
+   3314.3 ps                                        _1165_:           _3381_/Y ->          _3384_/B
+   3442.9 ps                                        _1168_:           _3384_/Y ->          _3385_/B
+   3607.8 ps                 \data_mux_inst_06.m_regD [11]:           _3385_/Y ->          _3563_/A
+   3777.3 ps                                        _1434_:           _3563_/Y ->          _3637_/A
+   3891.8 ps                                        _1319_:           _3637_/Y ->          _4246_/D
+
+   clock skew at destination = 18.709
+   setup at destination = 336.866
+
+Path _4299_/CLK to _4182_/D delay 4247.35 ps
+      0.1 ps                                 clock_bF$buf9: CLKBUF1_insert26/Y ->          _4299_/CLK
+    341.9 ps         \internal_register_inst_07.ra_out [0]:           _4299_/Q -> BUFX2_insert112/A
+    626.3 ps  \internal_register_inst_07.ra_out_0_bF$buf2 :  BUFX2_insert112/Y ->          _2099_/A
+    893.6 ps                                         _104_:           _2099_/Y ->          _2105_/A
+   1171.0 ps                                         _109_:           _2105_/Y ->          _2115_/B
+   1422.6 ps                                         _117_:           _2115_/Y ->          _2118_/B
+   1675.7 ps                                         _120_:           _2118_/Y ->          _2151_/B
+   1999.6 ps                                          _37_:           _2151_/Y ->          _2168_/B
+   2281.2 ps                                          _52_:           _2168_/Y ->          _2175_/C
+   2426.7 ps                                          _58_:           _2175_/Y ->          _2176_/C
+   2577.2 ps                                          _59_:           _2176_/Y ->          _2180_/A
+   2741.9 ps                \alu_inst01.inst01.result [11]:           _2180_/Y ->          _3163_/C
+   2859.2 ps                                        _1003_:           _3163_/Y ->          _3164_/B
+   2960.9 ps                                        _1004_:           _3164_/Y ->          _3165_/A
+   3055.9 ps                                        _1005_:           _3165_/Y ->          _3166_/C
+   3148.1 ps                     \alu_inst01.inst12.y [11]:           _3166_/Y ->          _3380_/A
+   3218.3 ps                                        _1164_:           _3380_/Y ->          _3381_/C
+   3314.3 ps                                        _1165_:           _3381_/Y ->          _3384_/B
+   3442.9 ps                                        _1168_:           _3384_/Y ->          _3385_/B
+   3607.8 ps                 \data_mux_inst_06.m_regD [11]:           _3385_/Y ->          _3563_/A
+   3777.4 ps                                        _1434_:           _3563_/Y ->          _3565_/A
+   3891.8 ps                                        _1287_:           _3565_/Y ->          _4182_/D
+
+   clock skew at destination = 18.709
+   setup at destination = 336.871
+
+Computed maximum clock frequency (zero margin) = 224.365 MHz
+-----------------------------------------
+
+Number of paths analyzed:  234
+
+Top 20 minimum delay paths:
+Path _4180_/CLK to _4180_/D delay 238.539 ps
+      0.1 ps                                   clock_bF$buf1: CLKBUF1_insert34/Y -> _4180_/CLK
+    180.5 ps  \internal_register_inst_07.internal_reg[7] [9]:           _4180_/Q -> _3558_/C
+    271.9 ps                                          _1431_:           _3558_/Y -> _3559_/C
+    337.1 ps                                          _1285_:           _3559_/Y -> _4180_/D
+
+   clock skew at destination = 0
+   hold at destination = -98.588
+
+Path _4174_/CLK to _4174_/D delay 238.776 ps
+      0.0 ps                                   clock_bF$buf4: CLKBUF1_insert31/Y -> _4174_/CLK
+    180.4 ps  \internal_register_inst_07.internal_reg[7] [3]:           _4174_/Q -> _3540_/C
+    272.1 ps                                          _1419_:           _3540_/Y -> _3541_/C
+    337.4 ps                                          _1279_:           _3541_/Y -> _4174_/D
+
+   clock skew at destination = 0
+   hold at destination = -98.6046
+
+Path _4182_/CLK to _4182_/D delay 238.886 ps
+      0.1 ps                                    clock_bF$buf8: CLKBUF1_insert27/Y -> _4182_/CLK
+    180.6 ps  \internal_register_inst_07.internal_reg[7] [11]:           _4182_/Q -> _3564_/C
+    272.2 ps                                           _1435_:           _3564_/Y -> _3565_/C
+    337.5 ps                                           _1287_:           _3565_/Y -> _4182_/D
+
+   clock skew at destination = 0
+   hold at destination = -98.5974
+
+Path _4171_/CLK to _4171_/D delay 238.888 ps
+      0.1 ps                                   clock_bF$buf5: CLKBUF1_insert30/Y -> _4171_/CLK
+    180.4 ps  \internal_register_inst_07.internal_reg[7] [0]:           _4171_/Q -> _3531_/C
+    271.8 ps                                          _1413_:           _3531_/Y -> _3532_/C
+    337.5 ps                                          _1276_:           _3532_/Y -> _4171_/D
+
+   clock skew at destination = 0
+   hold at destination = -98.6606
+
+Path _4184_/CLK to _4184_/D delay 239.069 ps
+      0.0 ps                                    clock_bF$buf1: CLKBUF1_insert34/Y -> _4184_/CLK
+    181.0 ps  \internal_register_inst_07.internal_reg[7] [13]:           _4184_/Q -> _3570_/C
+    272.4 ps                                           _1439_:           _3570_/Y -> _3571_/C
+    337.7 ps                                           _1289_:           _3571_/Y -> _4184_/D
+
+   clock skew at destination = 0
+   hold at destination = -98.5901
+
+Path _4178_/CLK to _4178_/D delay 239.11 ps
+      0.1 ps                                   clock_bF$buf8: CLKBUF1_insert27/Y -> _4178_/CLK
+    180.9 ps  \internal_register_inst_07.internal_reg[7] [7]:           _4178_/Q -> _3552_/C
+    272.3 ps                                          _1427_:           _3552_/Y -> _3553_/C
+    337.7 ps                                          _1283_:           _3553_/Y -> _4178_/D
+
+   clock skew at destination = 0
+   hold at destination = -98.6153
+
+Path _4176_/CLK to _4176_/D delay 239.128 ps
+      0.0 ps                                   clock_bF$buf4: CLKBUF1_insert31/Y -> _4176_/CLK
+    180.8 ps  \internal_register_inst_07.internal_reg[7] [5]:           _4176_/Q -> _3546_/C
+    272.4 ps                                          _1423_:           _3546_/Y -> _3547_/C
+    337.7 ps                                          _1281_:           _3547_/Y -> _4176_/D
+
+   clock skew at destination = 0
+   hold at destination = -98.6021
+
+Path _4172_/CLK to _4172_/D delay 239.192 ps
+      0.0 ps                                   clock_bF$buf4: CLKBUF1_insert31/Y -> _4172_/CLK
+    180.9 ps  \internal_register_inst_07.internal_reg[7] [1]:           _4172_/Q -> _3534_/C
+    272.5 ps                                          _1415_:           _3534_/Y -> _3535_/C
+    337.8 ps                                          _1277_:           _3535_/Y -> _4172_/D
+
+   clock skew at destination = 0
+   hold at destination = -98.5954
+
+Path _4179_/CLK to _4179_/D delay 239.234 ps
+      0.1 ps                                   clock_bF$buf0: CLKBUF1_insert35/Y -> _4179_/CLK
+    180.8 ps  \internal_register_inst_07.internal_reg[7] [8]:           _4179_/Q -> _3555_/C
+    272.4 ps                                          _1429_:           _3555_/Y -> _3556_/C
+    337.9 ps                                          _1284_:           _3556_/Y -> _4179_/D
+
+   clock skew at destination = 0
+   hold at destination = -98.6218
+
+Path _4185_/CLK to _4185_/D delay 239.239 ps
+      0.0 ps                                    clock_bF$buf0: CLKBUF1_insert35/Y -> _4185_/CLK
+    180.9 ps  \internal_register_inst_07.internal_reg[7] [14]:           _4185_/Q -> _3573_/C
+    272.6 ps                                           _1441_:           _3573_/Y -> _3574_/C
+    337.8 ps                                           _1290_:           _3574_/Y -> _4185_/D
+
+   clock skew at destination = 0
+   hold at destination = -98.5918
+
+Path _4173_/CLK to _4173_/D delay 239.41 ps
+      0.1 ps                                   clock_bF$buf8: CLKBUF1_insert27/Y -> _4173_/CLK
+    181.3 ps  \internal_register_inst_07.internal_reg[7] [2]:           _4173_/Q -> _3537_/C
+    272.7 ps                                          _1417_:           _3537_/Y -> _3538_/C
+    338.0 ps                                          _1278_:           _3538_/Y -> _4173_/D
+
+   clock skew at destination = 0
+   hold at destination = -98.5949
+
+Path _4175_/CLK to _4175_/D delay 239.717 ps
+      0.1 ps                                   clock_bF$buf8: CLKBUF1_insert27/Y -> _4175_/CLK
+    181.3 ps  \internal_register_inst_07.internal_reg[7] [4]:           _4175_/Q -> _3543_/C
+    273.0 ps                                          _1421_:           _3543_/Y -> _3544_/C
+    338.3 ps                                          _1280_:           _3544_/Y -> _4175_/D
+
+   clock skew at destination = 0
+   hold at destination = -98.6062
+
+Path _4186_/CLK to _4186_/D delay 239.817 ps
+      0.1 ps                                    clock_bF$buf1: CLKBUF1_insert34/Y -> _4186_/CLK
+    181.5 ps  \internal_register_inst_07.internal_reg[7] [15]:           _4186_/Q -> _3576_/C
+    273.2 ps                                           _1443_:           _3576_/Y -> _3577_/C
+    338.4 ps                                           _1291_:           _3577_/Y -> _4186_/D
+
+   clock skew at destination = 0
+   hold at destination = -98.5973
+
+Path _4183_/CLK to _4183_/D delay 239.991 ps
+      0.0 ps                                   clock_bF$buf13: CLKBUF1_insert22/Y -> _4183_/CLK
+    181.6 ps  \internal_register_inst_07.internal_reg[7] [12]:           _4183_/Q -> _3567_/C
+    273.3 ps                                           _1437_:           _3567_/Y -> _3568_/C
+    338.6 ps                                           _1288_:           _3568_/Y -> _4183_/D
+
+   clock skew at destination = 0
+   hold at destination = -98.5971
+
+Path _4181_/CLK to _4181_/D delay 240.165 ps
+      0.0 ps                                   clock_bF$buf13: CLKBUF1_insert22/Y -> _4181_/CLK
+    181.9 ps  \internal_register_inst_07.internal_reg[7] [10]:           _4181_/Q -> _3561_/C
+    273.6 ps                                           _1433_:           _3561_/Y -> _3562_/C
+    338.8 ps                                           _1286_:           _3562_/Y -> _4181_/D
+
+   clock skew at destination = 0
+   hold at destination = -98.5854
+
+Path _4177_/CLK to _4177_/D delay 241.319 ps
+      0.0 ps                                   clock_bF$buf9: CLKBUF1_insert26/Y -> _4177_/CLK
+    182.6 ps  \internal_register_inst_07.internal_reg[7] [6]:           _4177_/Q -> _3549_/C
+    274.3 ps                                          _1425_:           _3549_/Y -> _3550_/C
+    340.0 ps                                          _1282_:           _3550_/Y -> _4177_/D
+
+   clock skew at destination = 0
+   hold at destination = -98.6544
+
+Path _4192_/CLK to _4192_/D delay 246.17 ps
+      0.0 ps                                   clock_bF$buf5: CLKBUF1_insert30/Y -> _4192_/CLK
+    179.7 ps  \internal_register_inst_07.internal_reg[3] [5]:           _4192_/Q -> _3691_/A
+    280.2 ps                                          _1504_:           _3691_/Y -> _3692_/C
+    344.5 ps                                          _1345_:           _3692_/Y -> _4192_/D
+
+   clock skew at destination = 0
+   hold at destination = -98.3418
+
+Path _4199_/CLK to _4199_/D delay 246.403 ps
+      0.0 ps                                   clock_bF$buf13: CLKBUF1_insert22/Y -> _4199_/CLK
+    179.7 ps  \internal_register_inst_07.internal_reg[3] [12]:           _4199_/Q -> _3705_/A
+    280.4 ps                                           _1511_:           _3705_/Y -> _3706_/C
+    344.8 ps                                           _1352_:           _3706_/Y -> _4199_/D
+
+   clock skew at destination = 0
+   hold at destination = -98.3595
+
+Path _4194_/CLK to _4194_/D delay 246.475 ps
+      0.0 ps                                   clock_bF$buf4: CLKBUF1_insert31/Y -> _4194_/CLK
+    179.9 ps  \internal_register_inst_07.internal_reg[3] [7]:           _4194_/Q -> _3695_/A
+    280.5 ps                                          _1506_:           _3695_/Y -> _3696_/C
+    344.8 ps                                          _1347_:           _3696_/Y -> _4194_/D
+
+   clock skew at destination = 0
+   hold at destination = -98.3543
+
+Path _4201_/CLK to _4201_/D delay 246.507 ps
+      0.0 ps                                   clock_bF$buf13: CLKBUF1_insert22/Y -> _4201_/CLK
+    179.6 ps  \internal_register_inst_07.internal_reg[3] [14]:           _4201_/Q -> _3709_/A
+    280.3 ps                                           _1513_:           _3709_/Y -> _3710_/C
+    344.9 ps                                           _1354_:           _3710_/Y -> _4201_/D
+
+   clock skew at destination = 0
+   hold at destination = -98.3974
+
+Design meets minimum hold timing.
+-----------------------------------------
+
+Number of paths analyzed:  150
+
+Top 20 maximum delay paths:
+Path input pin data_in[12] to _4215_/D delay 1042.74 ps
+      0.0 ps                    data_in[12]:          -> _3389_/A
+     58.0 ps                         _1172_: _3389_/Y -> _3390_/A
+    203.4 ps                         _1173_: _3390_/Y -> _3391_/C
+    316.2 ps                         _1174_: _3391_/Y -> _3392_/B
+    477.1 ps  \data_mux_inst_06.m_regD [12]: _3392_/Y -> _3566_/A
+    647.7 ps                         _1436_: _3566_/Y -> _3605_/A
+    762.2 ps                         _1304_: _3605_/Y -> _4215_/D
+
+   setup at destination = 280.497
+
+Path input pin data_in[12] to _4183_/D delay 1042.67 ps
+      0.0 ps                    data_in[12]:          -> _3389_/A
+     58.0 ps                         _1172_: _3389_/Y -> _3390_/A
+    203.4 ps                         _1173_: _3390_/Y -> _3391_/C
+    316.2 ps                         _1174_: _3391_/Y -> _3392_/B
+    477.1 ps  \data_mux_inst_06.m_regD [12]: _3392_/Y -> _3566_/A
+    647.6 ps                         _1436_: _3566_/Y -> _3568_/A
+    762.2 ps                         _1288_: _3568_/Y -> _4183_/D
+
+   setup at destination = 280.504
+
+Path input pin data_in[12] to _4199_/D delay 1042.67 ps
+      0.0 ps                    data_in[12]:          -> _3389_/A
+     58.0 ps                         _1172_: _3389_/Y -> _3390_/A
+    203.4 ps                         _1173_: _3390_/Y -> _3391_/C
+    316.2 ps                         _1174_: _3391_/Y -> _3392_/B
+    477.1 ps  \data_mux_inst_06.m_regD [12]: _3392_/Y -> _3566_/A
+    647.6 ps                         _1436_: _3566_/Y -> _3706_/A
+    762.2 ps                         _1352_: _3706_/Y -> _4199_/D
+
+   setup at destination = 280.504
+
+Path input pin data_in[12] to _4247_/D delay 1042.62 ps
+      0.0 ps                    data_in[12]:          -> _3389_/A
+     58.0 ps                         _1172_: _3389_/Y -> _3390_/A
+    203.4 ps                         _1173_: _3390_/Y -> _3391_/C
+    316.2 ps                         _1174_: _3391_/Y -> _3392_/B
+    477.1 ps  \data_mux_inst_06.m_regD [12]: _3392_/Y -> _3566_/A
+    647.7 ps                         _1436_: _3566_/Y -> _3639_/A
+    762.1 ps                         _1320_: _3639_/Y -> _4247_/D
+
+   setup at destination = 280.508
+
+Path input pin data_in[12] to _4231_/D delay 1041.98 ps
+      0.0 ps                    data_in[12]:          -> _3389_/A
+     58.0 ps                         _1172_: _3389_/Y -> _3390_/A
+    203.4 ps                         _1173_: _3390_/Y -> _3391_/C
+    316.2 ps                         _1174_: _3391_/Y -> _3392_/B
+    477.1 ps  \data_mux_inst_06.m_regD [12]: _3392_/Y -> _3566_/A
+    647.7 ps                         _1436_: _3566_/Y -> _3739_/A
+    761.2 ps                         _1368_: _3739_/Y -> _4231_/D
+
+   setup at destination = 280.792
+
+Path input pin data_in[12] to _4279_/D delay 1041.92 ps
+      0.0 ps                    data_in[12]:          -> _3389_/A
+     58.0 ps                         _1172_: _3389_/Y -> _3390_/A
+    203.4 ps                         _1173_: _3390_/Y -> _3391_/C
+    316.2 ps                         _1174_: _3391_/Y -> _3392_/B
+    477.1 ps  \data_mux_inst_06.m_regD [12]: _3392_/Y -> _3566_/A
+    647.7 ps                         _1436_: _3566_/Y -> _3953_/A
+    761.1 ps                         _1384_: _3953_/Y -> _4279_/D
+
+   setup at destination = 280.797
+
+Path input pin data_in[12] to _4295_/D delay 1041.7 ps
+      0.0 ps                    data_in[12]:          -> _3389_/A
+     58.0 ps                         _1172_: _3389_/Y -> _3390_/A
+    203.4 ps                         _1173_: _3390_/Y -> _3391_/C
+    316.2 ps                         _1174_: _3391_/Y -> _3392_/B
+    477.1 ps  \data_mux_inst_06.m_regD [12]: _3392_/Y -> _3566_/A
+    647.7 ps                         _1436_: _3566_/Y -> _4164_/A
+    760.9 ps                         _1400_: _4164_/Y -> _4295_/D
+
+   setup at destination = 280.817
+
+Path input pin data_in[12] to _4263_/D delay 1041.67 ps
+      0.0 ps                    data_in[12]:          -> _3389_/A
+     58.0 ps                         _1172_: _3389_/Y -> _3390_/A
+    203.4 ps                         _1173_: _3390_/Y -> _3391_/C
+    316.2 ps                         _1174_: _3391_/Y -> _3392_/B
+    477.1 ps  \data_mux_inst_06.m_regD [12]: _3392_/Y -> _3566_/A
+    647.7 ps                         _1436_: _3566_/Y -> _3672_/A
+    760.9 ps                         _1336_: _3672_/Y -> _4263_/D
+
+   setup at destination = 280.819
+
+Path input pin data_in[15] to _4250_/D delay 1041.18 ps
+      0.0 ps                    data_in[15]:          -> _3410_/A
+     57.0 ps                         _1190_: _3410_/Y -> _3411_/A
+    202.9 ps                         _1191_: _3411_/Y -> _3412_/C
+    316.2 ps                         _1192_: _3412_/Y -> _3413_/B
+    476.0 ps  \data_mux_inst_06.m_regD [15]: _3413_/Y -> _3575_/A
+    646.0 ps                         _1442_: _3575_/Y -> _3645_/A
+    760.7 ps                         _1323_: _3645_/Y -> _4250_/D
+
+   setup at destination = 280.491
+
+Path input pin data_in[15] to _4202_/D delay 1041.11 ps
+      0.0 ps                    data_in[15]:          -> _3410_/A
+     57.0 ps                         _1190_: _3410_/Y -> _3411_/A
+    202.9 ps                         _1191_: _3411_/Y -> _3412_/C
+    316.2 ps                         _1192_: _3412_/Y -> _3413_/B
+    476.0 ps  \data_mux_inst_06.m_regD [15]: _3413_/Y -> _3575_/A
+    646.0 ps                         _1442_: _3575_/Y -> _3712_/A
+    760.6 ps                         _1355_: _3712_/Y -> _4202_/D
+
+   setup at destination = 280.497
+
+Path input pin data_in[15] to _4186_/D delay 1040.99 ps
+      0.0 ps                    data_in[15]:          -> _3410_/A
+     57.0 ps                         _1190_: _3410_/Y -> _3411_/A
+    202.9 ps                         _1191_: _3411_/Y -> _3412_/C
+    316.2 ps                         _1192_: _3412_/Y -> _3413_/B
+    476.0 ps  \data_mux_inst_06.m_regD [15]: _3413_/Y -> _3575_/A
+    646.0 ps                         _1442_: _3575_/Y -> _3577_/A
+    760.5 ps                         _1291_: _3577_/Y -> _4186_/D
+
+   setup at destination = 280.509
+
+Path input pin data_in[15] to _4218_/D delay 1040.99 ps
+      0.0 ps                    data_in[15]:          -> _3410_/A
+     57.0 ps                         _1190_: _3410_/Y -> _3411_/A
+    202.9 ps                         _1191_: _3411_/Y -> _3412_/C
+    316.2 ps                         _1192_: _3412_/Y -> _3413_/B
+    476.0 ps  \data_mux_inst_06.m_regD [15]: _3413_/Y -> _3575_/A
+    646.0 ps                         _1442_: _3575_/Y -> _3611_/A
+    760.5 ps                         _1307_: _3611_/Y -> _4218_/D
+
+   setup at destination = 280.509
+
+Path input pin data_in[10] to _4213_/D delay 1040.69 ps
+      0.0 ps                    data_in[10]:          -> _3375_/A
+     58.4 ps                         _1160_: _3375_/Y -> _3376_/A
+    203.2 ps                         _1161_: _3376_/Y -> _3377_/C
+    315.7 ps                         _1162_: _3377_/Y -> _3378_/B
+    474.9 ps  \data_mux_inst_06.m_regD [10]: _3378_/Y -> _3560_/A
+    645.4 ps                         _1432_: _3560_/Y -> _3601_/A
+    760.2 ps                         _1302_: _3601_/Y -> _4213_/D
+
+   setup at destination = 280.472
+
+Path input pin data_in[8] to _4195_/D delay 1040.55 ps
+      0.0 ps                    data_in[8]:          -> _3361_/A
+     56.6 ps                        _1148_: _3361_/Y -> _3362_/A
+    202.7 ps                        _1149_: _3362_/Y -> _3363_/C
+    316.0 ps                        _1150_: _3363_/Y -> _3364_/B
+    475.5 ps  \data_mux_inst_06.m_regD [8]: _3364_/Y -> _3554_/A
+    645.2 ps                        _1428_: _3554_/Y -> _3698_/A
+    760.1 ps                        _1348_: _3698_/Y -> _4195_/D
+
+   setup at destination = 280.478
+
+Path input pin data_in[13] to _4248_/D delay 1040.54 ps
+      0.0 ps                    data_in[13]:          -> _3396_/A
+     57.1 ps                         _1178_: _3396_/Y -> _3397_/A
+    202.6 ps                         _1179_: _3397_/Y -> _3398_/C
+    315.6 ps                         _1180_: _3398_/Y -> _3399_/B
+    475.1 ps  \data_mux_inst_06.m_regD [13]: _3399_/Y -> _3569_/A
+    645.2 ps                         _1438_: _3569_/Y -> _3641_/A
+    760.1 ps                         _1321_: _3641_/Y -> _4248_/D
+
+   setup at destination = 280.471
+
+Path input pin data_in[8] to _4179_/D delay 1040.35 ps
+      0.0 ps                    data_in[8]:          -> _3361_/A
+     56.6 ps                        _1148_: _3361_/Y -> _3362_/A
+    202.7 ps                        _1149_: _3362_/Y -> _3363_/C
+    316.0 ps                        _1150_: _3363_/Y -> _3364_/B
+    475.5 ps  \data_mux_inst_06.m_regD [8]: _3364_/Y -> _3554_/A
+    645.2 ps                        _1428_: _3554_/Y -> _3556_/A
+    759.9 ps                        _1284_: _3556_/Y -> _4179_/D
+
+   setup at destination = 280.496
+
+Path input pin data_in[10] to _4197_/D delay 1040.35 ps
+      0.0 ps                    data_in[10]:          -> _3375_/A
+     58.4 ps                         _1160_: _3375_/Y -> _3376_/A
+    203.2 ps                         _1161_: _3376_/Y -> _3377_/C
+    315.7 ps                         _1162_: _3377_/Y -> _3378_/B
+    474.9 ps  \data_mux_inst_06.m_regD [10]: _3378_/Y -> _3560_/A
+    645.4 ps                         _1432_: _3560_/Y -> _3702_/A
+    759.8 ps                         _1350_: _3702_/Y -> _4197_/D
+
+   setup at destination = 280.503
+
+Path input pin data_in[10] to _4245_/D delay 1040.33 ps
+      0.0 ps                    data_in[10]:          -> _3375_/A
+     58.4 ps                         _1160_: _3375_/Y -> _3376_/A
+    203.2 ps                         _1161_: _3376_/Y -> _3377_/C
+    315.7 ps                         _1162_: _3377_/Y -> _3378_/B
+    474.9 ps  \data_mux_inst_06.m_regD [10]: _3378_/Y -> _3560_/A
+    645.4 ps                         _1432_: _3560_/Y -> _3635_/A
+    759.8 ps                         _1318_: _3635_/Y -> _4245_/D
+
+   setup at destination = 280.504
+
+Path input pin data_in[10] to _4181_/D delay 1040.28 ps
+      0.0 ps                    data_in[10]:          -> _3375_/A
+     58.4 ps                         _1160_: _3375_/Y -> _3376_/A
+    203.2 ps                         _1161_: _3376_/Y -> _3377_/C
+    315.7 ps                         _1162_: _3377_/Y -> _3378_/B
+    474.9 ps  \data_mux_inst_06.m_regD [10]: _3378_/Y -> _3560_/A
+    645.3 ps                         _1432_: _3560_/Y -> _3562_/A
+    759.8 ps                         _1286_: _3562_/Y -> _4181_/D
+
+   setup at destination = 280.509
+
+Path input pin data_in[8] to _4243_/D delay 1040.25 ps
+      0.0 ps                    data_in[8]:          -> _3361_/A
+     56.6 ps                        _1148_: _3361_/Y -> _3362_/A
+    202.7 ps                        _1149_: _3362_/Y -> _3363_/C
+    316.0 ps                        _1150_: _3363_/Y -> _3364_/B
+    475.5 ps  \data_mux_inst_06.m_regD [8]: _3364_/Y -> _3554_/A
+    645.2 ps                        _1428_: _3554_/Y -> _3631_/A
+    759.7 ps                        _1316_: _3631_/Y -> _4243_/D
+
+   setup at destination = 280.505
+
+-----------------------------------------
+
+Number of paths analyzed:  150
+
+Top 20 minimum delay paths:
+Path input pin data_in[0] to _3501_/D delay 58.2665 ps
+      0.0 ps  data_in[0]:          -> _3479_/B
+     74.2 ps      _1236_: _3479_/Y -> _3481_/B
+    158.0 ps   _1229_[0]: _3481_/Y -> _3501_/D
+
+   hold at destination = -99.716
+
+Path input pin data_in[1] to _3502_/D delay 58.3866 ps
+      0.0 ps  data_in[1]:          -> _3482_/B
+     74.1 ps      _1238_: _3482_/Y -> _3484_/B
+    158.1 ps   _1229_[1]: _3484_/Y -> _3502_/D
+
+   hold at destination = -99.7466
+
+Path input pin data_in[8] to _3500_/D delay 58.5303 ps
+      0.0 ps  data_in[8]:          -> _3497_/B
+     74.1 ps      _1246_: _3497_/Y -> _3499_/B
+    158.3 ps      _1228_: _3499_/Y -> _3500_/D
+
+   hold at destination = -99.7789
+
+Path input pin data_in[11] to _3515_/D delay 58.5366 ps
+      0.0 ps  data_in[11]:          -> _3464_/B
+     74.2 ps       _1266_: _3464_/Y -> _3466_/B
+    158.3 ps    _1233_[2]: _3466_/Y -> _3515_/D
+
+   hold at destination = -99.7696
+
+Path input pin data_in[13] to _3510_/D delay 58.5398 ps
+      0.0 ps  data_in[13]:          -> _3470_/B
+     74.2 ps       _1270_: _3470_/Y -> _3472_/B
+    158.3 ps    _1230_[1]: _3472_/Y -> _3510_/D
+
+   hold at destination = -99.7731
+
+Path input pin data_in[10] to _3514_/D delay 58.564 ps
+      0.0 ps  data_in[10]:          -> _3461_/B
+     74.2 ps       _1264_: _3461_/Y -> _3463_/B
+    158.3 ps    _1233_[1]: _3463_/Y -> _3514_/D
+
+   hold at destination = -99.7706
+
+Path input pin data_in[9] to _3513_/D delay 58.6421 ps
+      0.0 ps  data_in[9]:          -> _3458_/B
+     74.2 ps      _1262_: _3458_/Y -> _3460_/B
+    158.4 ps   _1233_[0]: _3460_/Y -> _3513_/D
+
+   hold at destination = -99.7809
+
+Path input pin data_in[14] to _3511_/D delay 58.6791 ps
+      0.0 ps  data_in[14]:          -> _3473_/B
+     74.5 ps       _1272_: _3473_/Y -> _3475_/B
+    158.4 ps    _1230_[2]: _3475_/Y -> _3511_/D
+
+   hold at destination = -99.7326
+
+Path input pin data_in[12] to _3509_/D delay 58.9302 ps
+      0.0 ps  data_in[12]:          -> _3467_/B
+     74.3 ps       _1268_: _3467_/Y -> _3469_/B
+    158.8 ps    _1230_[0]: _3469_/Y -> _3509_/D
+
+   hold at destination = -99.8225
+
+Path input pin data_in[15] to _3512_/D delay 58.9989 ps
+      0.0 ps  data_in[15]:          -> _3476_/B
+     74.4 ps       _1234_: _3476_/Y -> _3478_/B
+    158.8 ps    _1230_[3]: _3478_/Y -> _3512_/D
+
+   hold at destination = -99.8254
+
+Path input pin data_in[6] to _3517_/D delay 118.859 ps
+      0.0 ps  data_in[6]:          -> _3453_/B
+    126.0 ps      _1259_: _3453_/Y -> _3454_/B
+    220.7 ps   _1231_[1]: _3454_/Y -> _3517_/D
+
+   hold at destination = -101.817
+
+Path input pin data_in[6] to _3507_/D delay 118.922 ps
+      0.0 ps  data_in[6]:          -> _3453_/B
+    126.0 ps      _1259_: _3453_/Y -> _3494_/B
+    220.8 ps   _1229_[6]: _3494_/Y -> _3507_/D
+
+   hold at destination = -101.829
+
+Path input pin data_in[4] to _3521_/D delay 119.007 ps
+      0.0 ps  data_in[4]:          -> _3447_/B
+    126.0 ps      _1255_: _3447_/Y -> _3448_/B
+    220.9 ps   _1232_[2]: _3448_/Y -> _3521_/D
+
+   hold at destination = -101.854
+
+Path input pin data_in[4] to _3505_/D delay 119.025 ps
+      0.0 ps  data_in[4]:          -> _3447_/B
+    126.0 ps      _1255_: _3447_/Y -> _3490_/B
+    220.9 ps   _1229_[4]: _3490_/Y -> _3505_/D
+
+   hold at destination = -101.857
+
+Path input pin data_in[7] to _3508_/D delay 119.1 ps
+      0.0 ps  data_in[7]:          -> _3456_/B
+    126.1 ps      _1261_: _3456_/Y -> _3496_/B
+    220.9 ps   _1229_[7]: _3496_/Y -> _3508_/D
+
+   hold at destination = -101.847
+
+Path input pin data_in[7] to _3518_/D delay 119.135 ps
+      0.0 ps  data_in[7]:          -> _3456_/B
+    126.1 ps      _1261_: _3456_/Y -> _3457_/B
+    221.0 ps   _1231_[2]: _3457_/Y -> _3518_/D
+
+   hold at destination = -101.854
+
+Path input pin data_in[3] to _3504_/D delay 119.278 ps
+      0.0 ps  data_in[3]:          -> _3444_/B
+    126.3 ps      _1253_: _3444_/Y -> _3488_/B
+    221.1 ps   _1229_[3]: _3488_/Y -> _3504_/D
+
+   hold at destination = -101.844
+
+Path input pin data_in[5] to _3516_/D delay 119.316 ps
+      0.0 ps  data_in[5]:          -> _3450_/B
+    126.3 ps      _1257_: _3450_/Y -> _3451_/B
+    221.2 ps   _1231_[0]: _3451_/Y -> _3516_/D
+
+   hold at destination = -101.85
+
+Path input pin data_in[5] to _3506_/D delay 119.352 ps
+      0.0 ps  data_in[5]:          -> _3450_/B
+    126.3 ps      _1257_: _3450_/Y -> _3492_/B
+    221.2 ps   _1229_[5]: _3492_/Y -> _3506_/D
+
+   hold at destination = -101.857
+
+Path input pin data_in[3] to _3520_/D delay 119.407 ps
+      0.0 ps  data_in[3]:          -> _3444_/B
+    126.3 ps      _1253_: _3444_/Y -> _3445_/B
+    221.3 ps   _1232_[1]: _3445_/Y -> _3520_/D
+
+   hold at destination = -101.867
+
+-----------------------------------------
+

@@ -1,0 +1,118 @@
+* NGSPICE file created from control_unit.ext - technology: scmos
+
+* Black-box entry subcircuit for INVX1 abstract view
+.subckt INVX1 A gnd Y vdd
+.ends
+
+* Black-box entry subcircuit for FILL abstract view
+.subckt FILL gnd vdd
+.ends
+
+* Black-box entry subcircuit for DFFPOSX1 abstract view
+.subckt DFFPOSX1 Q CLK D gnd vdd
+.ends
+
+* Black-box entry subcircuit for OAI21X1 abstract view
+.subckt OAI21X1 A B C gnd Y vdd
+.ends
+
+* Black-box entry subcircuit for BUFX2 abstract view
+.subckt BUFX2 A gnd Y vdd
+.ends
+
+* Black-box entry subcircuit for NOR2X1 abstract view
+.subckt NOR2X1 A B gnd Y vdd
+.ends
+
+* Black-box entry subcircuit for OAI22X1 abstract view
+.subckt OAI22X1 A B C D gnd Y vdd
+.ends
+
+* Black-box entry subcircuit for NAND2X1 abstract view
+.subckt NAND2X1 A B gnd Y vdd
+.ends
+
+* Black-box entry subcircuit for AND2X2 abstract view
+.subckt AND2X2 A B gnd Y vdd
+.ends
+
+* Black-box entry subcircuit for AOI21X1 abstract view
+.subckt AOI21X1 A B C gnd Y vdd
+.ends
+
+* Black-box entry subcircuit for OR2X2 abstract view
+.subckt OR2X2 A B gnd Y vdd
+.ends
+
+.subckt control_unit gnd vdd adrs_ctrl clock decoder_en flag imm_en inst_wr mem_rd
++ mem_wr opcode[3] opcode[2] opcode[1] opcode[0] pc_op[1] pc_op[0] rD_wr reg_en reset
+X_49_ _48_/Y gnd _49_/Y vdd INVX1
+XSFILL7600x2100 gnd vdd FILL
+X_66_ _41_/B clock _66_/D gnd vdd DFFPOSX1
+X_48_ _28_/B _46_/C reset gnd _48_/Y vdd OAI21X1
+X_65_ _28_/B clock _53_/A gnd vdd DFFPOSX1
+X_63_ _47_/Y gnd rD_wr vdd BUFX2
+XSFILL8080x4100 gnd vdd FILL
+X_47_ _46_/Y _45_/Y gnd _47_/Y vdd NOR2X1
+X_64_ _64_/A gnd reg_en vdd BUFX2
+X_62_ _30_/Y gnd pc_op[1] vdd BUFX2
+X_29_ _58_/A gnd _30_/B vdd INVX1
+XSFILL7440x100 gnd vdd FILL
+X_46_ _33_/Y _46_/B _46_/C gnd _46_/Y vdd OAI21X1
+X_61_ _28_/Y gnd pc_op[0] vdd BUFX2
+XSFILL7920x4100 gnd vdd FILL
+X_28_ _58_/A _28_/B gnd _28_/Y vdd NOR2X1
+X_45_ opcode[2] _44_/Y _45_/C _43_/Y gnd _45_/Y vdd OAI22X1
+X_44_ opcode[1] opcode[0] gnd _44_/Y vdd NAND2X1
+XSFILL3120x100 gnd vdd FILL
+XSFILL2640x2100 gnd vdd FILL
+X_43_ opcode[2] _43_/B gnd _43_/Y vdd NAND2X1
+X_60_ _60_/A gnd mem_wr vdd BUFX2
+XSFILL2160x2100 gnd vdd FILL
+XSFILL3440x4100 gnd vdd FILL
+X_42_ opcode[3] gnd _43_/B vdd INVX1
+XSFILL3280x100 gnd vdd FILL
+X_41_ _41_/A _41_/B gnd _59_/A vdd AND2X2
+X_40_ _33_/Y _45_/C gnd _41_/A vdd NOR2X1
+XSFILL2960x4100 gnd vdd FILL
+XSFILL7600x100 gnd vdd FILL
+XSFILL2800x100 gnd vdd FILL
+XSFILL7760x100 gnd vdd FILL
+XSFILL8080x2100 gnd vdd FILL
+XSFILL2960x100 gnd vdd FILL
+X_58_ _58_/A gnd inst_wr vdd BUFX2
+XSFILL7920x2100 gnd vdd FILL
+X_59_ _59_/A gnd mem_rd vdd BUFX2
+X_57_ gnd gnd imm_en vdd BUFX2
+X_56_ _69_/Q gnd decoder_en vdd BUFX2
+X_39_ opcode[0] _38_/Y gnd _45_/C vdd NAND2X1
+X_55_ gnd gnd adrs_ctrl vdd BUFX2
+X_38_ opcode[1] gnd _38_/Y vdd INVX1
+X_37_ _37_/A _46_/C gnd _60_/A vdd AND2X2
+X_54_ reset _69_/Q gnd _66_/D vdd AND2X2
+XSFILL7760x4100 gnd vdd FILL
+XFILL9200x100 gnd vdd FILL
+X_36_ _33_/Y _46_/B gnd _37_/A vdd NOR2X1
+X_53_ _53_/A _52_/B gnd _53_/Y vdd NOR2X1
+XSFILL2480x2100 gnd vdd FILL
+X_35_ opcode[1] _35_/B gnd _46_/B vdd NAND2X1
+X_52_ _50_/Y _52_/B _45_/Y gnd _64_/A vdd AOI21X1
+XSFILL2320x2100 gnd vdd FILL
+XSFILL7600x4100 gnd vdd FILL
+XSFILL3280x4100 gnd vdd FILL
+X_34_ opcode[0] gnd _35_/B vdd INVX1
+X_51_ _41_/B gnd _52_/B vdd INVX1
+XSFILL3120x4100 gnd vdd FILL
+X_33_ opcode[3] opcode[2] gnd _33_/Y vdd OR2X2
+X_50_ _46_/C gnd _50_/Y vdd INVX1
+X_32_ _30_/B _53_/A gnd _69_/D vdd NOR2X1
+X_31_ reset gnd _53_/A vdd INVX1
+X_30_ _28_/B _30_/B gnd _30_/Y vdd NAND2X1
+XFILL9200x2100 gnd vdd FILL
+X_69_ _69_/Q clock _69_/D gnd vdd DFFPOSX1
+X_68_ _58_/A clock _49_/Y gnd vdd DFFPOSX1
+XSFILL7280x100 gnd vdd FILL
+XSFILL7760x2100 gnd vdd FILL
+X_67_ _46_/C clock _53_/Y gnd vdd DFFPOSX1
+.ends
+

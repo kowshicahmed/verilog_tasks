@@ -1,0 +1,131 @@
+Qflow static timing analysis logfile created on So 12. Jul 18:46:32 CEST 2020
+Running vesta static timing analysis
+vesta --long control_unit.rtlnopwr.v /usr/local/share/qflow/tech/osu035/osu035_stdcells.lib
+----------------------------------------------
+Vesta static timing analysis tool
+for qflow 1.4.79
+(c) 2013-2018 Tim Edwards, Open Circuit Design
+----------------------------------------------
+
+Parsing library "osu035_stdcells"
+End of library at line 6636
+Lib read /usr/local/share/qflow/tech/osu035/osu035_stdcells.lib:  Processed 6637 lines.
+Parsing module "control_unit"
+Verilog netlist read:  Processed 382 lines.
+Number of paths analyzed:  6
+
+Top 6 maximum delay paths:
+Path _68_/CLK to _69_/D delay 859.979 ps
+      0.0 ps  clock:        -> _68_/CLK
+    335.6 ps   _22_: _68_/Q -> _29_/A
+    467.8 ps    _5_: _29_/Y -> _32_/A
+    577.9 ps    _1_: _32_/Y -> _69_/D
+
+   clock skew at destination = 0
+   setup at destination = 282.096
+
+Path _67_/CLK to _68_/D delay 822.666 ps
+      0.0 ps      clock:        -> _67_/CLK
+    359.8 ps  cState[2]: _67_/Q -> _48_/B
+    470.4 ps       _18_: _48_/Y -> _49_/A
+    539.0 ps        _2_: _49_/Y -> _68_/D
+
+   clock skew at destination = 0
+   setup at destination = 283.639
+
+Path _66_/CLK to _67_/D delay 743.615 ps
+      0.0 ps      clock:        -> _66_/CLK
+    254.5 ps  cState[1]: _66_/Q -> _51_/A
+    377.8 ps       _20_: _51_/Y -> _53_/B
+    461.9 ps        _3_: _53_/Y -> _67_/D
+
+   clock skew at destination = 0
+   setup at destination = 281.76
+
+Path _69_/CLK to _66_/D delay 691.634 ps
+      0.0 ps  clock:        -> _69_/CLK
+    254.5 ps   _21_: _69_/Q -> _54_/B
+    405.7 ps    _4_: _54_/Y -> _66_/D
+
+   clock skew at destination = 0
+   setup at destination = 285.944
+
+Path _68_/CLK to output pin pc_op[1] delay 677.384 ps
+      0.0 ps     clock:        -> _68_/CLK
+    335.6 ps      _22_: _68_/Q -> _29_/A
+    467.8 ps       _5_: _29_/Y -> _30_/B
+    555.9 ps   _25_[1]: _30_/Y -> _62_/A
+    677.4 ps  pc_op[1]: _62_/Y -> pc_op[1]
+
+Path _65_/CLK to output pin pc_op[0] delay 537.106 ps
+      0.0 ps      clock:        -> _65_/CLK
+    351.6 ps  cState[0]: _65_/Q -> _28_/B
+    427.3 ps    _25_[0]: _28_/Y -> _61_/A
+    537.1 ps   pc_op[0]: _61_/Y -> pc_op[0]
+
+Computed maximum clock frequency (zero margin) = 1162.82 MHz
+-----------------------------------------
+
+Number of paths analyzed:  6
+
+Top 6 minimum delay paths:
+Path _69_/CLK to _66_/D delay 101.463 ps
+      0.0 ps  clock:        -> _69_/CLK
+     82.8 ps   _21_: _69_/Q -> _54_/B
+    196.1 ps    _4_: _54_/Y -> _66_/D
+
+   clock skew at destination = 0
+   hold at destination = -94.6374
+
+Path _66_/CLK to _67_/D delay 179.524 ps
+      0.0 ps      clock:        -> _66_/CLK
+     82.9 ps  cState[1]: _66_/Q -> _51_/A
+    200.3 ps       _20_: _51_/Y -> _53_/B
+    277.1 ps        _3_: _53_/Y -> _67_/D
+
+   clock skew at destination = 0
+   hold at destination = -97.5707
+
+Path _68_/CLK to _69_/D delay 237.206 ps
+      0.0 ps  clock:        -> _68_/CLK
+    143.8 ps   _22_: _68_/Q -> _29_/A
+    259.3 ps    _5_: _29_/Y -> _32_/A
+    337.8 ps    _1_: _32_/Y -> _69_/D
+
+   clock skew at destination = 0
+   hold at destination = -100.641
+
+Path _65_/CLK to _68_/D delay 251.454 ps
+      0.0 ps      clock:        -> _65_/CLK
+    192.6 ps  cState[0]: _65_/Q -> _48_/A
+    293.5 ps       _18_: _48_/Y -> _49_/A
+    348.2 ps        _2_: _49_/Y -> _68_/D
+
+   clock skew at destination = 0
+   hold at destination = -96.711
+
+Path _68_/CLK to output pin pc_op[0] delay 325.582 ps
+      0.0 ps     clock:        -> _68_/CLK
+    143.8 ps      _22_: _68_/Q -> _28_/A
+    217.9 ps   _25_[0]: _28_/Y -> _61_/A
+    325.6 ps  pc_op[0]: _61_/Y -> pc_op[0]
+
+Path _65_/CLK to output pin pc_op[1] delay 393.039 ps
+      0.0 ps      clock:        -> _65_/CLK
+    192.6 ps  cState[0]: _65_/Q -> _30_/A
+    284.7 ps    _25_[1]: _30_/Y -> _62_/A
+    393.0 ps   pc_op[1]: _62_/Y -> pc_op[1]
+
+Design meets minimum hold timing.
+-----------------------------------------
+
+Number of paths analyzed:  0
+
+Top 0 maximum delay paths:
+-----------------------------------------
+
+Number of paths analyzed:  0
+
+Top 0 minimum delay paths:
+-----------------------------------------
+

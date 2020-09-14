@@ -1,0 +1,39 @@
+$date
+	Sat Jul 18 23:18:07 2020
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module immediate_operation_tb $end
+$var wire 16 ! imm_out [15:0] $end
+$var reg 1 " flag $end
+$var reg 8 # imm [7:0] $end
+$scope module uut $end
+$var wire 1 " flag $end
+$var wire 8 $ imm [7:0] $end
+$var wire 16 % imm_out [15:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 %
+b0 $
+b0 #
+0"
+b0 !
+$end
+#10000
+b101000000000 !
+b101000000000 %
+1"
+b1010 #
+b1010 $
+#20000
+b1010 !
+b1010 %
+0"
+#120000

@@ -1,0 +1,106 @@
+* XSpice netlist created from SPICE and liberty sources by spi2xspice.py
+*SPICE netlist created from verilog structural netlist module control_unit by vlog2Spice (qflow)
+** Start of included library /usr/local/share/qflow/tech/osu035/osu035_stdcells.sp
+** End of included library /usr/local/share/qflow/tech/osu035/osu035_stdcells.sp
+.subckt control_unit a_vdd a_gnd a_adrs_ctrl a_clock a_decoder_en a_flag a_imm_en a_inst_wr a_mem_rd a_mem_wr a_opcode_0_ a_opcode_1_ a_opcode_2_ a_opcode_3_ a_pc_op_0_ a_pc_op_1_ a_rD_wr a_reg_en a_reset
+A_28_ [_22_ cState_0_] _25__0_ d_lut_NOR2X1
+A_29_ [_22_] _5_ d_lut_INVX1
+A_30_ [cState_0_ _5_] _25__1_ d_lut_NAND2X1
+A_31_ [reset] _0_ d_lut_INVX1
+A_32_ [_5_ _0_] _1_ d_lut_NOR2X1
+A_33_ [opcode_3_ opcode_2_] _6_ d_lut_OR2X2
+A_34_ [opcode_0_] _7_ d_lut_INVX1
+A_35_ [opcode_1_ _7_] _8_ d_lut_NAND2X1
+A_36_ [_6_ _8_] _9_ d_lut_NOR2X1
+A_37_ [_9_ cState_2_] _24_ d_lut_AND2X2
+A_38_ [opcode_1_] _10_ d_lut_INVX1
+A_39_ [opcode_0_ _10_] _11_ d_lut_NAND2X1
+A_40_ [_6_ _11_] _12_ d_lut_NOR2X1
+A_41_ [_12_ cState_1_] _23_ d_lut_AND2X2
+A_42_ [opcode_3_] _13_ d_lut_INVX1
+A_43_ [opcode_2_ _13_] _14_ d_lut_NAND2X1
+A_44_ [opcode_1_ opcode_0_] _15_ d_lut_NAND2X1
+A_45_ [opcode_2_ _15_ _11_ _14_] _16_ d_lut_OAI22X1
+A_46_ [_6_ _8_ cState_2_] _17_ d_lut_OAI21X1
+A_47_ [_17_ _16_] _26_ d_lut_NOR2X1
+A_48_ [cState_0_ cState_2_ reset] _18_ d_lut_OAI21X1
+A_49_ [_18_] _2_ d_lut_INVX1
+A_50_ [cState_2_] _19_ d_lut_INVX1
+A_51_ [cState_1_] _20_ d_lut_INVX1
+A_52_ [_19_ _20_ _16_] _27_ d_lut_AOI21X1
+A_53_ [_0_ _20_] _3_ d_lut_NOR2X1
+A_54_ [reset _21_] _4_ d_lut_AND2X2
+A_55_ [gnd] adrs_ctrl d_lut_BUFX2
+A_56_ [_21_] decoder_en d_lut_BUFX2
+A_57_ [gnd] imm_en d_lut_BUFX2
+A_58_ [_22_] inst_wr d_lut_BUFX2
+A_59_ [_23_] mem_rd d_lut_BUFX2
+A_60_ [_24_] mem_wr d_lut_BUFX2
+A_61_ [_25__0_] pc_op_0_ d_lut_BUFX2
+A_62_ [_25__1_] pc_op_1_ d_lut_BUFX2
+A_63_ [_26_] rD_wr d_lut_BUFX2
+A_64_ [_27_] reg_en d_lut_BUFX2
+A_65_ _0_ clock NULL NULL cState_0_ NULL ddflop
+A_66_ _4_ clock NULL NULL cState_1_ NULL ddflop
+A_67_ _3_ clock NULL NULL cState_2_ NULL ddflop
+A_68_ _2_ clock NULL NULL _22_ NULL ddflop
+A_69_ _1_ clock NULL NULL _21_ NULL ddflop
+
+.model todig_3v3 adc_bridge(in_high=2.1999999999999997 in_low=1.0999999999999999 rise_delay=10n fall_delay=10n)
+.model toana_3v3 dac_bridge(out_high=3.3 out_low=0)
+
+.model ddflop d_dff(ic=0 rise_delay=1n fall_delay=1n)
+.model dzero d_pulldown(load=1p)
+.model done d_pullup(load=1p)
+
+AA2D1 [a_vdd] [vdd] todig_3v3
+AA2D2 [a_gnd] [gnd] todig_3v3
+AD2A1 [adrs_ctrl] [a_adrs_ctrl] toana_3v3
+AA2D3 [a_clock] [clock] todig_3v3
+AD2A2 [decoder_en] [a_decoder_en] toana_3v3
+AA2D4 [a_flag] [flag] todig_3v3
+AD2A3 [imm_en] [a_imm_en] toana_3v3
+AD2A4 [inst_wr] [a_inst_wr] toana_3v3
+AD2A5 [mem_rd] [a_mem_rd] toana_3v3
+AD2A6 [mem_wr] [a_mem_wr] toana_3v3
+AA2D5 [a_opcode_0_] [opcode_0_] todig_3v3
+AA2D6 [a_opcode_1_] [opcode_1_] todig_3v3
+AA2D7 [a_opcode_2_] [opcode_2_] todig_3v3
+AA2D8 [a_opcode_3_] [opcode_3_] todig_3v3
+AD2A7 [pc_op_0_] [a_pc_op_0_] toana_3v3
+AD2A8 [pc_op_1_] [a_pc_op_1_] toana_3v3
+AD2A9 [rD_wr] [a_rD_wr] toana_3v3
+AD2A10 [reg_en] [a_reg_en] toana_3v3
+AA2D9 [a_reset] [reset] todig_3v3
+
+.ends
+
+* NOR2X1 (!(A+B))
+.model d_lut_NOR2X1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "1000")
+* INVX1 (!A)
+.model d_lut_INVX1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "10")
+* NAND2X1 (!(A B))
+.model d_lut_NAND2X1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "1110")
+* OR2X2 (A+B)
+.model d_lut_OR2X2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0111")
+* AND2X2 (A B)
+.model d_lut_AND2X2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0001")
+* OAI22X1 (!((A+B) (C+D)))
+.model d_lut_OAI22X1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "1111100010001000")
+* OAI21X1 (!((A+B) C))
+.model d_lut_OAI21X1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "11111000")
+* AOI21X1 (!((A B)+C))
+.model d_lut_AOI21X1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "11100000")
+* BUFX2 A
+.model d_lut_BUFX2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "01")
+* DFFPOSX1 DS0000
+.end

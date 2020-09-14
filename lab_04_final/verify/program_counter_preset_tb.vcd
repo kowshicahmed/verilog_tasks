@@ -1,0 +1,44 @@
+$date
+	Sat Jul 18 23:35:48 2020
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module program_counter_preset_tb $end
+$var wire 16 ! q [15:0] $end
+$var reg 16 " ch0 [15:0] $end
+$var reg 16 # ch1 [15:0] $end
+$var reg 1 $ sel $end
+$scope module uut $end
+$var wire 16 % ch0 [15:0] $end
+$var wire 16 & ch1 [15:0] $end
+$var wire 1 $ sel $end
+$var wire 16 ' q [15:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 '
+b0 &
+b0 %
+0$
+b0 #
+b0 "
+b0 !
+$end
+#10000
+b100010 !
+b100010 '
+b110110 #
+b110110 &
+b100010 "
+b100010 %
+#20000
+b110110 !
+b110110 '
+1$
+#60000

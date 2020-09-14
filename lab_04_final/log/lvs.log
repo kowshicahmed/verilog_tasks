@@ -1,0 +1,276 @@
+Qflow LVS logfile created on Sun Aug 9 18:49:45 CEST 2020
+netgen -batch lvs "uProcessor.spice uProcessor" "/home/rabby/digital_design_lab/lab_04/synthesis/uProcessor.spc uProcessor" /usr/local/share/qflow/tech/osu035/osu035_setup.tcl comp.out -json -blackbox
+Netgen 1.5.146 compiled on Tue Apr 21 18:36:12 CEST 2020
+Warning: netgen command 'format' use fully-qualified name '::netgen::format'
+Warning: netgen command 'global' use fully-qualified name '::netgen::global'
+Generating JSON file result
+Treating empty subcircuits as black-box cells
+Reading netlist file uProcessor.spice
+Reading netlist file /home/rabby/digital_design_lab/lab_04/synthesis/uProcessor.spc
+Reading setup file /usr/local/share/qflow/tech/osu035/osu035_setup.tcl
+No property w found for device r
+No property l found for device r
+Error /usr/local/share/qflow/tech/osu035/osu035_setup.tcl:5 (ignoring), No such cell or bad file number!
+Error /usr/local/share/qflow/tech/osu035/osu035_setup.tcl:6 (ignoring), No such cell or bad file number!
+Warning:  There were errors reading the setup file
+Comparison output logged to file comp.out
+Logging to file "comp.out" enabled
+Contents of circuit 1:  Circuit: 'OAI21X1'
+Circuit OAI21X1 contains 0 device instances.
+Circuit contains 0 nets, and 6 disconnected pins.
+Contents of circuit 2:  Circuit: 'OAI21X1'
+Circuit OAI21X1 contains 6 device instances.
+  Class: pfet                  instances:   3
+  Class: nfet                  instances:   3
+Circuit contains 8 nets.
+
+Circuit OAI21X1 contains no devices.
+Contents of circuit 1:  Circuit: 'MUX2X1'
+Circuit MUX2X1 contains 0 device instances.
+Circuit contains 0 nets, and 6 disconnected pins.
+Contents of circuit 2:  Circuit: 'MUX2X1'
+Circuit MUX2X1 contains 10 device instances.
+  Class: pfet                  instances:   5
+  Class: nfet                  instances:   5
+Circuit contains 11 nets.
+
+Circuit MUX2X1 contains no devices.
+Contents of circuit 1:  Circuit: 'AOI21X1'
+Circuit AOI21X1 contains 0 device instances.
+Circuit contains 0 nets, and 6 disconnected pins.
+Contents of circuit 2:  Circuit: 'AOI21X1'
+Circuit AOI21X1 contains 6 device instances.
+  Class: pfet                  instances:   3
+  Class: nfet                  instances:   3
+Circuit contains 8 nets.
+
+Circuit AOI21X1 contains no devices.
+Contents of circuit 1:  Circuit: 'NAND3X1'
+Circuit NAND3X1 contains 0 device instances.
+Circuit contains 0 nets, and 6 disconnected pins.
+Contents of circuit 2:  Circuit: 'NAND3X1'
+Circuit NAND3X1 contains 6 device instances.
+  Class: pfet                  instances:   3
+  Class: nfet                  instances:   3
+Circuit contains 8 nets.
+
+Circuit NAND3X1 contains no devices.
+Contents of circuit 1:  Circuit: 'DFFPOSX1'
+Circuit DFFPOSX1 contains 0 device instances.
+Circuit contains 0 nets, and 5 disconnected pins.
+Contents of circuit 2:  Circuit: 'DFFPOSX1'
+Circuit DFFPOSX1 contains 22 device instances.
+  Class: pfet                  instances:  11
+  Class: nfet                  instances:  11
+Circuit contains 17 nets.
+
+Circuit DFFPOSX1 contains no devices.
+Contents of circuit 1:  Circuit: 'NAND2X1'
+Circuit NAND2X1 contains 0 device instances.
+Circuit contains 0 nets, and 5 disconnected pins.
+Contents of circuit 2:  Circuit: 'NAND2X1'
+Circuit NAND2X1 contains 4 device instances.
+  Class: pfet                  instances:   2
+  Class: nfet                  instances:   2
+Circuit contains 6 nets.
+
+Circuit NAND2X1 contains no devices.
+Contents of circuit 1:  Circuit: 'BUFX2'
+Circuit BUFX2 contains 0 device instances.
+Circuit contains 0 nets, and 4 disconnected pins.
+Contents of circuit 2:  Circuit: 'BUFX2'
+Circuit BUFX2 contains 4 device instances.
+  Class: pfet                  instances:   2
+  Class: nfet                  instances:   2
+Circuit contains 5 nets.
+
+Circuit BUFX2 contains no devices.
+Contents of circuit 1:  Circuit: 'INVX1'
+Circuit INVX1 contains 0 device instances.
+Circuit contains 0 nets, and 4 disconnected pins.
+Contents of circuit 2:  Circuit: 'INVX1'
+Circuit INVX1 contains 2 device instances.
+  Class: pfet                  instances:   1
+  Class: nfet                  instances:   1
+Circuit contains 4 nets.
+
+Circuit INVX1 contains no devices.
+Contents of circuit 1:  Circuit: 'OAI22X1'
+Circuit OAI22X1 contains 0 device instances.
+Circuit contains 0 nets, and 7 disconnected pins.
+Contents of circuit 2:  Circuit: 'OAI22X1'
+Circuit OAI22X1 contains 8 device instances.
+  Class: pfet                  instances:   4
+  Class: nfet                  instances:   4
+Circuit contains 10 nets.
+
+Circuit OAI22X1 contains no devices.
+Contents of circuit 1:  Circuit: 'INVX4'
+Circuit INVX4 contains 0 device instances.
+Circuit contains 0 nets, and 4 disconnected pins.
+Contents of circuit 2:  Circuit: 'INVX4'
+Circuit INVX4 contains 4 device instances.
+  Class: pfet                  instances:   2
+  Class: nfet                  instances:   2
+Circuit contains 4 nets.
+
+Circuit INVX4 contains no devices.
+Contents of circuit 1:  Circuit: 'NOR2X1'
+Circuit NOR2X1 contains 0 device instances.
+Circuit contains 0 nets, and 5 disconnected pins.
+Contents of circuit 2:  Circuit: 'NOR2X1'
+Circuit NOR2X1 contains 4 device instances.
+  Class: pfet                  instances:   2
+  Class: nfet                  instances:   2
+Circuit contains 6 nets.
+
+Circuit NOR2X1 contains no devices.
+Contents of circuit 1:  Circuit: 'AND2X2'
+Circuit AND2X2 contains 0 device instances.
+Circuit contains 0 nets, and 5 disconnected pins.
+Contents of circuit 2:  Circuit: 'AND2X2'
+Circuit AND2X2 contains 6 device instances.
+  Class: pfet                  instances:   3
+  Class: nfet                  instances:   3
+Circuit contains 7 nets.
+
+Circuit AND2X2 contains no devices.
+Contents of circuit 1:  Circuit: 'XOR2X1'
+Circuit XOR2X1 contains 0 device instances.
+Circuit contains 0 nets, and 5 disconnected pins.
+Contents of circuit 2:  Circuit: 'XOR2X1'
+Circuit XOR2X1 contains 12 device instances.
+  Class: pfet                  instances:   6
+  Class: nfet                  instances:   6
+Circuit contains 11 nets.
+
+Circuit XOR2X1 contains no devices.
+Contents of circuit 1:  Circuit: 'XNOR2X1'
+Circuit XNOR2X1 contains 0 device instances.
+Circuit contains 0 nets, and 5 disconnected pins.
+Contents of circuit 2:  Circuit: 'XNOR2X1'
+Circuit XNOR2X1 contains 12 device instances.
+  Class: pfet                  instances:   6
+  Class: nfet                  instances:   6
+Circuit contains 11 nets.
+
+Circuit XNOR2X1 contains no devices.
+Contents of circuit 1:  Circuit: 'AOI22X1'
+Circuit AOI22X1 contains 0 device instances.
+Circuit contains 0 nets, and 7 disconnected pins.
+Contents of circuit 2:  Circuit: 'AOI22X1'
+Circuit AOI22X1 contains 8 device instances.
+  Class: pfet                  instances:   4
+  Class: nfet                  instances:   4
+Circuit contains 10 nets.
+
+Circuit AOI22X1 contains no devices.
+Contents of circuit 1:  Circuit: 'OR2X2'
+Circuit OR2X2 contains 0 device instances.
+Circuit contains 0 nets, and 5 disconnected pins.
+Contents of circuit 2:  Circuit: 'OR2X2'
+Circuit OR2X2 contains 6 device instances.
+  Class: pfet                  instances:   3
+  Class: nfet                  instances:   3
+Circuit contains 7 nets.
+
+Circuit OR2X2 contains no devices.
+Contents of circuit 1:  Circuit: 'INVX8'
+Circuit INVX8 contains 0 device instances.
+Circuit contains 0 nets, and 4 disconnected pins.
+Contents of circuit 2:  Circuit: 'INVX8'
+Circuit INVX8 contains 8 device instances.
+  Class: pfet                  instances:   4
+  Class: nfet                  instances:   4
+Circuit contains 4 nets.
+
+Circuit INVX8 contains no devices.
+Contents of circuit 1:  Circuit: 'NOR3X1'
+Circuit NOR3X1 contains 0 device instances.
+Circuit contains 0 nets, and 6 disconnected pins.
+Contents of circuit 2:  Circuit: 'NOR3X1'
+Circuit NOR3X1 contains 9 device instances.
+  Class: pfet                  instances:   6
+  Class: nfet                  instances:   3
+Circuit contains 8 nets.
+
+Circuit NOR3X1 contains no devices.
+Contents of circuit 1:  Circuit: 'CLKBUF1'
+Circuit CLKBUF1 contains 0 device instances.
+Circuit contains 0 nets, and 4 disconnected pins.
+Contents of circuit 2:  Circuit: 'CLKBUF1'
+Circuit CLKBUF1 contains 16 device instances.
+  Class: pfet                  instances:   8
+  Class: nfet                  instances:   8
+Circuit contains 7 nets.
+
+Circuit CLKBUF1 contains no devices.
+Contents of circuit 1:  Circuit: 'INVX2'
+Circuit INVX2 contains 0 device instances.
+Circuit contains 0 nets, and 4 disconnected pins.
+Contents of circuit 2:  Circuit: 'INVX2'
+Circuit INVX2 contains 2 device instances.
+  Class: pfet                  instances:   1
+  Class: nfet                  instances:   1
+Circuit contains 4 nets.
+
+Circuit INVX2 contains no devices.
+Contents of circuit 1:  Circuit: 'uProcessor'
+Circuit uProcessor contains 2853 device instances.
+  Class: NOR3X1                instances:  16
+  Class: OR2X2                 instances:  34
+  Class: MUX2X1                instances:  96
+  Class: AOI22X1               instances:  67
+  Class: NOR2X1                instances: 347
+  Class: NAND3X1               instances: 192
+  Class: OAI22X1               instances: 138
+  Class: DFFPOSX1              instances: 203
+  Class: XOR2X1                instances:  24
+  Class: AOI21X1               instances: 174
+  Class: NAND2X1               instances: 343
+  Class: OAI21X1               instances: 334
+  Class: XNOR2X1               instances:  49
+  Class: BUFX2                 instances: 322
+  Class: AND2X2                instances:  91
+  Class: CLKBUF1               instances:  14
+  Class: INVX1                 instances: 380
+  Class: INVX2                 instances:   4
+  Class: INVX4                 instances:  18
+  Class: INVX8                 instances:   7
+Circuit contains 2873 nets.
+Contents of circuit 2:  Circuit: 'uProcessor'
+Circuit uProcessor contains 2853 device instances.
+  Class: NOR3X1                instances:  16
+  Class: OR2X2                 instances:  34
+  Class: MUX2X1                instances:  96
+  Class: AOI22X1               instances:  67
+  Class: NOR2X1                instances: 347
+  Class: NAND3X1               instances: 192
+  Class: OAI22X1               instances: 138
+  Class: DFFPOSX1              instances: 203
+  Class: XOR2X1                instances:  24
+  Class: AOI21X1               instances: 174
+  Class: NAND2X1               instances: 343
+  Class: OAI21X1               instances: 334
+  Class: XNOR2X1               instances:  49
+  Class: BUFX2                 instances: 322
+  Class: AND2X2                instances:  91
+  Class: CLKBUF1               instances:  14
+  Class: INVX1                 instances: 380
+  Class: INVX2                 instances:   4
+  Class: INVX4                 instances:  18
+  Class: INVX8                 instances:   7
+Circuit contains 2873 nets.
+
+Circuit 1 contains 2853 devices, Circuit 2 contains 2853 devices.
+Circuit 1 contains 2873 nets,    Circuit 2 contains 2873 nets.
+
+Netlists match uniquely.
+Result: Circuits match uniquely.
+Logging to file "comp.out" disabled
+LVS Done.
+/usr/local/share/qflow/scripts/count_lvs.py
+LVS reports no net, device, pin, or property mismatches.
+
+Total errors = 0
+LVS checking script ended on Sun Aug 9 18:49:46 CEST 2020

@@ -1,0 +1,59 @@
+$date
+	Sun Jul 19 00:15:25 2020
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module data_mux_tb $end
+$var wire 16 ! regD [15:0] $end
+$var reg 16 " alu_out [15:0] $end
+$var reg 1 # imm_en $end
+$var reg 16 $ imm_out [15:0] $end
+$var reg 4 % op_code [3:0] $end
+$var reg 16 & rd_data_bus [15:0] $end
+$scope module uut $end
+$var wire 16 ' alu_out [15:0] $end
+$var wire 1 # imm_en $end
+$var wire 16 ( imm_out [15:0] $end
+$var wire 4 ) op_code [3:0] $end
+$var wire 16 * rd_data_bus [15:0] $end
+$var wire 5 + sel [4:0] $end
+$var reg 16 , regD [15:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b101101 ,
+b0 +
+b1110011 *
+b0 )
+b110111 (
+b101101 '
+b1110011 &
+b0 %
+b110111 $
+0#
+b101101 "
+b101101 !
+$end
+#10000
+b110111 !
+b110111 ,
+b1 +
+1#
+#20000
+b10101 +
+b1010 %
+b1010 )
+#30000
+b1110011 !
+b1110011 ,
+0#
+b11000 +
+b1100 %
+b1100 )
+#130000

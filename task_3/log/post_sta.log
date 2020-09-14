@@ -1,0 +1,140 @@
+Qflow static timing analysis logfile created on So 12. Jul 18:46:36 CEST 2020
+Converting qrouter output to vesta delay format
+Running rc2dly -r control_unit.rc -l /usr/local/share/qflow/tech/osu035/osu035_stdcells.lib -V /home/akash/Documents/DigitalLab/verilog_tasks/task_3/synthesis/control_unit.rtl.v
+-d control_unit.dly
+Converting qrouter output to SPEF delay format
+Running rc2dly -D : -r control_unit.rc -l /usr/local/share/qflow/tech/osu035/osu035_stdcells.lib -V /home/akash/Documents/DigitalLab/verilog_tasks/task_3/synthesis/control_unit.rtl.v
+-d control_unit.spef
+Converting qrouter output to SDF delay format
+Running rc2dly -r control_unit.rc -l /usr/local/share/qflow/tech/osu035/osu035_stdcells.lib -V /home/akash/Documents/DigitalLab/verilog_tasks/task_3/synthesis/control_unit.rtl.v
+-d control_unit.sdf
+Running vesta static timing analysis with back-annotated extracted wire delays
+vesta -c -d control_unit.dly --long control_unit.rtlnopwr.v /usr/local/share/qflow/tech/osu035/osu035_stdcells.lib
+----------------------------------------------
+Vesta static timing analysis tool
+for qflow 1.4.79
+(c) 2013-2018 Tim Edwards, Open Circuit Design
+----------------------------------------------
+
+Parsing library "osu035_stdcells"
+End of library at line 6636
+Lib read /usr/local/share/qflow/tech/osu035/osu035_stdcells.lib:  Processed 6637 lines.
+Parsing module "control_unit"
+Verilog netlist read:  Processed 382 lines.
+Number of paths analyzed:  6
+
+Top 6 maximum delay paths:
+Path _68_/CLK to _69_/D delay 861.264 ps
+      0.0 ps  clock:        -> _68_/CLK
+    336.0 ps   _22_: _68_/Q -> _29_/A
+    468.9 ps    _5_: _29_/Y -> _32_/A
+    579.2 ps    _1_: _32_/Y -> _69_/D
+
+   clock skew at destination = 0
+   setup at destination = 282.08
+
+Path _67_/CLK to _68_/D delay 823.88 ps
+      0.0 ps      clock:        -> _67_/CLK
+    360.3 ps  cState[2]: _67_/Q -> _48_/B
+    471.3 ps       _18_: _48_/Y -> _49_/A
+    540.3 ps        _2_: _49_/Y -> _68_/D
+
+   clock skew at destination = 0
+   setup at destination = 283.622
+
+Path _66_/CLK to _67_/D delay 747.059 ps
+      0.0 ps      clock:        -> _66_/CLK
+    256.1 ps  cState[1]: _66_/Q -> _51_/A
+    380.6 ps       _20_: _51_/Y -> _53_/B
+    465.4 ps        _3_: _53_/Y -> _67_/D
+
+   clock skew at destination = 0
+   setup at destination = 281.707
+
+Path _69_/CLK to _66_/D delay 695.684 ps
+      0.0 ps  clock:        -> _69_/CLK
+    257.4 ps   _21_: _69_/Q -> _54_/B
+    409.8 ps    _4_: _54_/Y -> _66_/D
+
+   clock skew at destination = 0
+   setup at destination = 285.856
+
+Path _68_/CLK to output pin pc_op[1] delay 679.07 ps
+      0.0 ps     clock:        -> _68_/CLK
+    336.0 ps      _22_: _68_/Q -> _29_/A
+    468.9 ps       _5_: _29_/Y -> _30_/B
+    557.4 ps   _25_[1]: _30_/Y -> _62_/A
+    679.1 ps  pc_op[1]: _62_/Y -> pc_op[1]
+
+Path _65_/CLK to output pin pc_op[0] delay 538.173 ps
+      0.0 ps      clock:        -> _65_/CLK
+    352.1 ps  cState[0]: _65_/Q -> _28_/B
+    428.1 ps    _25_[0]: _28_/Y -> _61_/A
+    538.2 ps   pc_op[0]: _61_/Y -> pc_op[0]
+
+Computed maximum clock frequency (zero margin) = 1161.08 MHz
+-----------------------------------------
+
+Number of paths analyzed:  6
+
+Top 6 minimum delay paths:
+Path _69_/CLK to _66_/D delay 103.043 ps
+      0.0 ps  clock:        -> _69_/CLK
+     84.3 ps   _21_: _69_/Q -> _54_/B
+    197.7 ps    _4_: _54_/Y -> _66_/D
+
+   clock skew at destination = 0
+   hold at destination = -94.6978
+
+Path _66_/CLK to _67_/D delay 181.903 ps
+      0.0 ps      clock:        -> _66_/CLK
+     83.7 ps  cState[1]: _66_/Q -> _51_/A
+    202.1 ps       _20_: _51_/Y -> _53_/B
+    279.6 ps        _3_: _53_/Y -> _67_/D
+
+   clock skew at destination = 0
+   hold at destination = -97.6613
+
+Path _68_/CLK to _69_/D delay 239.234 ps
+      0.0 ps  clock:        -> _68_/CLK
+    145.1 ps   _22_: _68_/Q -> _29_/A
+    261.2 ps    _5_: _29_/Y -> _32_/A
+    339.9 ps    _1_: _32_/Y -> _69_/D
+
+   clock skew at destination = 0
+   hold at destination = -100.665
+
+Path _65_/CLK to _68_/D delay 253.361 ps
+      0.0 ps      clock:        -> _65_/CLK
+    193.9 ps  cState[0]: _65_/Q -> _48_/A
+    295.3 ps       _18_: _48_/Y -> _49_/A
+    350.2 ps        _2_: _49_/Y -> _68_/D
+
+   clock skew at destination = 0
+   hold at destination = -96.7906
+
+Path _68_/CLK to output pin pc_op[0] delay 327.411 ps
+      0.0 ps     clock:        -> _68_/CLK
+    145.1 ps      _22_: _68_/Q -> _28_/A
+    219.5 ps   _25_[0]: _28_/Y -> _61_/A
+    327.4 ps  pc_op[0]: _61_/Y -> pc_op[0]
+
+Path _65_/CLK to output pin pc_op[1] delay 394.753 ps
+      0.0 ps      clock:        -> _65_/CLK
+    193.9 ps  cState[0]: _65_/Q -> _30_/A
+    286.2 ps    _25_[1]: _30_/Y -> _62_/A
+    394.8 ps   pc_op[1]: _62_/Y -> pc_op[1]
+
+Design meets minimum hold timing.
+-----------------------------------------
+
+Number of paths analyzed:  0
+
+Top 0 maximum delay paths:
+-----------------------------------------
+
+Number of paths analyzed:  0
+
+Top 0 minimum delay paths:
+-----------------------------------------
+

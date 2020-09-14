@@ -1,0 +1,3428 @@
+* NGSPICE file created from uProcessor.ext - technology: scmos
+
+* Black-box entry subcircuit for NAND3X1 abstract view
+.subckt NAND3X1 A B C gnd Y vdd
+.ends
+
+* Black-box entry subcircuit for BUFX2 abstract view
+.subckt BUFX2 A gnd Y vdd
+.ends
+
+* Black-box entry subcircuit for NOR2X1 abstract view
+.subckt NOR2X1 A B gnd Y vdd
+.ends
+
+* Black-box entry subcircuit for OAI21X1 abstract view
+.subckt OAI21X1 A B C gnd Y vdd
+.ends
+
+* Black-box entry subcircuit for INVX1 abstract view
+.subckt INVX1 A gnd Y vdd
+.ends
+
+* Black-box entry subcircuit for FILL abstract view
+.subckt FILL gnd vdd
+.ends
+
+* Black-box entry subcircuit for INVX8 abstract view
+.subckt INVX8 A gnd Y vdd
+.ends
+
+* Black-box entry subcircuit for NAND2X1 abstract view
+.subckt NAND2X1 A B gnd Y vdd
+.ends
+
+* Black-box entry subcircuit for OAI22X1 abstract view
+.subckt OAI22X1 A B C D gnd Y vdd
+.ends
+
+* Black-box entry subcircuit for MUX2X1 abstract view
+.subckt MUX2X1 A B S gnd Y vdd
+.ends
+
+* Black-box entry subcircuit for DFFPOSX1 abstract view
+.subckt DFFPOSX1 Q CLK D gnd vdd
+.ends
+
+* Black-box entry subcircuit for AND2X2 abstract view
+.subckt AND2X2 A B gnd Y vdd
+.ends
+
+* Black-box entry subcircuit for AOI21X1 abstract view
+.subckt AOI21X1 A B C gnd Y vdd
+.ends
+
+* Black-box entry subcircuit for XNOR2X1 abstract view
+.subckt XNOR2X1 A B gnd Y vdd
+.ends
+
+* Black-box entry subcircuit for OR2X2 abstract view
+.subckt OR2X2 A B gnd Y vdd
+.ends
+
+* Black-box entry subcircuit for AOI22X1 abstract view
+.subckt AOI22X1 A B C D gnd Y vdd
+.ends
+
+* Black-box entry subcircuit for NOR3X1 abstract view
+.subckt NOR3X1 A B C gnd Y vdd
+.ends
+
+* Black-box entry subcircuit for INVX4 abstract view
+.subckt INVX4 A gnd Y vdd
+.ends
+
+* Black-box entry subcircuit for CLKBUF1 abstract view
+.subckt CLKBUF1 A gnd Y vdd
+.ends
+
+* Black-box entry subcircuit for XOR2X1 abstract view
+.subckt XOR2X1 A B gnd Y vdd
+.ends
+
+* Black-box entry subcircuit for INVX2 abstract view
+.subckt INVX2 A gnd Y vdd
+.ends
+
+.subckt uProcessor gnd vdd adrs_bus[15] adrs_bus[14] adrs_bus[13] adrs_bus[12] adrs_bus[11]
++ adrs_bus[10] adrs_bus[9] adrs_bus[8] adrs_bus[7] adrs_bus[6] adrs_bus[5] adrs_bus[4]
++ adrs_bus[3] adrs_bus[2] adrs_bus[1] adrs_bus[0] clock data_in[15] data_in[14] data_in[13]
++ data_in[12] data_in[11] data_in[10] data_in[9] data_in[8] data_in[7] data_in[6]
++ data_in[5] data_in[4] data_in[3] data_in[2] data_in[1] data_in[0] data_out[15] data_out[14]
++ data_out[13] data_out[12] data_out[11] data_out[10] data_out[9] data_out[8] data_out[7]
++ data_out[6] data_out[5] data_out[4] data_out[3] data_out[2] data_out[1] data_out[0]
++ mem_rd mem_wr reset
+X_3086_ _2307_/Y _3190_/B _3242_/C gnd _3090_/B vdd NAND3X1
+X_2106_ _2711_/D gnd data_out[2] vdd BUFX2
+X_3155_ _3154_/Y _3155_/B gnd _3155_/Y vdd NOR2X1
+X_2939_ _2863_/Y _2933_/Y _2938_/Y gnd _2940_/A vdd NAND3X1
+X_3988_ _3988_/A _3945_/B _3999_/C gnd _3988_/Y vdd OAI21X1
+X_4609_ _3487_/B gnd _4609_/Y vdd INVX1
+XSFILL44400x26100 gnd vdd FILL
+XSFILL29680x100 gnd vdd FILL
+XSFILL29840x24100 gnd vdd FILL
+X_3911_ _4025_/B gnd _3911_/Y vdd INVX8
+X_3842_ _3842_/A _3842_/B gnd _3842_/Y vdd NOR2X1
+X_3773_ _4331_/Q _3768_/B gnd _3773_/Y vdd NAND2X1
+X_2655_ _2594_/Y _2637_/Y _2655_/C gnd _2655_/Y vdd OAI21X1
+X_2724_ _2697_/A _2701_/B _2724_/C _2822_/B gnd _2724_/Y vdd OAI22X1
+X_2586_ _2686_/A gnd _2642_/D vdd INVX1
+XSFILL59440x42100 gnd vdd FILL
+X_4256_ _4256_/A _4256_/B _4090_/S gnd _4256_/Y vdd MUX2X1
+X_4187_ _4186_/Y _4182_/Y _4220_/S gnd _4187_/Y vdd MUX2X1
+X_3207_ _3206_/Y _3207_/B gnd _3226_/A vdd NOR2X1
+X_4325_ _4192_/A _4318_/CLK _4325_/D gnd vdd DFFPOSX1
+X_3069_ _3069_/A _3069_/B gnd _3070_/C vdd NOR2X1
+X_3138_ _2313_/Y _3092_/B _2951_/B gnd _3138_/Y vdd NAND3X1
+XBUFX2_insert100 _3843_/Y gnd _3868_/B vdd BUFX2
+XBUFX2_insert133 _3742_/Y gnd _3748_/B vdd BUFX2
+XBUFX2_insert122 _3646_/Q gnd _4142_/C vdd BUFX2
+XBUFX2_insert111 _3568_/Y gnd _3578_/B vdd BUFX2
+XBUFX2_insert188 _4458_/Q gnd _4076_/A vdd BUFX2
+XBUFX2_insert144 _3809_/Y gnd _3832_/B vdd BUFX2
+XBUFX2_insert199 _4455_/Q gnd _2368_/A vdd BUFX2
+XBUFX2_insert166 _4436_/Q gnd _4188_/A vdd BUFX2
+X_2440_ _4589_/B gnd _2440_/Y vdd INVX1
+XBUFX2_insert177 _4433_/Q gnd _2892_/A vdd BUFX2
+XBUFX2_insert155 _4448_/Q gnd _3966_/A vdd BUFX2
+X_4041_ _4041_/A _4039_/Y _3981_/C _4041_/D gnd _4042_/A vdd OAI22X1
+X_2371_ _2355_/A _2389_/B gnd _3351_/A vdd AND2X2
+X_4110_ _4110_/A _4110_/B _4220_/S gnd _4112_/A vdd MUX2X1
+X_3756_ _3823_/A _3766_/B _3755_/Y gnd _4322_/D vdd OAI21X1
+X_3825_ _3678_/A _3818_/B _3824_/Y gnd _4387_/D vdd AOI21X1
+X_2638_ _4221_/A gnd _2638_/Y vdd INVX1
+X_2569_ _2571_/A gnd _2569_/Y vdd INVX1
+X_3687_ _3731_/A _3657_/B _3687_/C gnd _3687_/Y vdd AOI21X1
+X_2707_ _2803_/D gnd _2721_/B vdd INVX1
+X_4239_ _4239_/A _4213_/B gnd _4241_/B vdd NOR2X1
+X_4308_ _4308_/Q _4337_/CLK _3861_/Y gnd vdd DFFPOSX1
+XSFILL29360x36100 gnd vdd FILL
+X_3610_ _3610_/A _3608_/Y _3625_/C gnd _3610_/Y vdd AOI21X1
+X_4590_ _3548_/A _4588_/Y _4589_/Y gnd _4590_/Y vdd OAI21X1
+X_2423_ _2874_/A _4188_/A gnd _2423_/Y vdd XNOR2X1
+X_3472_ _3466_/Y _3471_/Y gnd _3472_/Y vdd NAND2X1
+X_3541_ _3499_/A _3541_/B _3540_/Y gnd _3541_/Y vdd NAND3X1
+X_4024_ _4374_/Q _4050_/B gnd _4024_/Y vdd NOR2X1
+X_2285_ _4265_/A _2571_/A gnd _2285_/Y vdd XNOR2X1
+X_2354_ _2546_/A _2381_/B gnd _2354_/Y vdd OR2X2
+XBUFX2_insert0 _4457_/Q gnd _2103_/A vdd BUFX2
+X_3739_ _3839_/A _3733_/B _3739_/C gnd _3739_/Y vdd OAI21X1
+X_3808_ _3875_/A _3802_/B _3807_/Y gnd _4363_/D vdd OAI21X1
+XSFILL14800x16100 gnd vdd FILL
+XSFILL30640x38100 gnd vdd FILL
+XSFILL44400x34100 gnd vdd FILL
+X_2972_ _2972_/A _3291_/B _2972_/C gnd _2973_/B vdd OAI21X1
+X_4573_ _4573_/Q _4580_/CLK _4495_/Y gnd vdd DFFPOSX1
+X_2406_ _2406_/A _2405_/Y gnd _2418_/A vdd NAND2X1
+X_3386_ _3386_/A gnd _3386_/Y vdd INVX1
+X_3455_ data_in[3] gnd _3455_/Y vdd INVX1
+X_3524_ _3503_/A _3482_/B _3523_/Y gnd _3527_/B vdd OAI21X1
+XSFILL59440x50100 gnd vdd FILL
+X_2268_ _2546_/A gnd _2270_/B vdd INVX1
+X_4007_ _4007_/A _3974_/B _3985_/C gnd _4008_/A vdd OAI21X1
+X_2337_ _2337_/A _2337_/B gnd _3346_/A vdd NOR2X1
+X_2199_ _2308_/B _2308_/A gnd _2200_/A vdd NOR2X1
+XSFILL59920x28100 gnd vdd FILL
+XSFILL43920x22100 gnd vdd FILL
+XSFILL59600x10100 gnd vdd FILL
+X_3240_ _3236_/Y _3240_/B gnd _3240_/Y vdd NOR2X1
+XSFILL14320x28100 gnd vdd FILL
+X_2122_ _4480_/C gnd _2124_/B vdd INVX1
+X_3171_ _2989_/A gnd gnd _2989_/D gnd _3172_/C vdd AOI22X1
+X_2955_ _3603_/A _2944_/B gnd _2955_/Y vdd NOR2X1
+X_2886_ _2884_/Y _2919_/A _2886_/C _2886_/D gnd _2886_/Y vdd AOI22X1
+X_4556_ _4582_/Q _2158_/A _4544_/Y gnd _4559_/B vdd NAND3X1
+X_4625_ _3565_/A _2426_/B gnd _4625_/Y vdd NAND2X1
+X_3507_ _3501_/Y _3506_/Y gnd _3507_/Y vdd NAND2X1
+X_4487_ _4560_/A _4487_/B _4492_/A _4560_/D gnd _4487_/Y vdd AOI22X1
+X_3438_ _3425_/A _3438_/B gnd _3438_/Y vdd NAND2X1
+X_3369_ _3367_/Y _3291_/B _3368_/Y gnd _3369_/Y vdd OAI21X1
+X_2740_ _2767_/A _2765_/A gnd _2741_/C vdd NAND2X1
+X_2671_ _2747_/A _2666_/Y gnd _2671_/Y vdd NAND2X1
+X_4410_ _4071_/B _4387_/CLK _3699_/Y gnd vdd DFFPOSX1
+X_3223_ _2989_/A gnd gnd _2989_/D gnd _3224_/C vdd AOI22X1
+X_4272_ _4414_/Q _4283_/B gnd _4272_/Y vdd NOR2X1
+X_4341_ _4018_/A _4355_/CLK _4341_/D gnd vdd DFFPOSX1
+X_2105_ _2767_/A gnd data_out[15] vdd BUFX2
+X_3154_ _3152_/Y _3336_/B _3154_/C _2998_/D gnd _3154_/Y vdd OAI22X1
+X_3085_ gnd _3345_/B gnd _3085_/Y vdd NAND2X1
+X_3987_ _3987_/A _3987_/B _4053_/S gnd _3989_/A vdd MUX2X1
+X_2938_ _2938_/A _2938_/B gnd _2938_/Y vdd AND2X2
+X_2869_ _2324_/A gnd _2869_/Y vdd INVX1
+X_4608_ _3566_/A _4608_/B _4608_/C gnd _4514_/B vdd OAI21X1
+X_4539_ _4580_/Q _4550_/C _4506_/A gnd _4539_/Y vdd OAI21X1
+XFILL71120x44100 gnd vdd FILL
+XSFILL29840x40100 gnd vdd FILL
+X_3772_ _3839_/A _3768_/B _3772_/C gnd _4330_/D vdd OAI21X1
+X_3910_ _3777_/A _3910_/B _4062_/B gnd _3910_/Y vdd MUX2X1
+X_3841_ _3875_/A _3835_/B _3841_/C gnd _4395_/D vdd AOI21X1
+X_2723_ _2723_/A _2712_/Y _2722_/Y gnd _2731_/A vdd OAI21X1
+X_2654_ _2579_/Y _2644_/Y _2654_/C gnd _2655_/C vdd AOI21X1
+X_2585_ _2581_/Y _2583_/Y _2585_/C gnd _2593_/B vdd NAND3X1
+X_4324_ _4324_/Q _4316_/CLK _3760_/Y gnd vdd DFFPOSX1
+X_4255_ _4255_/A _4222_/B _4254_/Y gnd _4442_/D vdd AOI21X1
+X_4186_ _4186_/A _4184_/Y _4094_/C _4186_/D gnd _4186_/Y vdd OAI22X1
+X_3206_ _3206_/A _3336_/B _3206_/C _2998_/D gnd _3206_/Y vdd OAI22X1
+X_3137_ gnd _3345_/B gnd _3142_/A vdd NAND2X1
+X_3068_ _3068_/A _3068_/B _3068_/C gnd _3069_/B vdd NAND3X1
+XBUFX2_insert145 _4442_/Q gnd _2853_/C vdd BUFX2
+XBUFX2_insert134 _3742_/Y gnd _3767_/B vdd BUFX2
+XBUFX2_insert167 _4436_/Q gnd _2365_/B vdd BUFX2
+XBUFX2_insert101 _3843_/Y gnd _3852_/B vdd BUFX2
+XBUFX2_insert156 _4448_/Q gnd _2699_/C vdd BUFX2
+XBUFX2_insert123 _3412_/Y gnd _3424_/B vdd BUFX2
+XBUFX2_insert112 _3568_/Y gnd _3588_/B vdd BUFX2
+XBUFX2_insert189 _4458_/Q gnd _2852_/A vdd BUFX2
+XBUFX2_insert178 _4433_/Q gnd _2308_/B vdd BUFX2
+X_4040_ _4343_/Q _3915_/S _3981_/C gnd _4041_/A vdd OAI21X1
+X_2370_ _2546_/A _2381_/B gnd _3325_/A vdd AND2X2
+XSFILL14320x36100 gnd vdd FILL
+X_3755_ _3755_/A _3766_/B gnd _3755_/Y vdd NAND2X1
+X_3686_ _4406_/Q _3657_/B gnd _3687_/C vdd NOR2X1
+X_3824_ _3990_/B _3818_/B gnd _3824_/Y vdd NOR2X1
+X_2706_ _2719_/A gnd _2706_/Y vdd INVX1
+X_2499_ _2509_/B _2499_/B gnd _2511_/A vdd AND2X2
+X_2568_ _2564_/Y _2568_/B gnd _3360_/A vdd NAND2X1
+X_4307_ _3858_/A _4387_/CLK _4307_/D gnd vdd DFFPOSX1
+X_2637_ _2637_/A _2625_/B _2636_/Y gnd _2637_/Y vdd AOI21X1
+X_4238_ _4425_/Q _4409_/Q _4238_/S gnd _4241_/D vdd MUX2X1
+X_4169_ _3724_/C _4140_/B gnd _4171_/B vdd NOR2X1
+X_3540_ _3540_/A _3498_/B _3498_/C gnd _3540_/Y vdd NAND3X1
+X_2353_ _2353_/A _2353_/B gnd _3279_/A vdd OR2X2
+X_3471_ _3499_/A _3468_/Y _3470_/Y gnd _3471_/Y vdd NAND3X1
+X_2422_ _2329_/A _2399_/B gnd _2422_/Y vdd XNOR2X1
+X_4023_ _4201_/A _4390_/Q _4045_/S gnd _4026_/D vdd MUX2X1
+XBUFX2_insert1 _4457_/Q gnd _2381_/A vdd BUFX2
+X_2284_ _2270_/Y _2283_/Y _2274_/Y gnd _2284_/Y vdd OAI21X1
+XSFILL29520x12100 gnd vdd FILL
+XSFILL59440x48100 gnd vdd FILL
+X_3738_ _3740_/A _3732_/B _4378_/Q gnd _3739_/C vdd OAI21X1
+X_3807_ _4256_/A _3807_/B gnd _3807_/Y vdd NAND2X1
+X_3669_ _3752_/A _3678_/B _3669_/C gnd _3669_/Y vdd AOI21X1
+XSFILL14800x32100 gnd vdd FILL
+XSFILL59120x30100 gnd vdd FILL
+XSFILL44400x50100 gnd vdd FILL
+XFILL71120x52100 gnd vdd FILL
+X_2971_ _2971_/A _2950_/Y gnd _3291_/B vdd NAND2X1
+X_4572_ _4492_/A _4389_/CLK _4572_/D gnd vdd DFFPOSX1
+X_3523_ _3523_/A gnd _3523_/Y vdd INVX1
+X_2405_ _4032_/A _4210_/A gnd _2405_/Y vdd XNOR2X1
+X_2336_ _2355_/A _2389_/B gnd _2337_/B vdd AND2X2
+X_3385_ _3432_/A _3385_/B gnd _3386_/A vdd NOR2X1
+XSFILL59760x6100 gnd vdd FILL
+X_3454_ _3503_/A _3482_/B _3453_/Y gnd _3454_/Y vdd OAI21X1
+X_2267_ _2855_/A gnd _2270_/A vdd INVX1
+X_4006_ _4308_/Q _3973_/B gnd _4006_/Y vdd NOR2X1
+X_2198_ _2189_/Y _2195_/Y gnd _2201_/A vdd NOR2X1
+XSFILL59920x44100 gnd vdd FILL
+X_3170_ gnd _3092_/B _2957_/B gnd _3172_/A vdd NAND3X1
+X_2121_ _2144_/A _2121_/B _2120_/Y gnd _2083_/A vdd OAI21X1
+XSFILL14320x44100 gnd vdd FILL
+X_2954_ _2954_/A gnd _2958_/C vdd INVX1
+XSFILL29520x4100 gnd vdd FILL
+X_2885_ _2883_/D gnd _2886_/D vdd INVX1
+X_4486_ _4506_/A _4486_/B _4497_/B gnd _4488_/A vdd NAND3X1
+X_4555_ _4554_/Y _4460_/A gnd _4555_/Y vdd AND2X2
+X_4624_ _3522_/B gnd _4624_/Y vdd INVX1
+X_3506_ _3499_/A _3503_/Y _3505_/Y gnd _3506_/Y vdd NAND3X1
+X_2319_ _2319_/A _2318_/Y gnd _3190_/A vdd NOR2X1
+X_3437_ _3424_/Y _3436_/Y gnd _3437_/Y vdd NAND2X1
+X_3368_ gnd _2969_/B gnd _3368_/Y vdd NAND2X1
+X_3299_ _3299_/A _3091_/B gnd _3302_/B vdd NAND2X1
+X_2670_ _2853_/C _2669_/Y gnd _2672_/B vdd NAND2X1
+X_4340_ _4007_/A _4318_/CLK _3894_/Y gnd vdd DFFPOSX1
+X_2104_ _2104_/A gnd data_out[14] vdd BUFX2
+X_3222_ gnd _3243_/C _3248_/C gnd _3224_/A vdd NAND3X1
+X_4271_ _3660_/A _4283_/B _4270_/Y gnd _4271_/Y vdd AOI21X1
+X_3153_ gnd gnd _3154_/C vdd INVX1
+X_3084_ _3084_/A _3083_/Y gnd _3084_/Y vdd NOR2X1
+XSFILL29520x20100 gnd vdd FILL
+X_2868_ _2642_/B _2868_/B gnd _2871_/A vdd NAND2X1
+X_3986_ _3986_/A _3984_/Y _3985_/C _3986_/D gnd _3987_/A vdd OAI22X1
+X_4607_ _3566_/A _4177_/A gnd _4608_/C vdd NAND2X1
+X_2937_ _2914_/B _2937_/B gnd _2938_/A vdd NOR2X1
+X_4469_ _4468_/Y _4464_/Y _4460_/Y gnd _4469_/Y vdd AOI21X1
+X_4538_ _4532_/A _4538_/B _4519_/Y gnd _4550_/C vdd NOR3X1
+X_2799_ _2359_/A gnd _2800_/D vdd INVX1
+XSFILL14640x2100 gnd vdd FILL
+XSFILL43920x28100 gnd vdd FILL
+XSFILL59600x16100 gnd vdd FILL
+X_3771_ _4069_/A _3768_/B gnd _3772_/C vdd NAND2X1
+X_3840_ _4256_/B _3811_/B gnd _3841_/C vdd NOR2X1
+X_2722_ _2721_/Y _2722_/B _2719_/Y gnd _2722_/Y vdd AOI21X1
+X_2584_ _2642_/B _2679_/A gnd _2585_/C vdd XNOR2X1
+X_2653_ _2653_/A _2579_/B _2652_/Y gnd _2654_/C vdd OAI21X1
+X_4323_ _4170_/A _4387_/CLK _4323_/D gnd vdd DFFPOSX1
+X_4254_ _2853_/C _4076_/B _4076_/C gnd _4254_/Y vdd OAI21X1
+X_4185_ _4007_/A _4260_/S _4094_/C gnd _4186_/A vdd OAI21X1
+X_3205_ gnd gnd _3206_/C vdd INVX1
+X_3136_ _3136_/A _3136_/B gnd _3136_/Y vdd NOR2X1
+X_3067_ _2989_/A gnd gnd _2989_/D gnd _3068_/C vdd AOI22X1
+X_3969_ _4369_/Q _4039_/B gnd _3971_/B vdd NOR2X1
+XSFILL44880x30100 gnd vdd FILL
+XBUFX2_insert102 _3843_/Y gnd _3855_/B vdd BUFX2
+XBUFX2_insert168 _4436_/Q gnd _2877_/A vdd BUFX2
+XBUFX2_insert135 _3742_/Y gnd _3752_/B vdd BUFX2
+XBUFX2_insert146 _4442_/Q gnd _2389_/B vdd BUFX2
+XBUFX2_insert157 _4448_/Q gnd _2893_/A vdd BUFX2
+XBUFX2_insert113 _3568_/Y gnd _3575_/B vdd BUFX2
+XBUFX2_insert179 _4433_/Q gnd _4155_/A vdd BUFX2
+XBUFX2_insert124 _3412_/Y gnd _3425_/A vdd BUFX2
+X_3823_ _3823_/A _3832_/B _3823_/C gnd _3823_/Y vdd AOI21X1
+X_3754_ _3788_/A _3766_/B _3753_/Y gnd _3754_/Y vdd OAI21X1
+X_3685_ _3507_/Y gnd _3731_/A vdd INVX4
+X_2636_ _2636_/A _2633_/Y _2636_/C _2610_/A gnd _2636_/Y vdd OAI22X1
+X_2705_ _2696_/Y _2759_/B gnd _2731_/B vdd NOR2X1
+X_4237_ _4237_/A _4235_/Y _4236_/C _4234_/Y gnd _4242_/B vdd OAI22X1
+X_2498_ _2498_/A _2788_/C gnd _2509_/B vdd OR2X2
+X_2567_ _2562_/Y _2566_/Y gnd _2568_/B vdd NAND2X1
+X_4306_ _3856_/A _4338_/CLK _4306_/D gnd vdd DFFPOSX1
+X_4099_ _4099_/A _4099_/B _4220_/S gnd _4101_/A vdd MUX2X1
+X_4168_ _3990_/A _3990_/B _4190_/S gnd _4168_/Y vdd MUX2X1
+X_3119_ _2989_/A gnd gnd _2989_/D gnd _3120_/C vdd AOI22X1
+XSFILL44400x48100 gnd vdd FILL
+X_2352_ _2368_/A _2326_/B gnd _2352_/Y vdd OR2X2
+X_2283_ _2282_/Y _2256_/Y _2266_/A gnd _2283_/Y vdd AOI21X1
+X_3470_ _3470_/A _3498_/B _3498_/C gnd _3470_/Y vdd NAND3X1
+X_2421_ _2419_/Y _2420_/Y gnd _2421_/Y vdd NAND2X1
+XBUFX2_insert2 _4457_/Q gnd _2546_/A vdd BUFX2
+X_4022_ _4020_/Y _4188_/B _4021_/Y gnd _4022_/Y vdd AOI21X1
+X_3806_ _3839_/A _3802_/B _3805_/Y gnd _4362_/D vdd OAI21X1
+X_3737_ _4295_/A _3733_/B _3736_/Y gnd _3737_/Y vdd OAI21X1
+X_3668_ _4400_/Q _3678_/B gnd _3669_/C vdd NOR2X1
+X_3599_ _3605_/A data_in[13] gnd _3601_/B vdd NAND2X1
+X_2619_ _2619_/A _2619_/B gnd _2622_/A vdd NAND2X1
+XSFILL43920x36100 gnd vdd FILL
+X_2970_ _2943_/A _3603_/A gnd _2970_/Y vdd AND2X2
+X_4571_ _4480_/C _4389_/CLK _4481_/Y gnd vdd DFFPOSX1
+X_3453_ _3070_/Y gnd _3453_/Y vdd INVX1
+X_3522_ _3501_/A _3522_/B gnd _3522_/Y vdd NAND2X1
+X_2404_ _4043_/A _4221_/A gnd _2406_/A vdd XNOR2X1
+X_2335_ _2355_/A _2555_/A gnd _2337_/A vdd NOR2X1
+X_2266_ _2266_/A gnd _2266_/Y vdd INVX1
+X_3384_ _2983_/B gnd _3385_/B vdd INVX1
+X_4005_ _4284_/A _4404_/Q _3974_/B gnd _4005_/Y vdd MUX2X1
+X_2197_ _2193_/B _2195_/Y _2197_/C gnd _2216_/A vdd AOI21X1
+XSFILL14000x24100 gnd vdd FILL
+X_2120_ _2120_/A _4589_/B gnd _2120_/Y vdd NAND2X1
+XCLKBUF1_insert20 clock gnd _4318_/CLK vdd CLKBUF1
+X_2884_ _2884_/A gnd _2884_/Y vdd INVX1
+X_4623_ _3548_/A _4621_/Y _4623_/C gnd _4623_/Y vdd OAI21X1
+XSFILL29520x18100 gnd vdd FILL
+X_2953_ _2435_/Y gnd _2958_/A vdd INVX1
+X_4485_ _4485_/A gnd _4497_/B vdd INVX1
+X_4554_ _4552_/Y _4551_/Y _4553_/Y gnd _4554_/Y vdd OAI21X1
+X_3436_ _3499_/A _3430_/Y _3435_/Y gnd _3436_/Y vdd NAND3X1
+X_3505_ _3505_/A _3498_/B _3498_/C gnd _3505_/Y vdd NAND3X1
+XSFILL14800x38100 gnd vdd FILL
+X_2249_ _2245_/Y _2249_/B gnd _2250_/B vdd NAND2X1
+X_2318_ _2220_/B _2365_/B gnd _2318_/Y vdd AND2X2
+X_3298_ _3298_/A _3298_/B _3298_/C gnd _3303_/A vdd NAND3X1
+X_3367_ gnd gnd _3367_/Y vdd INVX1
+XSFILL59120x36100 gnd vdd FILL
+XSFILL59600x6100 gnd vdd FILL
+X_4270_ _3928_/A _4283_/B gnd _4270_/Y vdd NOR2X1
+X_2103_ _2103_/A gnd data_out[13] vdd BUFX2
+X_3221_ _2366_/Y _3091_/B gnd _3224_/B vdd NAND2X1
+X_3152_ _2485_/Y gnd _3152_/Y vdd INVX1
+X_3083_ _3083_/A _3291_/B _3083_/C gnd _3083_/Y vdd OAI21X1
+X_3985_ _4338_/Q _3974_/B _3985_/C gnd _3986_/A vdd OAI21X1
+XSFILL59280x6100 gnd vdd FILL
+X_2867_ _2101_/A gnd _2868_/B vdd INVX1
+X_2798_ _2709_/A gnd _2798_/Y vdd INVX1
+X_4606_ _3558_/Y gnd _4608_/B vdd INVX1
+X_2936_ _2936_/A _2935_/Y gnd _2937_/B vdd NAND2X1
+X_4399_ _3950_/B _4426_/CLK _4399_/D gnd vdd DFFPOSX1
+X_4468_ _4560_/A _4587_/Y _4472_/A _4560_/D gnd _4468_/Y vdd AOI22X1
+X_3419_ _3416_/B _3637_/CLK _3419_/D gnd vdd DFFPOSX1
+X_4537_ _4544_/A _4530_/Y gnd _4545_/B vdd NOR2X1
+XSFILL58640x24100 gnd vdd FILL
+XSFILL44560x10100 gnd vdd FILL
+XSFILL59600x32100 gnd vdd FILL
+X_3770_ _4295_/A _3767_/B _3769_/Y gnd _4329_/D vdd OAI21X1
+X_2652_ _2652_/A _2652_/B _2652_/C gnd _2652_/Y vdd OAI21X1
+XSFILL29040x4100 gnd vdd FILL
+X_2721_ _2300_/B _2721_/B gnd _2721_/Y vdd NOR2X1
+XFILL71280x12100 gnd vdd FILL
+X_4253_ _4252_/Y _4253_/B _4220_/S gnd _4255_/A vdd MUX2X1
+X_2583_ _2676_/C _2582_/Y gnd _2583_/Y vdd NAND2X1
+X_4322_ _3755_/A _4322_/CLK _4322_/D gnd vdd DFFPOSX1
+X_3204_ _3204_/A gnd _3206_/A vdd INVX1
+X_4184_ _4308_/Q _4151_/B gnd _4184_/Y vdd NOR2X1
+X_3135_ _3133_/Y _3291_/B _3135_/C gnd _3136_/B vdd OAI21X1
+X_3066_ gnd _3378_/B _3066_/C gnd _3068_/A vdd NAND3X1
+X_3968_ _4353_/Q _4385_/Q _3915_/S gnd _3971_/D vdd MUX2X1
+X_2919_ _2919_/A _2884_/Y gnd _2920_/B vdd NAND2X1
+X_3899_ _4343_/Q _3899_/B gnd _3900_/C vdd NOR2X1
+XBUFX2_insert158 _4439_/Q gnd _2779_/A vdd BUFX2
+XBUFX2_insert103 _4456_/Q gnd _2666_/A vdd BUFX2
+XBUFX2_insert169 _4436_/Q gnd _2685_/A vdd BUFX2
+XBUFX2_insert147 _4442_/Q gnd _2847_/A vdd BUFX2
+XBUFX2_insert114 _3568_/Y gnd _3616_/B vdd BUFX2
+XBUFX2_insert136 _4451_/Q gnd _2314_/A vdd BUFX2
+XBUFX2_insert125 _3412_/Y gnd _3501_/A vdd BUFX2
+X_3822_ _4386_/Q _3832_/B gnd _3823_/C vdd NOR2X1
+X_3753_ _3970_/A _3766_/B gnd _3753_/Y vdd NAND2X1
+X_3684_ _3796_/A _3699_/B _3683_/Y gnd _4405_/D vdd AOI21X1
+X_2704_ _2701_/Y _2703_/Y _2699_/Y gnd _2759_/B vdd NAND3X1
+X_2635_ _2635_/A _2635_/B _2635_/C gnd _2636_/C vdd OAI21X1
+X_4236_ _4058_/A _4223_/S _4236_/C gnd _4237_/A vdd OAI21X1
+X_2497_ _2788_/C _2498_/A gnd _2499_/B vdd NAND2X1
+X_2566_ _2565_/Y _2566_/B _2558_/Y gnd _2566_/Y vdd OAI21X1
+X_4305_ _4305_/Q _4338_/CLK _3855_/Y gnd vdd DFFPOSX1
+X_4167_ _4167_/A _4167_/B _4166_/Y gnd _4434_/D vdd AOI21X1
+X_4098_ _4098_/A _4098_/B _4097_/C _4095_/Y gnd _4099_/A vdd OAI22X1
+X_3049_ gnd gnd _3049_/Y vdd INVX1
+X_3118_ gnd _3092_/B _2957_/B gnd _3120_/A vdd NAND3X1
+XSFILL45040x30100 gnd vdd FILL
+X_2420_ _3988_/A _4166_/A gnd _2420_/Y vdd XNOR2X1
+XSFILL30320x50100 gnd vdd FILL
+X_2351_ _2513_/B _2513_/A gnd _3227_/A vdd OR2X2
+X_4021_ _2428_/A _4188_/B _4199_/C gnd _4021_/Y vdd OAI21X1
+X_2282_ _2282_/A _2280_/Y _2282_/C gnd _2282_/Y vdd OAI21X1
+XBUFX2_insert3 _4457_/Q gnd _2646_/A vdd BUFX2
+X_3736_ _3740_/A _3732_/B _4377_/Q gnd _3736_/Y vdd OAI21X1
+X_3805_ _4245_/A _3802_/B gnd _3805_/Y vdd NAND2X1
+X_2549_ _2855_/A _2546_/Y gnd _2549_/Y vdd NAND2X1
+X_3598_ _3598_/A _3598_/B _3577_/C gnd _3638_/D vdd AOI21X1
+X_2618_ _2618_/A gnd _2619_/B vdd INVX1
+X_3667_ _3465_/Y gnd _3752_/A vdd INVX4
+X_4219_ _4219_/A _4217_/Y _4215_/C _4219_/D gnd _4220_/A vdd OAI22X1
+XSFILL43920x52100 gnd vdd FILL
+XSFILL59600x40100 gnd vdd FILL
+X_4570_ _4570_/Q _4389_/CLK _4475_/Y gnd vdd DFFPOSX1
+X_2403_ _2387_/Y _2403_/B gnd _2986_/A vdd NOR2X1
+X_3383_ _3605_/A gnd _3389_/C vdd INVX1
+X_3452_ _3425_/A _3452_/B gnd _3458_/A vdd NAND2X1
+X_3521_ _3521_/A _3520_/Y gnd _3521_/Y vdd NAND2X1
+XFILL71280x20100 gnd vdd FILL
+X_4004_ _4004_/A _4002_/Y _4080_/C _4001_/Y gnd _4009_/B vdd OAI22X1
+X_2265_ _2260_/Y _2263_/Y gnd _2266_/A vdd NAND2X1
+X_2334_ _2332_/Y _2334_/B gnd _3320_/A vdd NOR2X1
+X_2196_ _2308_/B _2308_/A gnd _2197_/C vdd AND2X2
+X_3719_ _3752_/A _3733_/B _3718_/Y gnd _4368_/D vdd OAI21X1
+XSFILL14000x40100 gnd vdd FILL
+XCLKBUF1_insert21 clock gnd _4409_/CLK vdd CLKBUF1
+XCLKBUF1_insert10 clock gnd _4344_/CLK vdd CLKBUF1
+X_2952_ _2941_/Y _3333_/B _2942_/Y _3333_/D gnd _2959_/B vdd OAI22X1
+X_2883_ _2883_/A _2348_/A _2882_/Y _2883_/D gnd _2887_/A vdd AOI22X1
+X_4622_ _3548_/A _2399_/B gnd _4623_/C vdd NAND2X1
+X_4553_ _4560_/A _4553_/B _4582_/Q _4560_/D gnd _4553_/Y vdd AOI22X1
+X_4484_ _4483_/C _4491_/A gnd _4485_/A vdd NOR2X1
+XSFILL14480x12100 gnd vdd FILL
+X_3366_ _3366_/A _3340_/B _3365_/Y _3340_/D gnd _3366_/Y vdd OAI22X1
+X_3435_ _3431_/Y _3498_/B _3498_/C gnd _3435_/Y vdd NAND3X1
+X_3504_ data_in[10] gnd _3505_/A vdd INVX1
+X_2248_ _2235_/Y _2247_/B gnd _2249_/B vdd NOR2X1
+X_2317_ _2220_/B _2365_/B gnd _2319_/A vdd NOR2X1
+X_3297_ _3296_/Y _3297_/B gnd _3298_/C vdd AND2X2
+X_2179_ _2179_/A _2180_/C gnd _3061_/A vdd XNOR2X1
+X_3220_ _3215_/Y _3220_/B _3220_/C gnd _3220_/Y vdd NAND3X1
+X_2102_ _2102_/A gnd data_out[12] vdd BUFX2
+X_3082_ gnd _2969_/B gnd _3083_/C vdd NAND2X1
+X_3151_ _3151_/A _3333_/B _3150_/Y _3333_/D gnd _3155_/B vdd OAI22X1
+X_3984_ _3856_/A _3980_/B gnd _3984_/Y vdd NOR2X1
+X_2935_ _2935_/A _2935_/B gnd _2935_/Y vdd XNOR2X1
+X_2866_ _2923_/B _2923_/A _2865_/Y _2324_/A gnd _2866_/Y vdd AOI22X1
+X_4605_ _4605_/A _4605_/B _4604_/Y gnd _4507_/B vdd OAI21X1
+X_4536_ _4580_/Q gnd _4544_/A vdd INVX1
+X_2797_ _2794_/Y _2797_/B _2793_/Y gnd _2809_/B vdd OAI21X1
+X_3349_ _3348_/Y _3347_/Y gnd _3349_/Y vdd AND2X2
+X_4398_ _4398_/Q _4337_/CLK _4398_/D gnd vdd DFFPOSX1
+X_3418_ _3389_/C _3419_/D gnd _3420_/D vdd NOR2X1
+X_4467_ _4463_/B _4566_/A gnd _4560_/D vdd NOR2X1
+XSFILL44880x44100 gnd vdd FILL
+X_2582_ _2100_/A gnd _2582_/Y vdd INVX1
+X_2651_ _2847_/A _2572_/Y gnd _2652_/B vdd NOR2X1
+X_2720_ _2720_/A _2711_/A gnd _2722_/B vdd NAND2X1
+X_4252_ _4252_/A _4252_/B _4251_/C _4249_/Y gnd _4252_/Y vdd OAI22X1
+X_4321_ _3970_/A _4322_/CLK _3754_/Y gnd vdd DFFPOSX1
+X_4183_ _4284_/A _4404_/Q _4260_/S gnd _4186_/D vdd MUX2X1
+X_3203_ _3203_/A _3333_/B _3203_/C _3333_/D gnd _3207_/B vdd OAI22X1
+X_3134_ gnd _2969_/B gnd _3135_/C vdd NAND2X1
+X_3065_ _3065_/A _3091_/B gnd _3068_/B vdd NAND2X1
+X_3898_ _3731_/A _3898_/B _3897_/Y gnd _3898_/Y vdd AOI21X1
+X_3967_ _3967_/A _4188_/B _3966_/Y gnd _4448_/D vdd AOI21X1
+X_2918_ _2886_/C _2886_/D gnd _2918_/Y vdd NOR2X1
+X_2849_ _2571_/B gnd _2929_/A vdd INVX1
+X_4519_ _4519_/A _4577_/Q _4518_/Y gnd _4519_/Y vdd NAND3X1
+XBUFX2_insert115 _3646_/Q gnd _4251_/C vdd BUFX2
+XBUFX2_insert104 _4456_/Q gnd _2353_/A vdd BUFX2
+XBUFX2_insert159 _4439_/Q gnd _2326_/B vdd BUFX2
+XBUFX2_insert148 _4442_/Q gnd _2555_/A vdd BUFX2
+XBUFX2_insert137 _4451_/Q gnd _3999_/A vdd BUFX2
+XBUFX2_insert126 _3412_/Y gnd _3445_/A vdd BUFX2
+XSFILL28560x34100 gnd vdd FILL
+X_3821_ _3788_/A _3832_/B _3821_/C gnd _3821_/Y vdd AOI21X1
+X_3752_ _3752_/A _3752_/B _3751_/Y gnd _3752_/Y vdd OAI21X1
+X_2565_ _2565_/A gnd _2565_/Y vdd INVX1
+X_4304_ _4140_/A _4318_/CLK _3853_/Y gnd vdd DFFPOSX1
+X_3683_ _4016_/B _3699_/B gnd _3683_/Y vdd NOR2X1
+X_2703_ _2822_/B _2724_/C gnd _2703_/Y vdd NAND2X1
+X_2634_ _2413_/B _2606_/Y _2634_/C _2634_/D gnd _2635_/C vdd OAI22X1
+X_4235_ _4377_/Q _4235_/B gnd _4235_/Y vdd NOR2X1
+X_2496_ _2685_/A gnd _2498_/A vdd INVX1
+XSFILL29520x42100 gnd vdd FILL
+X_3117_ _2362_/Y _3091_/B gnd _3117_/Y vdd NAND2X1
+X_4166_ _4166_/A _4167_/B _4122_/C gnd _4166_/Y vdd OAI21X1
+XSFILL14480x20100 gnd vdd FILL
+X_4097_ _4097_/A _4097_/B _4097_/C gnd _4098_/A vdd OAI21X1
+X_3048_ _3048_/A gnd _3048_/Y vdd INVX1
+XSFILL59600x38100 gnd vdd FILL
+XSFILL44560x16100 gnd vdd FILL
+X_2350_ _2366_/A _2876_/A gnd _2350_/Y vdd OR2X2
+X_2281_ _2252_/A _2253_/A gnd _2282_/C vdd NOR2X1
+X_4020_ _4019_/Y _4020_/B _4053_/S gnd _4020_/Y vdd MUX2X1
+XFILL71280x18100 gnd vdd FILL
+XBUFX2_insert4 _4454_/Q gnd _2100_/A vdd BUFX2
+X_3804_ _4295_/A _3795_/B _3803_/Y gnd _4361_/D vdd OAI21X1
+X_3735_ _3902_/A _3733_/B _3734_/Y gnd _3735_/Y vdd OAI21X1
+X_2548_ _2547_/Y gnd _2550_/B vdd INVX1
+X_3666_ _3817_/A _3699_/B _3665_/Y gnd _4399_/D vdd AOI21X1
+X_2617_ _2613_/Y _2616_/Y gnd _2624_/C vdd NAND2X1
+X_3597_ _2983_/B _3575_/B gnd _3598_/A vdd NAND2X1
+X_4218_ _4343_/Q _4238_/S _4215_/C gnd _4219_/A vdd OAI21X1
+X_4149_ _4148_/Y _4147_/Y _4215_/C _4149_/D gnd _4154_/B vdd OAI22X1
+X_2479_ _2886_/C gnd _2479_/Y vdd INVX1
+X_3520_ _3499_/A _3520_/B _3519_/Y gnd _3520_/Y vdd NAND3X1
+X_2333_ _2381_/A _2381_/B gnd _2334_/B vdd AND2X2
+X_2402_ _2402_/A _2402_/B _2401_/Y gnd _2403_/B vdd NAND3X1
+X_3382_ _3382_/A _3370_/Y _3382_/C gnd _3537_/A vdd NAND3X1
+X_3451_ _3445_/Y _3450_/Y gnd _3451_/Y vdd NAND2X1
+X_4003_ _4324_/Q _4025_/B _4025_/C gnd _4004_/A vdd OAI21X1
+X_2264_ _2264_/A _2263_/Y gnd _3321_/A vdd XNOR2X1
+X_2195_ _2818_/A _2184_/B gnd _2195_/Y vdd AND2X2
+X_3718_ _3716_/A _3732_/B _3718_/C gnd _3718_/Y vdd OAI21X1
+X_3649_ _3649_/Q _4387_/CLK _3574_/Y gnd vdd DFFPOSX1
+XSFILL14160x8100 gnd vdd FILL
+XSFILL44080x28100 gnd vdd FILL
+X_2951_ _2950_/Y _2951_/B gnd _3333_/B vdd NAND2X1
+XCLKBUF1_insert11 clock gnd _4389_/CLK vdd CLKBUF1
+X_4483_ _4483_/A _4472_/Y _4483_/C gnd _4486_/B vdd OAI21X1
+X_2882_ _2812_/C gnd _2882_/Y vdd INVX1
+X_4621_ _3515_/B gnd _4621_/Y vdd INVX1
+X_4552_ _4582_/Q _4544_/Y _4506_/A gnd _4552_/Y vdd OAI21X1
+X_3503_ _3503_/A _3482_/B _3503_/C gnd _3503_/Y vdd OAI21X1
+X_3296_ gnd _3348_/B _3348_/C gnd _3296_/Y vdd NAND3X1
+X_2316_ _2316_/A _2315_/Y gnd _2316_/Y vdd NOR2X1
+X_3365_ gnd gnd _3365_/Y vdd INVX1
+X_3434_ _3603_/A _3434_/B gnd _3498_/C vdd NOR2X1
+X_2247_ _2235_/Y _2247_/B _2246_/Y gnd _2250_/A vdd OAI21X1
+X_2178_ _2177_/Y _2176_/Y gnd _2180_/C vdd NOR2X1
+XSFILL44560x24100 gnd vdd FILL
+XSFILL59600x46100 gnd vdd FILL
+X_3150_ gnd gnd _3150_/Y vdd INVX1
+X_2101_ _2101_/A gnd data_out[11] vdd BUFX2
+XFILL71280x26100 gnd vdd FILL
+X_3081_ gnd gnd _3083_/A vdd INVX1
+X_2865_ _2780_/A gnd _2865_/Y vdd INVX1
+X_3983_ _4418_/Q _4402_/Q _3974_/B gnd _3986_/D vdd MUX2X1
+X_2934_ _2934_/A _3933_/A gnd _2936_/A vdd XNOR2X1
+X_4604_ _4605_/A _4166_/A gnd _4604_/Y vdd NAND2X1
+X_4466_ _4567_/A _4566_/A gnd _4560_/A vdd NOR2X1
+X_4535_ _4533_/Y _4534_/Y _4460_/Y gnd _4535_/Y vdd AOI21X1
+X_2796_ _2842_/A _2795_/Y gnd _2797_/B vdd NOR2X1
+X_3279_ _3279_/A gnd _3279_/Y vdd INVX1
+X_4397_ _4397_/Q _4337_/CLK _4397_/D gnd vdd DFFPOSX1
+X_3348_ gnd _3348_/B _3348_/C gnd _3348_/Y vdd NAND3X1
+X_3417_ _3417_/A gnd _3417_/Y vdd INVX1
+X_2581_ _2100_/A _2639_/C gnd _2581_/Y vdd NAND2X1
+X_2650_ _2571_/B _2569_/Y gnd _2652_/A vdd NOR2X1
+X_4320_ _4320_/Q _4316_/CLK _3752_/Y gnd vdd DFFPOSX1
+X_4251_ _4251_/A _4090_/S _4251_/C gnd _4252_/A vdd OAI21X1
+X_4182_ _4182_/A _4180_/Y _4142_/C _4179_/Y gnd _4182_/Y vdd OAI22X1
+X_3202_ gnd gnd _3203_/C vdd INVX1
+X_3133_ gnd gnd _3133_/Y vdd INVX1
+XSFILL30000x28100 gnd vdd FILL
+X_3064_ _3059_/Y _3064_/B _3064_/C gnd _3069_/A vdd NAND3X1
+XSFILL14480x18100 gnd vdd FILL
+X_2848_ _4076_/A _2848_/B gnd _2848_/Y vdd NAND2X1
+X_3897_ _4207_/A _3898_/B gnd _3897_/Y vdd NOR2X1
+X_3966_ _3966_/A _4188_/B _4199_/C gnd _3966_/Y vdd OAI21X1
+X_2917_ _2919_/A _2884_/Y gnd _2920_/C vdd NOR2X1
+X_2779_ _2779_/A gnd _2779_/Y vdd INVX1
+X_4518_ _4518_/A _4518_/B _4492_/Y gnd _4518_/Y vdd NOR3X1
+X_4449_ _4449_/Q _4355_/CLK _4449_/D gnd vdd DFFPOSX1
+XSFILL29200x22100 gnd vdd FILL
+XBUFX2_insert105 _4456_/Q gnd _2102_/A vdd BUFX2
+XBUFX2_insert116 _3646_/Q gnd _4097_/C vdd BUFX2
+XBUFX2_insert149 _3876_/Y gnd _3886_/B vdd BUFX2
+XBUFX2_insert127 _3423_/Q gnd _3626_/A vdd BUFX2
+XBUFX2_insert138 _4451_/Q gnd _2348_/A vdd BUFX2
+XSFILL45040x44100 gnd vdd FILL
+X_3820_ _4385_/Q _3832_/B gnd _3821_/C vdd NOR2X1
+X_3751_ _4320_/Q _3752_/B gnd _3751_/Y vdd NAND2X1
+X_3682_ _3500_/Y gnd _3796_/A vdd INVX4
+X_2702_ _2699_/C gnd _2724_/C vdd INVX1
+X_2564_ _2558_/Y _2564_/B _2561_/Y gnd _2564_/Y vdd NAND3X1
+X_4303_ _4303_/Q _4387_/CLK _3851_/Y gnd vdd DFFPOSX1
+X_2495_ _2476_/D _2489_/Y _2543_/A gnd _2502_/B vdd AOI21X1
+X_2633_ _2348_/A _2596_/Y gnd _2633_/Y vdd NOR2X1
+X_4234_ _3803_/A _4056_/B _4223_/S gnd _4234_/Y vdd MUX2X1
+X_4096_ _4300_/Q _4213_/B gnd _4098_/B vdd NOR2X1
+X_4165_ _4165_/A _4165_/B _4220_/S gnd _4167_/A vdd MUX2X1
+X_3116_ _3116_/A _3112_/Y _3116_/C gnd _3121_/A vdd NAND3X1
+X_3047_ _3047_/A _3333_/B _3047_/C _3333_/D gnd _3051_/B vdd OAI22X1
+X_3949_ _3949_/A _3949_/B _4080_/C _3946_/Y gnd _3954_/B vdd OAI22X1
+XSFILL59280x12100 gnd vdd FILL
+XSFILL44560x32100 gnd vdd FILL
+X_2280_ _2183_/B _2183_/A _2279_/Y gnd _2280_/Y vdd AOI21X1
+X_3803_ _3803_/A _3795_/B gnd _3803_/Y vdd NAND2X1
+XBUFX2_insert5 _4454_/Q gnd _2324_/A vdd BUFX2
+X_3734_ _3740_/A _3732_/B _4376_/Q gnd _3734_/Y vdd OAI21X1
+X_3665_ _3950_/B _3699_/B gnd _3665_/Y vdd NOR2X1
+X_2616_ _2630_/B _4595_/B _4592_/B _2616_/D gnd _2616_/Y vdd AOI22X1
+X_4217_ _4311_/Q _4213_/B gnd _4217_/Y vdd NOR2X1
+X_2547_ _2855_/A _2546_/Y gnd _2547_/Y vdd NOR2X1
+X_3596_ _3605_/A data_in[12] gnd _3598_/B vdd NAND2X1
+X_2478_ _2476_/Y _2488_/A gnd _2478_/Y vdd XNOR2X1
+X_4148_ _3970_/A _4097_/B _4215_/C gnd _4148_/Y vdd OAI21X1
+X_4079_ _3740_/C _3980_/B gnd _4081_/B vdd NOR2X1
+X_2332_ _2381_/A _2381_/B gnd _2332_/Y vdd NOR2X1
+X_3381_ _3376_/Y _3381_/B gnd _3382_/C vdd NOR2X1
+X_2401_ _2399_/Y _2401_/B _2398_/Y gnd _2401_/Y vdd NOR3X1
+X_3450_ _3499_/A _3447_/Y _3450_/C gnd _3450_/Y vdd NAND3X1
+X_2263_ _2855_/A _2546_/A gnd _2263_/Y vdd XOR2X1
+X_4002_ _4002_/A _4002_/B gnd _4002_/Y vdd NOR2X1
+X_2194_ _2190_/Y _2276_/B gnd _2194_/Y vdd XNOR2X1
+XSFILL29520x48100 gnd vdd FILL
+XSFILL14480x26100 gnd vdd FILL
+X_3717_ _3817_/A _3733_/B _3717_/C gnd _4367_/D vdd OAI21X1
+X_3648_ _3648_/Q _4337_/CLK _3571_/Y gnd vdd DFFPOSX1
+X_3579_ _3568_/A data_in[5] gnd _3580_/B vdd NAND2X1
+XSFILL43600x38100 gnd vdd FILL
+X_2881_ _2812_/A gnd _2883_/A vdd INVX1
+X_4620_ _4593_/A _4618_/Y _4620_/C gnd _4620_/Y vdd OAI21X1
+X_2950_ _2983_/B _2950_/B gnd _2950_/Y vdd NOR2X1
+XCLKBUF1_insert12 clock gnd _4355_/CLK vdd CLKBUF1
+X_3502_ _3502_/A gnd _3503_/C vdd INVX1
+X_4482_ _4492_/A gnd _4483_/C vdd INVX2
+X_4551_ _4549_/Y _4550_/Y gnd _4551_/Y vdd NOR2X1
+X_3433_ _2983_/B gnd _3434_/B vdd INVX1
+X_2246_ _2245_/Y gnd _2246_/Y vdd INVX1
+X_3295_ _3295_/A _3295_/B _3346_/B gnd _3297_/B vdd NAND3X1
+X_2315_ _2314_/A _2314_/B gnd _2315_/Y vdd AND2X2
+X_3364_ gnd gnd _3366_/A vdd INVX1
+X_2177_ _4133_/A _3955_/A gnd _2177_/Y vdd NOR2X1
+XSFILL14960x22100 gnd vdd FILL
+XSFILL44560x40100 gnd vdd FILL
+XSFILL29840x100 gnd vdd FILL
+X_2100_ _2100_/A gnd data_out[10] vdd BUFX2
+X_3080_ _3078_/Y _3340_/B _3080_/C _3340_/D gnd _3084_/A vdd OAI22X1
+X_3982_ _3981_/Y _3980_/Y _3981_/C _3982_/D gnd _3987_/B vdd OAI22X1
+XSFILL14000x8100 gnd vdd FILL
+X_2864_ _2779_/A gnd _2923_/B vdd INVX1
+XFILL71280x42100 gnd vdd FILL
+X_2933_ _2933_/A _2933_/B gnd _2933_/Y vdd AND2X2
+X_4603_ _3556_/Y gnd _4605_/B vdd INVX1
+X_2795_ _2435_/A gnd _2795_/Y vdd INVX1
+X_4396_ _3915_/B _4338_/CLK _4396_/D gnd vdd DFFPOSX1
+X_3416_ _3416_/A _3416_/B _4460_/A gnd _3417_/A vdd OAI21X1
+X_4465_ _4564_/A gnd _4566_/A vdd INVX1
+X_4534_ _4560_/A _4534_/B _4531_/A _4560_/D gnd _4534_/Y vdd AOI22X1
+X_2229_ _2229_/A _2233_/B gnd _3217_/A vdd XOR2X1
+X_3347_ _3347_/A _2963_/A _3346_/B gnd _3347_/Y vdd NAND3X1
+X_3278_ _3278_/A _3266_/Y _3278_/C gnd _3509_/A vdd NAND3X1
+X_4250_ _4072_/A _4235_/B gnd _4252_/B vdd NOR2X1
+X_2580_ _2676_/C gnd _2639_/C vdd INVX1
+X_3201_ _2350_/Y gnd _3203_/A vdd INVX1
+X_4181_ _4324_/Q _4260_/S _4142_/C gnd _4182_/A vdd OAI21X1
+X_3132_ _3130_/Y _3340_/B _3132_/C _3340_/D gnd _3136_/A vdd OAI22X1
+X_3063_ _3063_/A _3063_/B gnd _3064_/C vdd AND2X2
+X_3965_ _3965_/A _3965_/B _4053_/S gnd _3967_/A vdd MUX2X1
+X_2778_ _2779_/A _2776_/Y _2780_/A _2780_/B gnd _2831_/C vdd OAI22X1
+XSFILL30000x44100 gnd vdd FILL
+X_2847_ _2847_/A gnd _2848_/B vdd INVX1
+XSFILL14480x34100 gnd vdd FILL
+X_3896_ _3796_/A _3886_/B _3896_/C gnd _4341_/D vdd AOI21X1
+X_2916_ _2890_/A _2891_/A _2916_/C gnd _2916_/Y vdd OAI21X1
+X_4379_ _3740_/C _4316_/CLK _4379_/D gnd vdd DFFPOSX1
+X_4448_ _4448_/Q _4426_/CLK _4448_/D gnd vdd DFFPOSX1
+X_4517_ _4511_/A _4511_/B _4524_/A gnd _4520_/B vdd OAI21X1
+XSFILL44080x52100 gnd vdd FILL
+XBUFX2_insert106 _4456_/Q gnd _2329_/A vdd BUFX2
+XBUFX2_insert117 _3646_/Q gnd _4170_/C vdd BUFX2
+XBUFX2_insert128 _3423_/Q gnd _3605_/A vdd BUFX2
+XBUFX2_insert139 _4451_/Q gnd _2884_/A vdd BUFX2
+X_3750_ _3817_/A _3768_/B _3749_/Y gnd _4319_/D vdd OAI21X1
+X_3681_ _3681_/A _3678_/B _3681_/C gnd _3681_/Y vdd AOI21X1
+X_2701_ _2697_/A _2701_/B gnd _2701_/Y vdd NAND2X1
+X_2632_ _2632_/A _2624_/C _2631_/Y gnd _2637_/A vdd OAI21X1
+X_4233_ _4233_/A _4222_/B _4232_/Y gnd _4233_/Y vdd AOI21X1
+X_2563_ _2562_/Y gnd _2564_/B vdd INVX1
+X_4302_ _4302_/Q _4337_/CLK _3849_/Y gnd vdd DFFPOSX1
+X_2494_ _2489_/B _2494_/B _2494_/C gnd _2543_/A vdd OAI21X1
+X_4095_ _3915_/A _3915_/B _4097_/B gnd _4095_/Y vdd MUX2X1
+X_4164_ _4164_/A _4162_/Y _4097_/C _4164_/D gnd _4165_/A vdd OAI22X1
+X_3046_ gnd gnd _3047_/C vdd INVX1
+X_3115_ _3115_/A _3115_/B gnd _3116_/C vdd AND2X2
+X_3948_ _3948_/A _4080_/B _4080_/C gnd _3949_/A vdd OAI21X1
+X_3879_ _3930_/A _3888_/B gnd _3880_/C vdd NOR2X1
+XBUFX2_insert6 _4454_/Q gnd _2513_/B vdd BUFX2
+X_3802_ _3902_/A _3802_/B _3801_/Y gnd _3802_/Y vdd OAI21X1
+XFILL71280x50100 gnd vdd FILL
+X_3733_ _3867_/A _3733_/B _3733_/C gnd _3733_/Y vdd OAI21X1
+X_2615_ _2711_/D gnd _2616_/D vdd INVX1
+X_3664_ _3458_/Y gnd _3817_/A vdd INVX4
+X_3595_ _3595_/A _3595_/B _3589_/C gnd _3595_/Y vdd AOI21X1
+X_4216_ _4423_/Q _4407_/Q _4238_/S gnd _4219_/D vdd MUX2X1
+X_4147_ _4369_/Q _4147_/B gnd _4147_/Y vdd NOR2X1
+X_2546_ _2546_/A gnd _2546_/Y vdd INVX1
+X_2477_ _2886_/C _2883_/D gnd _2488_/A vdd XNOR2X1
+X_4078_ _4256_/A _4256_/B _4080_/B gnd _4078_/Y vdd MUX2X1
+X_3029_ gnd gnd _3031_/A vdd INVX1
+XBUFX2_insert90 _3776_/Y gnd _3793_/B vdd BUFX2
+X_2400_ _2874_/A _4188_/A gnd _2401_/B vdd XOR2X1
+X_2331_ _2331_/A _2331_/B gnd _3294_/A vdd NOR2X1
+X_2262_ _2262_/A _2260_/Y _2258_/Y gnd _2264_/A vdd AOI21X1
+X_4001_ _4001_/A _4001_/B _4025_/B gnd _4001_/Y vdd MUX2X1
+X_3380_ _3378_/Y _3380_/B _3380_/C gnd _3381_/B vdd NAND3X1
+X_2193_ _2191_/Y _2193_/B gnd _2276_/B vdd NAND2X1
+X_3716_ _3716_/A _3732_/B _3716_/C gnd _3717_/C vdd OAI21X1
+X_2529_ _2518_/Y _2521_/Y _2528_/Y gnd _2530_/C vdd OAI21X1
+XSFILL14480x42100 gnd vdd FILL
+X_3647_ _3584_/A _4387_/CLK _3586_/Y gnd vdd DFFPOSX1
+X_3578_ _4106_/S _3578_/B gnd _3580_/A vdd NAND2X1
+XSFILL59280x18100 gnd vdd FILL
+XCLKBUF1_insert13 clock gnd _4394_/CLK vdd CLKBUF1
+X_2880_ _2933_/A _2933_/B _2863_/Y gnd _2932_/A vdd NAND3X1
+X_3363_ _3362_/Y _3359_/Y gnd _3382_/A vdd NOR2X1
+X_4481_ _4481_/A _4479_/Y _4460_/Y gnd _4481_/Y vdd AOI21X1
+X_4550_ _4580_/Q _4581_/Q _4550_/C gnd _4550_/Y vdd NAND3X1
+X_3501_ _3501_/A _3501_/B gnd _3501_/Y vdd NAND2X1
+X_3432_ _3432_/A _2943_/A gnd _3498_/B vdd NOR2X1
+X_2245_ _2245_/A _2243_/Y gnd _2245_/Y vdd NOR2X1
+X_3294_ _3294_/A _3346_/B _3346_/C gnd _3298_/B vdd NAND3X1
+X_2314_ _2314_/A _2314_/B gnd _2316_/A vdd NOR2X1
+X_2176_ _4133_/A _3955_/A gnd _2176_/Y vdd AND2X2
+XSFILL45040x6100 gnd vdd FILL
+XSFILL59760x14100 gnd vdd FILL
+XSFILL29840x6100 gnd vdd FILL
+X_3981_ _3755_/A _4062_/B _3981_/C gnd _3981_/Y vdd OAI21X1
+X_2932_ _2932_/A _2922_/Y _2932_/C gnd _2932_/Y vdd OAI21X1
+X_2863_ _2854_/Y _2863_/B gnd _2863_/Y vdd NOR2X1
+X_4533_ _4506_/A _4530_/Y _4533_/C gnd _4533_/Y vdd NAND3X1
+X_4602_ _3548_/A _4602_/B _4601_/Y gnd _4501_/B vdd OAI21X1
+X_2794_ _2414_/A _2792_/Y gnd _2794_/Y vdd NOR2X1
+X_4395_ _4256_/B _4316_/CLK _4395_/D gnd vdd DFFPOSX1
+X_3346_ _3346_/A _3346_/B _3346_/C gnd _3350_/B vdd NAND3X1
+X_3415_ _3415_/A _4460_/A gnd _3415_/Y vdd AND2X2
+X_4464_ _4464_/A _4506_/A gnd _4464_/Y vdd NAND2X1
+X_2228_ _2228_/A _2226_/Y gnd _2233_/B vdd NOR2X1
+X_3277_ _3277_/A _3277_/B gnd _3278_/C vdd NOR2X1
+X_2159_ _2147_/A _2389_/B gnd _2159_/Y vdd NAND2X1
+XSFILL29200x36100 gnd vdd FILL
+XSFILL14160x14100 gnd vdd FILL
+X_4180_ _4002_/A _4140_/B gnd _4180_/Y vdd NOR2X1
+X_3200_ _3200_/A _3200_/B _3200_/C gnd _3488_/A vdd NAND3X1
+X_3131_ gnd gnd _3132_/C vdd INVX1
+X_3062_ gnd _2971_/A _3036_/C gnd _3063_/A vdd NAND3X1
+X_3964_ _3964_/A _3964_/B _4025_/C _3964_/D gnd _3965_/A vdd OAI22X1
+X_3895_ _4018_/A _3886_/B gnd _3896_/C vdd NOR2X1
+X_2915_ _2892_/A _2892_/B _2915_/C _2894_/A gnd _2916_/C vdd OAI22X1
+XSFILL14480x50100 gnd vdd FILL
+X_2777_ _2324_/A gnd _2780_/B vdd INVX1
+X_4516_ _4577_/Q gnd _4524_/A vdd INVX1
+X_2846_ _2791_/Y _2845_/Y _2846_/C _2828_/Y gnd _2966_/A vdd AOI22X1
+X_4378_ _4378_/Q _4344_/CLK _3739_/Y gnd vdd DFFPOSX1
+X_3329_ _3329_/A _3329_/B gnd _3330_/C vdd NOR2X1
+X_4447_ _4447_/Q _4355_/CLK _4447_/D gnd vdd DFFPOSX1
+XBUFX2_insert118 _3646_/Q gnd _4215_/C vdd BUFX2
+XBUFX2_insert107 _2955_/Y gnd _3248_/C vdd BUFX2
+XSFILL43760x4100 gnd vdd FILL
+XBUFX2_insert129 _3423_/Q gnd _3568_/A vdd BUFX2
+XFILL71280x6100 gnd vdd FILL
+XSFILL14640x10100 gnd vdd FILL
+X_2562_ _2562_/A _2571_/A gnd _2562_/Y vdd XOR2X1
+X_3680_ _4404_/Q _3662_/B gnd _3681_/C vdd NOR2X1
+X_2700_ _2635_/B gnd _2701_/B vdd INVX1
+X_2631_ _2628_/Y _2631_/B _2630_/Y gnd _2631_/Y vdd OAI21X1
+XFILL71280x48100 gnd vdd FILL
+X_4232_ _2770_/A _4222_/B _4076_/C gnd _4232_/Y vdd OAI21X1
+X_4163_ _4338_/Q _4097_/B _4097_/C gnd _4164_/A vdd OAI21X1
+XSFILL30480x32100 gnd vdd FILL
+X_4301_ _3929_/A _4337_/CLK _4301_/D gnd vdd DFFPOSX1
+X_2493_ _2485_/B _2480_/Y _2493_/C gnd _2494_/C vdd AOI21X1
+X_4094_ _4093_/Y _4094_/B _4094_/C _4094_/D gnd _4099_/B vdd OAI22X1
+X_3045_ _3045_/A gnd _3047_/A vdd INVX1
+X_3114_ gnd _3192_/B _3192_/C gnd _3115_/A vdd NAND3X1
+X_3878_ _3711_/A _3899_/B _3878_/C gnd _3878_/Y vdd AOI21X1
+X_3947_ _3716_/C _3980_/B gnd _3949_/B vdd NOR2X1
+X_2829_ _2775_/Y gnd _2829_/Y vdd INVX1
+XSFILL59760x22100 gnd vdd FILL
+XBUFX2_insert7 _4454_/Q gnd _4032_/A vdd BUFX2
+X_3801_ _4360_/Q _3802_/B gnd _3801_/Y vdd NAND2X1
+X_3732_ _3732_/A _3732_/B _4375_/Q gnd _3733_/C vdd OAI21X1
+X_2545_ _2535_/Y _2544_/Y _2534_/Y gnd _2545_/Y vdd OAI21X1
+X_3663_ _3849_/A _3662_/B _3663_/C gnd _4398_/D vdd AOI21X1
+X_3594_ _3842_/A _3588_/B gnd _3595_/A vdd NAND2X1
+X_2614_ _2614_/A gnd _2630_/B vdd INVX1
+X_4215_ _4214_/Y _4213_/Y _4215_/C _4215_/D gnd _4220_/B vdd OAI22X1
+X_4146_ _4353_/Q _4385_/Q _4238_/S gnd _4149_/D vdd MUX2X1
+X_2476_ _2469_/Y _2474_/Y _2475_/Y _2476_/D gnd _2476_/Y vdd AOI22X1
+X_4077_ _4075_/Y _4076_/B _4077_/C gnd _4458_/D vdd AOI21X1
+X_3028_ _3026_/Y _3340_/B _3028_/C _3340_/D gnd _3028_/Y vdd OAI22X1
+XBUFX2_insert91 _3776_/Y gnd _3807_/B vdd BUFX2
+XBUFX2_insert80 _4431_/Q gnd _2719_/A vdd BUFX2
+X_2330_ _2329_/A _2353_/B gnd _2331_/B vdd AND2X2
+X_2261_ _2262_/A _2260_/Y gnd _3295_/A vdd XOR2X1
+X_2192_ _2308_/B _2308_/A gnd _2193_/B vdd OR2X2
+X_4000_ _4000_/A _3945_/B _3999_/Y gnd _4451_/D vdd AOI21X1
+XSFILL44240x18100 gnd vdd FILL
+X_3715_ _3849_/A _3733_/B _3714_/Y gnd _4366_/D vdd OAI21X1
+XBUFX2_insert290 _4432_/Q gnd _2305_/B vdd BUFX2
+X_2528_ _2522_/Y gnd _2528_/Y vdd INVX1
+X_3577_ _3577_/A _3577_/B _3577_/C gnd _3650_/D vdd AOI21X1
+XSFILL29680x16100 gnd vdd FILL
+X_3646_ _3646_/Q _4389_/CLK _3646_/D gnd vdd DFFPOSX1
+X_4129_ _4303_/Q _4140_/B gnd _4131_/B vdd NOR2X1
+X_2459_ _2807_/A _2457_/Y gnd _2459_/Y vdd NOR2X1
+XCLKBUF1_insert14 clock gnd _4426_/CLK vdd CLKBUF1
+X_3500_ _3494_/Y _3499_/Y gnd _3500_/Y vdd NAND2X1
+X_3362_ _3362_/A _3336_/B _3362_/C _2998_/D gnd _3362_/Y vdd OAI22X1
+X_4480_ _4560_/A _4593_/Y _4480_/C _4560_/D gnd _4481_/A vdd AOI22X1
+X_3431_ data_in[0] gnd _3431_/Y vdd INVX1
+X_2313_ _2313_/A _2312_/Y gnd _2313_/Y vdd NOR2X1
+X_2244_ _2326_/B _2368_/A gnd _2245_/A vdd NOR2X1
+X_3293_ gnd _3345_/B gnd _3298_/A vdd NAND2X1
+X_2175_ _2175_/A _2173_/Y _2171_/Y gnd _2179_/A vdd AOI21X1
+XSFILL44720x14100 gnd vdd FILL
+X_3629_ _3629_/Q _4389_/CLK _3628_/Y gnd vdd DFFPOSX1
+X_2931_ _2863_/Y _2925_/Y _2931_/C gnd _2932_/C vdd AOI21X1
+X_3980_ _4370_/Q _3980_/B gnd _3980_/Y vdd NOR2X1
+X_2862_ _2862_/A _2862_/B _2862_/C gnd _2863_/B vdd NAND3X1
+X_4463_ _4564_/A _4463_/B gnd _4506_/A vdd NOR2X1
+X_4532_ _4532_/A _4519_/Y _4538_/B gnd _4533_/C vdd OAI21X1
+X_4601_ _3548_/A _4155_/A gnd _4601_/Y vdd NAND2X1
+X_2793_ _2414_/A _2792_/Y gnd _2793_/Y vdd NAND2X1
+X_4394_ _3838_/A _4394_/CLK _4394_/D gnd vdd DFFPOSX1
+X_3345_ gnd _3345_/B gnd _3350_/A vdd NAND2X1
+X_3276_ _3274_/Y _3276_/B _3276_/C gnd _3277_/B vdd NAND3X1
+X_3414_ _3414_/A _3419_/D gnd _3414_/Y vdd NOR2X1
+XSFILL14480x48100 gnd vdd FILL
+X_2227_ _2321_/B _2321_/A gnd _2228_/A vdd NOR2X1
+X_2089_ _2089_/A gnd adrs_bus[15] vdd BUFX2
+X_2158_ _2158_/A gnd _2158_/Y vdd INVX1
+XSFILL59440x2100 gnd vdd FILL
+XSFILL59920x8100 gnd vdd FILL
+XSFILL45040x100 gnd vdd FILL
+X_3130_ gnd gnd _3130_/Y vdd INVX1
+XSFILL44240x26100 gnd vdd FILL
+X_3061_ _3061_/A _2964_/A _3040_/B gnd _3063_/B vdd NAND3X1
+X_3894_ _3681_/A _3898_/B _3893_/Y gnd _3894_/Y vdd AOI21X1
+X_3963_ _3963_/A _3974_/B _3985_/C gnd _3964_/A vdd OAI21X1
+X_2845_ _2845_/A _2845_/B _2845_/C gnd _2845_/Y vdd NOR3X1
+X_2914_ _2914_/A _2914_/B _2913_/Y gnd _2922_/A vdd OAI21X1
+X_2776_ _2101_/A gnd _2776_/Y vdd INVX1
+X_4515_ _4515_/A _4515_/B _4460_/Y gnd _4576_/D vdd AOI21X1
+X_4446_ _4446_/Q _4355_/CLK _4446_/D gnd vdd DFFPOSX1
+X_4377_ _4377_/Q _4344_/CLK _3737_/Y gnd vdd DFFPOSX1
+X_3259_ _3259_/A _3259_/B gnd _3278_/A vdd NOR2X1
+X_3328_ _3326_/Y _3328_/B _3328_/C gnd _3329_/B vdd NAND3X1
+XSFILL29680x24100 gnd vdd FILL
+XBUFX2_insert108 _2955_/Y gnd _2957_/B vdd BUFX2
+XBUFX2_insert119 _3646_/Q gnd _4109_/C vdd BUFX2
+XSFILL59280x42100 gnd vdd FILL
+X_4300_ _4300_/Q _4322_/CLK _3845_/Y gnd vdd DFFPOSX1
+X_2561_ _2561_/A _2560_/Y _2565_/A gnd _2561_/Y vdd OAI21X1
+X_2630_ _2711_/B _2630_/B gnd _2630_/Y vdd NAND2X1
+X_2492_ _2884_/A _2492_/B gnd _2493_/C vdd NOR2X1
+X_4231_ _4231_/A _4231_/B _4220_/S gnd _4233_/A vdd MUX2X1
+X_4093_ _3743_/A _4090_/S _4094_/C gnd _4093_/Y vdd OAI21X1
+X_4162_ _3856_/A _4147_/B gnd _4162_/Y vdd NOR2X1
+X_3113_ _2194_/Y _3191_/B _3190_/B gnd _3115_/B vdd NAND3X1
+X_3044_ _3044_/A _3032_/Y _3044_/C gnd _3044_/Y vdd NAND3X1
+X_3877_ _4097_/A _3899_/B gnd _3878_/C vdd NOR2X1
+X_3946_ _3946_/A _4383_/Q _4080_/B gnd _3946_/Y vdd MUX2X1
+X_2828_ _2791_/Y _2827_/Y gnd _2828_/Y vdd NAND2X1
+X_2759_ _2696_/Y _2759_/B _2758_/Y gnd _2759_/Y vdd NOR3X1
+X_4429_ _4429_/Q _4355_/CLK _4429_/D gnd vdd DFFPOSX1
+X_3800_ _3867_/A _3795_/B _3799_/Y gnd _3800_/Y vdd OAI21X1
+X_3731_ _3731_/A _3733_/B _3730_/Y gnd _3731_/Y vdd OAI21X1
+X_3662_ _4398_/Q _3662_/B gnd _3663_/C vdd NOR2X1
+X_2544_ _2560_/A _2530_/Y gnd _2544_/Y vdd AND2X2
+XSFILL43600x4100 gnd vdd FILL
+X_2613_ _2611_/Y _2614_/A _2613_/C _2711_/D gnd _2613_/Y vdd AOI22X1
+X_2475_ _2463_/B _2473_/B gnd _2475_/Y vdd NOR2X1
+X_3593_ _3587_/A data_in[11] gnd _3595_/B vdd NAND2X1
+X_4076_ _4076_/A _4076_/B _4076_/C gnd _4077_/C vdd OAI21X1
+X_4214_ _4036_/A _4238_/S _4215_/C gnd _4214_/Y vdd OAI21X1
+X_4145_ _4145_/A _4200_/B _4144_/Y gnd _4432_/D vdd AOI21X1
+X_3027_ gnd gnd _3028_/C vdd INVX1
+X_3929_ _3929_/A _3973_/B gnd _3931_/B vdd NOR2X1
+XSFILL14640x16100 gnd vdd FILL
+XBUFX2_insert92 _3776_/Y gnd _3788_/B vdd BUFX2
+XBUFX2_insert70 _4434_/Q gnd _4166_/A vdd BUFX2
+XBUFX2_insert81 _4431_/Q gnd _4133_/A vdd BUFX2
+X_2260_ _2260_/A _2258_/Y gnd _2260_/Y vdd NOR2X1
+X_2191_ _2308_/B _2308_/A gnd _2191_/Y vdd NAND2X1
+XSFILL30480x38100 gnd vdd FILL
+XSFILL44240x34100 gnd vdd FILL
+XBUFX2_insert280 _3649_/Q gnd _3985_/C vdd BUFX2
+X_3714_ _3714_/A _3732_/B _3714_/C gnd _3714_/Y vdd OAI21X1
+XBUFX2_insert291 reset gnd _4199_/C vdd BUFX2
+X_3645_ _3645_/Q _4389_/CLK _3580_/Y gnd vdd DFFPOSX1
+X_2527_ _2525_/Y gnd _2530_/A vdd INVX1
+X_3576_ _3626_/A data_in[4] gnd _3577_/B vdd NAND2X1
+X_2458_ _2807_/A _2457_/Y gnd _2460_/B vdd NAND2X1
+X_4059_ _4059_/A _4057_/Y _3913_/C _4056_/Y gnd _4064_/B vdd OAI22X1
+XSFILL45200x42100 gnd vdd FILL
+X_4128_ _3950_/A _3950_/B _4137_/B gnd _4131_/D vdd MUX2X1
+X_2389_ _2355_/A _2389_/B gnd _2389_/Y vdd XOR2X1
+XSFILL14960x52100 gnd vdd FILL
+XSFILL59280x50100 gnd vdd FILL
+XCLKBUF1_insert15 clock gnd _3637_/CLK vdd CLKBUF1
+X_3361_ gnd gnd _3362_/C vdd INVX1
+X_3292_ _3292_/A _3291_/Y gnd _3292_/Y vdd NOR2X1
+X_2312_ _2203_/B _2203_/A gnd _2312_/Y vdd AND2X2
+X_3430_ _3503_/A _3482_/B _3426_/Y gnd _3430_/Y vdd OAI21X1
+X_2243_ _2241_/Y _2242_/Y gnd _2243_/Y vdd NOR2X1
+XSFILL43760x22100 gnd vdd FILL
+XSFILL59440x10100 gnd vdd FILL
+X_2174_ _2175_/A _2173_/Y gnd _3035_/A vdd XOR2X1
+XSFILL44720x30100 gnd vdd FILL
+X_3628_ _3628_/A _3626_/Y _3625_/C gnd _3628_/Y vdd AOI21X1
+X_3559_ _3559_/A _4605_/A gnd _3487_/B vdd AND2X2
+X_2861_ _2769_/A _2861_/B gnd _2862_/B vdd NAND2X1
+X_2930_ _2854_/Y _2930_/B _2930_/C gnd _2931_/C vdd OAI21X1
+X_4600_ _4600_/A gnd _4602_/B vdd INVX1
+X_4462_ _4567_/A gnd _4463_/B vdd INVX1
+X_4531_ _4531_/A gnd _4538_/B vdd INVX1
+X_3413_ _3413_/A gnd _3653_/C vdd INVX1
+X_2792_ _2934_/A gnd _2792_/Y vdd INVX1
+X_4393_ _4056_/B _4344_/CLK _4393_/D gnd vdd DFFPOSX1
+X_3275_ _2989_/A gnd gnd _2989_/D gnd _3276_/C vdd AOI22X1
+X_2226_ _2224_/Y _2226_/B gnd _2226_/Y vdd NOR2X1
+X_3344_ _3344_/A _3343_/Y gnd _3344_/Y vdd NOR2X1
+X_2088_ _2160_/Y gnd adrs_bus[14] vdd BUFX2
+X_2157_ _2163_/A _2157_/B _2157_/C gnd _2087_/A vdd OAI21X1
+X_3060_ _2304_/Y _3040_/B _2949_/A gnd _3064_/B vdd NAND3X1
+X_3893_ _4007_/A _3898_/B gnd _3893_/Y vdd NOR2X1
+X_3962_ _4140_/A _4002_/B gnd _3964_/B vdd NOR2X1
+X_2913_ _2911_/Y _2913_/B _2913_/C gnd _2913_/Y vdd AOI21X1
+X_2844_ _2844_/A _2935_/B _2844_/C gnd _2845_/C vdd OAI21X1
+X_4376_ _4376_/Q _4344_/CLK _3735_/Y gnd vdd DFFPOSX1
+X_2775_ _2771_/Y _2775_/B _2768_/Y gnd _2775_/Y vdd NAND3X1
+X_4514_ _4560_/A _4514_/B _4519_/A _4560_/D gnd _4515_/B vdd AOI22X1
+X_4445_ _4445_/Q _4355_/CLK _3934_/Y gnd vdd DFFPOSX1
+XSFILL29680x40100 gnd vdd FILL
+X_3258_ _3258_/A _3336_/B _3257_/Y _2998_/D gnd _3259_/A vdd OAI22X1
+X_3327_ _2989_/A gnd gnd _2989_/D gnd _3328_/C vdd AOI22X1
+X_3189_ gnd _3345_/B gnd _3194_/A vdd NAND2X1
+X_2209_ _2314_/B _2314_/A gnd _2209_/Y vdd AND2X2
+XBUFX2_insert109 _2955_/Y gnd _3378_/C vdd BUFX2
+X_4230_ _4229_/Y _4228_/Y _4236_/C _4230_/D gnd _4231_/A vdd OAI22X1
+X_2560_ _2560_/A _2530_/Y _2560_/C gnd _2560_/Y vdd AOI21X1
+X_2491_ _2919_/A gnd _2492_/B vdd INVX1
+X_4092_ _4364_/Q _4213_/B gnd _4094_/B vdd NOR2X1
+X_4161_ _4418_/Q _4402_/Q _4097_/B gnd _4164_/D vdd MUX2X1
+X_3043_ _3043_/A _3043_/B gnd _3044_/C vdd NOR2X1
+X_3112_ _2310_/Y _3092_/B _2951_/B gnd _3112_/Y vdd NAND3X1
+X_3945_ _3945_/A _3945_/B _3944_/Y gnd _4446_/D vdd AOI21X1
+X_3876_ _3876_/A _3842_/Y gnd _3876_/Y vdd AND2X2
+X_2758_ _2712_/A _2711_/Y _2758_/C gnd _2758_/Y vdd NAND3X1
+X_2827_ _2845_/B _2827_/B _2826_/Y gnd _2827_/Y vdd OAI21X1
+X_4359_ _4359_/Q _4409_/CLK _3800_/Y gnd vdd DFFPOSX1
+X_2689_ _2673_/Y _2688_/Y gnd _2746_/A vdd NAND2X1
+X_4428_ _4428_/Q _4355_/CLK _4428_/D gnd vdd DFFPOSX1
+XSFILL59440x8100 gnd vdd FILL
+X_3730_ _3740_/A _3732_/B _4374_/Q gnd _3730_/Y vdd OAI21X1
+X_2612_ _4592_/B gnd _2613_/C vdd INVX1
+X_3661_ _3451_/Y gnd _3849_/A vdd INVX4
+X_3592_ _3591_/Y _3590_/Y _3589_/C gnd _3592_/Y vdd AOI21X1
+X_4213_ _4375_/Q _4213_/B gnd _4213_/Y vdd NOR2X1
+X_2474_ _2467_/A _2893_/A _2474_/C gnd _2474_/Y vdd OAI21X1
+X_2543_ _2543_/A _2541_/Y _2543_/C gnd _2560_/A vdd OAI21X1
+X_4075_ _4074_/Y _4075_/B _4053_/S gnd _4075_/Y vdd MUX2X1
+X_4144_ _2634_/D _4200_/B _4199_/C gnd _4144_/Y vdd OAI21X1
+X_3026_ gnd gnd _3026_/Y vdd INVX1
+X_3928_ _3928_/A _4397_/Q _3928_/S gnd _3931_/D vdd MUX2X1
+X_3859_ _3678_/A _3852_/B _3858_/Y gnd _4307_/D vdd OAI21X1
+XSFILL59280x48100 gnd vdd FILL
+XSFILL29360x12100 gnd vdd FILL
+XBUFX2_insert60 _4437_/Q gnd _2428_/B vdd BUFX2
+XBUFX2_insert93 _3776_/Y gnd _3795_/B vdd BUFX2
+XSFILL14640x32100 gnd vdd FILL
+XBUFX2_insert82 _4431_/Q gnd _2720_/A vdd BUFX2
+XBUFX2_insert71 _4434_/Q gnd _2886_/C vdd BUFX2
+X_2190_ _2189_/Y _2188_/Y _2186_/A gnd _2190_/Y vdd OAI21X1
+XSFILL44240x50100 gnd vdd FILL
+XBUFX2_insert292 reset gnd _4076_/C vdd BUFX2
+XBUFX2_insert281 _3649_/Q gnd _4080_/C vdd BUFX2
+X_3713_ _3660_/A _3733_/B _3713_/C gnd _3713_/Y vdd OAI21X1
+X_3644_ _3842_/A _4337_/CLK _3595_/Y gnd vdd DFFPOSX1
+X_3575_ _3909_/A _3575_/B gnd _3577_/A vdd NAND2X1
+XBUFX2_insert270 _4435_/Q gnd _2364_/B vdd BUFX2
+X_2526_ _2511_/Y _2525_/Y gnd _2526_/Y vdd OR2X2
+X_2388_ _2388_/A _2562_/A gnd _2390_/A vdd XOR2X1
+X_2457_ _2719_/A gnd _2457_/Y vdd INVX1
+X_4058_ _4058_/A _4062_/B _3913_/C gnd _4059_/A vdd OAI21X1
+X_4127_ _4127_/A _4127_/B _4170_/C _4127_/D gnd _4132_/B vdd OAI22X1
+X_3009_ _3009_/A _2964_/A _3040_/B gnd _3011_/B vdd NAND3X1
+XCLKBUF1_insert16 clock gnd _4316_/CLK vdd CLKBUF1
+XSFILL14320x4100 gnd vdd FILL
+XSFILL59760x44100 gnd vdd FILL
+XFILL71120x12100 gnd vdd FILL
+X_2242_ _2368_/A gnd _2242_/Y vdd INVX1
+X_3360_ _3360_/A gnd _3362_/A vdd INVX1
+X_3291_ _3289_/Y _3291_/B _3290_/Y gnd _3291_/Y vdd OAI21X1
+X_2311_ _2203_/B _2203_/A gnd _2313_/A vdd NOR2X1
+X_2173_ _2173_/A _2171_/Y gnd _2173_/Y vdd NOR2X1
+X_2509_ _2504_/Y _2509_/B _2505_/Y gnd _2509_/Y vdd OAI21X1
+X_3627_ _3562_/A _3616_/B gnd _3628_/A vdd NAND2X1
+X_3558_ _3566_/A _3557_/Y gnd _3558_/Y vdd NOR2X1
+X_3489_ _3503_/A _3482_/B _3489_/C gnd _3492_/B vdd OAI21X1
+XSFILL14160x44100 gnd vdd FILL
+XSFILL15120x52100 gnd vdd FILL
+X_2791_ _2775_/Y _2791_/B gnd _2791_/Y vdd NOR2X1
+X_2860_ _2103_/A gnd _2861_/B vdd INVX1
+X_4392_ _4045_/B _4344_/CLK _4392_/D gnd vdd DFFPOSX1
+X_4530_ _4530_/A _4531_/A _4529_/Y gnd _4530_/Y vdd NAND3X1
+X_4461_ _4472_/A gnd _4464_/A vdd INVX1
+X_3412_ _3412_/A _3388_/Y gnd _3412_/Y vdd NOR2X1
+X_3274_ gnd _3243_/C _3248_/C gnd _3274_/Y vdd NAND3X1
+X_2225_ _2321_/A gnd _2226_/B vdd INVX1
+X_3343_ _3341_/Y _3291_/B _3343_/C gnd _3343_/Y vdd OAI21X1
+X_2087_ _2087_/A gnd adrs_bus[13] vdd BUFX2
+X_2156_ _2163_/A _2426_/B gnd _2157_/C vdd NAND2X1
+X_2989_ _2989_/A _2989_/B gnd _2989_/D gnd _2990_/C vdd AOI22X1
+XSFILL29360x20100 gnd vdd FILL
+X_3961_ _4276_/A _4400_/Q _4025_/B gnd _3964_/D vdd MUX2X1
+X_2912_ _2711_/B _2910_/B gnd _2913_/B vdd NAND2X1
+X_2774_ _2774_/A _2648_/A _2773_/Y _2770_/A gnd _2775_/B vdd AOI22X1
+XSFILL43760x28100 gnd vdd FILL
+X_3892_ _3678_/A _3886_/B _3891_/Y gnd _4339_/D vdd AOI21X1
+X_4513_ _4506_/A _4510_/Y _4512_/Y gnd _4515_/A vdd NAND3X1
+X_2843_ _2794_/Y _2843_/B gnd _2844_/C vdd NOR2X1
+XSFILL59440x16100 gnd vdd FILL
+X_4375_ _4375_/Q _4409_/CLK _3733_/Y gnd vdd DFFPOSX1
+X_3326_ gnd _3346_/B _3248_/C gnd _3326_/Y vdd NAND3X1
+X_4444_ _4444_/Q _4426_/CLK _4444_/D gnd vdd DFFPOSX1
+X_3257_ gnd gnd _3257_/Y vdd INVX1
+X_2139_ _2120_/A _2139_/B _2139_/C gnd _2095_/A vdd OAI21X1
+X_2208_ _2204_/A _2208_/B _2208_/C gnd _2208_/Y vdd AOI21X1
+X_3188_ _3184_/Y _3188_/B gnd _3200_/B vdd NOR2X1
+XSFILL59760x52100 gnd vdd FILL
+X_4160_ _4160_/A _4158_/Y _4097_/C _4160_/D gnd _4165_/B vdd OAI22X1
+X_2490_ _2892_/A _2471_/B _2474_/Y gnd _2494_/B vdd OAI21X1
+X_4091_ _4260_/S gnd _4091_/Y vdd INVX8
+X_3042_ _3042_/A _3042_/B _3042_/C gnd _3043_/B vdd NAND3X1
+X_3111_ gnd _3345_/B gnd _3116_/A vdd NAND2X1
+X_3875_ _3875_/A _3866_/B _3874_/Y gnd _4315_/D vdd OAI21X1
+X_3944_ _3944_/A _4133_/B _3999_/C gnd _3944_/Y vdd OAI21X1
+X_2688_ _2680_/Y _2688_/B gnd _2688_/Y vdd AND2X2
+X_2826_ _2826_/A _2824_/Y _2826_/C _2823_/C gnd _2826_/Y vdd AOI22X1
+X_2757_ _2757_/A _2757_/B _2755_/Y _2756_/Y gnd _2758_/C vdd AOI22X1
+X_4358_ _4201_/A _4344_/CLK _3798_/Y gnd vdd DFFPOSX1
+X_4289_ _3731_/A _4289_/B _4288_/Y gnd _4422_/D vdd AOI21X1
+X_4427_ _4427_/Q _4322_/CLK _4299_/Y gnd vdd DFFPOSX1
+X_3309_ gnd gnd _3309_/Y vdd INVX1
+X_3660_ _3660_/A _3662_/B _3659_/Y gnd _4397_/D vdd AOI21X1
+X_2542_ _2525_/Y _2511_/Y gnd _2543_/C vdd NOR2X1
+X_2611_ _4595_/B gnd _2611_/Y vdd INVX1
+X_3591_ _3704_/A _3588_/B gnd _3591_/Y vdd NAND2X1
+X_4212_ _4359_/Q _4391_/Q _4238_/S gnd _4215_/D vdd MUX2X1
+XSFILL44240x48100 gnd vdd FILL
+X_4143_ _4143_/A _4143_/B _4220_/S gnd _4145_/A vdd MUX2X1
+X_2473_ _2473_/A _2473_/B gnd _2473_/Y vdd XNOR2X1
+XSFILL14320x12100 gnd vdd FILL
+X_4074_ _4074_/A _4074_/B _4052_/C _4071_/Y gnd _4074_/Y vdd OAI22X1
+X_3025_ _3024_/Y _3025_/B gnd _3044_/A vdd NOR2X1
+X_3858_ _3858_/A _3852_/B gnd _3858_/Y vdd NAND2X1
+X_3927_ _3926_/Y _3927_/B _3931_/C _3927_/D gnd _3932_/B vdd OAI22X1
+XSFILL29680x46100 gnd vdd FILL
+X_3789_ _4157_/A _3788_/B gnd _3789_/Y vdd NAND2X1
+X_2809_ _2809_/A _2809_/B _2808_/Y gnd _2827_/B vdd AOI21X1
+XBUFX2_insert72 _3648_/Q gnd _4025_/B vdd BUFX2
+XBUFX2_insert61 _4437_/Q gnd _2876_/A vdd BUFX2
+XBUFX2_insert50 _2970_/Y gnd _3348_/B vdd BUFX2
+XBUFX2_insert83 _4431_/Q gnd _2711_/B vdd BUFX2
+XBUFX2_insert94 _4428_/Q gnd _2435_/A vdd BUFX2
+X_3712_ _3714_/A _3732_/B _4365_/Q gnd _3713_/C vdd OAI21X1
+XBUFX2_insert260 _4447_/Q gnd _2614_/A vdd BUFX2
+XBUFX2_insert282 _3649_/Q gnd _3981_/C vdd BUFX2
+X_2525_ _2513_/Y _2523_/Y gnd _2525_/Y vdd NAND2X1
+XSFILL43760x36100 gnd vdd FILL
+XBUFX2_insert271 _4435_/Q gnd _4177_/A vdd BUFX2
+XBUFX2_insert293 reset gnd _4122_/C vdd BUFX2
+X_3574_ _3574_/A _3574_/B _3623_/C gnd _3574_/Y vdd AOI21X1
+X_3643_ _3704_/A _4580_/CLK _3592_/Y gnd vdd DFFPOSX1
+X_4126_ _3948_/A _4137_/B _4170_/C gnd _4127_/A vdd OAI21X1
+X_2456_ _2446_/Y _2537_/B gnd _2461_/B vdd NAND2X1
+X_2387_ _2375_/Y _2387_/B _2387_/C gnd _2387_/Y vdd NAND3X1
+X_4057_ _4377_/Q _4050_/B gnd _4057_/Y vdd NOR2X1
+XSFILL44720x44100 gnd vdd FILL
+X_3008_ _3008_/A _3040_/B _2949_/A gnd _3012_/B vdd NAND3X1
+XCLKBUF1_insert17 clock gnd _4580_/CLK vdd CLKBUF1
+X_2241_ _2326_/B gnd _2241_/Y vdd INVX1
+X_3290_ gnd _2969_/B gnd _3290_/Y vdd NAND2X1
+X_2310_ _2308_/Y _2309_/Y gnd _2310_/Y vdd NOR2X1
+X_2172_ _2408_/B _3944_/A gnd _2173_/A vdd NOR2X1
+XSFILL60720x26100 gnd vdd FILL
+X_2508_ _2502_/Y _2507_/Y gnd _3204_/A vdd XOR2X1
+X_3626_ _3626_/A data_in[8] gnd _3626_/Y vdd NAND2X1
+X_3557_ _3566_/B gnd _3557_/Y vdd INVX1
+X_3488_ _3488_/A gnd _3489_/C vdd INVX1
+X_4109_ _4108_/Y _4109_/B _4109_/C _4109_/D gnd _4110_/A vdd OAI22X1
+X_2439_ _4589_/B _2438_/Y gnd _2439_/Y vdd NAND2X1
+XSFILL59920x20100 gnd vdd FILL
+XSFILL29360x18100 gnd vdd FILL
+XSFILL14640x38100 gnd vdd FILL
+X_2790_ _2790_/A _2789_/Y gnd _2791_/B vdd NAND2X1
+X_4391_ _4391_/Q _4322_/CLK _3833_/Y gnd vdd DFFPOSX1
+X_3342_ gnd _2969_/B gnd _3343_/C vdd NAND2X1
+X_3411_ _3386_/Y _3411_/B _3388_/Y gnd _3411_/Y vdd AOI21X1
+X_4460_ _4460_/A gnd _4460_/Y vdd INVX4
+XSFILL14320x20100 gnd vdd FILL
+X_3273_ _3273_/A _3091_/B gnd _3276_/B vdd NAND2X1
+X_2224_ _2321_/B gnd _2224_/Y vdd INVX1
+X_2155_ _4582_/Q gnd _2157_/B vdd INVX1
+X_2086_ _2086_/A gnd adrs_bus[12] vdd BUFX2
+X_3609_ _3559_/A _3616_/B gnd _3610_/A vdd NAND2X1
+X_2988_ _3432_/A _2983_/B _2967_/Y gnd _2989_/A vdd NOR3X1
+X_4589_ _3562_/A _4589_/B gnd _4589_/Y vdd NAND2X1
+XSFILL44400x16100 gnd vdd FILL
+XSFILL58480x24100 gnd vdd FILL
+XSFILL29840x14100 gnd vdd FILL
+X_3960_ _3960_/A _3960_/B _4080_/C _3957_/Y gnd _3965_/B vdd OAI22X1
+X_3891_ _3996_/A _3886_/B gnd _3891_/Y vdd NOR2X1
+X_2911_ _2300_/B _2911_/B gnd _2911_/Y vdd NOR2X1
+X_2773_ _2102_/A gnd _2773_/Y vdd INVX1
+X_4512_ _4512_/A gnd _4512_/Y vdd INVX1
+X_2842_ _2842_/A _2795_/Y _2793_/Y gnd _2843_/B vdd OAI21X1
+X_4374_ _4374_/Q _4344_/CLK _3731_/Y gnd vdd DFFPOSX1
+X_4443_ _4443_/Q _4344_/CLK _4266_/Y gnd vdd DFFPOSX1
+X_3256_ _3256_/A gnd _3258_/A vdd INVX1
+XSFILL59440x32100 gnd vdd FILL
+X_3325_ _3325_/A _3091_/B gnd _3328_/B vdd NAND2X1
+X_2138_ _2120_/A _4177_/A gnd _2139_/C vdd NAND2X1
+X_2207_ _2206_/Y _2208_/C gnd _2208_/B vdd NOR2X1
+X_3187_ _3187_/A _3291_/B _3186_/Y gnd _3188_/B vdd OAI21X1
+X_3110_ _3106_/Y _3109_/Y gnd _3122_/B vdd NOR2X1
+X_4090_ _3777_/A _3910_/B _4090_/S gnd _4094_/D vdd MUX2X1
+X_3041_ _2989_/A gnd gnd _2989_/D gnd _3042_/C vdd AOI22X1
+X_3874_ _3874_/A _3866_/B gnd _3874_/Y vdd NAND2X1
+XSFILL60720x34100 gnd vdd FILL
+X_2825_ _2825_/A _2825_/B gnd _2826_/C vdd NOR2X1
+X_3943_ _3943_/A _3943_/B _4053_/S gnd _3945_/A vdd MUX2X1
+X_2687_ _2687_/A _2686_/Y gnd _2688_/B vdd NOR2X1
+X_4426_ _4071_/A _4426_/CLK _4297_/Y gnd vdd DFFPOSX1
+X_2756_ _2935_/B _2842_/A gnd _2756_/Y vdd NAND2X1
+X_4288_ _4288_/A _4289_/B gnd _4288_/Y vdd NOR2X1
+X_3308_ _2551_/Y gnd _3310_/A vdd INVX1
+X_4357_ _4357_/Q _4318_/CLK _4357_/D gnd vdd DFFPOSX1
+X_3239_ _3239_/A _3291_/B _3238_/Y gnd _3240_/B vdd OAI21X1
+XSFILL14640x46100 gnd vdd FILL
+X_2472_ _2469_/Y _2474_/C gnd _2473_/B vdd NAND2X1
+X_2541_ _2541_/A _2460_/Y _2540_/Y gnd _2541_/Y vdd AOI21X1
+X_2610_ _2610_/A _2610_/B gnd _2625_/B vdd NOR2X1
+X_3590_ _3587_/A data_in[10] gnd _3590_/Y vdd NAND2X1
+X_4073_ _4251_/A _4045_/S _4052_/C gnd _4074_/A vdd OAI21X1
+X_4211_ _4211_/A _4032_/B _4210_/Y gnd _4211_/Y vdd AOI21X1
+X_4142_ _4142_/A _4140_/Y _4142_/C _4142_/D gnd _4143_/A vdd OAI22X1
+X_3024_ _3022_/Y _3336_/B _3023_/Y _2998_/D gnd _3024_/Y vdd OAI22X1
+X_3788_ _3788_/A _3788_/B _3787_/Y gnd _3788_/Y vdd OAI21X1
+X_3857_ _3823_/A _3855_/B _3857_/C gnd _4306_/D vdd OAI21X1
+X_2808_ _2808_/A _2807_/Y _2805_/Y gnd _2808_/Y vdd OAI21X1
+X_3926_ _4104_/A _3928_/S _3931_/C gnd _3926_/Y vdd OAI21X1
+X_4409_ _4409_/Q _4409_/CLK _3696_/Y gnd vdd DFFPOSX1
+X_2739_ _2739_/A _2739_/B gnd _2741_/D vdd NAND2X1
+XSFILL30160x50100 gnd vdd FILL
+XBUFX2_insert40 _4440_/Q gnd _2770_/A vdd BUFX2
+XBUFX2_insert62 _4091_/Y gnd _4235_/B vdd BUFX2
+XBUFX2_insert73 _3648_/Q gnd _3928_/S vdd BUFX2
+XBUFX2_insert84 _4431_/Q gnd _4595_/B vdd BUFX2
+XBUFX2_insert51 _2970_/Y gnd _2971_/A vdd BUFX2
+XBUFX2_insert95 _4428_/Q gnd _2292_/A vdd BUFX2
+XFILL71120x26100 gnd vdd FILL
+XSFILL14320x100 gnd vdd FILL
+X_3711_ _3711_/A _3733_/B _3710_/Y gnd _3711_/Y vdd OAI21X1
+XBUFX2_insert283 _3649_/Q gnd _3913_/C vdd BUFX2
+XBUFX2_insert294 reset gnd _4032_/C vdd BUFX2
+XBUFX2_insert261 _4438_/Q gnd _2676_/C vdd BUFX2
+XBUFX2_insert250 _4441_/Q gnd _2381_/B vdd BUFX2
+X_3642_ _3654_/A _4337_/CLK _3589_/Y gnd vdd DFFPOSX1
+XBUFX2_insert272 _4435_/Q gnd _2812_/A vdd BUFX2
+XSFILL43760x52100 gnd vdd FILL
+X_2524_ _2519_/Y _2523_/Y gnd _3256_/A vdd XOR2X1
+X_3573_ _3626_/A data_in[3] gnd _3574_/B vdd NAND2X1
+X_2455_ _2453_/Y _2537_/B gnd _3048_/A vdd XNOR2X1
+X_4056_ _3803_/A _4056_/B _4062_/B gnd _4056_/Y vdd MUX2X1
+XSFILL59440x40100 gnd vdd FILL
+X_4125_ _3716_/C _4235_/B gnd _4127_/B vdd NOR2X1
+X_2386_ _2379_/Y _2380_/Y _2386_/C gnd _2387_/C vdd NOR3X1
+X_3007_ gnd _3345_/B gnd _3007_/Y vdd NAND2X1
+X_3909_ _3909_/A gnd _4053_/S vdd INVX8
+XCLKBUF1_insert18 clock gnd _4387_/CLK vdd CLKBUF1
+X_2240_ _2239_/Y _2247_/B gnd _3243_/A vdd NOR2X1
+X_2171_ _2408_/B _3944_/A gnd _2171_/Y vdd AND2X2
+XSFILL14320x18100 gnd vdd FILL
+X_3625_ _3625_/A _3586_/B _3625_/C gnd _3637_/D vdd AOI21X1
+X_2507_ _2504_/Y _2507_/B gnd _2507_/Y vdd NOR2X1
+X_2438_ _2618_/A gnd _2438_/Y vdd INVX1
+X_3487_ _3424_/B _3487_/B gnd _3487_/Y vdd NAND2X1
+X_3556_ _3565_/A _3556_/B gnd _3556_/Y vdd NOR2X1
+X_4039_ _4311_/Q _4039_/B gnd _4039_/Y vdd NOR2X1
+X_4108_ _3930_/A _4106_/S _4109_/C gnd _4108_/Y vdd OAI21X1
+X_2369_ _2329_/A _2399_/B gnd _3299_/A vdd AND2X2
+XFILL70960x50100 gnd vdd FILL
+X_4390_ _4390_/Q _4344_/CLK _3831_/Y gnd vdd DFFPOSX1
+X_3272_ _3272_/A _3272_/B _3271_/Y gnd _3277_/A vdd NAND3X1
+X_3341_ gnd gnd _3341_/Y vdd INVX1
+X_3410_ _3410_/A gnd _2115_/A vdd INVX1
+X_2085_ _2151_/Y gnd adrs_bus[11] vdd BUFX2
+X_2223_ _2220_/Y _2257_/B _2223_/C gnd _2229_/A vdd OAI21X1
+XSFILL45360x8100 gnd vdd FILL
+X_2154_ _2163_/A _2154_/B _2154_/C gnd _2086_/A vdd OAI21X1
+X_2987_ _3603_/A _2944_/B _2987_/C gnd _2989_/D vdd NOR3X1
+X_3608_ _3626_/A data_in[0] gnd _3608_/Y vdd NAND2X1
+X_4588_ _3438_/B gnd _4588_/Y vdd INVX1
+X_3539_ data_in[15] gnd _3540_/A vdd INVX1
+XSFILL29680x2100 gnd vdd FILL
+XSFILL44400x32100 gnd vdd FILL
+XSFILL29840x30100 gnd vdd FILL
+X_3890_ _3823_/A _3899_/B _3890_/C gnd _3890_/Y vdd AOI21X1
+X_2910_ _2711_/B _2910_/B gnd _2913_/C vdd NOR2X1
+X_2841_ _2842_/A gnd _2844_/A vdd INVX1
+X_2772_ _2646_/A gnd _2774_/A vdd INVX1
+X_4442_ _4442_/Q _4394_/CLK _4442_/D gnd vdd DFFPOSX1
+X_4511_ _4511_/A _4511_/B gnd _4512_/A vdd NOR2X1
+X_3255_ _3255_/A _3333_/B _3255_/C _3333_/D gnd _3259_/B vdd OAI22X1
+X_3324_ _3319_/Y _3324_/B _3323_/Y gnd _3329_/A vdd NAND3X1
+X_4373_ _3728_/C _4318_/CLK _4373_/D gnd vdd DFFPOSX1
+X_2206_ _2203_/A _2203_/B gnd _2206_/Y vdd NOR2X1
+X_2137_ _4519_/A gnd _2139_/B vdd INVX1
+X_3186_ gnd _2969_/B gnd _3186_/Y vdd NAND2X1
+X_3040_ gnd _3040_/B _3066_/C gnd _3042_/A vdd NAND3X1
+X_3873_ _3839_/A _3868_/B _3872_/Y gnd _4314_/D vdd OAI21X1
+XSFILL14320x26100 gnd vdd FILL
+X_3942_ _3941_/Y _3942_/B _3931_/C _3942_/D gnd _3943_/A vdd OAI22X1
+X_2824_ _2812_/A _2810_/Y gnd _2824_/Y vdd NAND2X1
+X_4425_ _4425_/Q _4322_/CLK _4295_/Y gnd vdd DFFPOSX1
+X_2686_ _2686_/A _2686_/B _2686_/C _2685_/Y gnd _2686_/Y vdd OAI22X1
+X_4356_ _4001_/A _4387_/CLK _3794_/Y gnd vdd DFFPOSX1
+X_2755_ _2935_/B _2842_/A gnd _2755_/Y vdd OR2X2
+X_3307_ _3307_/A _3333_/B _3307_/C _3333_/D gnd _3311_/B vdd OAI22X1
+X_4287_ _3796_/A _4296_/B _4286_/Y gnd _4421_/D vdd AOI21X1
+X_3169_ _2364_/Y _3091_/B gnd _3172_/B vdd NAND2X1
+X_3238_ gnd _2969_/B gnd _3238_/Y vdd NAND2X1
+XSFILL29360x42100 gnd vdd FILL
+X_4210_ _4210_/A _4032_/B _4032_/C gnd _4210_/Y vdd OAI21X1
+X_2471_ _2892_/A _2471_/B gnd _2474_/C vdd NAND2X1
+X_2540_ _2540_/A _2475_/Y gnd _2540_/Y vdd NAND2X1
+X_4072_ _4072_/A _4050_/B gnd _4074_/B vdd NOR2X1
+X_4141_ _3963_/A _4260_/S _4094_/C gnd _4142_/A vdd OAI21X1
+X_3023_ gnd gnd _3023_/Y vdd INVX1
+XSFILL59440x38100 gnd vdd FILL
+X_3925_ _4365_/Q _3973_/B gnd _3927_/B vdd NOR2X1
+X_3856_ _3856_/A _3855_/B gnd _3857_/C vdd NAND2X1
+X_2738_ _2737_/Y _2738_/B _2738_/C gnd _2738_/Y vdd OAI21X1
+XSFILL13840x4100 gnd vdd FILL
+X_2807_ _2807_/A _2803_/B gnd _2807_/Y vdd NOR2X1
+X_3787_ _4353_/Q _3788_/B gnd _3787_/Y vdd NAND2X1
+X_2669_ _2104_/A gnd _2669_/Y vdd INVX1
+X_4408_ _4227_/B _4409_/CLK _4408_/D gnd vdd DFFPOSX1
+X_4339_ _3996_/A _4318_/CLK _4339_/D gnd vdd DFFPOSX1
+XSFILL14800x22100 gnd vdd FILL
+XBUFX2_insert85 _4459_/Q gnd _2767_/A vdd BUFX2
+XBUFX2_insert30 _4452_/Q gnd _2686_/C vdd BUFX2
+XBUFX2_insert41 _4440_/Q gnd _2353_/B vdd BUFX2
+XBUFX2_insert74 _3648_/Q gnd _4080_/B vdd BUFX2
+XBUFX2_insert63 _4091_/Y gnd _4140_/B vdd BUFX2
+XBUFX2_insert52 _2970_/Y gnd _2980_/B vdd BUFX2
+XBUFX2_insert96 _4428_/Q gnd _2621_/A vdd BUFX2
+X_3710_ _3732_/A _3732_/B _4364_/Q gnd _3710_/Y vdd OAI21X1
+XBUFX2_insert262 _4438_/Q gnd _2780_/A vdd BUFX2
+XBUFX2_insert251 _4441_/Q gnd _2426_/B vdd BUFX2
+X_3641_ _2943_/A _3637_/CLK _3641_/D gnd vdd DFFPOSX1
+XBUFX2_insert273 _4435_/Q gnd _2314_/B vdd BUFX2
+XBUFX2_insert240 _2974_/Y gnd _3036_/C vdd BUFX2
+XBUFX2_insert295 reset gnd _4460_/A vdd BUFX2
+X_3572_ _4015_/C _3578_/B gnd _3574_/A vdd NAND2X1
+XBUFX2_insert284 _3649_/Q gnd _4015_/C vdd BUFX2
+X_2523_ _2521_/Y _2522_/Y gnd _2523_/Y vdd NOR2X1
+X_2385_ _2385_/A _2385_/B _2383_/Y _2384_/Y gnd _2386_/C vdd OAI22X1
+X_2454_ _2719_/A _2807_/A gnd _2537_/B vdd XNOR2X1
+X_4055_ _4055_/A _4076_/B _4054_/Y gnd _4456_/D vdd AOI21X1
+X_4124_ _3946_/A _4383_/Q _4137_/B gnd _4127_/D vdd MUX2X1
+X_3006_ _3002_/Y _3005_/Y gnd _3006_/Y vdd NOR2X1
+X_3908_ _3875_/A _3898_/B _3907_/Y gnd _4347_/D vdd AOI21X1
+X_3839_ _3839_/A _3835_/B _3838_/Y gnd _4394_/D vdd AOI21X1
+XSFILL44880x12100 gnd vdd FILL
+XCLKBUF1_insert19 clock gnd _4322_/CLK vdd CLKBUF1
+X_2170_ _2164_/Y _2168_/A _2170_/C gnd _2175_/A vdd OAI21X1
+XSFILL14320x34100 gnd vdd FILL
+X_3624_ _3566_/B _3578_/B gnd _3625_/A vdd NAND2X1
+X_3555_ _3636_/Q gnd _3556_/B vdd INVX1
+X_2506_ _2505_/Y gnd _2507_/B vdd INVX1
+X_2368_ _2368_/A _2326_/B gnd _3273_/A vdd AND2X2
+X_2437_ _2935_/A _2436_/Y gnd _2445_/A vdd NAND2X1
+X_3486_ _3486_/A _3485_/Y gnd _3486_/Y vdd NAND2X1
+X_4038_ _4423_/Q _4407_/Q _3915_/S gnd _4041_/D vdd MUX2X1
+X_4107_ _3929_/A _4151_/B gnd _4109_/B vdd NOR2X1
+X_2299_ _2359_/A _2300_/B gnd _2299_/Y vdd NOR2X1
+XSFILL29840x28100 gnd vdd FILL
+X_3271_ _3270_/Y _3271_/B gnd _3271_/Y vdd AND2X2
+X_2222_ _2257_/B _2222_/B gnd _3191_/A vdd XNOR2X1
+X_3340_ _3340_/A _3340_/B _3339_/Y _3340_/D gnd _3344_/A vdd OAI22X1
+X_2084_ _2148_/Y gnd adrs_bus[10] vdd BUFX2
+XSFILL29520x10100 gnd vdd FILL
+X_2153_ _2163_/A _2399_/B gnd _2154_/C vdd NAND2X1
+XSFILL59440x46100 gnd vdd FILL
+X_2986_ _2986_/A _3378_/B _3378_/C gnd _2990_/A vdd NAND3X1
+XSFILL14800x30100 gnd vdd FILL
+X_4587_ _4593_/A _4585_/Y _4586_/Y gnd _4587_/Y vdd OAI21X1
+X_3607_ _3606_/Y _3607_/B _3577_/C gnd _3641_/D vdd AOI21X1
+X_3538_ _3503_/A _3482_/B _3538_/C gnd _3541_/B vdd OAI21X1
+X_3469_ data_in[5] gnd _3470_/A vdd INVX1
+XFILL71120x50100 gnd vdd FILL
+X_2771_ _2771_/A _2103_/A _2102_/A _2771_/D gnd _2771_/Y vdd AOI22X1
+X_2840_ _2809_/A gnd _2845_/A vdd INVX1
+X_4441_ _4441_/Q _4394_/CLK _4441_/D gnd vdd DFFPOSX1
+X_4372_ _4002_/A _4387_/CLK _4372_/D gnd vdd DFFPOSX1
+X_4510_ _4518_/B _4499_/Y _4511_/A gnd _4510_/Y vdd OAI21X1
+X_3254_ gnd gnd _3255_/C vdd INVX1
+X_3323_ _3322_/Y _3323_/B gnd _3323_/Y vdd AND2X2
+X_2205_ _2203_/A _2203_/B gnd _2208_/C vdd AND2X2
+X_3185_ gnd gnd _3187_/A vdd INVX1
+X_2136_ _2144_/A _2136_/B _2136_/C gnd _2136_/Y vdd OAI21X1
+XSFILL59760x4100 gnd vdd FILL
+X_2969_ _2969_/A _2969_/B gnd _2972_/C vdd NAND2X1
+XSFILL44880x20100 gnd vdd FILL
+XSFILL45200x8100 gnd vdd FILL
+X_3941_ _4334_/Q _3928_/S _3931_/C gnd _3941_/Y vdd OAI21X1
+X_3872_ _4072_/A _3868_/B gnd _3872_/Y vdd NAND2X1
+XSFILL14320x42100 gnd vdd FILL
+XSFILL29520x2100 gnd vdd FILL
+X_2823_ _2825_/B _2822_/Y _2823_/C gnd _2845_/B vdd NAND3X1
+X_2754_ _2619_/A _2297_/A gnd _2757_/B vdd NAND2X1
+X_4424_ _4292_/A _4409_/CLK _4424_/D gnd vdd DFFPOSX1
+X_2685_ _2685_/A gnd _2685_/Y vdd INVX1
+X_3306_ gnd gnd _3307_/C vdd INVX1
+X_4355_ _3990_/A _4355_/CLK _4355_/D gnd vdd DFFPOSX1
+X_4286_ _4421_/Q _4296_/B gnd _4286_/Y vdd NOR2X1
+X_3237_ gnd gnd _3239_/A vdd INVX1
+X_2119_ _4570_/Q gnd _2121_/B vdd INVX1
+X_3168_ _3163_/Y _3164_/Y _3168_/C gnd _3173_/A vdd NAND3X1
+X_3099_ _3099_/A _3333_/B _3098_/Y _3333_/D gnd _3103_/B vdd OAI22X1
+XSFILL59120x18100 gnd vdd FILL
+XSFILL29680x8100 gnd vdd FILL
+XSFILL44880x2100 gnd vdd FILL
+X_4140_ _4140_/A _4140_/B gnd _4140_/Y vdd NOR2X1
+X_2470_ _2891_/A gnd _2471_/B vdd INVX1
+X_4071_ _4071_/A _4071_/B _4080_/B gnd _4071_/Y vdd MUX2X1
+X_3022_ _3022_/A gnd _3022_/Y vdd INVX1
+X_3924_ _4349_/Q _3924_/B _3928_/S gnd _3927_/D vdd MUX2X1
+X_2668_ _2769_/A _2667_/B gnd _2672_/A vdd NAND2X1
+X_2737_ _2686_/B _2686_/A _2687_/A gnd _2737_/Y vdd OAI21X1
+X_3855_ _3788_/A _3855_/B _3854_/Y gnd _3855_/Y vdd OAI21X1
+X_3786_ _3752_/A _3807_/B _3785_/Y gnd _3786_/Y vdd OAI21X1
+X_2806_ _2359_/A _2806_/B gnd _2808_/A vdd NAND2X1
+X_4338_ _4338_/Q _4338_/CLK _3890_/Y gnd vdd DFFPOSX1
+X_4407_ _4407_/Q _4409_/CLK _3690_/Y gnd vdd DFFPOSX1
+X_4269_ _3711_/A _4269_/B _4268_/Y gnd _4269_/Y vdd AOI21X1
+X_2599_ _2348_/A gnd _2599_/Y vdd INVX1
+XBUFX2_insert31 _4443_/Q gnd _2765_/A vdd BUFX2
+XBUFX2_insert42 _4440_/Q gnd _2399_/B vdd BUFX2
+XBUFX2_insert75 _3648_/Q gnd _3974_/B vdd BUFX2
+XBUFX2_insert64 _4091_/Y gnd _4147_/B vdd BUFX2
+XBUFX2_insert86 _4459_/Q gnd _2388_/A vdd BUFX2
+XBUFX2_insert53 _4446_/Q gnd _2711_/D vdd BUFX2
+XBUFX2_insert97 _4428_/Q gnd _2935_/B vdd BUFX2
+XSFILL59600x14100 gnd vdd FILL
+X_2522_ _2520_/Y _2779_/A gnd _2522_/Y vdd AND2X2
+XBUFX2_insert263 _4438_/Q gnd _4210_/A vdd BUFX2
+XBUFX2_insert252 _4267_/Y gnd _4289_/B vdd BUFX2
+XBUFX2_insert285 _3649_/Q gnd _4025_/C vdd BUFX2
+XBUFX2_insert230 _2977_/Y gnd _3346_/B vdd BUFX2
+X_3640_ _3603_/A _3637_/CLK _3604_/Y gnd vdd DFFPOSX1
+XBUFX2_insert296 reset gnd _3999_/C vdd BUFX2
+XBUFX2_insert274 _2962_/Y gnd _2964_/A vdd BUFX2
+X_3571_ _3569_/Y _3571_/B _3589_/C gnd _3571_/Y vdd AOI21X1
+XBUFX2_insert241 _2974_/Y gnd _3192_/C vdd BUFX2
+X_2384_ _2428_/A _2876_/A gnd _2384_/Y vdd NOR2X1
+X_2453_ _2450_/Y _2446_/Y _2452_/Y gnd _2453_/Y vdd AOI21X1
+X_4123_ _4123_/A _3945_/B _4122_/Y gnd _4430_/D vdd AOI21X1
+X_4054_ _2102_/A _4076_/B _4076_/C gnd _4054_/Y vdd OAI21X1
+X_3005_ _3003_/Y _3291_/B _3004_/Y gnd _3005_/Y vdd OAI21X1
+X_3838_ _3838_/A _3835_/B gnd _3838_/Y vdd NOR2X1
+X_3907_ _4262_/A _3898_/B gnd _3907_/Y vdd NOR2X1
+X_3769_ _4058_/A _3767_/B gnd _3769_/Y vdd NAND2X1
+XSFILL29360x48100 gnd vdd FILL
+X_2505_ _2786_/A _2504_/B gnd _2505_/Y vdd NAND2X1
+X_3485_ _3499_/A _3482_/Y _3485_/C gnd _3485_/Y vdd NAND3X1
+X_3554_ _3565_/A _3553_/Y gnd _4600_/A vdd NOR2X1
+X_3623_ _3623_/A _3583_/B _3623_/C gnd _3623_/Y vdd AOI21X1
+X_2367_ _4032_/A _4210_/A gnd _3247_/A vdd AND2X2
+X_4106_ _3928_/A _4397_/Q _4106_/S gnd _4109_/D vdd MUX2X1
+X_2436_ _2621_/A gnd _2436_/Y vdd INVX1
+X_2298_ _2298_/A _2297_/Y gnd _3008_/A vdd NOR2X1
+X_4037_ _4037_/A _4035_/Y _3981_/C _4037_/D gnd _4042_/B vdd OAI22X1
+XSFILL14800x28100 gnd vdd FILL
+XSFILL45200x100 gnd vdd FILL
+XSFILL45040x12100 gnd vdd FILL
+XFILL71120x48100 gnd vdd FILL
+XSFILL29840x44100 gnd vdd FILL
+XSFILL30320x32100 gnd vdd FILL
+X_2221_ _2220_/Y _2230_/C gnd _2222_/B vdd NOR2X1
+X_3270_ gnd _2980_/B _3088_/C gnd _3270_/Y vdd NAND3X1
+X_2152_ _4581_/Q gnd _2154_/B vdd INVX1
+X_2083_ _2083_/A gnd adrs_bus[1] vdd BUFX2
+X_2985_ _2985_/A _3091_/B gnd _2990_/B vdd NAND2X1
+X_4586_ _2621_/A _4605_/A gnd _4586_/Y vdd NAND2X1
+X_3606_ _2943_/A _3575_/B gnd _3606_/Y vdd NAND2X1
+X_3468_ _3503_/A _3482_/B _3467_/Y gnd _3468_/Y vdd OAI21X1
+X_3537_ _3537_/A gnd _3538_/C vdd INVX1
+X_3399_ _3385_/B _3399_/B gnd _3399_/Y vdd NOR2X1
+X_2419_ _3999_/A _4177_/A gnd _2419_/Y vdd XNOR2X1
+XSFILL60400x28100 gnd vdd FILL
+XSFILL59600x22100 gnd vdd FILL
+X_2770_ _2770_/A gnd _2771_/D vdd INVX1
+X_4440_ _4440_/Q _4394_/CLK _4233_/Y gnd vdd DFFPOSX1
+X_4371_ _3724_/C _4387_/CLK _4371_/D gnd vdd DFFPOSX1
+X_3322_ gnd _3348_/B _3348_/C gnd _3322_/Y vdd NAND3X1
+X_3253_ _2352_/Y gnd _3255_/A vdd INVX1
+X_2135_ _2144_/A _4166_/A gnd _2136_/C vdd NAND2X1
+X_2204_ _2204_/A _2204_/B gnd _2204_/Y vdd XNOR2X1
+X_3184_ _3184_/A _3340_/B _3183_/Y _3340_/D gnd _3184_/Y vdd OAI22X1
+X_2899_ _2899_/A _2614_/A _2898_/Y _2711_/D gnd _2899_/Y vdd AOI22X1
+X_2968_ _2967_/Y _2968_/B gnd _2969_/B vdd NOR2X1
+X_4569_ _4472_/A _4580_/CLK _4469_/Y gnd vdd DFFPOSX1
+X_3871_ _4295_/A _3866_/B _3870_/Y gnd _4313_/D vdd OAI21X1
+X_3940_ _4302_/Q _3973_/B gnd _3942_/B vdd NOR2X1
+X_2684_ _2786_/A gnd _2686_/B vdd INVX1
+X_2822_ _2822_/A _2822_/B _2825_/A gnd _2822_/Y vdd AOI21X1
+X_2753_ _2296_/B _2297_/A gnd _2757_/A vdd OR2X2
+X_4423_ _4423_/Q _4322_/CLK _4423_/D gnd vdd DFFPOSX1
+X_4354_ _4157_/A _4322_/CLK _3790_/Y gnd vdd DFFPOSX1
+X_4285_ _3681_/A _4289_/B _4284_/Y gnd _4420_/D vdd AOI21X1
+X_3305_ _2354_/Y gnd _3307_/A vdd INVX1
+XSFILL29520x16100 gnd vdd FILL
+X_3236_ _3234_/Y _3340_/B _3235_/Y _3340_/D gnd _3236_/Y vdd OAI22X1
+X_2118_ _2118_/A _2118_/B _2117_/Y gnd _2082_/A vdd OAI21X1
+X_3098_ gnd gnd _3098_/Y vdd INVX1
+X_3167_ _3167_/A _3165_/Y gnd _3168_/C vdd AND2X2
+XSFILL14800x36100 gnd vdd FILL
+XSFILL59600x4100 gnd vdd FILL
+X_4070_ _4069_/Y _4070_/B _4052_/C _4067_/Y gnd _4075_/B vdd OAI22X1
+X_3021_ _3021_/A _3333_/B _3021_/C _3333_/D gnd _3025_/B vdd OAI22X1
+X_3854_ _4305_/Q _3854_/B gnd _3854_/Y vdd NAND2X1
+X_3923_ _3923_/A _4200_/B _3922_/Y gnd _4444_/D vdd AOI21X1
+XSFILL59280x4100 gnd vdd FILL
+X_2805_ _2709_/A _2803_/B gnd _2805_/Y vdd NAND2X1
+X_2736_ _2679_/B _2679_/A _2676_/Y gnd _2738_/C vdd OAI21X1
+X_2667_ _2769_/A _2667_/B _2747_/A _2666_/Y gnd _2673_/A vdd OAI22X1
+X_4406_ _4406_/Q _4338_/CLK _3687_/Y gnd vdd DFFPOSX1
+X_3785_ _3957_/A _3807_/B gnd _3785_/Y vdd NAND2X1
+X_4268_ _3915_/A _4269_/B gnd _4268_/Y vdd NOR2X1
+X_4337_ _4152_/A _4337_/CLK _3888_/Y gnd vdd DFFPOSX1
+X_3219_ _3219_/A _3219_/B gnd _3220_/C vdd AND2X2
+X_2598_ _2596_/Y _2348_/A _2597_/Y _2363_/A gnd _2636_/A vdd AOI22X1
+X_4199_ _2428_/B _4200_/B _4199_/C gnd _4199_/Y vdd OAI21X1
+XBUFX2_insert43 _4440_/Q gnd _2747_/A vdd BUFX2
+XBUFX2_insert32 _4443_/Q gnd _4265_/A vdd BUFX2
+XBUFX2_insert65 _4091_/Y gnd _4151_/B vdd BUFX2
+XBUFX2_insert54 _4446_/Q gnd _2359_/A vdd BUFX2
+XBUFX2_insert87 _4459_/Q gnd _2762_/A vdd BUFX2
+XBUFX2_insert98 _3843_/Y gnd _3866_/B vdd BUFX2
+XBUFX2_insert76 _3648_/Q gnd _4012_/S vdd BUFX2
+XSFILL59600x30100 gnd vdd FILL
+XBUFX2_insert242 _2974_/Y gnd _3088_/C vdd BUFX2
+XBUFX2_insert220 _3921_/Y gnd _4133_/B vdd BUFX2
+XBUFX2_insert231 _2977_/Y gnd _3040_/B vdd BUFX2
+X_2521_ _2779_/A _2520_/Y gnd _2521_/Y vdd NOR2X1
+XBUFX2_insert264 _4438_/Q gnd _2513_/A vdd BUFX2
+XBUFX2_insert253 _4267_/Y gnd _4296_/B vdd BUFX2
+XBUFX2_insert275 _2962_/Y gnd _3295_/B vdd BUFX2
+XBUFX2_insert286 _4432_/Q gnd _2894_/A vdd BUFX2
+XFILL71280x10100 gnd vdd FILL
+X_3570_ data_in[2] _3587_/A gnd _3571_/B vdd NAND2X1
+XBUFX2_insert297 _4429_/Q gnd _2296_/B vdd BUFX2
+X_4053_ _4053_/A _4048_/Y _4053_/S gnd _4055_/A vdd MUX2X1
+X_2383_ _2428_/A _2876_/A gnd _2383_/Y vdd AND2X2
+X_2452_ _2803_/D _2452_/B gnd _2452_/Y vdd NOR2X1
+XSFILL29520x8100 gnd vdd FILL
+X_4122_ _2408_/B _3945_/B _4122_/C gnd _4122_/Y vdd OAI21X1
+XSFILL14320x48100 gnd vdd FILL
+X_3004_ gnd _2969_/B gnd _3004_/Y vdd NAND2X1
+XSFILL44720x2100 gnd vdd FILL
+X_3768_ _3902_/A _3768_/B _3768_/C gnd _4328_/D vdd OAI21X1
+X_3906_ _3839_/A _3901_/B _3905_/Y gnd _4346_/D vdd AOI21X1
+X_3837_ _4295_/A _3811_/B _3837_/C gnd _4393_/D vdd AOI21X1
+X_3699_ _3839_/A _3699_/B _3698_/Y gnd _3699_/Y vdd AOI21X1
+X_2719_ _2719_/A _2711_/A gnd _2719_/Y vdd NOR2X1
+X_3622_ _3636_/Q _3578_/B gnd _3623_/A vdd NAND2X1
+X_2504_ _2786_/A _2504_/B gnd _2504_/Y vdd NOR2X1
+X_3484_ _3484_/A _3498_/B _3498_/C gnd _3485_/C vdd NAND3X1
+X_3553_ _3564_/B gnd _3553_/Y vdd INVX1
+X_2435_ _2435_/A _2435_/B gnd _2435_/Y vdd XOR2X1
+X_4036_ _4036_/A _3915_/S _3981_/C gnd _4037_/A vdd OAI21X1
+X_2366_ _2366_/A _2876_/A gnd _2366_/Y vdd AND2X2
+XSFILL29520x24100 gnd vdd FILL
+X_2297_ _2297_/A _2296_/B gnd _2297_/Y vdd AND2X2
+X_4105_ _4104_/Y _4105_/B _4109_/C _4105_/D gnd _4110_/B vdd OAI22X1
+XSFILL45360x46100 gnd vdd FILL
+XSFILL14640x6100 gnd vdd FILL
+XSFILL28880x52100 gnd vdd FILL
+X_2220_ _2365_/B _2220_/B gnd _2220_/Y vdd NOR2X1
+X_2082_ _2082_/A gnd adrs_bus[0] vdd BUFX2
+X_2151_ _2147_/A _2151_/B _2150_/Y gnd _2151_/Y vdd OAI21X1
+X_2984_ _2987_/C _2944_/Y gnd _3091_/B vdd NOR2X1
+X_4585_ _3424_/A gnd _4585_/Y vdd INVX1
+X_3605_ _3605_/A data_in[15] gnd _3607_/B vdd NAND2X1
+X_2418_ _2418_/A _2409_/Y _2417_/Y gnd _2434_/A vdd NOR3X1
+X_3398_ _3386_/A _3406_/A _3398_/C _3397_/Y gnd _3400_/B vdd AOI22X1
+X_3467_ _3122_/Y gnd _3467_/Y vdd INVX1
+X_3536_ _3501_/A _3536_/B gnd _3542_/A vdd NAND2X1
+X_2349_ _2874_/A _2877_/A gnd _3175_/A vdd OR2X2
+X_4019_ _4018_/Y _4017_/Y _4015_/C _4016_/Y gnd _4019_/Y vdd OAI22X1
+XSFILL29040x36100 gnd vdd FILL
+X_4370_ _4370_/Q _4322_/CLK _3723_/Y gnd vdd DFFPOSX1
+X_3321_ _3321_/A _3295_/B _3346_/B gnd _3323_/B vdd NAND3X1
+X_3252_ _3252_/A _3240_/Y _3252_/C gnd _3502_/A vdd NAND3X1
+X_2134_ _4575_/Q gnd _2136_/B vdd INVX1
+X_2203_ _2203_/A _2203_/B gnd _2204_/B vdd XNOR2X1
+X_3183_ gnd gnd _3183_/Y vdd INVX1
+X_2967_ _2943_/A _3603_/A gnd _2967_/Y vdd NAND2X1
+X_2898_ _2902_/C gnd _2898_/Y vdd INVX1
+X_4568_ _4568_/A _4568_/B _4460_/Y gnd _4584_/D vdd AOI21X1
+X_4499_ _4505_/A _4498_/Y gnd _4499_/Y vdd NAND2X1
+X_3519_ _3518_/Y _3498_/B _3498_/C gnd _3519_/Y vdd NAND3X1
+X_3870_ _4239_/A _3866_/B gnd _3870_/Y vdd NAND2X1
+XSFILL30320x38100 gnd vdd FILL
+X_2821_ _2362_/A _2821_/B gnd _2825_/A vdd NOR2X1
+X_2752_ _2751_/Y _2752_/B gnd _2760_/C vdd NOR2X1
+X_2683_ _2642_/C _2683_/B _2682_/Y _2685_/A gnd _2687_/A vdd OAI22X1
+X_4422_ _4288_/A _4338_/CLK _4422_/D gnd vdd DFFPOSX1
+X_4353_ _4353_/Q _4322_/CLK _3788_/Y gnd vdd DFFPOSX1
+XSFILL13840x44100 gnd vdd FILL
+X_4284_ _4284_/A _4269_/B gnd _4284_/Y vdd NOR2X1
+X_3304_ _3304_/A _3292_/Y _3304_/C gnd _3516_/A vdd NAND3X1
+X_3235_ gnd gnd _3235_/Y vdd INVX1
+XSFILL14480x10100 gnd vdd FILL
+X_3097_ _2346_/Y gnd _3099_/A vdd INVX1
+X_2117_ _2621_/A _2118_/A gnd _2117_/Y vdd NAND2X1
+X_3166_ gnd _3192_/B _3192_/C gnd _3167_/A vdd NAND3X1
+XSFILL14800x52100 gnd vdd FILL
+X_3999_ _3999_/A _3945_/B _3999_/C gnd _3999_/Y vdd OAI21X1
+XSFILL59120x50100 gnd vdd FILL
+XSFILL43600x22100 gnd vdd FILL
+X_3020_ gnd gnd _3021_/C vdd INVX1
+X_3784_ _3817_/A _3807_/B _3784_/C gnd _4351_/D vdd OAI21X1
+X_3853_ _3752_/A _3852_/B _3853_/C gnd _3853_/Y vdd OAI21X1
+X_3922_ _3922_/A _4200_/B _4199_/C gnd _3922_/Y vdd OAI21X1
+X_2804_ _2804_/A _2803_/Y gnd _2809_/A vdd NOR2X1
+X_2735_ _2735_/A _2735_/B _2732_/Y gnd _2738_/B vdd NAND3X1
+X_2666_ _2666_/A gnd _2666_/Y vdd INVX1
+X_4336_ _3963_/A _4318_/CLK _3886_/Y gnd vdd DFFPOSX1
+X_4405_ _4016_/B _4426_/CLK _4405_/D gnd vdd DFFPOSX1
+X_2597_ _2363_/B gnd _2597_/Y vdd INVX1
+X_4267_ _4267_/A _3652_/Y gnd _4267_/Y vdd AND2X2
+X_4198_ _4197_/Y _4198_/B _4220_/S gnd _4200_/A vdd MUX2X1
+X_3218_ gnd _2980_/B _3088_/C gnd _3219_/A vdd NAND3X1
+X_3149_ _3149_/A gnd _3151_/A vdd INVX1
+XBUFX2_insert77 _3648_/Q gnd _3915_/S vdd BUFX2
+XSFILL44880x42100 gnd vdd FILL
+XBUFX2_insert44 _3911_/Y gnd _3980_/B vdd BUFX2
+XBUFX2_insert33 _4443_/Q gnd _2571_/B vdd BUFX2
+XBUFX2_insert66 _4091_/Y gnd _4213_/B vdd BUFX2
+XBUFX2_insert88 _4459_/Q gnd _2571_/A vdd BUFX2
+XBUFX2_insert99 _3843_/Y gnd _3854_/B vdd BUFX2
+XBUFX2_insert22 _3655_/Y gnd _3678_/B vdd BUFX2
+XBUFX2_insert55 _4446_/Q gnd _3944_/A vdd BUFX2
+XFILL71120x100 gnd vdd FILL
+XBUFX2_insert210 _3645_/Q gnd _4260_/S vdd BUFX2
+XBUFX2_insert254 _4267_/Y gnd _4283_/B vdd BUFX2
+XBUFX2_insert232 _2977_/Y gnd _3243_/C vdd BUFX2
+XBUFX2_insert221 _3921_/Y gnd _4200_/B vdd BUFX2
+XBUFX2_insert243 _4450_/Q gnd _2883_/D vdd BUFX2
+XBUFX2_insert276 _2962_/Y gnd _3191_/B vdd BUFX2
+XBUFX2_insert265 _4444_/Q gnd _3922_/A vdd BUFX2
+X_2520_ _2923_/A gnd _2520_/Y vdd INVX1
+X_2451_ _2902_/C gnd _2452_/B vdd INVX1
+XBUFX2_insert298 _4429_/Q gnd _2619_/A vdd BUFX2
+XBUFX2_insert287 _4432_/Q gnd _2634_/D vdd BUFX2
+X_4052_ _4051_/Y _4052_/B _4052_/C _4052_/D gnd _4053_/A vdd OAI22X1
+X_2382_ _2381_/A _2426_/B gnd _2385_/A vdd NOR2X1
+X_3003_ gnd gnd _3003_/Y vdd INVX1
+X_4121_ _4121_/A _4116_/Y _4220_/S gnd _4123_/A vdd MUX2X1
+X_3905_ _4251_/A _3901_/B gnd _3905_/Y vdd NOR2X1
+X_3767_ _4047_/A _3767_/B gnd _3768_/C vdd NAND2X1
+X_3836_ _4056_/B _3811_/B gnd _3837_/C vdd NOR2X1
+XSFILL14480x100 gnd vdd FILL
+X_2718_ _2718_/A _2718_/B _2718_/C gnd _2723_/A vdd AOI21X1
+X_2649_ _2649_/A _2646_/A _2649_/C gnd _2653_/A vdd OAI21X1
+X_4319_ _3948_/A _4426_/CLK _4319_/D gnd vdd DFFPOSX1
+X_3698_ _4071_/B _3699_/B gnd _3698_/Y vdd NOR2X1
+X_3552_ _3566_/A _3551_/Y gnd _3552_/Y vdd NOR2X1
+X_3621_ _3621_/A _3580_/B _3623_/C gnd _3635_/D vdd AOI21X1
+X_2503_ _2113_/A gnd _2504_/B vdd INVX1
+X_2365_ _2220_/B _2365_/B gnd _3195_/A vdd AND2X2
+X_2434_ _2434_/A _2434_/B gnd _2954_/A vdd NAND2X1
+X_3483_ data_in[7] gnd _3484_/A vdd INVX1
+X_4035_ _4375_/Q _4039_/B gnd _4035_/Y vdd NOR2X1
+XSFILL29520x40100 gnd vdd FILL
+X_2296_ _2414_/A _2296_/B gnd _2298_/A vdd NOR2X1
+X_4104_ _4104_/A _4106_/S _4109_/C gnd _4104_/Y vdd OAI21X1
+X_3819_ _3752_/A _3818_/B _3819_/C gnd _3819_/Y vdd AOI21X1
+XSFILL59600x36100 gnd vdd FILL
+XSFILL44560x14100 gnd vdd FILL
+X_2150_ _2147_/A _4221_/A gnd _2150_/Y vdd NAND2X1
+XFILL71280x16100 gnd vdd FILL
+X_2983_ _3432_/A _2983_/B gnd _2987_/C vdd NAND2X1
+X_3604_ _3604_/A _3602_/Y _3577_/C gnd _3604_/Y vdd AOI21X1
+X_4584_ _2161_/A _4389_/CLK _4584_/D gnd vdd DFFPOSX1
+X_3535_ _3535_/A _3534_/Y gnd _3535_/Y vdd NAND2X1
+X_2417_ _2410_/Y _2417_/B _2416_/Y gnd _2417_/Y vdd NAND3X1
+X_3397_ _2943_/A _3385_/B gnd _3397_/Y vdd NAND2X1
+X_2348_ _2348_/A _2364_/B gnd _3149_/A vdd OR2X2
+X_3466_ _3445_/A _4600_/A gnd _3466_/Y vdd NAND2X1
+X_4018_ _4018_/A _4012_/S _4015_/C gnd _4018_/Y vdd OAI21X1
+X_2279_ _2276_/Y _2278_/Y gnd _2279_/Y vdd NAND2X1
+XSFILL29040x52100 gnd vdd FILL
+X_3320_ _3320_/A _3346_/B _3346_/C gnd _3324_/B vdd NAND3X1
+X_3251_ _3246_/Y _3251_/B gnd _3252_/C vdd NOR2X1
+X_2202_ _2202_/A _2188_/Y _2216_/A gnd _2204_/A vdd OAI21X1
+X_3182_ gnd gnd _3184_/A vdd INVX1
+X_2133_ _2144_/A _2133_/B _2133_/C gnd _2133_/Y vdd OAI21X1
+X_2897_ _4595_/B gnd _2899_/A vdd INVX1
+X_2966_ _2966_/A gnd _2972_/A vdd INVX1
+X_4498_ _4483_/C _4489_/Y _4491_/A gnd _4498_/Y vdd NOR3X1
+X_4567_ _4567_/A _4564_/Y _4567_/C gnd _4568_/A vdd NAND3X1
+X_3518_ data_in[12] gnd _3518_/Y vdd INVX1
+XSFILL14160x6100 gnd vdd FILL
+X_3449_ _3449_/A _3498_/B _3498_/C gnd _3450_/C vdd NAND3X1
+X_2751_ _2680_/Y _2688_/B gnd _2751_/Y vdd NAND2X1
+X_2820_ _2699_/C gnd _2822_/A vdd INVX1
+X_2682_ _2686_/C gnd _2682_/Y vdd INVX1
+X_4352_ _3957_/A _4426_/CLK _3786_/Y gnd vdd DFFPOSX1
+X_4421_ _4421_/Q _4387_/CLK _4421_/D gnd vdd DFFPOSX1
+X_4283_ _3678_/A _4283_/B _4282_/Y gnd _4419_/D vdd AOI21X1
+X_3303_ _3303_/A _3302_/Y gnd _3304_/C vdd NOR2X1
+X_3234_ gnd gnd _3234_/Y vdd INVX1
+X_3165_ _2212_/Y _3191_/B _3190_/B gnd _3165_/Y vdd NAND3X1
+X_2116_ _4472_/A gnd _2118_/B vdd INVX1
+X_3096_ _3077_/Y _3084_/Y _3096_/C gnd _3096_/Y vdd NAND3X1
+X_3998_ _3998_/A _3993_/Y _4053_/S gnd _4000_/A vdd MUX2X1
+X_2949_ _2949_/A _2948_/Y gnd _3333_/D vdd NAND2X1
+X_4619_ _3565_/A _4221_/A gnd _4620_/C vdd NAND2X1
+XSFILL59600x44100 gnd vdd FILL
+XFILL71280x24100 gnd vdd FILL
+X_3921_ _3653_/C _3920_/Y gnd _3921_/Y vdd NOR2X1
+X_2734_ _2676_/C _2675_/Y gnd _2735_/B vdd NAND2X1
+X_3783_ _3946_/A _3807_/B gnd _3784_/C vdd NAND2X1
+X_3852_ _4140_/A _3852_/B gnd _3853_/C vdd NAND2X1
+X_2803_ _2709_/A _2803_/B _2806_/B _2803_/D gnd _2803_/Y vdd OAI22X1
+X_2665_ _2103_/A gnd _2667_/B vdd INVX1
+X_4404_ _4404_/Q _4338_/CLK _3681_/Y gnd vdd DFFPOSX1
+X_4335_ _3952_/A _4426_/CLK _4335_/D gnd vdd DFFPOSX1
+X_2596_ _2364_/B gnd _2596_/Y vdd INVX1
+X_4266_ _4266_/A _4032_/B _4265_/Y gnd _4266_/Y vdd AOI21X1
+X_3217_ _3217_/A _3295_/B _3190_/B gnd _3219_/B vdd NAND3X1
+X_4197_ _4196_/Y _4197_/B _4170_/C _4194_/Y gnd _4197_/Y vdd OAI22X1
+X_3148_ _3129_/Y _3136_/Y _3148_/C gnd _3148_/Y vdd NAND3X1
+XSFILL14000x44100 gnd vdd FILL
+X_3079_ gnd gnd _3080_/C vdd INVX1
+XBUFX2_insert78 _3648_/Q gnd _4062_/B vdd BUFX2
+XBUFX2_insert89 _3776_/Y gnd _3802_/B vdd BUFX2
+XBUFX2_insert34 _4443_/Q gnd _2562_/A vdd BUFX2
+XBUFX2_insert23 _3655_/Y gnd _3657_/B vdd BUFX2
+XBUFX2_insert45 _3911_/Y gnd _4002_/B vdd BUFX2
+XBUFX2_insert56 _4446_/Q gnd _2803_/D vdd BUFX2
+XBUFX2_insert67 _4434_/Q gnd _2363_/B vdd BUFX2
+XBUFX2_insert222 _3921_/Y gnd _4222_/B vdd BUFX2
+XBUFX2_insert255 _4267_/Y gnd _4269_/B vdd BUFX2
+XBUFX2_insert233 _2977_/Y gnd _3190_/B vdd BUFX2
+XBUFX2_insert244 _4450_/Q gnd _2363_/A vdd BUFX2
+XBUFX2_insert266 _4444_/Q gnd _2935_/A vdd BUFX2
+XBUFX2_insert288 _4432_/Q gnd _2818_/A vdd BUFX2
+XBUFX2_insert299 _4429_/Q gnd _2934_/A vdd BUFX2
+XBUFX2_insert200 _3567_/Y gnd _3589_/C vdd BUFX2
+XBUFX2_insert211 _3645_/Q gnd _4106_/S vdd BUFX2
+XBUFX2_insert277 _2962_/Y gnd _2963_/A vdd BUFX2
+X_2381_ _2381_/A _2381_/B gnd _2385_/B vdd AND2X2
+X_2450_ _2450_/A _2450_/B _2439_/Y gnd _2450_/Y vdd OAI21X1
+X_4051_ _3901_/A _4045_/S _4052_/C gnd _4051_/Y vdd OAI21X1
+X_4120_ _4119_/Y _4120_/B _4109_/C _4120_/D gnd _4121_/A vdd OAI22X1
+X_3002_ _3000_/Y _3340_/B _3002_/C _3340_/D gnd _3002_/Y vdd OAI22X1
+X_3904_ _4295_/A _3901_/B _3904_/C gnd _3904_/Y vdd AOI21X1
+XSFILL14480x16100 gnd vdd FILL
+X_3835_ _3902_/A _3835_/B _3834_/Y gnd _4392_/D vdd AOI21X1
+X_3766_ _3867_/A _3766_/B _3765_/Y gnd _3766_/Y vdd OAI21X1
+X_3697_ _3535_/Y gnd _3839_/A vdd INVX4
+X_2717_ _2619_/A _2713_/Y gnd _2718_/B vdd NAND2X1
+X_2648_ _2648_/A _2648_/B _2770_/A _2647_/Y gnd _2649_/C vdd OAI22X1
+X_2579_ _2579_/A _2579_/B gnd _2579_/Y vdd NOR2X1
+X_4249_ _4071_/A _4071_/B _4137_/B gnd _4249_/Y vdd MUX2X1
+X_4318_ _3747_/A _4318_/CLK _4318_/D gnd vdd DFFPOSX1
+XSFILL29200x20100 gnd vdd FILL
+XCLKBUF1_insert8 clock gnd _4337_/CLK vdd CLKBUF1
+XSFILL45040x42100 gnd vdd FILL
+X_2502_ _2502_/A _2502_/B _2509_/B gnd _2502_/Y vdd OAI21X1
+X_3551_ _3551_/A gnd _3551_/Y vdd INVX1
+X_3620_ _3564_/B _3578_/B gnd _3621_/A vdd NAND2X1
+X_2433_ _2421_/Y _2424_/Y _2433_/C gnd _2434_/B vdd NOR3X1
+X_4103_ _4365_/Q _4151_/B gnd _4105_/B vdd NOR2X1
+X_2364_ _3999_/A _2364_/B gnd _2364_/Y vdd AND2X2
+X_3482_ _3503_/A _3482_/B _3481_/Y gnd _3482_/Y vdd OAI21X1
+X_4034_ _4359_/Q _4391_/Q _3915_/S gnd _4037_/D vdd MUX2X1
+X_2295_ _2293_/Y _2295_/B gnd _2295_/Y vdd NOR2X1
+X_3818_ _3957_/B _3818_/B gnd _3819_/C vdd NOR2X1
+X_3749_ _3948_/A _3768_/B gnd _3749_/Y vdd NAND2X1
+XSFILL59280x10100 gnd vdd FILL
+XSFILL59600x52100 gnd vdd FILL
+XSFILL44560x30100 gnd vdd FILL
+XFILL71280x32100 gnd vdd FILL
+X_2982_ _2976_/Y _2982_/B _2982_/C gnd _2991_/A vdd NAND3X1
+X_3603_ _3603_/A _3575_/B gnd _3604_/A vdd NAND2X1
+X_3465_ _3465_/A _3464_/Y gnd _3465_/Y vdd NAND2X1
+X_4583_ _2158_/A _4389_/CLK _4561_/Y gnd vdd DFFPOSX1
+X_3534_ _3499_/A _3534_/B _3533_/Y gnd _3534_/Y vdd NAND3X1
+X_3396_ _3603_/A _3395_/Y gnd _3398_/C vdd NOR2X1
+X_2347_ _2363_/A _2812_/C gnd _3123_/A vdd OR2X2
+X_2416_ _2413_/Y _2416_/B _2416_/C _2415_/Y gnd _2416_/Y vdd AOI22X1
+X_2278_ _2204_/B _2277_/Y gnd _2278_/Y vdd NOR2X1
+X_4017_ _4017_/A _4002_/B gnd _4017_/Y vdd NOR2X1
+X_3181_ _3180_/Y _3181_/B gnd _3200_/A vdd NOR2X1
+X_3250_ _3248_/Y _3250_/B _3250_/C gnd _3251_/B vdd NAND3X1
+X_2132_ _2118_/A _4155_/A gnd _2133_/C vdd NAND2X1
+X_2201_ _2201_/A _2200_/Y gnd _2202_/A vdd NAND2X1
+XSFILL29520x46100 gnd vdd FILL
+XSFILL14480x24100 gnd vdd FILL
+X_2896_ _2921_/B _2895_/Y gnd _2938_/B vdd NOR2X1
+X_2965_ _2965_/A _3340_/B _2961_/Y _3340_/D gnd _2965_/Y vdd OAI22X1
+X_4497_ _4489_/Y _4497_/B _4518_/A gnd _4500_/C vdd OAI21X1
+X_4566_ _4566_/A _2161_/A _4566_/C gnd _4567_/C vdd NAND3X1
+X_3517_ _3503_/A _3482_/B _3517_/C gnd _3520_/B vdd OAI21X1
+X_3448_ data_in[2] gnd _3449_/A vdd INVX1
+X_3379_ _2989_/A gnd gnd _2989_/D gnd _3380_/C vdd AOI22X1
+X_2750_ _2741_/Y _2750_/B _2749_/Y gnd _2752_/B vdd NAND3X1
+X_2681_ _2686_/A gnd _2683_/B vdd INVX1
+XSFILL43600x36100 gnd vdd FILL
+X_4351_ _3946_/A _4426_/CLK _4351_/D gnd vdd DFFPOSX1
+X_4420_ _4284_/A _4338_/CLK _4420_/D gnd vdd DFFPOSX1
+X_4282_ _4282_/A _4283_/B gnd _4282_/Y vdd NOR2X1
+X_3302_ _3302_/A _3302_/B _3301_/Y gnd _3302_/Y vdd NAND3X1
+X_3233_ _3232_/Y _3233_/B gnd _3252_/A vdd NOR2X1
+X_2115_ _2115_/A gnd mem_wr vdd BUFX2
+X_3164_ _2316_/Y _3092_/B _2951_/B gnd _3164_/Y vdd NAND3X1
+X_3095_ _3095_/A _3095_/B gnd _3096_/C vdd NOR2X1
+X_3997_ _3996_/Y _3997_/B _4015_/C _3997_/D gnd _3998_/A vdd OAI22X1
+X_2879_ _2875_/Y _2878_/Y gnd _2933_/B vdd NOR2X1
+X_4618_ _3508_/B gnd _4618_/Y vdd INVX1
+X_2948_ _2968_/B gnd _2948_/Y vdd INVX1
+X_4549_ _4582_/Q gnd _4549_/Y vdd INVX1
+X_3851_ _3817_/A _3868_/B _3850_/Y gnd _3851_/Y vdd OAI21X1
+X_3920_ _3653_/B gnd _3920_/Y vdd INVX1
+X_2664_ _2664_/A _2664_/B _2664_/C gnd _2673_/B vdd NAND3X1
+X_2733_ _2642_/B _2676_/B gnd _2735_/A vdd NAND2X1
+XFILL71280x40100 gnd vdd FILL
+X_2802_ _2300_/B gnd _2806_/B vdd INVX1
+X_3782_ _3849_/A _3793_/B _3782_/C gnd _3782_/Y vdd OAI21X1
+X_4265_ _4265_/A _4032_/B _4032_/C gnd _4265_/Y vdd OAI21X1
+X_2595_ _2594_/Y gnd _2595_/Y vdd INVX1
+X_4403_ _3677_/A _4318_/CLK _4403_/D gnd vdd DFFPOSX1
+X_4334_ _4334_/Q _4337_/CLK _3882_/Y gnd vdd DFFPOSX1
+X_3216_ _2322_/Y _3190_/B _3242_/C gnd _3220_/B vdd NAND3X1
+X_4196_ _4018_/A _4190_/S _4170_/C gnd _4196_/Y vdd OAI21X1
+X_3078_ gnd gnd _3078_/Y vdd INVX1
+X_3147_ _3147_/A _3147_/B gnd _3148_/C vdd NOR2X1
+XBUFX2_insert24 _3655_/Y gnd _3662_/B vdd BUFX2
+XBUFX2_insert57 _4437_/Q gnd _2786_/A vdd BUFX2
+XBUFX2_insert79 _3648_/Q gnd _4045_/S vdd BUFX2
+XBUFX2_insert46 _3911_/Y gnd _4050_/B vdd BUFX2
+XBUFX2_insert35 _4449_/Q gnd _2891_/A vdd BUFX2
+XBUFX2_insert68 _4434_/Q gnd _2812_/C vdd BUFX2
+XSFILL29200x18100 gnd vdd FILL
+XBUFX2_insert201 _3567_/Y gnd _3577_/C vdd BUFX2
+XBUFX2_insert256 _4267_/Y gnd _4295_/B vdd BUFX2
+XBUFX2_insert278 _3649_/Q gnd _4052_/C vdd BUFX2
+XBUFX2_insert223 _3921_/Y gnd _4032_/B vdd BUFX2
+XBUFX2_insert234 _4453_/Q gnd _2428_/A vdd BUFX2
+XBUFX2_insert212 _2945_/Y gnd _3242_/C vdd BUFX2
+XBUFX2_insert289 _4432_/Q gnd _2822_/B vdd BUFX2
+XBUFX2_insert245 _4450_/Q gnd _2203_/B vdd BUFX2
+XBUFX2_insert267 _4444_/Q gnd _2842_/A vdd BUFX2
+X_2380_ _3944_/A _2408_/B gnd _2380_/Y vdd XOR2X1
+X_4050_ _3868_/A _4050_/B gnd _4052_/B vdd NOR2X1
+X_3001_ gnd gnd _3002_/C vdd INVX1
+X_3834_ _4045_/B _3835_/B gnd _3834_/Y vdd NOR2X1
+X_3903_ _4345_/Q _3901_/B gnd _3904_/C vdd NOR2X1
+X_3696_ _4295_/A _3695_/B _3696_/C gnd _3696_/Y vdd AOI21X1
+X_2647_ _2102_/A gnd _2647_/Y vdd INVX1
+X_3765_ _4036_/A _3766_/B gnd _3765_/Y vdd NAND2X1
+XSFILL14480x32100 gnd vdd FILL
+X_2716_ _2935_/B _2716_/B gnd _2718_/A vdd NAND2X1
+X_4248_ _4248_/A _4248_/B _4236_/C _4248_/D gnd _4253_/B vdd OAI22X1
+X_2578_ _2576_/Y _2577_/Y gnd _2579_/A vdd NAND2X1
+X_4317_ _4104_/A _4389_/CLK _4317_/D gnd vdd DFFPOSX1
+X_4179_ _4001_/A _4001_/B _4137_/B gnd _4179_/Y vdd MUX2X1
+XCLKBUF1_insert9 clock gnd _4338_/CLK vdd CLKBUF1
+X_2501_ _2511_/A gnd _2502_/A vdd INVX1
+X_3550_ _3562_/A _3549_/Y gnd _3452_/B vdd NOR2X1
+X_3481_ _3174_/Y gnd _3481_/Y vdd INVX1
+X_4033_ _4031_/Y _4222_/B _4032_/Y gnd _4454_/D vdd AOI21X1
+X_2432_ _2432_/A _2431_/Y _2432_/C gnd _2433_/C vdd NAND3X1
+X_2363_ _2363_/A _2363_/B gnd _3143_/A vdd AND2X2
+X_4102_ _4349_/Q _3924_/B _4106_/S gnd _4105_/D vdd MUX2X1
+X_2294_ _3922_/A _2292_/A gnd _2295_/B vdd AND2X2
+X_3817_ _3817_/A _3835_/B _3817_/C gnd _3817_/Y vdd AOI21X1
+X_3748_ _3849_/A _3748_/B _3747_/Y gnd _4318_/D vdd OAI21X1
+X_3679_ _3493_/Y gnd _3681_/A vdd INVX4
+XSFILL45360x100 gnd vdd FILL
+X_2981_ _2980_/Y _2981_/B gnd _2982_/C vdd AND2X2
+X_3602_ _3605_/A data_in[14] gnd _3602_/Y vdd NAND2X1
+X_3464_ _3499_/A _3461_/Y _3463_/Y gnd _3464_/Y vdd NAND3X1
+X_3533_ _3532_/Y _3498_/B _3498_/C gnd _3533_/Y vdd NAND3X1
+X_4582_ _4582_/Q _4580_/CLK _4555_/Y gnd vdd DFFPOSX1
+X_2415_ _2414_/A _2934_/A gnd _2415_/Y vdd OR2X2
+X_4016_ _4421_/Q _4016_/B _4012_/S gnd _4016_/Y vdd MUX2X1
+X_2346_ _2635_/B _2697_/A gnd _2346_/Y vdd OR2X2
+X_3395_ _3432_/A gnd _3395_/Y vdd INVX1
+X_2277_ _2314_/B _2314_/A gnd _2277_/Y vdd XNOR2X1
+XSFILL29200x26100 gnd vdd FILL
+X_3180_ _3180_/A _3336_/B _3179_/Y _2998_/D gnd _3180_/Y vdd OAI22X1
+X_2131_ _4505_/A gnd _2133_/B vdd INVX1
+X_2200_ _2200_/A _2197_/C gnd _2200_/Y vdd NOR2X1
+X_2964_ _2964_/A _2950_/Y gnd _3340_/B vdd NAND2X1
+X_2895_ _2892_/Y _2894_/Y _2890_/Y gnd _2895_/Y vdd NAND3X1
+X_4565_ _4549_/Y _4557_/Y _4550_/Y gnd _4566_/C vdd NOR3X1
+XSFILL30000x50100 gnd vdd FILL
+XSFILL14480x40100 gnd vdd FILL
+X_3378_ gnd _3378_/B _3378_/C gnd _3378_/Y vdd NAND3X1
+X_4496_ _4505_/A gnd _4518_/A vdd INVX1
+X_3447_ _3503_/A _3482_/B _3446_/Y gnd _3447_/Y vdd OAI21X1
+X_3516_ _3516_/A gnd _3517_/C vdd INVX1
+X_2329_ _2329_/A _2353_/B gnd _2331_/A vdd NOR2X1
+XSFILL59280x16100 gnd vdd FILL
+X_2680_ _2676_/Y _2680_/B gnd _2680_/Y vdd NOR2X1
+XSFILL43600x52100 gnd vdd FILL
+X_4281_ _3823_/A _4289_/B _4281_/C gnd _4281_/Y vdd AOI21X1
+X_3232_ _3232_/A _3336_/B _3232_/C _2998_/D gnd _3232_/Y vdd OAI22X1
+X_4350_ _4350_/Q _4580_/CLK _3782_/Y gnd vdd DFFPOSX1
+X_3301_ _2989_/A gnd gnd _2989_/D gnd _3301_/Y vdd AOI22X1
+XFILL71280x38100 gnd vdd FILL
+X_2114_ _2114_/A gnd mem_rd vdd BUFX2
+X_3163_ gnd _3345_/B gnd _3163_/Y vdd NAND2X1
+X_3094_ _3092_/Y _3094_/B _3094_/C gnd _3095_/B vdd NAND3X1
+X_3996_ _3996_/A _4012_/S _4015_/C gnd _3996_/Y vdd OAI21X1
+X_2947_ _2983_/B _2950_/B gnd _2968_/B vdd NAND2X1
+X_2878_ _2878_/A _2366_/A _2878_/C gnd _2878_/Y vdd OAI21X1
+X_4617_ _4628_/A _4615_/Y _4617_/C gnd _4534_/B vdd OAI21X1
+X_4548_ _4547_/Y _4460_/A gnd _4581_/D vdd AND2X2
+X_4479_ _4506_/A _4491_/A _4477_/Y gnd _4479_/Y vdd NAND3X1
+XSFILL59760x12100 gnd vdd FILL
+X_3850_ _4303_/Q _3868_/B gnd _3850_/Y vdd NAND2X1
+X_2801_ _2720_/A gnd _2803_/B vdd INVX1
+X_3781_ _4350_/Q _3793_/B gnd _3782_/C vdd NAND2X1
+X_2663_ _2104_/A _2663_/B gnd _2664_/C vdd NAND2X1
+X_2732_ _2679_/B _2679_/A _2732_/C _2100_/A gnd _2732_/Y vdd AOI22X1
+X_2594_ _2579_/Y _2593_/Y gnd _2594_/Y vdd NAND2X1
+X_4402_ _4402_/Q _4338_/CLK _3675_/Y gnd vdd DFFPOSX1
+X_4264_ _4263_/Y _4264_/B _4220_/S gnd _4266_/A vdd MUX2X1
+X_4333_ _3930_/A _4318_/CLK _3880_/Y gnd vdd DFFPOSX1
+X_4195_ _4017_/A _4140_/B gnd _4197_/B vdd NOR2X1
+X_3215_ gnd _3345_/B gnd _3215_/Y vdd NAND2X1
+X_3077_ _3076_/Y _3077_/B gnd _3077_/Y vdd NOR2X1
+X_3146_ _3146_/A _3143_/Y _3146_/C gnd _3147_/B vdd NAND3X1
+X_3979_ _4157_/A _4386_/Q _3915_/S gnd _3982_/D vdd MUX2X1
+XBUFX2_insert47 _3911_/Y gnd _4039_/B vdd BUFX2
+XBUFX2_insert25 _3655_/Y gnd _3699_/B vdd BUFX2
+XBUFX2_insert36 _4449_/Q gnd _2635_/B vdd BUFX2
+XBUFX2_insert58 _4437_/Q gnd _2321_/B vdd BUFX2
+XBUFX2_insert69 _4434_/Q gnd _2203_/A vdd BUFX2
+XBUFX2_insert224 _3653_/Y gnd _3714_/A vdd BUFX2
+XBUFX2_insert213 _2945_/Y gnd _3346_/C vdd BUFX2
+XBUFX2_insert202 _3567_/Y gnd _3625_/C vdd BUFX2
+XBUFX2_insert235 _4453_/Q gnd _2113_/A vdd BUFX2
+XBUFX2_insert257 _4447_/Q gnd _2709_/A vdd BUFX2
+XBUFX2_insert246 _4450_/Q gnd _3988_/A vdd BUFX2
+XBUFX2_insert268 _4444_/Q gnd _2435_/B vdd BUFX2
+XBUFX2_insert279 _3649_/Q gnd _3931_/C vdd BUFX2
+X_3000_ gnd gnd _3000_/Y vdd INVX1
+X_3902_ _3902_/A _3901_/B _3902_/C gnd _4344_/D vdd AOI21X1
+X_3764_ _3731_/A _3767_/B _3763_/Y gnd _4326_/D vdd OAI21X1
+X_3833_ _3867_/A _3832_/B _3833_/C gnd _3833_/Y vdd AOI21X1
+X_3695_ _4409_/Q _3695_/B gnd _3696_/C vdd NOR2X1
+X_2646_ _2646_/A gnd _2648_/B vdd INVX1
+X_2577_ _2770_/A _2666_/A gnd _2577_/Y vdd XNOR2X1
+XSFILL14960x2100 gnd vdd FILL
+X_2715_ _2935_/A gnd _2716_/B vdd INVX1
+X_4247_ _4069_/A _4223_/S _4236_/C gnd _4248_/A vdd OAI21X1
+X_4316_ _3743_/A _4316_/CLK _3744_/Y gnd vdd DFFPOSX1
+X_4178_ _4178_/A _4167_/B _4177_/Y gnd _4435_/D vdd AOI21X1
+X_3129_ _3128_/Y _3125_/Y gnd _3129_/Y vdd NOR2X1
+XFILL71280x4100 gnd vdd FILL
+X_2500_ _2502_/B _2511_/A gnd _3178_/A vdd XNOR2X1
+X_2431_ _3922_/A _2292_/A gnd _2431_/Y vdd XNOR2X1
+X_3480_ _3424_/B _3558_/Y gnd _3486_/A vdd NAND2X1
+XFILL71280x46100 gnd vdd FILL
+X_4032_ _4032_/A _4032_/B _4032_/C gnd _4032_/Y vdd OAI21X1
+X_2362_ _2362_/A _2413_/B gnd _2362_/Y vdd AND2X2
+X_2293_ _2435_/B _2435_/A gnd _2293_/Y vdd NOR2X1
+X_4101_ _4101_/A _4200_/B _4100_/Y gnd _4428_/D vdd AOI21X1
+X_3816_ _4383_/Q _3835_/B gnd _3817_/C vdd NOR2X1
+X_3747_ _3747_/A _3748_/B gnd _3747_/Y vdd NAND2X1
+X_3678_ _3678_/A _3678_/B _3678_/C gnd _4403_/D vdd AOI21X1
+X_2629_ _4592_/B _2616_/D gnd _2631_/B vdd NOR2X1
+XSFILL60560x26100 gnd vdd FILL
+XSFILL44880x100 gnd vdd FILL
+X_2980_ _2980_/A _2980_/B _3348_/C gnd _2980_/Y vdd NAND3X1
+XSFILL59760x20100 gnd vdd FILL
+X_3601_ _3601_/A _3601_/B _3577_/C gnd _3639_/D vdd AOI21X1
+X_4581_ _4581_/Q _4580_/CLK _4581_/D gnd vdd DFFPOSX1
+X_3394_ _2943_/A gnd _3406_/A vdd INVX1
+X_3463_ _3462_/Y _3498_/B _3498_/C gnd _3463_/Y vdd NAND3X1
+X_3532_ data_in[14] gnd _3532_/Y vdd INVX1
+X_2414_ _2414_/A _2934_/A gnd _2416_/C vdd NAND2X1
+XSFILL14480x38100 gnd vdd FILL
+X_4015_ _4014_/Y _4013_/Y _4015_/C _4015_/D gnd _4020_/B vdd OAI22X1
+X_2345_ _2699_/C _2822_/B gnd _3071_/A vdd OR2X2
+X_2276_ _2187_/B _2276_/B gnd _2276_/Y vdd NOR2X1
+XSFILL14160x20100 gnd vdd FILL
+X_2130_ _2118_/A _2130_/B _2130_/C gnd _2092_/A vdd OAI21X1
+XSFILL44240x16100 gnd vdd FILL
+X_2963_ _2963_/A _2948_/Y gnd _3340_/D vdd NAND2X1
+X_2894_ _2894_/A _2915_/C gnd _2894_/Y vdd NAND2X1
+X_4564_ _4564_/A _4559_/B _4563_/Y gnd _4564_/Y vdd OAI21X1
+X_3515_ _3424_/B _3515_/B gnd _3521_/A vdd NAND2X1
+X_2328_ _2326_/Y _2328_/B gnd _3268_/A vdd NOR2X1
+X_3377_ _3377_/A _3091_/B gnd _3380_/B vdd NAND2X1
+X_3446_ _3044_/Y gnd _3446_/Y vdd INVX1
+X_4495_ _4493_/Y _4494_/Y _4460_/Y gnd _4495_/Y vdd AOI21X1
+XSFILL29680x14100 gnd vdd FILL
+X_2259_ _2353_/B _2353_/A gnd _2260_/A vdd NOR2X1
+XSFILL59280x32100 gnd vdd FILL
+X_4280_ _4418_/Q _4289_/B gnd _4281_/C vdd NOR2X1
+X_3231_ gnd gnd _3232_/C vdd INVX1
+X_3300_ gnd _3378_/B _3378_/C gnd _3302_/A vdd NAND3X1
+X_3162_ _3162_/A _3161_/Y gnd _3162_/Y vdd NOR2X1
+X_2113_ _2113_/A gnd data_out[9] vdd BUFX2
+X_3093_ _2989_/A gnd gnd _2989_/D gnd _3094_/C vdd AOI22X1
+X_2877_ _2877_/A _2875_/C gnd _2878_/C vdd NAND2X1
+X_3995_ _3858_/A _4002_/B gnd _3997_/B vdd NOR2X1
+X_2946_ _3432_/A gnd _2950_/B vdd INVX1
+X_4478_ _4472_/A _4570_/Q _4480_/C gnd _4491_/A vdd NAND3X1
+X_4547_ _4544_/Y _4547_/B _4546_/Y gnd _4547_/Y vdd OAI21X1
+XSFILL44720x12100 gnd vdd FILL
+X_4616_ _4628_/A _4210_/A gnd _4617_/C vdd NAND2X1
+X_3429_ _2983_/B _3429_/B gnd _3482_/B vdd NAND2X1
+XSFILL60560x34100 gnd vdd FILL
+X_2800_ _2720_/A _2798_/Y _2300_/B _2800_/D gnd _2804_/A vdd OAI22X1
+X_2731_ _2731_/A _2731_/B _2730_/Y gnd _2731_/Y vdd AOI21X1
+X_3780_ _3660_/A _3793_/B _3780_/C gnd _3780_/Y vdd OAI21X1
+X_2662_ _2853_/C gnd _2663_/B vdd INVX2
+X_2593_ _2593_/A _2593_/B gnd _2593_/Y vdd NOR2X1
+X_4332_ _4097_/A _4338_/CLK _3878_/Y gnd vdd DFFPOSX1
+X_4401_ _3671_/A _4338_/CLK _4401_/D gnd vdd DFFPOSX1
+X_4263_ _4263_/A _4261_/Y _4251_/C _4263_/D gnd _4263_/Y vdd OAI22X1
+X_4194_ _4421_/Q _4016_/B _4190_/S gnd _4194_/Y vdd MUX2X1
+X_3214_ _3210_/Y _3213_/Y gnd _3214_/Y vdd NOR2X1
+X_3145_ _2989_/A gnd gnd _2989_/D gnd _3146_/C vdd AOI22X1
+XSFILL14480x46100 gnd vdd FILL
+X_3076_ _3076_/A _3336_/B _3075_/Y _2998_/D gnd _3076_/Y vdd OAI22X1
+XBUFX2_insert26 _3655_/Y gnd _3695_/B vdd BUFX2
+XBUFX2_insert59 _4437_/Q gnd _2642_/C vdd BUFX2
+X_2929_ _2929_/A _2762_/A _2929_/C gnd _2930_/C vdd AOI21X1
+XBUFX2_insert48 _3911_/Y gnd _3973_/B vdd BUFX2
+XBUFX2_insert37 _4449_/Q gnd _3977_/A vdd BUFX2
+X_3978_ _3978_/A _4133_/B _3977_/Y gnd _4449_/D vdd AOI21X1
+XBUFX2_insert247 _4441_/Q gnd _2769_/A vdd BUFX2
+XBUFX2_insert225 _3653_/Y gnd _3740_/A vdd BUFX2
+XBUFX2_insert236 _4453_/Q gnd _2366_/A vdd BUFX2
+XBUFX2_insert258 _4447_/Q gnd _2807_/A vdd BUFX2
+XBUFX2_insert203 _3567_/Y gnd _3623_/C vdd BUFX2
+XBUFX2_insert214 _2945_/Y gnd _2949_/A vdd BUFX2
+XBUFX2_insert269 _4435_/Q gnd _2919_/A vdd BUFX2
+X_3901_ _3901_/A _3901_/B gnd _3902_/C vdd NOR2X1
+XFILL71280x100 gnd vdd FILL
+X_3832_ _4391_/Q _3832_/B gnd _3833_/C vdd NOR2X1
+X_3763_ _4203_/A _3767_/B gnd _3763_/Y vdd NAND2X1
+X_3694_ _3528_/Y gnd _4295_/A vdd INVX4
+X_2714_ _2619_/A _2713_/Y gnd _2718_/C vdd NOR2X1
+X_2645_ _2648_/A gnd _2649_/A vdd INVX1
+X_2576_ _2648_/A _2646_/A gnd _2576_/Y vdd XNOR2X1
+X_4315_ _3874_/A _4316_/CLK _4315_/D gnd vdd DFFPOSX1
+X_4246_ _4378_/Q _4235_/B gnd _4248_/B vdd NOR2X1
+X_3128_ _3126_/Y _3336_/B _3128_/C _2998_/D gnd _3128_/Y vdd OAI22X1
+X_4177_ _4177_/A _4167_/B _4122_/C gnd _4177_/Y vdd OAI21X1
+XSFILL29680x22100 gnd vdd FILL
+X_3059_ gnd _3345_/B gnd _3059_/Y vdd NAND2X1
+XSFILL59280x40100 gnd vdd FILL
+XSFILL29360x4100 gnd vdd FILL
+X_2430_ _3966_/A _2634_/D gnd _2432_/A vdd XNOR2X1
+X_2361_ _2184_/B _2818_/A gnd _2361_/Y vdd AND2X2
+X_4031_ _4030_/Y _4026_/Y _4053_/S gnd _4031_/Y vdd MUX2X1
+X_2292_ _2292_/A _3922_/A gnd _2979_/A vdd XOR2X1
+X_4100_ _2292_/A _4133_/B _4199_/C gnd _4100_/Y vdd OAI21X1
+X_3677_ _3677_/A _3678_/B gnd _3678_/C vdd NOR2X1
+X_3746_ _3660_/A _3748_/B _3746_/C gnd _4317_/D vdd OAI21X1
+X_3815_ _3849_/A _3829_/B _3814_/Y gnd _4382_/D vdd AOI21X1
+X_4229_ _3901_/A _4223_/S _4236_/C gnd _4229_/Y vdd OAI21X1
+X_2559_ _2554_/B gnd _2560_/C vdd INVX1
+X_2628_ _2711_/B _2630_/B gnd _2628_/Y vdd NOR2X1
+XSFILL44720x20100 gnd vdd FILL
+XSFILL14800x2100 gnd vdd FILL
+X_4580_ _4580_/Q _4580_/CLK _4542_/Y gnd vdd DFFPOSX1
+X_3600_ _3432_/A _3575_/B gnd _3601_/A vdd NAND2X1
+X_3531_ _3503_/A _3482_/B _3531_/C gnd _3534_/B vdd OAI21X1
+X_2344_ _2709_/A _2719_/A gnd _3045_/A vdd OR2X2
+X_3393_ _3416_/A _3392_/Y gnd _3410_/A vdd NAND2X1
+X_3462_ data_in[4] gnd _3462_/Y vdd INVX1
+X_2413_ _3977_/A _2413_/B gnd _2413_/Y vdd OR2X2
+X_2275_ _2271_/Y _2274_/Y gnd _3347_/A vdd XNOR2X1
+X_4014_ _4192_/A _4012_/S _3931_/C gnd _4014_/Y vdd OAI21X1
+XSFILL14480x2100 gnd vdd FILL
+XFILL71120x4100 gnd vdd FILL
+X_3729_ _3796_/A _3733_/B _3729_/C gnd _4373_/D vdd OAI21X1
+XSFILL14640x14100 gnd vdd FILL
+X_2893_ _2893_/A gnd _2915_/C vdd INVX1
+X_4632_ _4628_/A _4630_/Y _4632_/C gnd _4562_/A vdd OAI21X1
+X_2962_ _2943_/A _3603_/A gnd _2962_/Y vdd NOR2X1
+X_4494_ _4560_/A _4494_/B _4573_/Q _4560_/D gnd _4494_/Y vdd AOI22X1
+X_4563_ _2161_/A gnd _4563_/Y vdd INVX1
+X_3445_ _3445_/A _4591_/A gnd _3445_/Y vdd NAND2X1
+X_3514_ _3508_/Y _3513_/Y gnd _3514_/Y vdd NAND2X1
+X_2327_ _2923_/A _2779_/A gnd _2328_/B vdd AND2X2
+X_2258_ _2353_/B _2353_/A gnd _2258_/Y vdd AND2X2
+X_3376_ _3371_/Y _3376_/B _3375_/Y gnd _3376_/Y vdd NAND3X1
+XSFILL29680x30100 gnd vdd FILL
+X_2189_ _2305_/B _2184_/B gnd _2189_/Y vdd NOR2X1
+XSFILL14960x50100 gnd vdd FILL
+X_2112_ _2788_/C gnd data_out[8] vdd BUFX2
+X_3230_ _3230_/A gnd _3232_/A vdd INVX1
+X_3161_ _3159_/Y _3291_/B _3161_/C gnd _3161_/Y vdd OAI21X1
+X_3092_ gnd _3092_/B _2957_/B gnd _3092_/Y vdd NAND3X1
+X_2876_ _2876_/A gnd _2878_/A vdd INVX1
+X_3994_ _4282_/A _3677_/A _4012_/S gnd _3997_/D vdd MUX2X1
+X_4615_ _3501_/B gnd _4615_/Y vdd INVX1
+X_2945_ _2944_/Y gnd _2945_/Y vdd INVX8
+X_4477_ _4464_/A _4471_/B _4483_/A gnd _4477_/Y vdd OAI21X1
+X_4546_ _4560_/A _4623_/Y _4581_/Q _4560_/D gnd _4546_/Y vdd AOI22X1
+X_3428_ _3603_/A gnd _3429_/B vdd INVX1
+X_3359_ _3359_/A _3333_/B _3359_/C _3333_/D gnd _3359_/Y vdd OAI22X1
+XSFILL14160x26100 gnd vdd FILL
+X_2661_ _2765_/A _2739_/A gnd _2664_/B vdd NAND2X1
+X_2730_ _2725_/Y _2696_/Y _2730_/C gnd _2730_/Y vdd OAI21X1
+X_2592_ _2592_/A _2644_/C _2589_/Y gnd _2593_/A vdd NAND3X1
+X_4331_ _4331_/Q _4316_/CLK _3774_/Y gnd vdd DFFPOSX1
+X_4262_ _4262_/A _4260_/S _4094_/C gnd _4263_/A vdd OAI21X1
+X_4400_ _4400_/Q _4318_/CLK _3669_/Y gnd vdd DFFPOSX1
+X_4193_ _4192_/Y _4191_/Y _4142_/C _4190_/Y gnd _4198_/B vdd OAI22X1
+X_3075_ gnd gnd _3075_/Y vdd INVX1
+X_3144_ gnd _3092_/B _2957_/B gnd _3146_/A vdd NAND3X1
+X_3213_ _3211_/Y _3291_/B _3212_/Y gnd _3213_/Y vdd OAI21X1
+X_3977_ _3977_/A _4133_/B _3999_/C gnd _3977_/Y vdd OAI21X1
+X_2859_ _2747_/A _2858_/Y gnd _2862_/A vdd NAND2X1
+X_2928_ _2571_/B _2928_/B _2848_/Y gnd _2929_/C vdd AOI21X1
+XBUFX2_insert27 _4452_/Q gnd _2874_/A vdd BUFX2
+XBUFX2_insert38 _4449_/Q gnd _2308_/A vdd BUFX2
+XBUFX2_insert49 _2970_/Y gnd _3192_/B vdd BUFX2
+X_4529_ _4511_/A _4524_/A _4511_/B gnd _4529_/Y vdd NOR3X1
+XBUFX2_insert237 _4453_/Q gnd _2686_/A vdd BUFX2
+XBUFX2_insert226 _3653_/Y gnd _3732_/A vdd BUFX2
+XBUFX2_insert248 _4441_/Q gnd _2855_/A vdd BUFX2
+XBUFX2_insert204 _3645_/Q gnd _4190_/S vdd BUFX2
+XBUFX2_insert215 _2945_/Y gnd _2951_/B vdd BUFX2
+XBUFX2_insert259 _4447_/Q gnd _3955_/A vdd BUFX2
+XSFILL14640x22100 gnd vdd FILL
+X_3900_ _3867_/A _3899_/B _3900_/C gnd _3900_/Y vdd AOI21X1
+X_3831_ _3731_/A _3811_/B _3831_/C gnd _3831_/Y vdd AOI21X1
+X_3693_ _3902_/A _3695_/B _3692_/Y gnd _4408_/D vdd AOI21X1
+X_2644_ _2639_/Y _2644_/B _2644_/C _2643_/Y gnd _2644_/Y vdd OAI22X1
+X_3762_ _3796_/A _3748_/B _3761_/Y gnd _4325_/D vdd OAI21X1
+X_2713_ _2618_/A gnd _2713_/Y vdd INVX1
+X_4245_ _4245_/A _3838_/A _4223_/S gnd _4248_/D vdd MUX2X1
+X_4314_ _4072_/A _4344_/CLK _4314_/D gnd vdd DFFPOSX1
+X_2575_ _2575_/A _2574_/Y _2571_/Y gnd _2579_/B vdd NAND3X1
+X_4176_ _4176_/A _4171_/Y _4220_/S gnd _4178_/A vdd MUX2X1
+X_3058_ _3054_/Y _3057_/Y gnd _3058_/Y vdd NOR2X1
+X_3127_ gnd gnd _3128_/C vdd INVX1
+XSFILL44720x18100 gnd vdd FILL
+X_2291_ _2291_/A _2290_/Y gnd _3373_/A vdd NAND2X1
+X_2360_ _3955_/A _4133_/A gnd _3065_/A vdd AND2X2
+X_4030_ _4030_/A _4030_/B _4025_/C _4027_/Y gnd _4030_/Y vdd OAI22X1
+X_3814_ _3814_/A _3829_/B gnd _3814_/Y vdd NOR2X1
+X_2627_ _2622_/A _2622_/B _2626_/Y gnd _2632_/A vdd AOI21X1
+X_3676_ _3486_/Y gnd _3678_/A vdd INVX4
+X_3745_ _4104_/A _3748_/B gnd _3746_/C vdd NAND2X1
+X_4228_ _3868_/A _4235_/B gnd _4228_/Y vdd NOR2X1
+X_2558_ _2847_/A _2557_/Y gnd _2558_/Y vdd NAND2X1
+X_2489_ _2489_/A _2489_/B gnd _2489_/Y vdd NOR2X1
+X_4159_ _3755_/A _4097_/B _4097_/C gnd _4160_/A vdd OAI21X1
+XSFILL59440x6100 gnd vdd FILL
+XSFILL14160x34100 gnd vdd FILL
+X_3530_ _3530_/A gnd _3531_/C vdd INVX1
+X_3461_ _3503_/A _3482_/B _3460_/Y gnd _3461_/Y vdd OAI21X1
+X_2274_ _2274_/A _2272_/Y gnd _2274_/Y vdd AND2X2
+X_4013_ _3728_/C _4002_/B gnd _4013_/Y vdd NOR2X1
+X_3392_ _3411_/B _3399_/B gnd _3392_/Y vdd NOR2X1
+X_2343_ _2803_/D _2902_/C gnd _3019_/A vdd OR2X2
+X_2412_ _3977_/A _4155_/A gnd _2416_/B vdd NAND2X1
+XSFILL29200x4100 gnd vdd FILL
+X_3728_ _3714_/A _3732_/B _3728_/C gnd _3729_/C vdd OAI21X1
+X_3659_ _4397_/Q _3662_/B gnd _3659_/Y vdd NOR2X1
+XSFILL60080x100 gnd vdd FILL
+XSFILL29360x10100 gnd vdd FILL
+XSFILL14640x30100 gnd vdd FILL
+X_2892_ _2892_/A _2892_/B gnd _2892_/Y vdd NAND2X1
+X_4631_ _4628_/A _4265_/A gnd _4632_/C vdd NAND2X1
+X_2961_ gnd gnd _2961_/Y vdd INVX1
+X_4493_ _4506_/A _4490_/Y _4492_/Y gnd _4493_/Y vdd NAND3X1
+X_3444_ _3438_/Y _3443_/Y gnd _3444_/Y vdd NAND2X1
+X_4562_ _4562_/A _4560_/A gnd _4568_/B vdd NAND2X1
+X_3513_ _3499_/A _3510_/Y _3513_/C gnd _3513_/Y vdd NAND3X1
+X_2326_ _2923_/A _2326_/B gnd _2326_/Y vdd NOR2X1
+X_2257_ _2252_/Y _2257_/B _2256_/Y gnd _2262_/A vdd OAI21X1
+X_3375_ _3374_/Y _3375_/B gnd _3375_/Y vdd AND2X2
+XSFILL44720x26100 gnd vdd FILL
+X_2188_ _2187_/A gnd _2188_/Y vdd INVX1
+XSFILL59760x42100 gnd vdd FILL
+XFILL71120x10100 gnd vdd FILL
+X_2111_ _2884_/A gnd data_out[7] vdd BUFX2
+X_3160_ gnd _2969_/B gnd _3161_/C vdd NAND2X1
+X_3091_ _2361_/Y _3091_/B gnd _3094_/B vdd NAND2X1
+X_3993_ _3992_/Y _3993_/B _4015_/C _3990_/Y gnd _3993_/Y vdd OAI22X1
+X_2875_ _2642_/C _2873_/Y _2875_/C _2877_/A gnd _2875_/Y vdd OAI22X1
+X_4614_ _3562_/A _4612_/Y _4613_/Y gnd _4614_/Y vdd OAI21X1
+XSFILL14480x8100 gnd vdd FILL
+X_4545_ _4581_/Q _4545_/B _4506_/A gnd _4547_/B vdd OAI21X1
+X_2944_ _3603_/A _2944_/B gnd _2944_/Y vdd NAND2X1
+X_3358_ gnd gnd _3359_/C vdd INVX1
+X_4476_ _4480_/C gnd _4483_/A vdd INVX1
+X_3427_ _3432_/A _2943_/A gnd _3503_/A vdd OR2X2
+X_3289_ gnd gnd _3289_/Y vdd INVX1
+X_2309_ _2362_/A _2308_/B gnd _2309_/Y vdd AND2X2
+XSFILL14160x42100 gnd vdd FILL
+X_2660_ _2767_/A gnd _2739_/A vdd INVX1
+X_4330_ _4069_/A _4394_/CLK _4330_/D gnd vdd DFFPOSX1
+X_2591_ _2590_/Y _2686_/A _2686_/C _2589_/A gnd _2644_/C vdd AOI22X1
+X_4261_ _3874_/A _4147_/B gnd _4261_/Y vdd NOR2X1
+X_3212_ gnd _2969_/B gnd _3212_/Y vdd NAND2X1
+X_4192_ _4192_/A _4190_/S _4142_/C gnd _4192_/Y vdd OAI21X1
+X_3074_ _2463_/Y gnd _3076_/A vdd INVX1
+X_3143_ _3143_/A _3091_/B gnd _3143_/Y vdd NAND2X1
+X_2927_ _2857_/A _2103_/A _2927_/C gnd _2930_/B vdd OAI21X1
+X_3976_ _3976_/A _3976_/B _4053_/S gnd _3978_/A vdd MUX2X1
+X_2789_ _2788_/Y _2832_/C gnd _2789_/Y vdd NOR2X1
+XSFILL45200x46100 gnd vdd FILL
+X_2858_ _2666_/A gnd _2858_/Y vdd INVX1
+XBUFX2_insert28 _4452_/Q gnd _2220_/B vdd BUFX2
+X_4528_ _4526_/Y _4528_/B _4460_/Y gnd _4578_/D vdd AOI21X1
+XSFILL14640x100 gnd vdd FILL
+XBUFX2_insert39 _4449_/Q gnd _2362_/A vdd BUFX2
+X_4459_ _4459_/Q _4394_/CLK _4088_/Y gnd vdd DFFPOSX1
+XSFILL28720x52100 gnd vdd FILL
+XBUFX2_insert249 _4441_/Q gnd _2648_/A vdd BUFX2
+XBUFX2_insert205 _3645_/Q gnd _4097_/B vdd BUFX2
+XBUFX2_insert227 _3653_/Y gnd _3716_/A vdd BUFX2
+XBUFX2_insert238 _4453_/Q gnd _2321_/A vdd BUFX2
+XBUFX2_insert216 _3921_/Y gnd _3945_/B vdd BUFX2
+X_3830_ _4390_/Q _3811_/B gnd _3831_/C vdd NOR2X1
+X_3761_ _4192_/A _3748_/B gnd _3761_/Y vdd NAND2X1
+X_3692_ _4227_/B _3695_/B gnd _3692_/Y vdd NOR2X1
+X_2643_ _2583_/Y _2639_/Y _2643_/C gnd _2643_/Y vdd NAND3X1
+X_2574_ _2847_/A _2572_/Y gnd _2574_/Y vdd NAND2X1
+X_2712_ _2712_/A _2711_/Y gnd _2712_/Y vdd NAND2X1
+X_4313_ _4239_/A _4409_/CLK _4313_/D gnd vdd DFFPOSX1
+X_4244_ _4244_/A _4222_/B _4243_/Y gnd _4441_/D vdd AOI21X1
+X_4175_ _4174_/Y _4175_/B _4142_/C _4175_/D gnd _4176_/A vdd OAI22X1
+XSFILL59440x14100 gnd vdd FILL
+X_3057_ _3055_/Y _3291_/B _3056_/Y gnd _3057_/Y vdd OAI21X1
+X_3126_ _2478_/Y gnd _3126_/Y vdd INVX1
+XSFILL44720x34100 gnd vdd FILL
+X_3959_ _4320_/Q _4025_/B _4080_/C gnd _3960_/A vdd OAI21X1
+X_2290_ _2285_/Y _2289_/Y gnd _2290_/Y vdd NAND2X1
+X_3744_ _3711_/A _3767_/B _3744_/C gnd _3744_/Y vdd OAI21X1
+X_3813_ _3660_/A _3829_/B _3812_/Y gnd _4381_/D vdd AOI21X1
+X_2557_ _2852_/A gnd _2557_/Y vdd INVX1
+X_3675_ _3823_/A _3657_/B _3674_/Y gnd _3675_/Y vdd AOI21X1
+X_2626_ _2619_/A _2619_/B gnd _2626_/Y vdd NOR2X1
+X_4227_ _4292_/A _4227_/B _4223_/S gnd _4230_/D vdd MUX2X1
+X_4158_ _4370_/Q _4213_/B gnd _4158_/Y vdd NOR2X1
+X_2488_ _2488_/A _2485_/B gnd _2489_/B vdd NAND2X1
+X_3109_ _3109_/A _3291_/B _3109_/C gnd _3109_/Y vdd OAI21X1
+X_4089_ _3584_/A gnd _4220_/S vdd INVX8
+XSFILL14640x28100 gnd vdd FILL
+X_2411_ _2355_/A _2389_/B gnd _2417_/B vdd XNOR2X1
+X_3391_ _3432_/A _3385_/B gnd _3411_/B vdd NAND2X1
+X_3460_ _3096_/Y gnd _3460_/Y vdd INVX1
+X_2273_ _2555_/A _2852_/A gnd _2274_/A vdd OR2X2
+X_4012_ _4357_/Q _4012_/B _4012_/S gnd _4015_/D vdd MUX2X1
+XSFILL14320x10100 gnd vdd FILL
+X_2342_ _2297_/A _2296_/B gnd _2993_/A vdd OR2X2
+X_3727_ _3681_/A _3733_/B _3727_/C gnd _4372_/D vdd OAI21X1
+XSFILL30160x32100 gnd vdd FILL
+X_3589_ _3589_/A _3589_/B _3589_/C gnd _3589_/Y vdd AOI21X1
+X_2609_ _2605_/Y _2609_/B gnd _2610_/B vdd NAND2X1
+X_3658_ _3444_/Y gnd _3660_/A vdd INVX4
+XSFILL60240x28100 gnd vdd FILL
+X_2960_ gnd gnd _2965_/A vdd INVX1
+X_2891_ _2891_/A gnd _2892_/B vdd INVX1
+X_4561_ _4559_/Y _4561_/B _4460_/Y gnd _4561_/Y vdd AOI21X1
+X_4630_ _3536_/B gnd _4630_/Y vdd INVX1
+X_3374_ gnd _3348_/B _3348_/C gnd _3374_/Y vdd NAND3X1
+XSFILL59440x22100 gnd vdd FILL
+X_4492_ _4492_/A _4573_/Q _4491_/Y gnd _4492_/Y vdd NAND3X1
+X_3443_ _3499_/A _3440_/Y _3442_/Y gnd _3443_/Y vdd NAND3X1
+X_3512_ _3512_/A _3498_/B _3498_/C gnd _3513_/C vdd NAND3X1
+X_2325_ _2323_/Y _2325_/B gnd _3242_/A vdd NOR2X1
+X_2256_ _2256_/A _2256_/B _2256_/C gnd _2256_/Y vdd AOI21X1
+X_2187_ _2187_/A _2187_/B gnd _2187_/Y vdd XNOR2X1
+XSFILL44720x42100 gnd vdd FILL
+X_2110_ _2883_/D gnd data_out[6] vdd BUFX2
+X_3090_ _3085_/Y _3090_/B _3090_/C gnd _3095_/A vdd NAND3X1
+X_3992_ _4170_/A _4012_/S _4015_/C gnd _3992_/Y vdd OAI21X1
+X_2943_ _2943_/A gnd _2944_/B vdd INVX1
+X_2874_ _2874_/A gnd _2875_/C vdd INVX1
+X_4613_ _3562_/A _2428_/B gnd _4613_/Y vdd NAND2X1
+X_4544_ _4544_/A _4543_/Y _4530_/Y gnd _4544_/Y vdd NOR3X1
+X_3357_ _3357_/A gnd _3359_/A vdd INVX1
+X_4475_ _4474_/Y _4473_/Y _4460_/Y gnd _4475_/Y vdd AOI21X1
+X_2308_ _2308_/A _2308_/B gnd _2308_/Y vdd NOR2X1
+X_3426_ _3426_/A gnd _3426_/Y vdd INVX1
+X_2239_ _2237_/Y _2239_/B gnd _2239_/Y vdd NOR2X1
+X_3288_ _3288_/A _3340_/B _3287_/Y _3340_/D gnd _3292_/A vdd OAI22X1
+XSFILL29360x16100 gnd vdd FILL
+XSFILL14640x36100 gnd vdd FILL
+XSFILL44080x4100 gnd vdd FILL
+X_2590_ _2642_/C gnd _2590_/Y vdd INVX1
+X_4260_ _4427_/Q _4260_/B _4260_/S gnd _4263_/D vdd MUX2X1
+X_4191_ _3728_/C _4140_/B gnd _4191_/Y vdd NOR2X1
+X_3142_ _3142_/A _3138_/Y _3142_/C gnd _3147_/A vdd NAND3X1
+X_3211_ gnd gnd _3211_/Y vdd INVX1
+X_3073_ _3073_/A _3333_/B _3073_/C _3333_/D gnd _3077_/B vdd OAI22X1
+X_2926_ _2769_/A _2861_/B _2858_/Y _2747_/A gnd _2927_/C vdd OAI22X1
+X_2857_ _2857_/A _2103_/A _2666_/A _2857_/D gnd _2862_/C vdd AOI22X1
+XBUFX2_insert29 _4452_/Q gnd _2788_/C vdd BUFX2
+X_3975_ _3975_/A _3975_/B _3985_/C _3975_/D gnd _3976_/A vdd OAI22X1
+X_4458_ _4458_/Q _4394_/CLK _4458_/D gnd vdd DFFPOSX1
+X_2788_ _2113_/A _2788_/B _2788_/C _2785_/B gnd _2788_/Y vdd OAI22X1
+X_4527_ _4560_/A _4614_/Y _4530_/A _4560_/D gnd _4528_/B vdd AOI22X1
+X_3409_ _4460_/A gnd _3419_/D vdd INVX1
+X_4389_ _4012_/B _4389_/CLK _4389_/D gnd vdd DFFPOSX1
+XBUFX2_insert206 _3645_/Q gnd _4090_/S vdd BUFX2
+XBUFX2_insert239 _2974_/Y gnd _3348_/C vdd BUFX2
+XSFILL44400x14100 gnd vdd FILL
+XBUFX2_insert217 _3921_/Y gnd _4167_/B vdd BUFX2
+XBUFX2_insert228 _2977_/Y gnd _3378_/B vdd BUFX2
+XSFILL14320x8100 gnd vdd FILL
+XSFILL29840x12100 gnd vdd FILL
+XSFILL59760x48100 gnd vdd FILL
+X_3760_ _3681_/A _3752_/B _3759_/Y gnd _3760_/Y vdd OAI21X1
+X_2711_ _2711_/A _2711_/B _2711_/C _2711_/D gnd _2711_/Y vdd AOI22X1
+X_4312_ _3868_/A _4344_/CLK _3869_/Y gnd vdd DFFPOSX1
+X_2642_ _2642_/A _2642_/B _2642_/C _2642_/D gnd _2643_/C vdd AOI22X1
+X_2573_ _2572_/Y _2847_/A gnd _2575_/A vdd OR2X2
+X_3691_ _3521_/Y gnd _3902_/A vdd INVX4
+X_4243_ _2648_/A _4222_/B _4076_/C gnd _4243_/Y vdd OAI21X1
+XSFILL59440x30100 gnd vdd FILL
+X_4174_ _3996_/A _4190_/S _4142_/C gnd _4174_/Y vdd OAI21X1
+X_3125_ _3123_/Y _3333_/B _3125_/C _3333_/D gnd _3125_/Y vdd OAI22X1
+X_3056_ gnd _2969_/B gnd _3056_/Y vdd NAND2X1
+XSFILL44720x50100 gnd vdd FILL
+X_3889_ _4338_/Q _3899_/B gnd _3890_/C vdd NOR2X1
+X_3958_ _3718_/C _3980_/B gnd _3960_/B vdd NOR2X1
+X_2909_ _2909_/A _2909_/B _2909_/C gnd _2914_/A vdd AOI21X1
+XSFILL14160x48100 gnd vdd FILL
+X_3743_ _3743_/A _3766_/B gnd _3744_/C vdd NAND2X1
+X_3674_ _4402_/Q _3657_/B gnd _3674_/Y vdd NOR2X1
+X_3812_ _3924_/B _3829_/B gnd _3812_/Y vdd NOR2X1
+X_2556_ _2566_/B _2565_/A gnd _3334_/A vdd XNOR2X1
+X_2487_ _2465_/Y _2487_/B gnd _2489_/A vdd NAND2X1
+X_2625_ _2625_/A _2625_/B gnd _2625_/Y vdd AND2X2
+X_4226_ _4226_/A _4226_/B _4236_/C _4226_/D gnd _4231_/B vdd OAI22X1
+X_4157_ _4157_/A _4386_/Q _4238_/S gnd _4160_/D vdd MUX2X1
+X_4088_ _4086_/Y _4032_/B _4087_/Y gnd _4088_/Y vdd AOI21X1
+X_3108_ gnd _2969_/B gnd _3109_/C vdd NAND2X1
+X_3039_ _3039_/A _3091_/B gnd _3042_/B vdd NAND2X1
+XFILL70960x40100 gnd vdd FILL
+XSFILL29360x24100 gnd vdd FILL
+X_2410_ _2388_/A _4265_/A gnd _2410_/Y vdd XNOR2X1
+X_3390_ _3387_/Y gnd _3399_/B vdd INVX1
+X_2341_ _2435_/B _2435_/A gnd _2941_/A vdd OR2X2
+X_4011_ _4009_/Y _4188_/B _4010_/Y gnd _4452_/D vdd AOI21X1
+X_2272_ _2555_/A _2852_/A gnd _2272_/Y vdd NAND2X1
+X_3657_ _3711_/A _3657_/B _3656_/Y gnd _4396_/D vdd AOI21X1
+X_3726_ _3716_/A _3732_/B _4002_/A gnd _3727_/C vdd OAI21X1
+X_3588_ _3654_/A _3588_/B gnd _3589_/A vdd NAND2X1
+X_2539_ _2539_/A _2539_/B gnd _2540_/A vdd NOR2X1
+X_2608_ _2606_/Y _2413_/B _2634_/C _2818_/A gnd _2609_/B vdd AOI22X1
+X_4209_ _4209_/A _4209_/B _4220_/S gnd _4211_/A vdd MUX2X1
+XFILL71120x24100 gnd vdd FILL
+X_2890_ _2890_/A _2362_/A _2893_/A _2889_/Y gnd _2890_/Y vdd AOI22X1
+X_3511_ data_in[11] gnd _3512_/A vdd INVX1
+X_4491_ _4491_/A gnd _4491_/Y vdd INVX1
+X_4560_ _4560_/A _4629_/Y _2158_/A _4560_/D gnd _4561_/B vdd AOI22X1
+X_2324_ _2324_/A _2780_/A gnd _2325_/B vdd AND2X2
+X_3373_ _3373_/A _2963_/A _3346_/B gnd _3375_/B vdd NAND3X1
+X_3442_ _3441_/Y _3498_/B _3498_/C gnd _3442_/Y vdd NAND3X1
+X_2255_ _2241_/Y _2242_/Y _2255_/C gnd _2256_/C vdd OAI21X1
+X_2186_ _2186_/A _2186_/B gnd _2187_/B vdd NAND2X1
+X_3709_ _3654_/A _3705_/Y gnd _3732_/B vdd NAND2X1
+X_2873_ _2366_/A gnd _2873_/Y vdd INVX1
+X_3991_ _3724_/C _4002_/B gnd _3993_/B vdd NOR2X1
+X_2942_ gnd gnd _2942_/Y vdd INVX1
+X_4612_ _3494_/B gnd _4612_/Y vdd INVX1
+X_4474_ _4560_/A _4590_/Y _4570_/Q _4560_/D gnd _4474_/Y vdd AOI22X1
+X_4543_ _4581_/Q gnd _4543_/Y vdd INVX1
+X_2238_ _2239_/B _2237_/Y gnd _2247_/B vdd AND2X2
+X_3356_ _3356_/A _3344_/Y _3355_/Y gnd _3530_/A vdd NAND3X1
+X_2307_ _2307_/A _2306_/Y gnd _2307_/Y vdd NOR2X1
+X_3287_ gnd gnd _3287_/Y vdd INVX1
+X_3425_ _3425_/A gnd _3499_/A vdd INVX4
+XSFILL30160x38100 gnd vdd FILL
+X_2169_ _2169_/A _2164_/Y gnd _3009_/A vdd XNOR2X1
+XSFILL14640x52100 gnd vdd FILL
+X_4190_ _4357_/Q _4012_/B _4190_/S gnd _4190_/Y vdd MUX2X1
+X_3210_ _3208_/Y _3340_/B _3210_/C _3340_/D gnd _3210_/Y vdd OAI22X1
+X_3141_ _3141_/A _3139_/Y gnd _3142_/C vdd AND2X2
+X_3072_ gnd gnd _3073_/C vdd INVX1
+X_2856_ _2770_/A gnd _2857_/D vdd INVX1
+X_2925_ _2866_/Y _2925_/B _2924_/Y _2871_/Y gnd _2925_/Y vdd OAI22X1
+X_3974_ _4152_/A _3974_/B _3985_/C gnd _3975_/A vdd OAI21X1
+XSFILL45360x6100 gnd vdd FILL
+X_2787_ _2786_/A gnd _2788_/B vdd INVX1
+X_4457_ _4457_/Q _4394_/CLK _4457_/D gnd vdd DFFPOSX1
+X_4526_ _4532_/A _4519_/Y _4525_/Y gnd _4526_/Y vdd OAI21X1
+X_3408_ _3402_/C _3416_/B _3407_/Y gnd _4567_/A vdd OAI21X1
+XSFILL14800x12100 gnd vdd FILL
+XSFILL44720x48100 gnd vdd FILL
+X_4388_ _4001_/B _4387_/CLK _4388_/D gnd vdd DFFPOSX1
+X_3339_ gnd gnd _3339_/Y vdd INVX1
+XSFILL43440x22100 gnd vdd FILL
+XSFILL59120x10100 gnd vdd FILL
+XBUFX2_insert218 _3921_/Y gnd _4076_/B vdd BUFX2
+XBUFX2_insert207 _3645_/Q gnd _4137_/B vdd BUFX2
+XBUFX2_insert229 _2977_/Y gnd _3092_/B vdd BUFX2
+X_3690_ _3867_/A _3695_/B _3689_/Y gnd _3690_/Y vdd AOI21X1
+XFILL71120x32100 gnd vdd FILL
+X_2710_ _4592_/B gnd _2711_/C vdd INVX1
+X_4311_ _4311_/Q _4409_/CLK _3867_/Y gnd vdd DFFPOSX1
+X_4242_ _4242_/A _4242_/B _4220_/S gnd _4244_/A vdd MUX2X1
+X_2641_ _2679_/A gnd _2642_/A vdd INVX1
+X_2572_ _4076_/A gnd _2572_/Y vdd INVX1
+X_4173_ _3858_/A _4140_/B gnd _4175_/B vdd NOR2X1
+X_3055_ gnd gnd _3055_/Y vdd INVX1
+X_3124_ gnd gnd _3125_/C vdd INVX1
+X_3957_ _3957_/A _3957_/B _4080_/B gnd _3957_/Y vdd MUX2X1
+X_2839_ _2839_/A _2829_/Y _2839_/C gnd _2846_/C vdd AOI21X1
+X_3888_ _3788_/A _3888_/B _3887_/Y gnd _3888_/Y vdd AOI21X1
+X_2908_ _4111_/A _2908_/B gnd _2909_/B vdd NAND2X1
+X_4509_ _4519_/A gnd _4511_/A vdd INVX2
+X_3811_ _3711_/A _3811_/B _3810_/Y gnd _3811_/Y vdd AOI21X1
+X_3673_ _3479_/Y gnd _3823_/A vdd INVX4
+X_3742_ _3705_/Y _3876_/A gnd _3742_/Y vdd NAND2X1
+XSFILL14320x24100 gnd vdd FILL
+X_2624_ _2624_/A _2623_/Y _2624_/C gnd _2625_/A vdd NOR3X1
+X_4225_ _4047_/A _4223_/S _4236_/C gnd _4226_/A vdd OAI21X1
+X_2555_ _2555_/A _2852_/A gnd _2565_/A vdd XNOR2X1
+X_2486_ _2892_/A _2891_/A gnd _2487_/B vdd XNOR2X1
+X_4087_ _2571_/A _4032_/B _4032_/C gnd _4087_/Y vdd OAI21X1
+X_3107_ gnd gnd _3109_/A vdd INVX1
+X_3038_ _3033_/Y _3038_/B _3038_/C gnd _3043_/A vdd NAND3X1
+X_4156_ _4156_/A _4167_/B _4155_/Y gnd _4433_/D vdd AOI21X1
+X_2271_ _2262_/A _2266_/Y _2270_/Y gnd _2271_/Y vdd AOI21X1
+X_2340_ _2338_/Y _2340_/B gnd _3372_/A vdd NOR2X1
+X_4010_ _2874_/A _4188_/B _4032_/C gnd _4010_/Y vdd OAI21X1
+X_3656_ _3915_/B _3657_/B gnd _3656_/Y vdd NOR2X1
+XSFILL59440x36100 gnd vdd FILL
+X_3725_ _3678_/A _3733_/B _3725_/C gnd _4371_/D vdd OAI21X1
+X_3587_ _3587_/A data_in[9] gnd _3589_/B vdd NAND2X1
+X_2607_ _2184_/B gnd _2634_/C vdd INVX1
+X_4208_ _4207_/Y _4208_/B _4094_/C _4205_/Y gnd _4209_/A vdd OAI22X1
+X_2469_ _2891_/A _2468_/Y gnd _2469_/Y vdd NAND2X1
+X_2538_ _2919_/A _2884_/A gnd _2539_/B vdd XOR2X1
+X_4139_ _4276_/A _4400_/Q _4260_/S gnd _4142_/D vdd MUX2X1
+XFILL71120x40100 gnd vdd FILL
+X_4490_ _4483_/C _4491_/A _4489_/Y gnd _4490_/Y vdd OAI21X1
+X_3441_ data_in[1] gnd _3441_/Y vdd INVX1
+X_3510_ _3503_/A _3482_/B _3509_/Y gnd _3510_/Y vdd OAI21X1
+X_2323_ _2513_/B _2513_/A gnd _2323_/Y vdd NOR2X1
+X_2254_ _2326_/B _2368_/A _2235_/Y gnd _2255_/C vdd OAI21X1
+X_3372_ _3372_/A _3378_/B _3346_/C gnd _3376_/B vdd NAND3X1
+XSFILL58960x24100 gnd vdd FILL
+X_2185_ _2305_/B _3966_/A gnd _2186_/B vdd OR2X2
+X_3708_ _3705_/Y _4267_/A gnd _3733_/B vdd NAND2X1
+X_3639_ _3432_/A _3637_/CLK _3639_/D gnd vdd DFFPOSX1
+XSFILL44880x10100 gnd vdd FILL
+X_3990_ _3990_/A _3990_/B _4012_/S gnd _3990_/Y vdd MUX2X1
+X_2872_ _2871_/Y gnd _2933_/A vdd INVX1
+X_4611_ _4593_/A _4609_/Y _4611_/C gnd _4611_/Y vdd OAI21X1
+X_2941_ _2941_/A gnd _2941_/Y vdd INVX1
+XSFILL14320x32100 gnd vdd FILL
+X_4473_ _4472_/Y _4471_/Y _4506_/A gnd _4473_/Y vdd NAND3X1
+X_4542_ _4541_/Y _4460_/A gnd _4542_/Y vdd AND2X2
+X_3424_ _3424_/A _3424_/B gnd _3424_/Y vdd NAND2X1
+X_2237_ _2237_/A _2235_/Y gnd _2237_/Y vdd NOR2X1
+X_3355_ _3355_/A _3354_/Y gnd _3355_/Y vdd NOR2X1
+X_2306_ _3966_/A _2305_/B gnd _2306_/Y vdd AND2X2
+X_3286_ gnd gnd _3288_/A vdd INVX1
+X_2099_ _2618_/A gnd data_out[1] vdd BUFX2
+X_2168_ _2168_/A _2168_/B gnd _2169_/A vdd NOR2X1
+X_3071_ _3071_/A gnd _3073_/A vdd INVX1
+X_3140_ gnd _3192_/B _3192_/C gnd _3141_/A vdd NAND3X1
+X_3973_ _4305_/Q _3973_/B gnd _3975_/B vdd NOR2X1
+X_2786_ _2786_/A _2783_/Y _2785_/Y gnd _2832_/C vdd OAI21X1
+XSFILL59440x44100 gnd vdd FILL
+X_2855_ _2855_/A gnd _2857_/A vdd INVX1
+X_2924_ _2878_/A _2366_/A _2875_/Y gnd _2924_/Y vdd OAI21X1
+X_4525_ _4525_/A _4506_/A gnd _4525_/Y vdd AND2X2
+X_4456_ _4456_/Q _4394_/CLK _4456_/D gnd vdd DFFPOSX1
+X_4387_ _3990_/B _4387_/CLK _4387_/D gnd vdd DFFPOSX1
+X_3338_ gnd gnd _3340_/A vdd INVX1
+X_3407_ _3407_/A _3402_/C _3415_/A gnd _3407_/Y vdd AOI21X1
+X_3269_ _3269_/A _3295_/B _3243_/C gnd _3271_/B vdd NAND3X1
+XBUFX2_insert208 _3645_/Q gnd _4223_/S vdd BUFX2
+XBUFX2_insert219 _3921_/Y gnd _4188_/B vdd BUFX2
+X_2640_ _4043_/A _2638_/Y gnd _2644_/B vdd NOR2X1
+X_4241_ _4240_/Y _4241_/B _4215_/C _4241_/D gnd _4242_/A vdd OAI22X1
+X_2571_ _2571_/A _2571_/B gnd _2571_/Y vdd XNOR2X1
+X_4310_ _4310_/Q _4338_/CLK _4310_/D gnd vdd DFFPOSX1
+X_4172_ _4282_/A _3677_/A _4190_/S gnd _4175_/D vdd MUX2X1
+X_3054_ _3054_/A _3340_/B _3053_/Y _3340_/D gnd _3054_/Y vdd OAI22X1
+X_3123_ _3123_/A gnd _3123_/Y vdd INVX1
+X_2907_ _2435_/A _2906_/Y gnd _2909_/A vdd NAND2X1
+X_3956_ _3956_/A _4133_/B _3955_/Y gnd _4447_/D vdd AOI21X1
+X_2769_ _2769_/A gnd _2771_/A vdd INVX1
+X_2838_ _2771_/Y _2838_/B _2838_/C gnd _2839_/C vdd OAI21X1
+X_3887_ _4152_/A _3888_/B gnd _3887_/Y vdd NOR2X1
+X_4508_ _4506_/Y _4507_/Y _4460_/Y gnd _4508_/Y vdd AOI21X1
+X_4439_ _4439_/Q _4394_/CLK _4222_/Y gnd vdd DFFPOSX1
+XSFILL45200x6100 gnd vdd FILL
+X_3810_ _3910_/B _3811_/B gnd _3810_/Y vdd NOR2X1
+X_3741_ _3875_/A _3733_/B _3741_/C gnd _4379_/D vdd OAI21X1
+XSFILL29040x20100 gnd vdd FILL
+X_2554_ _2531_/Y _2554_/B _2561_/A gnd _2566_/B vdd AOI21X1
+X_3672_ _3788_/A _3662_/B _3671_/Y gnd _4401_/D vdd AOI21X1
+X_2623_ _2619_/A _2619_/B _2621_/A _2621_/B gnd _2623_/Y vdd OAI22X1
+X_4224_ _4376_/Q _4235_/B gnd _4226_/B vdd NOR2X1
+XSFILL14320x40100 gnd vdd FILL
+X_2485_ _2485_/A _2485_/B gnd _2485_/Y vdd XNOR2X1
+X_4155_ _4155_/A _4167_/B _4122_/C gnd _4155_/Y vdd OAI21X1
+X_4086_ _4086_/A _4086_/B _4053_/S gnd _4086_/Y vdd MUX2X1
+X_3106_ _3104_/Y _3340_/B _3106_/C _3340_/D gnd _3106_/Y vdd OAI22X1
+X_3037_ _3037_/A _3037_/B gnd _3038_/C vdd AND2X2
+XSFILL14800x18100 gnd vdd FILL
+X_3939_ _4414_/Q _4398_/Q _3928_/S gnd _3942_/D vdd MUX2X1
+XSFILL59120x16100 gnd vdd FILL
+XSFILL28880x26100 gnd vdd FILL
+XSFILL29680x6100 gnd vdd FILL
+XFILL71120x38100 gnd vdd FILL
+X_2270_ _2270_/A _2270_/B _2269_/Y gnd _2270_/Y vdd OAI21X1
+X_3724_ _3716_/A _3732_/B _3724_/C gnd _3725_/C vdd OAI21X1
+XSFILL59440x52100 gnd vdd FILL
+X_3655_ _3876_/A _3652_/Y gnd _3655_/Y vdd AND2X2
+X_2537_ _2446_/Y _2537_/B _2450_/Y gnd _2541_/A vdd NAND3X1
+X_2606_ _3977_/A gnd _2606_/Y vdd INVX1
+X_3586_ _3584_/Y _3586_/B _3623_/C gnd _3586_/Y vdd AOI21X1
+X_4207_ _4207_/A _4090_/S _4094_/C gnd _4207_/Y vdd OAI21X1
+X_4138_ _4138_/A _4138_/B _4251_/C _4135_/Y gnd _4143_/B vdd OAI22X1
+X_2399_ _2329_/A _2399_/B gnd _2399_/Y vdd XOR2X1
+X_2468_ _2892_/A gnd _2468_/Y vdd INVX1
+X_4069_ _4069_/A _4045_/S _4052_/C gnd _4069_/Y vdd OAI21X1
+XSFILL59600x12100 gnd vdd FILL
+X_3371_ gnd _3345_/B gnd _3371_/Y vdd NAND2X1
+XSFILL43920x4100 gnd vdd FILL
+X_3440_ _3503_/A _3482_/B _3439_/Y gnd _3440_/Y vdd OAI21X1
+X_2253_ _2253_/A gnd _2256_/A vdd INVX1
+X_2322_ _2320_/Y _2322_/B gnd _2322_/Y vdd NOR2X1
+X_2184_ _2305_/B _2184_/B gnd _2186_/A vdd NAND2X1
+X_3707_ _3707_/A _3714_/A gnd _4267_/A vdd NOR2X1
+X_3638_ _2983_/B _3637_/CLK _3638_/D gnd vdd DFFPOSX1
+X_3569_ _3928_/S _3588_/B gnd _3569_/Y vdd NAND2X1
+XSFILL29360x46100 gnd vdd FILL
+X_2940_ _2940_/A _2932_/Y gnd _2980_/A vdd NAND2X1
+X_2871_ _2871_/A _2870_/Y _2866_/Y gnd _2871_/Y vdd NAND3X1
+X_4610_ _4593_/A _4188_/A gnd _4611_/C vdd NAND2X1
+X_4541_ _4545_/B _4539_/Y _4540_/Y gnd _4541_/Y vdd OAI21X1
+X_3354_ _3352_/Y _3354_/B _3353_/Y gnd _3354_/Y vdd NAND3X1
+X_3423_ _3423_/Q _3637_/CLK _3415_/Y gnd vdd DFFPOSX1
+X_4472_ _4472_/A _4570_/Q gnd _4472_/Y vdd NAND2X1
+X_2236_ _2513_/A _2513_/B gnd _2237_/A vdd NOR2X1
+X_3285_ _3284_/Y _3285_/B gnd _3304_/A vdd NOR2X1
+X_2305_ _3966_/A _2305_/B gnd _2307_/A vdd NOR2X1
+X_2167_ _2296_/B _2297_/A gnd _2168_/A vdd NOR2X1
+X_2098_ _2935_/A gnd data_out[0] vdd BUFX2
+XSFILL43440x36100 gnd vdd FILL
+XSFILL28880x34100 gnd vdd FILL
+XSFILL45040x10100 gnd vdd FILL
+XFILL71120x46100 gnd vdd FILL
+XSFILL29840x42100 gnd vdd FILL
+X_3070_ _3051_/Y _3058_/Y _3070_/C gnd _3070_/Y vdd NAND3X1
+X_2923_ _2923_/A _2923_/B gnd _2925_/B vdd NOR2X1
+X_3972_ _4417_/Q _3671_/A _3974_/B gnd _3975_/D vdd MUX2X1
+X_2785_ _2788_/C _2785_/B gnd _2785_/Y vdd NAND2X1
+X_2854_ _2848_/Y _2850_/Y _2854_/C gnd _2854_/Y vdd NAND3X1
+X_4524_ _4524_/A _4512_/Y _4532_/A gnd _4525_/A vdd OAI21X1
+X_4386_ _4386_/Q _4322_/CLK _3823_/Y gnd vdd DFFPOSX1
+X_4455_ _4455_/Q _4394_/CLK _4455_/D gnd vdd DFFPOSX1
+X_3337_ _3336_/Y _3337_/B gnd _3356_/A vdd NOR2X1
+X_3406_ _3406_/A _3603_/A _3386_/A gnd _3407_/A vdd NAND3X1
+X_2219_ _2223_/C gnd _2230_/C vdd INVX1
+X_3268_ _3268_/A _3243_/C _3242_/C gnd _3272_/B vdd NAND3X1
+X_3199_ _3194_/Y _3199_/B gnd _3200_/C vdd NOR2X1
+XBUFX2_insert209 _3645_/Q gnd _4238_/S vdd BUFX2
+XSFILL59920x38100 gnd vdd FILL
+XSFILL60400x26100 gnd vdd FILL
+XSFILL59600x20100 gnd vdd FILL
+X_2570_ _2571_/B _2569_/Y gnd _2652_/C vdd NAND2X1
+X_4240_ _4345_/Q _4238_/S _4215_/C gnd _4240_/Y vdd OAI21X1
+X_4171_ _4170_/Y _4171_/B _4170_/C _4168_/Y gnd _4171_/Y vdd OAI22X1
+X_3122_ _3103_/Y _3122_/B _3122_/C gnd _3122_/Y vdd NAND3X1
+X_3053_ gnd gnd _3053_/Y vdd INVX1
+X_3886_ _3752_/A _3886_/B _3886_/C gnd _3886_/Y vdd AOI21X1
+X_2906_ _2435_/B gnd _2906_/Y vdd INVX1
+X_3955_ _3955_/A _4133_/B _3999_/C gnd _3955_/Y vdd OAI21X1
+X_2768_ _2764_/Y _2768_/B gnd _2768_/Y vdd NOR2X1
+X_2837_ _2767_/A _2837_/B _2837_/C gnd _2838_/C vdd AOI21X1
+X_4438_ _4438_/Q _4394_/CLK _4211_/Y gnd vdd DFFPOSX1
+X_4507_ _4560_/A _4507_/B _4575_/Q _4560_/D gnd _4507_/Y vdd AOI22X1
+X_2699_ _2725_/A _2635_/B _2699_/C _2698_/Y gnd _2699_/Y vdd AOI22X1
+X_4369_ _4369_/Q _4409_/CLK _3721_/Y gnd vdd DFFPOSX1
+X_3740_ _3740_/A _3732_/B _3740_/C gnd _3741_/C vdd OAI21X1
+X_2553_ _2547_/Y _2534_/Y _2549_/Y gnd _2561_/A vdd OAI21X1
+X_3671_ _3671_/A _3657_/B gnd _3671_/Y vdd NOR2X1
+X_2622_ _2622_/A _2622_/B gnd _2624_/A vdd NAND2X1
+X_4223_ _4360_/Q _4045_/B _4223_/S gnd _4226_/D vdd MUX2X1
+X_4085_ _4085_/A _4083_/Y _4025_/C _4082_/Y gnd _4086_/A vdd OAI22X1
+X_4154_ _4154_/A _4154_/B _4220_/S gnd _4156_/A vdd MUX2X1
+X_2484_ _2919_/A _2884_/A gnd _2485_/B vdd XNOR2X1
+X_3105_ gnd gnd _3106_/C vdd INVX1
+XSFILL29520x14100 gnd vdd FILL
+X_3036_ gnd _2971_/A _3036_/C gnd _3037_/A vdd NAND3X1
+X_3869_ _3902_/A _3868_/B _3869_/C gnd _3869_/Y vdd OAI21X1
+X_3938_ _3937_/Y _3938_/B _3931_/C _3935_/Y gnd _3943_/B vdd OAI22X1
+XSFILL59120x32100 gnd vdd FILL
+XSFILL59600x2100 gnd vdd FILL
+X_3723_ _3823_/A _3733_/B _3722_/Y gnd _3723_/Y vdd OAI21X1
+X_3654_ _3654_/A _3714_/A gnd _3876_/A vdd NOR2X1
+XSFILL59280x2100 gnd vdd FILL
+X_2536_ _2531_/Y _2535_/Y gnd _3282_/A vdd XNOR2X1
+X_2467_ _2467_/A _2893_/A _2467_/C gnd _2473_/A vdd OAI21X1
+XSFILL59760x8100 gnd vdd FILL
+X_2605_ _2635_/A _2635_/B _2699_/C _2604_/Y gnd _2605_/Y vdd AOI22X1
+X_3585_ _3568_/A data_in[7] gnd _3586_/B vdd NAND2X1
+X_4068_ _4378_/Q _4050_/B gnd _4070_/B vdd NOR2X1
+X_4206_ _4310_/Q _4147_/B gnd _4208_/B vdd NOR2X1
+X_4137_ _4320_/Q _4137_/B _4251_/C gnd _4138_/A vdd OAI21X1
+X_2398_ _2398_/A _2398_/B _2396_/Y _2397_/Y gnd _2398_/Y vdd OAI22X1
+XSFILL44880x24100 gnd vdd FILL
+X_3019_ _3019_/A gnd _3021_/A vdd INVX1
+XSFILL59920x46100 gnd vdd FILL
+XSFILL60400x34100 gnd vdd FILL
+X_2321_ _2321_/A _2321_/B gnd _2322_/B vdd AND2X2
+XSFILL29040x26100 gnd vdd FILL
+X_3370_ _3366_/Y _3369_/Y gnd _3370_/Y vdd NOR2X1
+X_2252_ _2252_/A _2253_/A gnd _2252_/Y vdd OR2X2
+X_2183_ _2183_/A _2183_/B gnd _2187_/A vdd NAND2X1
+XSFILL14320x46100 gnd vdd FILL
+XSFILL29520x6100 gnd vdd FILL
+X_3706_ _3654_/A gnd _3707_/A vdd INVX1
+X_3637_ _3566_/B _3637_/CLK _3637_/D gnd vdd DFFPOSX1
+X_2519_ _2518_/Y _2519_/B gnd _2519_/Y vdd NAND2X1
+X_3568_ _3568_/A gnd _3568_/Y vdd INVX8
+X_3499_ _3499_/A _3496_/Y _3499_/C gnd _3499_/Y vdd NAND3X1
+XSFILL44880x6100 gnd vdd FILL
+X_2870_ _2780_/A _2869_/Y gnd _2870_/Y vdd NAND2X1
+XSFILL30320x28100 gnd vdd FILL
+X_4471_ _4464_/A _4471_/B gnd _4471_/Y vdd NAND2X1
+X_4540_ _4560_/A _4620_/Y _4580_/Q _4560_/D gnd _4540_/Y vdd AOI22X1
+X_3284_ _3284_/A _3336_/B _3284_/C _2998_/D gnd _3284_/Y vdd OAI22X1
+X_3353_ _2989_/A gnd gnd _2989_/D gnd _3353_/Y vdd AOI22X1
+X_3422_ _3415_/A _3637_/CLK _3417_/Y gnd vdd DFFPOSX1
+X_2304_ _2304_/A _2304_/B gnd _2304_/Y vdd NOR2X1
+X_2235_ _2513_/A _2513_/B gnd _2235_/Y vdd AND2X2
+X_2097_ _2097_/A gnd adrs_bus[9] vdd BUFX2
+X_2166_ _2170_/C gnd _2168_/B vdd INVX1
+XSFILL29520x22100 gnd vdd FILL
+X_2999_ _2999_/A _2995_/Y gnd _3018_/A vdd NOR2X1
+XSFILL59600x18100 gnd vdd FILL
+X_3971_ _3970_/Y _3971_/B _3913_/C _3971_/D gnd _3976_/B vdd OAI22X1
+X_2853_ _2928_/B _2571_/B _2853_/C _2852_/Y gnd _2854_/C vdd AOI22X1
+X_2922_ _2922_/A _2938_/B _2921_/Y gnd _2922_/Y vdd AOI21X1
+X_2784_ _2685_/A gnd _2785_/B vdd INVX1
+X_4454_ _4454_/Q _4394_/CLK _4454_/D gnd vdd DFFPOSX1
+X_4523_ _4530_/A gnd _4532_/A vdd INVX2
+X_4385_ _4385_/Q _4322_/CLK _3821_/Y gnd vdd DFFPOSX1
+X_3336_ _3336_/A _3336_/B _3335_/Y _2998_/D gnd _3336_/Y vdd OAI22X1
+X_3267_ gnd _3345_/B gnd _3272_/A vdd NAND2X1
+X_3405_ _3415_/A _3416_/B _3414_/A gnd _4564_/A vdd OAI21X1
+X_2218_ _2365_/B _2220_/B gnd _2223_/C vdd NAND2X1
+X_3198_ _3196_/Y _3198_/B _3197_/Y gnd _3199_/B vdd NAND3X1
+X_2149_ _4580_/Q gnd _2151_/B vdd INVX1
+XSFILL44880x32100 gnd vdd FILL
+XSFILL29040x34100 gnd vdd FILL
+X_4170_ _4170_/A _4190_/S _4170_/C gnd _4170_/Y vdd OAI21X1
+X_3121_ _3121_/A _3120_/Y gnd _3122_/C vdd NOR2X1
+X_3052_ gnd gnd _3054_/A vdd INVX1
+X_2836_ _2764_/B _2765_/A _2835_/Y gnd _2837_/C vdd AOI21X1
+X_3954_ _3954_/A _3954_/B _4053_/S gnd _3956_/A vdd MUX2X1
+X_3885_ _3963_/A _3898_/B gnd _3886_/C vdd NOR2X1
+X_2905_ _4111_/A _2908_/B gnd _2909_/C vdd NOR2X1
+X_2767_ _2767_/A _2837_/B _2767_/C _4076_/A gnd _2768_/B vdd OAI22X1
+X_4437_ _4437_/Q _4426_/CLK _4200_/Y gnd vdd DFFPOSX1
+X_4506_ _4506_/A _4511_/B _4506_/C gnd _4506_/Y vdd NAND3X1
+X_2698_ _2822_/B gnd _2698_/Y vdd INVX1
+X_4299_ _3875_/A _4269_/B _4299_/C gnd _4299_/Y vdd AOI21X1
+X_4368_ _3718_/C _4316_/CLK _4368_/D gnd vdd DFFPOSX1
+X_3319_ gnd _3345_/B gnd _3319_/Y vdd NAND2X1
+XSFILL29840x48100 gnd vdd FILL
+X_3670_ _3472_/Y gnd _3788_/A vdd INVX4
+X_4222_ _4222_/A _4222_/B _4221_/Y gnd _4222_/Y vdd AOI21X1
+X_2552_ _2535_/Y _2550_/Y gnd _2554_/B vdd NOR2X1
+X_2483_ _2480_/Y _2482_/Y gnd _2485_/A vdd NOR2X1
+X_2621_ _2621_/A _2621_/B gnd _2622_/B vdd NAND2X1
+X_4084_ _4262_/A _4025_/B _4025_/C gnd _4085_/A vdd OAI21X1
+X_4153_ _4153_/A _4151_/Y _4097_/C _4153_/D gnd _4154_/A vdd OAI22X1
+X_3104_ gnd gnd _3104_/Y vdd INVX1
+X_3035_ _3035_/A _2964_/A _3040_/B gnd _3037_/B vdd NAND3X1
+XSFILL29520x30100 gnd vdd FILL
+X_3937_ _3747_/A _3928_/S _3931_/C gnd _3937_/Y vdd OAI21X1
+X_3799_ _4359_/Q _3795_/B gnd _3799_/Y vdd NAND2X1
+X_3868_ _3868_/A _3868_/B gnd _3869_/C vdd NAND2X1
+X_2819_ _2821_/B _2362_/A _2699_/C _2818_/Y gnd _2825_/B vdd AOI22X1
+XSFILL14800x50100 gnd vdd FILL
+XSFILL60240x100 gnd vdd FILL
+XSFILL43920x38100 gnd vdd FILL
+X_3722_ _3732_/A _3732_/B _4370_/Q gnd _3722_/Y vdd OAI21X1
+X_2604_ _2818_/A gnd _2604_/Y vdd INVX1
+X_3653_ _4122_/C _3653_/B _3653_/C gnd _3653_/Y vdd NAND3X1
+X_4205_ _4288_/A _4406_/Q _4097_/B gnd _4205_/Y vdd MUX2X1
+X_2535_ _2535_/A _2534_/Y gnd _2535_/Y vdd NAND2X1
+X_2466_ _2465_/Y _2476_/D gnd _2467_/C vdd NAND2X1
+X_3584_ _3584_/A _3578_/B gnd _3584_/Y vdd NAND2X1
+X_4067_ _4245_/A _3838_/A _4045_/S gnd _4067_/Y vdd MUX2X1
+X_4136_ _3718_/C _4147_/B gnd _4138_/B vdd NOR2X1
+X_3018_ _3018_/A _3006_/Y _3018_/C gnd _3018_/Y vdd NAND3X1
+X_2397_ _3977_/A _4155_/A gnd _2397_/Y vdd NOR2X1
+XSFILL44880x40100 gnd vdd FILL
+X_2251_ _2237_/Y _2245_/Y gnd _2253_/A vdd NAND2X1
+X_2320_ _2321_/A _2321_/B gnd _2320_/Y vdd NOR2X1
+X_2182_ _2182_/A _2171_/Y _2176_/Y gnd _2183_/A vdd AOI21X1
+X_3705_ _3705_/A _3842_/B gnd _3705_/Y vdd NOR2X1
+XBUFX2_insert190 _3411_/Y gnd _2147_/A vdd BUFX2
+X_3567_ _4122_/C gnd _3567_/Y vdd INVX8
+X_3636_ _3636_/Q _4389_/CLK _3623_/Y gnd vdd DFFPOSX1
+X_2518_ _2780_/A _2518_/B gnd _2518_/Y vdd NAND2X1
+X_2449_ _4589_/B _2438_/Y gnd _2450_/A vdd NOR2X1
+X_3498_ _3498_/A _3498_/B _3498_/C gnd _3499_/C vdd NAND3X1
+X_4119_ _4334_/Q _4106_/S _4109_/C gnd _4119_/Y vdd OAI21X1
+XSFILL44080x16100 gnd vdd FILL
+XSFILL59120x2100 gnd vdd FILL
+XSFILL45040x24100 gnd vdd FILL
+XSFILL59600x8100 gnd vdd FILL
+XSFILL30320x44100 gnd vdd FILL
+X_4470_ _4570_/Q gnd _4471_/B vdd INVX1
+X_3421_ _3416_/A _3637_/CLK _3414_/Y gnd vdd DFFPOSX1
+X_2234_ _2252_/A _2257_/B _2232_/Y gnd _2239_/B vdd OAI21X1
+X_3283_ gnd gnd _3284_/C vdd INVX1
+X_3352_ gnd _3378_/B _3378_/C gnd _3352_/Y vdd NAND3X1
+X_2303_ _2807_/A _2720_/A gnd _2304_/B vdd AND2X2
+X_2096_ _2096_/A gnd adrs_bus[8] vdd BUFX2
+X_2165_ _2934_/A _2414_/A gnd _2170_/C vdd NAND2X1
+X_2998_ _2996_/Y _3336_/B _2997_/Y _2998_/D gnd _2999_/A vdd OAI22X1
+XSFILL14800x100 gnd vdd FILL
+X_3619_ _3619_/A _3577_/B _3577_/C gnd _3634_/D vdd AOI21X1
+X_4599_ _4593_/A _4597_/Y _4599_/C gnd _4494_/B vdd OAI21X1
+XSFILL44560x12100 gnd vdd FILL
+X_3970_ _3970_/A _4062_/B _3913_/C gnd _3970_/Y vdd OAI21X1
+X_2783_ _2113_/A gnd _2783_/Y vdd INVX1
+X_2852_ _2852_/A gnd _2852_/Y vdd INVX1
+X_2921_ _2916_/Y _2921_/B _2920_/Y gnd _2921_/Y vdd OAI21X1
+XFILL71280x14100 gnd vdd FILL
+X_4453_ _4453_/Q _4426_/CLK _4022_/Y gnd vdd DFFPOSX1
+X_4384_ _3957_/B _4387_/CLK _3819_/Y gnd vdd DFFPOSX1
+X_3404_ _3402_/C gnd _3414_/A vdd INVX1
+X_4522_ _4522_/A _4521_/Y _4460_/Y gnd _4522_/Y vdd AOI21X1
+X_3335_ gnd gnd _3335_/Y vdd INVX1
+X_3197_ _2989_/A gnd gnd _2989_/D gnd _3197_/Y vdd AOI22X1
+X_2217_ _2214_/Y _2187_/A _2282_/A gnd _2257_/B vdd AOI21X1
+X_3266_ _3262_/Y _3266_/B gnd _3266_/Y vdd NOR2X1
+X_2148_ _2147_/A _2146_/Y _2148_/C gnd _2148_/Y vdd OAI21X1
+X_3051_ _3051_/A _3051_/B gnd _3051_/Y vdd NOR2X1
+X_3120_ _3120_/A _3117_/Y _3120_/C gnd _3120_/Y vdd NAND3X1
+X_3953_ _3953_/A _3953_/B _4080_/C _3950_/Y gnd _3954_/A vdd OAI22X1
+X_2835_ _4076_/A _2767_/C gnd _2835_/Y vdd NAND2X1
+X_2766_ _2853_/C gnd _2767_/C vdd INVX1
+X_3884_ _3817_/A _3886_/B _3883_/Y gnd _4335_/D vdd AOI21X1
+X_2904_ _3933_/A gnd _2908_/B vdd INVX1
+X_4367_ _3716_/C _4316_/CLK _4367_/D gnd vdd DFFPOSX1
+X_4436_ _4436_/Q _4426_/CLK _4436_/D gnd vdd DFFPOSX1
+X_3318_ _3314_/Y _3317_/Y gnd _3318_/Y vdd NOR2X1
+X_4505_ _4505_/A _4575_/Q _4498_/Y gnd _4511_/B vdd NAND3X1
+X_2697_ _2697_/A gnd _2725_/A vdd INVX1
+X_4298_ _4427_/Q _4269_/B gnd _4299_/C vdd NOR2X1
+X_3249_ _2989_/A gnd gnd _2989_/D gnd _3250_/C vdd AOI22X1
+XSFILL14160x4100 gnd vdd FILL
+XSFILL29200x10100 gnd vdd FILL
+X_2620_ _2935_/A gnd _2621_/B vdd INVX1
+X_4221_ _4221_/A _4222_/B _4076_/C gnd _4221_/Y vdd OAI21X1
+X_2551_ _2545_/Y _2550_/Y gnd _2551_/Y vdd XNOR2X1
+X_2482_ _2539_/A _2476_/Y gnd _2482_/Y vdd NOR2X1
+X_4083_ _3874_/A _3980_/B gnd _4083_/Y vdd NOR2X1
+X_4152_ _4152_/A _4097_/B _4097_/C gnd _4153_/A vdd OAI21X1
+X_3103_ _3102_/Y _3103_/B gnd _3103_/Y vdd NOR2X1
+X_3034_ _2301_/Y _3040_/B _2949_/A gnd _3038_/B vdd NAND3X1
+X_3936_ _3714_/C _3973_/B gnd _3938_/B vdd NOR2X1
+X_3867_ _3867_/A _3866_/B _3867_/C gnd _3867_/Y vdd OAI21X1
+X_2749_ _2769_/A _2667_/B _2749_/C gnd _2749_/Y vdd AOI21X1
+X_3798_ _3731_/A _3802_/B _3797_/Y gnd _3798_/Y vdd OAI21X1
+X_2818_ _2818_/A gnd _2818_/Y vdd INVX1
+X_4419_ _4282_/A _4318_/CLK _4419_/D gnd vdd DFFPOSX1
+XSFILL59600x42100 gnd vdd FILL
+XSFILL44560x20100 gnd vdd FILL
+X_3721_ _3788_/A _3733_/B _3721_/C gnd _3721_/Y vdd OAI21X1
+X_2534_ _2532_/Y _2353_/A gnd _2534_/Y vdd OR2X2
+X_3652_ _3842_/A _3704_/A gnd _3652_/Y vdd NOR2X1
+XFILL71280x22100 gnd vdd FILL
+X_2603_ _2413_/B gnd _2635_/A vdd INVX1
+X_3583_ _3583_/A _3583_/B _3589_/C gnd _3646_/D vdd AOI21X1
+X_4204_ _4204_/A _4202_/Y _4251_/C _4204_/D gnd _4209_/B vdd OAI22X1
+X_4135_ _3957_/A _3957_/B _4137_/B gnd _4135_/Y vdd MUX2X1
+X_2465_ _2894_/A _2893_/A gnd _2465_/Y vdd XNOR2X1
+X_2396_ _3977_/A _4155_/A gnd _2396_/Y vdd AND2X2
+X_4066_ _4066_/A _4076_/B _4065_/Y gnd _4457_/D vdd AOI21X1
+X_3017_ _3012_/Y _3017_/B gnd _3018_/C vdd NOR2X1
+X_3919_ _3919_/A _3919_/B _4053_/S gnd _3923_/A vdd MUX2X1
+XSFILL14000x42100 gnd vdd FILL
+X_2250_ _2250_/A _2250_/B gnd _3269_/A vdd NAND2X1
+X_2181_ _2177_/Y gnd _2182_/A vdd INVX1
+X_3704_ _3704_/A gnd _3842_/B vdd INVX1
+X_2517_ _2324_/A gnd _2518_/B vdd INVX1
+XSFILL29520x36100 gnd vdd FILL
+XBUFX2_insert191 _3411_/Y gnd _2120_/A vdd BUFX2
+XBUFX2_insert180 _4433_/Q gnd _2413_/B vdd BUFX2
+X_3635_ _3564_/B _4389_/CLK _3635_/D gnd vdd DFFPOSX1
+XSFILL14480x14100 gnd vdd FILL
+X_3566_ _3566_/A _3566_/B gnd _3536_/B vdd AND2X2
+X_3497_ data_in[9] gnd _3498_/A vdd INVX1
+X_4118_ _4302_/Q _4151_/B gnd _4120_/B vdd NOR2X1
+X_2448_ _2436_/Y _2935_/A gnd _2450_/B vdd AND2X2
+X_2379_ _3955_/A _4133_/A gnd _2379_/Y vdd XOR2X1
+X_4049_ _4292_/A _4227_/B _4045_/S gnd _4052_/D vdd MUX2X1
+XSFILL45040x40100 gnd vdd FILL
+X_3351_ _3351_/A _3091_/B gnd _3354_/B vdd NAND2X1
+X_3420_ _3402_/C _3637_/CLK _3420_/D gnd vdd DFFPOSX1
+X_3282_ _3282_/A gnd _3284_/A vdd INVX1
+X_2233_ _2222_/B _2233_/B gnd _2252_/A vdd NAND2X1
+X_2302_ _2807_/A _2720_/A gnd _2304_/A vdd NOR2X1
+X_2164_ _2435_/A _2435_/B gnd _2164_/Y vdd NAND2X1
+X_2095_ _2095_/A gnd adrs_bus[7] vdd BUFX2
+X_2997_ gnd gnd _2997_/Y vdd INVX1
+X_3618_ _3551_/A _3616_/B gnd _3619_/A vdd NAND2X1
+X_3549_ _3562_/B gnd _3549_/Y vdd INVX1
+X_4598_ _3548_/A _2634_/D gnd _4599_/C vdd NAND2X1
+XSFILL44880x46100 gnd vdd FILL
+XSFILL59600x50100 gnd vdd FILL
+X_2920_ _2918_/Y _2920_/B _2920_/C gnd _2920_/Y vdd AOI21X1
+X_2782_ _2831_/C _2781_/Y gnd _2790_/A vdd NOR2X1
+X_2851_ _2762_/A gnd _2928_/B vdd INVX1
+XFILL71280x30100 gnd vdd FILL
+X_4521_ _4560_/A _4611_/Y _4577_/Q _4560_/D gnd _4521_/Y vdd AOI22X1
+X_4383_ _4383_/Q _4394_/CLK _3817_/Y gnd vdd DFFPOSX1
+X_4452_ _4452_/Q _4426_/CLK _4452_/D gnd vdd DFFPOSX1
+X_3334_ _3334_/A gnd _3336_/A vdd INVX1
+X_3403_ _3410_/A _3403_/B _3413_/A gnd _3653_/B vdd NAND3X1
+X_3196_ gnd _3243_/C _3248_/C gnd _3196_/Y vdd NAND3X1
+X_2147_ _2147_/A _4210_/A gnd _2148_/C vdd NAND2X1
+X_2216_ _2216_/A _2213_/Y _2215_/Y gnd _2282_/A vdd OAI21X1
+X_3265_ _3263_/Y _3291_/B _3265_/C gnd _3266_/B vdd OAI21X1
+X_3050_ _3048_/Y _3336_/B _3049_/Y _2998_/D gnd _3051_/A vdd OAI22X1
+X_3952_ _3952_/A _4080_/B _4080_/C gnd _3953_/A vdd OAI21X1
+X_3883_ _3952_/A _3886_/B gnd _3883_/Y vdd NOR2X1
+X_2903_ _2899_/Y _2902_/Y gnd _2914_/B vdd NAND2X1
+X_2765_ _2765_/A gnd _2837_/B vdd INVX1
+X_2834_ _2771_/A _2646_/A _2768_/Y gnd _2838_/B vdd OAI21X1
+X_4504_ _4518_/A _4492_/Y _4518_/B gnd _4506_/C vdd OAI21X1
+X_2696_ _2692_/Y _2696_/B gnd _2696_/Y vdd NAND2X1
+XSFILL14480x22100 gnd vdd FILL
+X_4297_ _3839_/A _4296_/B _4297_/C gnd _4297_/Y vdd AOI21X1
+X_4366_ _3714_/C _4337_/CLK _4366_/D gnd vdd DFFPOSX1
+X_4435_ _4435_/Q _4355_/CLK _4435_/D gnd vdd DFFPOSX1
+X_3317_ _3315_/Y _3291_/B _3316_/Y gnd _3317_/Y vdd OAI21X1
+X_3179_ gnd gnd _3179_/Y vdd INVX1
+X_3248_ gnd _3243_/C _3248_/C gnd _3248_/Y vdd NAND3X1
+XSFILL44560x18100 gnd vdd FILL
+X_2550_ _2549_/Y _2550_/B gnd _2550_/Y vdd NAND2X1
+X_4220_ _4220_/A _4220_/B _4220_/S gnd _4222_/A vdd MUX2X1
+X_4151_ _4305_/Q _4151_/B gnd _4151_/Y vdd NOR2X1
+X_2481_ _2886_/C _2883_/D gnd _2539_/A vdd XOR2X1
+X_4082_ _4427_/Q _4260_/B _4025_/B gnd _4082_/Y vdd MUX2X1
+X_3102_ _3100_/Y _3336_/B _3102_/C _2998_/D gnd _3102_/Y vdd OAI22X1
+X_3033_ gnd _3345_/B gnd _3033_/Y vdd NAND2X1
+X_3866_ _4311_/Q _3866_/B gnd _3867_/C vdd NAND2X1
+X_3935_ _4350_/Q _3814_/A _3928_/S gnd _3935_/Y vdd MUX2X1
+X_4418_ _4418_/Q _4338_/CLK _4281_/Y gnd vdd DFFPOSX1
+X_2679_ _2679_/A _2679_/B _2732_/C _2100_/A gnd _2680_/B vdd OAI22X1
+X_2748_ _2104_/A _2663_/B _2748_/C _2666_/A gnd _2749_/C vdd OAI22X1
+X_3797_ _4201_/A _3802_/B gnd _3797_/Y vdd NAND2X1
+X_2817_ _2413_/B gnd _2821_/B vdd INVX1
+X_4349_ _4349_/Q _4337_/CLK _3780_/Y gnd vdd DFFPOSX1
+X_3720_ _3732_/A _3732_/B _4369_/Q gnd _3721_/C vdd OAI21X1
+XSFILL14000x4100 gnd vdd FILL
+X_2533_ _2353_/A _2532_/Y gnd _2535_/A vdd NAND2X1
+X_3651_ _3437_/Y gnd _3711_/A vdd INVX4
+X_2602_ _2636_/A _2601_/Y gnd _2610_/A vdd NAND2X1
+X_3582_ _3568_/A data_in[6] gnd _3583_/B vdd NAND2X1
+X_4203_ _4203_/A _4090_/S _4251_/C gnd _4204_/A vdd OAI21X1
+X_4134_ _4134_/A _4200_/B _4133_/Y gnd _4431_/D vdd AOI21X1
+X_2464_ _2894_/A gnd _2467_/A vdd INVX1
+X_2395_ _3933_/A _4111_/A gnd _2398_/A vdd NOR2X1
+X_4065_ _2646_/A _4032_/B _4032_/C gnd _4065_/Y vdd OAI21X1
+X_3016_ _3014_/Y _3013_/Y _3016_/C gnd _3017_/B vdd NAND3X1
+X_3918_ _3917_/Y _3918_/B _3981_/C _3918_/D gnd _3919_/A vdd OAI22X1
+X_3849_ _3849_/A _3854_/B _3848_/Y gnd _3849_/Y vdd OAI21X1
+XSFILL29200x16100 gnd vdd FILL
+X_2180_ _2173_/Y _2175_/A _2180_/C gnd _2183_/B vdd NAND3X1
+X_3703_ _3842_/A gnd _3705_/A vdd INVX1
+XBUFX2_insert170 _3629_/Q gnd _4605_/A vdd BUFX2
+X_3634_ _3551_/A _3637_/CLK _3634_/D gnd vdd DFFPOSX1
+XBUFX2_insert192 _3411_/Y gnd _2144_/A vdd BUFX2
+XBUFX2_insert181 _4433_/Q gnd _2697_/A vdd BUFX2
+X_2516_ _2515_/Y _2519_/B gnd _3230_/A vdd AND2X2
+XSFILL14480x30100 gnd vdd FILL
+X_2447_ _2445_/Y _2446_/Y gnd _3022_/A vdd XNOR2X1
+X_3565_ _3565_/A _3636_/Q gnd _4627_/A vdd AND2X2
+X_3496_ _3503_/A _3482_/B _3496_/C gnd _3496_/Y vdd OAI21X1
+X_4048_ _4048_/A _4046_/Y _4052_/C _4048_/D gnd _4048_/Y vdd OAI22X1
+XSFILL30000x40100 gnd vdd FILL
+X_2378_ _2378_/A _2378_/B gnd _2387_/B vdd NOR2X1
+X_4117_ _4414_/Q _4398_/Q _4106_/S gnd _4120_/D vdd MUX2X1
+XSFILL44560x26100 gnd vdd FILL
+XSFILL59600x48100 gnd vdd FILL
+X_3350_ _3350_/A _3350_/B _3349_/Y gnd _3355_/A vdd NAND3X1
+X_2301_ _2299_/Y _2300_/Y gnd _2301_/Y vdd NOR2X1
+X_2232_ _2256_/B gnd _2232_/Y vdd INVX1
+X_3281_ _3279_/Y _3333_/B _3281_/C _3333_/D gnd _3285_/B vdd OAI22X1
+XFILL71280x28100 gnd vdd FILL
+X_2163_ _2163_/A _2163_/B _2163_/C gnd _2089_/A vdd OAI21X1
+X_2094_ _2136_/Y gnd adrs_bus[6] vdd BUFX2
+X_2996_ _2996_/A gnd _2996_/Y vdd INVX1
+X_3617_ _3617_/A _3574_/B _3625_/C gnd _3617_/Y vdd AOI21X1
+X_4597_ _3552_/Y gnd _4597_/Y vdd INVX1
+X_3548_ _3548_/A _3548_/B gnd _4591_/A vdd NOR2X1
+X_3479_ _3473_/Y _3478_/Y gnd _3479_/Y vdd NAND2X1
+XSFILL14000x48100 gnd vdd FILL
+X_2850_ _2762_/A _2929_/A gnd _2850_/Y vdd NAND2X1
+X_2781_ _2779_/Y _2101_/A _2780_/Y gnd _2781_/Y vdd OAI21X1
+X_4520_ _4506_/A _4520_/B _4519_/Y gnd _4522_/A vdd NAND3X1
+X_4451_ _4451_/Q _4355_/CLK _4451_/D gnd vdd DFFPOSX1
+X_3333_ _3331_/Y _3333_/B _3333_/C _3333_/D gnd _3337_/B vdd OAI22X1
+X_3402_ _3603_/A _3412_/A _3402_/C gnd _3403_/B vdd OAI21X1
+X_4382_ _3814_/A _4580_/CLK _4382_/D gnd vdd DFFPOSX1
+X_3264_ gnd _2969_/B gnd _3265_/C vdd NAND2X1
+X_3195_ _3195_/A _3091_/B gnd _3198_/B vdd NAND2X1
+XSFILL30000x100 gnd vdd FILL
+X_2146_ _4531_/A gnd _2146_/Y vdd INVX1
+X_2215_ _2212_/B _2208_/C _2209_/Y gnd _2215_/Y vdd AOI21X1
+X_2979_ _2979_/A _2963_/A _3378_/B gnd _2981_/B vdd NAND3X1
+XSFILL44080x38100 gnd vdd FILL
+XSFILL45040x46100 gnd vdd FILL
+XSFILL28560x52100 gnd vdd FILL
+X_2833_ _2832_/Y _2830_/Y _2833_/C gnd _2839_/A vdd OAI21X1
+X_3951_ _4303_/Q _4002_/B gnd _3953_/B vdd NOR2X1
+X_3882_ _3849_/A _3888_/B _3881_/Y gnd _3882_/Y vdd AOI21X1
+X_2902_ _2910_/B _2719_/A _2902_/C _2911_/B gnd _2902_/Y vdd AOI22X1
+X_2764_ _2765_/A _2764_/B _2853_/C _2764_/D gnd _2764_/Y vdd OAI22X1
+X_4503_ _4575_/Q gnd _4518_/B vdd INVX1
+X_2695_ _2695_/A _4177_/A _2694_/Y _3988_/A gnd _2696_/B vdd AOI22X1
+X_4434_ _4434_/Q _4355_/CLK _4434_/D gnd vdd DFFPOSX1
+X_4365_ _4365_/Q _4337_/CLK _3713_/Y gnd vdd DFFPOSX1
+X_4296_ _4071_/A _4296_/B gnd _4297_/C vdd NOR2X1
+X_3247_ _3247_/A _3091_/B gnd _3250_/B vdd NAND2X1
+X_3316_ gnd _2969_/B gnd _3316_/Y vdd NAND2X1
+X_3178_ _3178_/A gnd _3180_/A vdd INVX1
+X_2129_ _2163_/A _2634_/D gnd _2130_/C vdd NAND2X1
+XSFILL14960x16100 gnd vdd FILL
+XSFILL44560x34100 gnd vdd FILL
+X_2480_ _2883_/D _2479_/Y gnd _2480_/Y vdd NOR2X1
+X_4081_ _4081_/A _4081_/B _4052_/C _4078_/Y gnd _4086_/B vdd OAI22X1
+X_4150_ _4417_/Q _3671_/A _4097_/B gnd _4153_/D vdd MUX2X1
+X_3101_ gnd gnd _3102_/C vdd INVX1
+X_3032_ _3028_/Y _3031_/Y gnd _3032_/Y vdd NOR2X1
+X_3865_ _3731_/A _3855_/B _3864_/Y gnd _4310_/D vdd OAI21X1
+X_3796_ _3796_/A _3795_/B _3795_/Y gnd _4357_/D vdd OAI21X1
+X_2816_ _2826_/A _2815_/Y gnd _2823_/C vdd NOR2X1
+X_3934_ _3934_/A _4167_/B _3933_/Y gnd _3934_/Y vdd AOI21X1
+X_4417_ _4417_/Q _4338_/CLK _4279_/Y gnd vdd DFFPOSX1
+X_2747_ _2747_/A gnd _2748_/C vdd INVX1
+X_2678_ _2676_/C gnd _2732_/C vdd INVX1
+X_4348_ _3777_/A _4409_/CLK _4348_/D gnd vdd DFFPOSX1
+X_4279_ _3788_/A _4289_/B _4279_/C gnd _4279_/Y vdd AOI21X1
+XSFILL45520x8100 gnd vdd FILL
+X_3650_ _3909_/A _3637_/CLK _3650_/D gnd vdd DFFPOSX1
+X_4202_ _4374_/Q _4147_/B gnd _4202_/Y vdd NOR2X1
+X_2532_ _2353_/B gnd _2532_/Y vdd INVX1
+X_2463_ _2476_/D _2463_/B gnd _2463_/Y vdd XNOR2X1
+X_2601_ _2599_/Y _2812_/A _2812_/C _2601_/D gnd _2601_/Y vdd AOI22X1
+X_3581_ _4109_/C _3588_/B gnd _3583_/A vdd NAND2X1
+X_4064_ _4064_/A _4064_/B _4053_/S gnd _4066_/A vdd MUX2X1
+X_3015_ _2989_/A gnd gnd _2989_/D gnd _3016_/C vdd AOI22X1
+X_2394_ _3933_/A _4111_/A gnd _2398_/B vdd AND2X2
+X_4133_ _4133_/A _4133_/B _4199_/C gnd _4133_/Y vdd OAI21X1
+XSFILL14480x28100 gnd vdd FILL
+X_3917_ _4097_/A _4062_/B _3981_/C gnd _3917_/Y vdd OAI21X1
+X_3848_ _4302_/Q _3854_/B gnd _3848_/Y vdd NAND2X1
+X_3779_ _4349_/Q _3793_/B gnd _3780_/C vdd NAND2X1
+XSFILL14160x10100 gnd vdd FILL
+XBUFX2_insert160 _4439_/Q gnd _2642_/B vdd BUFX2
+X_3702_ _3875_/A _3678_/B _3701_/Y gnd _3702_/Y vdd AOI21X1
+XBUFX2_insert182 _4430_/Q gnd _4592_/B vdd BUFX2
+X_3633_ _3562_/B _3637_/CLK _3617_/Y gnd vdd DFFPOSX1
+XBUFX2_insert193 _3411_/Y gnd _2163_/A vdd BUFX2
+XBUFX2_insert171 _3629_/Q gnd _4628_/A vdd BUFX2
+X_2515_ _2515_/A _2513_/Y gnd _2515_/Y vdd OR2X2
+X_3495_ _3495_/A gnd _3496_/C vdd INVX1
+X_2446_ _2902_/C _2803_/D gnd _2446_/Y vdd XNOR2X1
+X_3564_ _3565_/A _3564_/B gnd _3522_/B vdd AND2X2
+X_4047_ _4047_/A _4045_/S _4052_/C gnd _4048_/A vdd OAI21X1
+X_2377_ _4032_/A _2676_/C gnd _2378_/B vdd XOR2X1
+XSFILL60080x28100 gnd vdd FILL
+X_4116_ _4116_/A _4116_/B _4109_/C _4113_/Y gnd _4116_/Y vdd OAI22X1
+XFILL71280x2100 gnd vdd FILL
+X_3280_ gnd gnd _3281_/C vdd INVX1
+X_2231_ _2224_/Y _2226_/B _2231_/C gnd _2256_/B vdd OAI21X1
+X_2300_ _2359_/A _2300_/B gnd _2300_/Y vdd AND2X2
+X_2093_ _2133_/Y gnd adrs_bus[5] vdd BUFX2
+X_2162_ _2147_/A _4265_/A gnd _2163_/C vdd NAND2X1
+XFILL71280x44100 gnd vdd FILL
+X_2995_ _2995_/A _3333_/B _2994_/Y _3333_/D gnd _2995_/Y vdd OAI22X1
+X_4596_ _4605_/A _4596_/B _4595_/Y gnd _4487_/B vdd OAI21X1
+X_3616_ _3562_/B _3616_/B gnd _3617_/A vdd NAND2X1
+X_3547_ _3614_/A gnd _3548_/B vdd INVX1
+X_2429_ _2426_/Y _2425_/Y _2427_/Y _2429_/D gnd _2432_/C vdd AOI22X1
+X_3478_ _3499_/A _3475_/Y _3477_/Y gnd _3478_/Y vdd NAND3X1
+X_2780_ _2780_/A _2780_/B gnd _2780_/Y vdd NAND2X1
+X_3401_ _2983_/B _3432_/A gnd _3412_/A vdd NAND2X1
+X_4450_ _4450_/Q _4355_/CLK _4450_/D gnd vdd DFFPOSX1
+X_4381_ _3924_/B _4389_/CLK _4381_/D gnd vdd DFFPOSX1
+X_3332_ gnd gnd _3333_/C vdd INVX1
+X_3194_ _3194_/A _3194_/B _3193_/Y gnd _3194_/Y vdd NAND3X1
+X_2214_ _2202_/A _2213_/Y gnd _2214_/Y vdd NOR2X1
+X_3263_ gnd gnd _3263_/Y vdd INVX1
+XSFILL14480x36100 gnd vdd FILL
+X_2145_ _2144_/A _2145_/B _2145_/C gnd _2097_/A vdd OAI21X1
+X_2978_ _2295_/Y _3378_/B _3346_/C gnd _2982_/B vdd NAND3X1
+X_4579_ _4531_/A _4580_/CLK _4535_/Y gnd vdd DFFPOSX1
+X_3950_ _3950_/A _3950_/B _4080_/B gnd _3950_/Y vdd MUX2X1
+X_2763_ _4076_/A gnd _2764_/D vdd INVX1
+X_2832_ _2788_/B _2113_/A _2832_/C gnd _2832_/Y vdd OAI21X1
+X_3881_ _4334_/Q _3888_/B gnd _3881_/Y vdd NOR2X1
+X_2901_ _2711_/D gnd _2911_/B vdd INVX1
+XSFILL44240x14100 gnd vdd FILL
+X_4364_ _4364_/Q _4409_/CLK _3711_/Y gnd vdd DFFPOSX1
+X_4502_ _4502_/A _4502_/B _4460_/Y gnd _4502_/Y vdd AOI21X1
+X_2694_ _2363_/B gnd _2694_/Y vdd INVX1
+X_4433_ _4433_/Q _4355_/CLK _4433_/D gnd vdd DFFPOSX1
+X_4295_ _4295_/A _4295_/B _4294_/Y gnd _4295_/Y vdd AOI21X1
+X_3177_ _3177_/A _3333_/B _3176_/Y _3333_/D gnd _3181_/B vdd OAI22X1
+X_3246_ _3246_/A _3242_/Y _3245_/Y gnd _3246_/Y vdd NAND3X1
+XSFILL29680x12100 gnd vdd FILL
+X_3315_ gnd gnd _3315_/Y vdd INVX1
+X_2128_ _4573_/Q gnd _2130_/B vdd INVX1
+XSFILL59280x30100 gnd vdd FILL
+XSFILL44560x50100 gnd vdd FILL
+X_4080_ _4331_/Q _4080_/B _4080_/C gnd _4081_/A vdd OAI21X1
+X_3100_ _2473_/Y gnd _3100_/Y vdd INVX1
+X_3031_ _3031_/A _3291_/B _3030_/Y gnd _3031_/Y vdd OAI21X1
+XFILL71280x52100 gnd vdd FILL
+XSFILL58800x24100 gnd vdd FILL
+X_3933_ _3933_/A _4167_/B _4122_/C gnd _3933_/Y vdd OAI21X1
+X_2746_ _2746_/A _2731_/Y _2746_/C gnd _2761_/B vdd OAI21X1
+X_3864_ _4310_/Q _3866_/B gnd _3864_/Y vdd NAND2X1
+X_3795_ _4357_/Q _3795_/B gnd _3795_/Y vdd NAND2X1
+X_2815_ _2348_/A _2813_/Y _2814_/Y _2363_/A gnd _2815_/Y vdd OAI22X1
+X_2677_ _2642_/B gnd _2679_/B vdd INVX1
+X_4347_ _4262_/A _4316_/CLK _4347_/D gnd vdd DFFPOSX1
+X_4416_ _4276_/A _4318_/CLK _4416_/D gnd vdd DFFPOSX1
+XSFILL44720x10100 gnd vdd FILL
+X_4278_ _4417_/Q _4289_/B gnd _4279_/C vdd NOR2X1
+X_3229_ _3229_/A _3333_/B _3229_/C _3333_/D gnd _3233_/B vdd OAI22X1
+X_2600_ _2363_/A gnd _2601_/D vdd INVX1
+X_3580_ _3580_/A _3580_/B _3623_/C gnd _3580_/Y vdd AOI21X1
+X_4201_ _4201_/A _4390_/Q _4090_/S gnd _4204_/D vdd MUX2X1
+X_2531_ _2526_/Y _2502_/B _2530_/Y gnd _2531_/Y vdd OAI21X1
+X_2393_ _2391_/Y _2393_/B gnd _2402_/B vdd NOR2X1
+X_2462_ _2894_/A _2893_/A gnd _2463_/B vdd XOR2X1
+X_4063_ _4062_/Y _4063_/B _3913_/C _4063_/D gnd _4064_/A vdd OAI22X1
+X_4132_ _4131_/Y _4132_/B _4220_/S gnd _4134_/A vdd MUX2X1
+X_3014_ gnd _3040_/B _3066_/C gnd _3014_/Y vdd NAND3X1
+X_3916_ _4300_/Q _4039_/B gnd _3918_/B vdd NOR2X1
+X_3778_ _3711_/A _3788_/B _3777_/Y gnd _4348_/D vdd OAI21X1
+X_3847_ _3660_/A _3854_/B _3846_/Y gnd _4301_/D vdd OAI21X1
+X_2729_ _2729_/A _2727_/Y _2726_/Y gnd _2730_/C vdd AOI21X1
+XBUFX2_insert161 _4439_/Q gnd _4221_/A vdd BUFX2
+X_3701_ _4260_/B _3678_/B gnd _3701_/Y vdd NOR2X1
+XBUFX2_insert150 _3876_/Y gnd _3898_/B vdd BUFX2
+XBUFX2_insert194 _3411_/Y gnd _2118_/A vdd BUFX2
+XBUFX2_insert183 _4430_/Q gnd _2300_/B vdd BUFX2
+XBUFX2_insert172 _3629_/Q gnd _3562_/A vdd BUFX2
+X_3563_ _3566_/A _3551_/A gnd _3515_/B vdd AND2X2
+X_3632_ _3614_/A _4580_/CLK _3632_/D gnd vdd DFFPOSX1
+X_2376_ _4043_/A _4221_/A gnd _2378_/A vdd XOR2X1
+X_2514_ _2513_/Y _2515_/A gnd _2519_/B vdd NAND2X1
+X_4115_ _3747_/A _4190_/S _4142_/C gnd _4116_/A vdd OAI21X1
+X_2445_ _2445_/A _2441_/Y _2445_/C gnd _2445_/Y vdd AOI21X1
+X_3494_ _3424_/B _3494_/B gnd _3494_/Y vdd NAND2X1
+X_4046_ _4376_/Q _4050_/B gnd _4046_/Y vdd NOR2X1
+XSFILL45040x8100 gnd vdd FILL
+XSFILL29360x2100 gnd vdd FILL
+X_2230_ _2321_/B _2321_/A _2230_/C gnd _2231_/C vdd OAI21X1
+X_2092_ _2092_/A gnd adrs_bus[4] vdd BUFX2
+X_2161_ _2161_/A gnd _2163_/B vdd INVX1
+X_2994_ gnd gnd _2994_/Y vdd INVX1
+X_4595_ _4605_/A _4595_/B gnd _4595_/Y vdd NAND2X1
+X_3546_ _3566_/A _3545_/Y gnd _3438_/B vdd NOR2X1
+X_3615_ _3614_/Y _3571_/B _3589_/C gnd _3632_/D vdd AOI21X1
+X_2428_ _2428_/A _2428_/B gnd _2429_/D vdd OR2X2
+X_3477_ _3477_/A _3498_/B _3498_/C gnd _3477_/Y vdd NAND3X1
+X_2359_ _2359_/A _2408_/B gnd _3039_/A vdd AND2X2
+X_4029_ _4207_/A _4025_/B _4025_/C gnd _4030_/A vdd OAI21X1
+X_4380_ _3910_/B _4316_/CLK _3811_/Y gnd vdd DFFPOSX1
+X_3331_ _2355_/Y gnd _3331_/Y vdd INVX1
+X_3400_ _3399_/Y _3400_/B _3416_/A gnd _3413_/A vdd OAI21X1
+X_3193_ _3192_/Y _3191_/Y gnd _3193_/Y vdd AND2X2
+X_2144_ _2144_/A _2428_/B gnd _2145_/C vdd NAND2X1
+X_2213_ _2208_/B _2212_/B gnd _2213_/Y vdd NAND2X1
+X_3262_ _3260_/Y _3340_/B _3262_/C _3340_/D gnd _3262_/Y vdd OAI22X1
+XFILL71120x2100 gnd vdd FILL
+X_2977_ _3432_/A _2983_/B gnd _2977_/Y vdd NOR2X1
+X_4578_ _4530_/A _4580_/CLK _4578_/D gnd vdd DFFPOSX1
+X_3529_ _3501_/A _4627_/A gnd _3535_/A vdd NAND2X1
+XSFILL28720x26100 gnd vdd FILL
+XFILL71280x8100 gnd vdd FILL
+XSFILL14640x12100 gnd vdd FILL
+XSFILL44560x48100 gnd vdd FILL
+X_2900_ _2614_/A gnd _2910_/B vdd INVX1
+X_2831_ _2779_/Y _2101_/A _2831_/C gnd _2833_/C vdd OAI21X1
+X_2762_ _2762_/A gnd _2764_/B vdd INVX1
+X_3880_ _3660_/A _3888_/B _3880_/C gnd _3880_/Y vdd AOI21X1
+X_4501_ _4560_/A _4501_/B _4505_/A _4560_/D gnd _4502_/B vdd AOI22X1
+X_4294_ _4425_/Q _4295_/B gnd _4294_/Y vdd NOR2X1
+X_4363_ _4256_/A _4316_/CLK _4363_/D gnd vdd DFFPOSX1
+X_4432_ _4432_/Q _4426_/CLK _4432_/D gnd vdd DFFPOSX1
+X_3314_ _3314_/A _3340_/B _3313_/Y _3340_/D gnd _3314_/Y vdd OAI22X1
+X_2693_ _3999_/A gnd _2695_/A vdd INVX1
+X_3176_ gnd gnd _3176_/Y vdd INVX1
+X_3245_ _3244_/Y _3245_/B gnd _3245_/Y vdd AND2X2
+X_2127_ _2120_/A _2127_/B _2127_/C gnd _2091_/A vdd OAI21X1
+X_3030_ gnd _2969_/B gnd _3030_/Y vdd NAND2X1
+X_3863_ _3796_/A _3852_/B _3862_/Y gnd _4309_/D vdd OAI21X1
+X_3932_ _3932_/A _3932_/B _4053_/S gnd _3934_/A vdd MUX2X1
+X_2676_ _2642_/B _2676_/B _2676_/C _2675_/Y gnd _2676_/Y vdd OAI22X1
+X_2745_ _2673_/Y _2738_/Y _2745_/C gnd _2746_/C vdd AOI21X1
+X_3794_ _3681_/A _3807_/B _3794_/C gnd _3794_/Y vdd OAI21X1
+X_2814_ _2812_/C gnd _2814_/Y vdd INVX1
+X_4346_ _4251_/A _4344_/CLK _4346_/D gnd vdd DFFPOSX1
+X_4277_ _3752_/A _4269_/B _4276_/Y gnd _4416_/D vdd AOI21X1
+X_4415_ _3950_/A _4426_/CLK _4415_/D gnd vdd DFFPOSX1
+X_3228_ gnd gnd _3229_/C vdd INVX1
+X_3159_ gnd gnd _3159_/Y vdd INVX1
+XSFILL14160x24100 gnd vdd FILL
+XSFILL29520x100 gnd vdd FILL
+XSFILL29200x46100 gnd vdd FILL
+X_2530_ _2530_/A _2509_/Y _2530_/C gnd _2530_/Y vdd AOI21X1
+X_4131_ _4131_/A _4131_/B _4170_/C _4131_/D gnd _4131_/Y vdd OAI22X1
+X_4200_ _4200_/A _4200_/B _4199_/Y gnd _4200_/Y vdd AOI21X1
+X_2392_ _3966_/A _2634_/D gnd _2393_/B vdd XOR2X1
+X_2461_ _2445_/Y _2461_/B _2460_/Y gnd _2476_/D vdd OAI21X1
+X_4062_ _4345_/Q _4062_/B _3913_/C gnd _4062_/Y vdd OAI21X1
+X_3013_ _3013_/A _3091_/B gnd _3013_/Y vdd NAND2X1
+X_3915_ _3915_/A _3915_/B _3915_/S gnd _3918_/D vdd MUX2X1
+X_3846_ _3929_/A _3854_/B gnd _3846_/Y vdd NAND2X1
+X_2659_ _2767_/A _2739_/B gnd _2664_/A vdd NAND2X1
+X_3777_ _3777_/A _3788_/B gnd _3777_/Y vdd NAND2X1
+X_2728_ _2363_/B _2691_/Y gnd _2729_/A vdd NOR2X1
+XSFILL29680x18100 gnd vdd FILL
+X_4329_ _4058_/A _4316_/CLK _4329_/D gnd vdd DFFPOSX1
+XSFILL14960x38100 gnd vdd FILL
+XSFILL28720x34100 gnd vdd FILL
+XSFILL59280x36100 gnd vdd FILL
+XSFILL14640x20100 gnd vdd FILL
+XBUFX2_insert140 _3809_/Y gnd _3835_/B vdd BUFX2
+XBUFX2_insert151 _3876_/Y gnd _3899_/B vdd BUFX2
+X_3700_ _3542_/Y gnd _3875_/A vdd INVX4
+XBUFX2_insert195 _4455_/Q gnd _2679_/A vdd BUFX2
+X_2513_ _2513_/A _2513_/B gnd _2513_/Y vdd XNOR2X1
+X_3631_ _3560_/B _3637_/CLK _3631_/D gnd vdd DFFPOSX1
+X_3562_ _3562_/A _3562_/B gnd _3508_/B vdd AND2X2
+XBUFX2_insert173 _3629_/Q gnd _3565_/A vdd BUFX2
+XBUFX2_insert162 _4445_/Q gnd _2297_/A vdd BUFX2
+XBUFX2_insert184 _4430_/Q gnd _2408_/B vdd BUFX2
+X_3493_ _3487_/Y _3492_/Y gnd _3493_/Y vdd NAND2X1
+X_4114_ _3714_/C _4151_/B gnd _4116_/B vdd NOR2X1
+X_2444_ _2618_/A _2440_/Y gnd _2445_/C vdd NOR2X1
+X_2375_ _2373_/Y _2374_/Y gnd _2375_/Y vdd NOR2X1
+X_4045_ _4360_/Q _4045_/B _4045_/S gnd _4048_/D vdd MUX2X1
+X_3829_ _3796_/A _3829_/B _3828_/Y gnd _4389_/D vdd AOI21X1
+X_2160_ _2147_/A _2158_/Y _2159_/Y gnd _2160_/Y vdd OAI21X1
+X_2091_ _2091_/A gnd adrs_bus[3] vdd BUFX2
+X_2993_ _2993_/A gnd _2995_/A vdd INVX1
+X_3614_ _3614_/A _3588_/B gnd _3614_/Y vdd NAND2X1
+X_2427_ _2428_/A _2428_/B gnd _2427_/Y vdd NAND2X1
+X_4594_ _3452_/B gnd _4596_/B vdd INVX1
+X_3545_ _3560_/B gnd _3545_/Y vdd INVX1
+X_3476_ data_in[6] gnd _3477_/A vdd INVX1
+X_4028_ _4310_/Q _3980_/B gnd _4030_/B vdd NOR2X1
+X_2289_ _2288_/Y _2271_/Y _2272_/Y gnd _2289_/Y vdd OAI21X1
+X_2358_ _2297_/A _2296_/B gnd _3013_/A vdd AND2X2
+XSFILL59440x4100 gnd vdd FILL
+X_3330_ _3330_/A _3318_/Y _3330_/C gnd _3523_/A vdd NAND3X1
+XSFILL44240x28100 gnd vdd FILL
+X_2143_ _4530_/A gnd _2145_/B vdd INVX1
+X_2212_ _2208_/Y _2212_/B gnd _2212_/Y vdd XNOR2X1
+X_3261_ gnd gnd _3262_/C vdd INVX1
+X_3192_ gnd _3192_/B _3192_/C gnd _3192_/Y vdd NAND3X1
+X_2976_ gnd _3345_/B gnd _2976_/Y vdd NAND2X1
+X_4577_ _4577_/Q _4580_/CLK _4522_/Y gnd vdd DFFPOSX1
+XSFILL29200x2100 gnd vdd FILL
+X_3459_ _3425_/A _3552_/Y gnd _3465_/A vdd NAND2X1
+X_3528_ _3522_/Y _3527_/Y gnd _3528_/Y vdd NAND2X1
+XSFILL29360x8100 gnd vdd FILL
+X_2830_ _2781_/Y _2831_/C gnd _2830_/Y vdd OR2X2
+XSFILL44560x2100 gnd vdd FILL
+X_2761_ _2761_/A _2761_/B gnd _2969_/A vdd NAND2X1
+X_4500_ _4506_/A _4499_/Y _4500_/C gnd _4502_/A vdd NAND3X1
+X_2692_ _2690_/Y _3999_/A _2363_/B _2691_/Y gnd _2692_/Y vdd AOI22X1
+X_4431_ _4431_/Q _4355_/CLK _4431_/D gnd vdd DFFPOSX1
+X_4293_ _3902_/A _4295_/B _4292_/Y gnd _4424_/D vdd AOI21X1
+XSFILL30480x50100 gnd vdd FILL
+X_4362_ _4245_/A _4394_/CLK _4362_/D gnd vdd DFFPOSX1
+X_3244_ gnd _2980_/B _3088_/C gnd _3244_/Y vdd NAND3X1
+X_3313_ gnd gnd _3313_/Y vdd INVX1
+X_3175_ _3175_/A gnd _3177_/A vdd INVX1
+X_2126_ _2120_/A _4595_/B gnd _2127_/C vdd NAND2X1
+XSFILL44720x24100 gnd vdd FILL
+X_2959_ _2959_/A _2959_/B gnd _2992_/A vdd NOR2X1
+XSFILL30000x6100 gnd vdd FILL
+X_4629_ _4628_/A _4627_/Y _4629_/C gnd _4629_/Y vdd OAI21X1
+XSFILL60400x100 gnd vdd FILL
+XSFILL59760x40100 gnd vdd FILL
+X_3931_ _3930_/Y _3931_/B _3931_/C _3931_/D gnd _3932_/A vdd OAI22X1
+X_3862_ _4017_/A _3852_/B gnd _3862_/Y vdd NAND2X1
+X_2813_ _2812_/A gnd _2813_/Y vdd INVX1
+X_2675_ _2100_/A gnd _2675_/Y vdd INVX1
+X_2744_ _2744_/A _2750_/B _2741_/Y gnd _2745_/C vdd OAI21X1
+X_3793_ _4001_/A _3793_/B gnd _3794_/C vdd NAND2X1
+X_4414_ _4414_/Q _4337_/CLK _4273_/Y gnd vdd DFFPOSX1
+XSFILL14480x6100 gnd vdd FILL
+X_4345_ _4345_/Q _4409_/CLK _3904_/Y gnd vdd DFFPOSX1
+X_4276_ _4276_/A _4296_/B gnd _4276_/Y vdd NOR2X1
+X_3227_ _3227_/A gnd _3229_/A vdd INVX1
+XFILL71120x8100 gnd vdd FILL
+X_2109_ _2891_/A gnd data_out[5] vdd BUFX2
+X_3158_ _3158_/A _3340_/B _3157_/Y _3340_/D gnd _3162_/A vdd OAI22X1
+X_3089_ _3089_/A _3087_/Y gnd _3090_/C vdd AND2X2
+XSFILL14160x40100 gnd vdd FILL
+XBUFX2_insert300 _4429_/Q gnd _4589_/B vdd BUFX2
+XSFILL14640x18100 gnd vdd FILL
+X_2460_ _2452_/Y _2460_/B _2459_/Y gnd _2460_/Y vdd AOI21X1
+X_4061_ _4239_/A _4039_/B gnd _4063_/B vdd NOR2X1
+X_4130_ _3952_/A _4137_/B _4170_/C gnd _4131_/A vdd OAI21X1
+X_2391_ _3922_/A _2292_/A gnd _2391_/Y vdd XOR2X1
+X_3012_ _3007_/Y _3012_/B _3011_/Y gnd _3012_/Y vdd NAND3X1
+X_3914_ _3913_/Y _3914_/B _3913_/C _3910_/Y gnd _3919_/B vdd OAI22X1
+X_3845_ _3711_/A _3855_/B _3845_/C gnd _3845_/Y vdd OAI21X1
+X_3776_ _3775_/Y _4267_/A gnd _3776_/Y vdd NAND2X1
+X_2658_ _2765_/A gnd _2739_/B vdd INVX1
+X_2589_ _2589_/A _2686_/C gnd _2589_/Y vdd OR2X2
+X_2727_ _2364_/B _2695_/A gnd _2727_/Y vdd NAND2X1
+X_4328_ _4047_/A _4344_/CLK _4328_/D gnd vdd DFFPOSX1
+XSFILL45200x44100 gnd vdd FILL
+X_4259_ _4259_/A _4259_/B _4251_/C _4256_/Y gnd _4264_/B vdd OAI22X1
+XSFILL59280x52100 gnd vdd FILL
+XBUFX2_insert141 _3809_/Y gnd _3811_/B vdd BUFX2
+XBUFX2_insert152 _3876_/Y gnd _3888_/B vdd BUFX2
+X_3630_ _3559_/A _4389_/CLK _3610_/Y gnd vdd DFFPOSX1
+XBUFX2_insert185 _4430_/Q gnd _2902_/C vdd BUFX2
+XBUFX2_insert174 _3629_/Q gnd _3548_/A vdd BUFX2
+XBUFX2_insert163 _4445_/Q gnd _2414_/A vdd BUFX2
+XBUFX2_insert130 _3423_/Q gnd _3587_/A vdd BUFX2
+XBUFX2_insert196 _4455_/Q gnd _2101_/A vdd BUFX2
+X_2512_ _2511_/Y _2502_/B _2510_/Y gnd _2515_/A vdd OAI21X1
+X_2443_ _2442_/Y _2445_/A gnd _2996_/A vdd XNOR2X1
+X_3561_ _4628_/A _3614_/A gnd _3501_/B vdd AND2X2
+X_3492_ _3499_/A _3492_/B _3491_/Y gnd _3492_/Y vdd NAND3X1
+X_4044_ _4044_/A _4076_/B _4043_/Y gnd _4455_/D vdd AOI21X1
+X_2374_ _3988_/A _4166_/A gnd _2374_/Y vdd XOR2X1
+XSFILL59440x12100 gnd vdd FILL
+X_4113_ _4350_/Q _3814_/A _4106_/S gnd _4113_/Y vdd MUX2X1
+X_3759_ _4324_/Q _3752_/B gnd _3759_/Y vdd NAND2X1
+XSFILL44720x32100 gnd vdd FILL
+X_3828_ _4012_/B _3829_/B gnd _3828_/Y vdd NOR2X1
+X_2090_ _2124_/Y gnd adrs_bus[2] vdd BUFX2
+X_2992_ _2992_/A _2992_/B _2992_/C gnd _3426_/A vdd NAND3X1
+X_3613_ _3613_/A _3611_/Y _3625_/C gnd _3631_/D vdd AOI21X1
+X_4593_ _4593_/A _4593_/B _4592_/Y gnd _4593_/Y vdd OAI21X1
+X_2426_ _2381_/A _2426_/B gnd _2426_/Y vdd OR2X2
+X_3544_ _4605_/A _3543_/Y gnd _3424_/A vdd NOR2X1
+X_3475_ _3503_/A _3482_/B _3474_/Y gnd _3475_/Y vdd OAI21X1
+X_4027_ _4288_/A _4406_/Q _3974_/B gnd _4027_/Y vdd MUX2X1
+X_2288_ _2274_/Y gnd _2288_/Y vdd INVX1
+X_2357_ _3922_/A _2292_/A gnd _2985_/A vdd AND2X2
+XSFILL14640x26100 gnd vdd FILL
+X_3260_ gnd gnd _3260_/Y vdd INVX1
+X_3191_ _3191_/A _3191_/B _3190_/B gnd _3191_/Y vdd NAND3X1
+X_2142_ _2118_/A _2142_/B _2142_/C gnd _2096_/A vdd OAI21X1
+X_2211_ _2211_/A _2209_/Y gnd _2212_/B vdd NOR2X1
+X_2975_ _3036_/C _2964_/A gnd _3345_/B vdd AND2X2
+X_4576_ _4519_/A _4580_/CLK _4576_/D gnd vdd DFFPOSX1
+X_3527_ _3499_/A _3527_/B _3526_/Y gnd _3527_/Y vdd NAND3X1
+XSFILL29680x42100 gnd vdd FILL
+X_3389_ _3388_/Y _3386_/Y _3389_/C gnd _2114_/A vdd OAI21X1
+X_3458_ _3458_/A _3457_/Y gnd _3458_/Y vdd NAND2X1
+X_2409_ _2409_/A _2408_/Y gnd _2409_/Y vdd NAND2X1
+XSFILL59760x38100 gnd vdd FILL
+XSFILL60240x26100 gnd vdd FILL
+X_2760_ _2762_/A _2739_/B _2760_/C _2759_/Y gnd _2761_/A vdd AOI22X1
+X_2691_ _3988_/A gnd _2691_/Y vdd INVX1
+X_4430_ _4430_/Q _4355_/CLK _4430_/D gnd vdd DFFPOSX1
+X_4361_ _3803_/A _4409_/CLK _4361_/D gnd vdd DFFPOSX1
+X_4292_ _4292_/A _4295_/B gnd _4292_/Y vdd NOR2X1
+X_3243_ _3243_/A _3295_/B _3243_/C gnd _3245_/B vdd NAND3X1
+X_3312_ gnd gnd _3314_/A vdd INVX1
+X_2125_ _4492_/A gnd _2127_/B vdd INVX1
+X_3174_ _3155_/Y _3162_/Y _3174_/C gnd _3174_/Y vdd NAND3X1
+XSFILL59440x20100 gnd vdd FILL
+X_2958_ _2958_/A _3336_/B _2958_/C _2998_/D gnd _2959_/A vdd OAI22X1
+XSFILL44720x40100 gnd vdd FILL
+X_2889_ _2894_/A gnd _2889_/Y vdd INVX1
+X_4559_ _4506_/A _4559_/B _4559_/C gnd _4559_/Y vdd NAND3X1
+X_4628_ _4628_/A _2389_/B gnd _4629_/C vdd NAND2X1
+X_3930_ _3930_/A _3928_/S _3985_/C gnd _3930_/Y vdd OAI21X1
+X_2743_ _2663_/B _2104_/A _2672_/A gnd _2744_/A vdd OAI21X1
+X_3861_ _3681_/A _3854_/B _3860_/Y gnd _3861_/Y vdd OAI21X1
+X_3792_ _3678_/A _3793_/B _3792_/C gnd _4355_/D vdd OAI21X1
+X_2812_ _2812_/A _2810_/Y _2812_/C _2812_/D gnd _2826_/A vdd OAI22X1
+X_4344_ _3901_/A _4344_/CLK _4344_/D gnd vdd DFFPOSX1
+X_2674_ _2679_/A gnd _2676_/B vdd INVX1
+X_4413_ _3928_/A _4337_/CLK _4271_/Y gnd vdd DFFPOSX1
+X_4275_ _3817_/A _4296_/B _4275_/C gnd _4415_/D vdd AOI21X1
+X_3226_ _3226_/A _3214_/Y _3225_/Y gnd _3495_/A vdd NAND3X1
+X_3157_ gnd gnd _3157_/Y vdd INVX1
+XSFILL29200x8100 gnd vdd FILL
+X_2108_ _2184_/B gnd data_out[4] vdd BUFX2
+X_3088_ gnd _3192_/B _3088_/C gnd _3089_/A vdd NAND3X1
+XSFILL44400x2100 gnd vdd FILL
+XSFILL29360x14100 gnd vdd FILL
+XSFILL14640x34100 gnd vdd FILL
+XBUFX2_insert301 _4429_/Q gnd _4111_/A vdd BUFX2
+X_4060_ _4425_/Q _4409_/Q _3915_/S gnd _4063_/D vdd MUX2X1
+X_2390_ _2390_/A _2389_/Y gnd _2402_/A vdd NOR2X1
+X_3011_ _3011_/A _3011_/B gnd _3011_/Y vdd AND2X2
+X_3913_ _3743_/A _4062_/B _3913_/C gnd _3913_/Y vdd OAI21X1
+X_3844_ _4300_/Q _3855_/B gnd _3845_/C vdd NAND2X1
+X_3775_ _3704_/A _3705_/A gnd _3775_/Y vdd NOR2X1
+X_2726_ _2364_/B _2695_/A gnd _2726_/Y vdd NOR2X1
+X_4327_ _4036_/A _4409_/CLK _3766_/Y gnd vdd DFFPOSX1
+X_2588_ _2877_/A gnd _2589_/A vdd INVX1
+X_2657_ _2595_/Y _2625_/Y _2652_/C _2656_/Y gnd _2989_/B vdd AOI22X1
+X_4258_ _4331_/Q _4090_/S _4251_/C gnd _4259_/A vdd OAI21X1
+X_4189_ _4187_/Y _4188_/B _4189_/C gnd _4436_/D vdd AOI21X1
+X_3209_ gnd gnd _3210_/C vdd INVX1
+XSFILL14320x6100 gnd vdd FILL
+XBUFX2_insert186 _4458_/Q gnd _2104_/A vdd BUFX2
+XSFILL59760x46100 gnd vdd FILL
+XBUFX2_insert197 _4455_/Q gnd _2923_/A vdd BUFX2
+XBUFX2_insert120 _3646_/Q gnd _4094_/C vdd BUFX2
+XBUFX2_insert153 _3876_/Y gnd _3901_/B vdd BUFX2
+XBUFX2_insert131 _3742_/Y gnd _3768_/B vdd BUFX2
+XSFILL60240x34100 gnd vdd FILL
+XBUFX2_insert142 _3809_/Y gnd _3818_/B vdd BUFX2
+X_3560_ _3562_/A _3560_/B gnd _3494_/B vdd AND2X2
+XBUFX2_insert164 _4445_/Q gnd _2618_/A vdd BUFX2
+XBUFX2_insert175 _3629_/Q gnd _3566_/A vdd BUFX2
+XFILL71120x14100 gnd vdd FILL
+X_2511_ _2511_/A _2507_/Y gnd _2511_/Y vdd NAND2X1
+X_2442_ _2439_/Y _2441_/Y gnd _2442_/Y vdd NAND2X1
+X_2373_ _3999_/A _4177_/A gnd _2373_/Y vdd XOR2X1
+X_3491_ _3490_/Y _3498_/B _3498_/C gnd _3491_/Y vdd NAND3X1
+X_4043_ _4043_/A _4076_/B _4076_/C gnd _4043_/Y vdd OAI21X1
+X_4112_ _4112_/A _3945_/B _4111_/Y gnd _4429_/D vdd AOI21X1
+X_3689_ _4407_/Q _3695_/B gnd _3689_/Y vdd NOR2X1
+X_3827_ _3681_/A _3818_/B _3826_/Y gnd _4388_/D vdd AOI21X1
+X_3758_ _3678_/A _3752_/B _3757_/Y gnd _4323_/D vdd OAI21X1
+X_2709_ _2709_/A gnd _2711_/A vdd INVX1
+XSFILL14160x46100 gnd vdd FILL
+X_2991_ _2991_/A _2991_/B gnd _2992_/C vdd NOR2X1
+X_3543_ _3559_/A gnd _3543_/Y vdd INVX1
+X_3612_ _3560_/B _3616_/B gnd _3613_/A vdd NAND2X1
+X_4592_ _4593_/A _4592_/B gnd _4592_/Y vdd NAND2X1
+X_2356_ _2388_/A _2562_/A gnd _3357_/A vdd OR2X2
+X_2425_ _2381_/A _2426_/B gnd _2425_/Y vdd NAND2X1
+X_3474_ _3148_/Y gnd _3474_/Y vdd INVX1
+X_4026_ _4026_/A _4024_/Y _4025_/C _4026_/D gnd _4026_/Y vdd OAI22X1
+X_2287_ _2272_/Y _2287_/B _2284_/Y gnd _2291_/A vdd NAND3X1
+XSFILL30160x28100 gnd vdd FILL
+XSFILL29360x22100 gnd vdd FILL
+X_3190_ _3190_/A _3190_/B _3242_/C gnd _3194_/B vdd NAND3X1
+X_2210_ _2314_/B _2314_/A gnd _2211_/A vdd NOR2X1
+X_2141_ _2118_/A _4188_/A gnd _2142_/C vdd NAND2X1
+X_2974_ _3432_/A _2983_/B gnd _2974_/Y vdd AND2X2
+XSFILL59440x18100 gnd vdd FILL
+X_4575_ _4575_/Q _4580_/CLK _4508_/Y gnd vdd DFFPOSX1
+X_3526_ _3525_/Y _3498_/B _3498_/C gnd _3526_/Y vdd NAND3X1
+X_2339_ _2388_/A _2562_/A gnd _2340_/B vdd AND2X2
+X_3388_ _3402_/C _3416_/A _3387_/Y gnd _3388_/Y vdd OAI21X1
+X_3457_ _3499_/A _3454_/Y _3456_/Y gnd _3457_/Y vdd NAND3X1
+X_2408_ _3944_/A _2408_/B gnd _2408_/Y vdd XNOR2X1
+X_4009_ _4008_/Y _4009_/B _4053_/S gnd _4009_/Y vdd MUX2X1
+XSFILL44400x20100 gnd vdd FILL
+XFILL71120x22100 gnd vdd FILL
+X_4360_ _4360_/Q _4344_/CLK _3802_/Y gnd vdd DFFPOSX1
+X_3311_ _3310_/Y _3311_/B gnd _3330_/A vdd NOR2X1
+X_2690_ _2364_/B gnd _2690_/Y vdd INVX1
+X_4291_ _3867_/A _4295_/B _4290_/Y gnd _4423_/D vdd AOI21X1
+X_3242_ _3242_/A _3243_/C _3242_/C gnd _3242_/Y vdd NAND3X1
+X_2124_ _2120_/A _2124_/B _2123_/Y gnd _2124_/Y vdd OAI21X1
+X_3173_ _3173_/A _3173_/B gnd _3174_/C vdd NOR2X1
+X_2888_ _2697_/A gnd _2890_/A vdd INVX1
+X_4627_ _4627_/A gnd _4627_/Y vdd INVX1
+X_2957_ _2950_/Y _2957_/B gnd _3336_/B vdd NAND2X1
+X_4489_ _4573_/Q gnd _4489_/Y vdd INVX1
+X_4558_ _4549_/Y _4550_/Y _4557_/Y gnd _4559_/C vdd OAI21X1
+XSFILL59920x14100 gnd vdd FILL
+X_3509_ _3509_/A gnd _3509_/Y vdd INVX1
+X_2742_ _2673_/A gnd _2750_/B vdd INVX1
+X_3860_ _4308_/Q _3854_/B gnd _3860_/Y vdd NAND2X1
+X_3791_ _3990_/A _3793_/B gnd _3792_/C vdd NAND2X1
+X_2811_ _2363_/A gnd _2812_/D vdd INVX1
+XSFILL14320x14100 gnd vdd FILL
+X_4343_ _4343_/Q _4322_/CLK _3900_/Y gnd vdd DFFPOSX1
+X_2673_ _2673_/A _2673_/B _2672_/Y gnd _2673_/Y vdd NOR3X1
+X_4412_ _3915_/A _4338_/CLK _4269_/Y gnd vdd DFFPOSX1
+X_4274_ _3950_/A _4296_/B gnd _4275_/C vdd NOR2X1
+X_3225_ _3220_/Y _3225_/B gnd _3225_/Y vdd NOR2X1
+X_2107_ _2614_/A gnd data_out[3] vdd BUFX2
+X_3156_ gnd gnd _3158_/A vdd INVX1
+X_3087_ _2187_/Y _3191_/B _3190_/B gnd _3087_/Y vdd NAND3X1
+XSFILL29680x48100 gnd vdd FILL
+X_3989_ _3989_/A _3945_/B _3988_/Y gnd _4450_/D vdd AOI21X1
+XSFILL29360x30100 gnd vdd FILL
+XSFILL14640x50100 gnd vdd FILL
+X_3010_ gnd _2971_/A _3036_/C gnd _3011_/A vdd NAND3X1
+X_3912_ _4364_/Q _4039_/B gnd _3914_/B vdd NOR2X1
+XSFILL43760x38100 gnd vdd FILL
+X_3843_ _3842_/Y _4267_/A gnd _3843_/Y vdd NAND2X1
+X_3774_ _3875_/A _3768_/B _3773_/Y gnd _3774_/Y vdd OAI21X1
+X_2656_ _2571_/Y _2655_/Y gnd _2656_/Y vdd NAND2X1
+X_2725_ _2725_/A _2635_/B _2724_/Y gnd _2725_/Y vdd OAI21X1
+X_2587_ _2642_/C _2642_/D gnd _2592_/A vdd NAND2X1
+X_4257_ _3740_/C _4235_/B gnd _4259_/B vdd NOR2X1
+X_4326_ _4203_/A _4316_/CLK _4326_/D gnd vdd DFFPOSX1
+X_4188_ _4188_/A _4188_/B _4032_/C gnd _4189_/C vdd OAI21X1
+X_3208_ gnd gnd _3208_/Y vdd INVX1
+X_3139_ _2204_/Y _3191_/B _3092_/B gnd _3139_/Y vdd NAND3X1
+XSFILL30640x32100 gnd vdd FILL
+XSFILL59920x100 gnd vdd FILL
+XBUFX2_insert110 _2955_/Y gnd _3066_/C vdd BUFX2
+XBUFX2_insert121 _3646_/Q gnd _4236_/C vdd BUFX2
+XBUFX2_insert132 _3742_/Y gnd _3766_/B vdd BUFX2
+XBUFX2_insert198 _4455_/Q gnd _4043_/A vdd BUFX2
+X_2510_ _2509_/Y gnd _2510_/Y vdd INVX1
+XBUFX2_insert187 _4458_/Q gnd _2355_/A vdd BUFX2
+XFILL71120x30100 gnd vdd FILL
+XBUFX2_insert143 _3809_/Y gnd _3829_/B vdd BUFX2
+XBUFX2_insert176 _3629_/Q gnd _4593_/A vdd BUFX2
+X_3490_ data_in[8] gnd _3490_/Y vdd INVX1
+XBUFX2_insert154 _4448_/Q gnd _2184_/B vdd BUFX2
+XBUFX2_insert165 _4445_/Q gnd _3933_/A vdd BUFX2
+X_2372_ _2388_/A _4265_/A gnd _3377_/A vdd AND2X2
+X_2441_ _2618_/A _2440_/Y gnd _2441_/Y vdd NAND2X1
+X_4111_ _4111_/A _4133_/B _3999_/C gnd _4111_/Y vdd OAI21X1
+X_4042_ _4042_/A _4042_/B _4053_/S gnd _4044_/A vdd MUX2X1
+X_3826_ _4001_/B _3818_/B gnd _3826_/Y vdd NOR2X1
+X_2639_ _2638_/Y _4043_/A _2639_/C _4032_/A gnd _2639_/Y vdd AOI22X1
+X_3688_ _3514_/Y gnd _3867_/A vdd INVX4
+X_3757_ _4170_/A _3752_/B gnd _3757_/Y vdd NAND2X1
+X_2708_ _2706_/Y _2709_/A _2902_/C _2721_/B gnd _2712_/A vdd AOI22X1
+X_4309_ _4017_/A _4387_/CLK _4309_/D gnd vdd DFFPOSX1
+XSFILL59920x22100 gnd vdd FILL
+X_2990_ _2990_/A _2990_/B _2990_/C gnd _2991_/B vdd NAND3X1
+X_3611_ _3626_/A data_in[1] gnd _3611_/Y vdd NAND2X1
+X_4591_ _4591_/A gnd _4593_/B vdd INVX1
+X_3473_ _3445_/A _3556_/Y gnd _3473_/Y vdd NAND2X1
+X_3542_ _3542_/A _3541_/Y gnd _3542_/Y vdd NAND2X1
+X_2355_ _2355_/A _2555_/A gnd _2355_/Y vdd OR2X2
+X_2286_ _2285_/Y gnd _2287_/B vdd INVX1
+X_2424_ _2422_/Y _2423_/Y gnd _2424_/Y vdd NAND2X1
+X_4025_ _4203_/A _4025_/B _4025_/C gnd _4026_/A vdd OAI21X1
+XSFILL30160x44100 gnd vdd FILL
+X_3809_ _3876_/A _3775_/Y gnd _3809_/Y vdd AND2X2
+XSFILL44400x18100 gnd vdd FILL
+X_2140_ _4577_/Q gnd _2142_/B vdd INVX1
+X_2973_ _2965_/Y _2973_/B gnd _2992_/B vdd NOR2X1
+X_4574_ _4505_/A _4389_/CLK _4502_/Y gnd vdd DFFPOSX1
+X_3456_ _3455_/Y _3498_/B _3498_/C gnd _3456_/Y vdd NAND3X1
+X_3525_ data_in[13] gnd _3525_/Y vdd INVX1
+X_2269_ _2855_/A _2546_/A _2258_/Y gnd _2269_/Y vdd OAI21X1
+X_4008_ _4008_/A _4006_/Y _3985_/C _4005_/Y gnd _4008_/Y vdd OAI22X1
+X_2338_ _2388_/A _2562_/A gnd _2338_/Y vdd NOR2X1
+X_3387_ _2943_/A _3603_/A gnd _3387_/Y vdd NOR2X1
+X_2407_ _3955_/A _4133_/A gnd _2409_/A vdd XNOR2X1
+X_4290_ _4423_/Q _4295_/B gnd _4290_/Y vdd NOR2X1
+X_3310_ _3310_/A _3336_/B _3309_/Y _2998_/D gnd _3310_/Y vdd OAI22X1
+X_3241_ gnd _3345_/B gnd _3246_/A vdd NAND2X1
+X_2123_ _2120_/A _4592_/B gnd _2123_/Y vdd NAND2X1
+X_3172_ _3172_/A _3172_/B _3172_/C gnd _3173_/B vdd NAND3X1
+X_2887_ _2887_/A _2886_/Y gnd _2921_/B vdd NAND2X1
+X_4626_ _3565_/A _4624_/Y _4625_/Y gnd _4553_/B vdd OAI21X1
+X_2956_ _3066_/C _2948_/Y gnd _2998_/D vdd NAND2X1
+X_4488_ _4488_/A _4487_/Y _4460_/Y gnd _4572_/D vdd AOI21X1
+X_3439_ _3018_/Y gnd _3439_/Y vdd INVX1
+X_3508_ _3445_/A _3508_/B gnd _3508_/Y vdd NAND2X1
+X_4557_ _2158_/A gnd _4557_/Y vdd INVX1
+XFILL70960x44100 gnd vdd FILL
+XSFILL29040x10100 gnd vdd FILL
+X_2672_ _2672_/A _2672_/B _2671_/Y gnd _2672_/Y vdd NAND3X1
+X_2741_ _2663_/B _2104_/A _2741_/C _2741_/D gnd _2741_/Y vdd AOI22X1
+X_3790_ _3823_/A _3788_/B _3789_/Y gnd _3790_/Y vdd OAI21X1
+X_4411_ _4260_/B _4318_/CLK _3702_/Y gnd vdd DFFPOSX1
+X_2810_ _2314_/A gnd _2810_/Y vdd INVX1
+X_4342_ _4207_/A _4322_/CLK _3898_/Y gnd vdd DFFPOSX1
+XSFILL14320x30100 gnd vdd FILL
+X_3224_ _3224_/A _3224_/B _3224_/C gnd _3225_/B vdd NAND3X1
+X_4273_ _3849_/A _4283_/B _4272_/Y gnd _4273_/Y vdd AOI21X1
+.ends
+
