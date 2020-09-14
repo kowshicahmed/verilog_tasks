@@ -10,7 +10,7 @@ initial
 begin
     $dumpfile("decoder2to4.vcd"); //generate a waveform call it x.vcd and dump the files there
     $dumpvars(0, decoder2to4_tb);
-    a = 2'b00;
+    a = 2'b01;
     #1;
     a = 2'b01;
     #1;
